@@ -59,8 +59,14 @@
 
     <xsl:template match="imkl:Duct/imkl:containerType"></xsl:template>
     <xsl:template match="imkl:ExtraDetailinfo/imkl:opKabelEnLeidingen"></xsl:template>
+    <xsl:template match="imkl:ExtraDetailinfo/imkl:heeftUtilityNetwork"></xsl:template>
+    <xsl:template match="imkl:DiepteNAP/imkl:heeftKabelEnLeidingContainer"></xsl:template>
+    <xsl:template match="imkl:Utiliteitsnet/imkl:eigenExtraInformatie"></xsl:template>
+    <xsl:template match="imkl:ActivityComplex"></xsl:template>
+    <xsl:template match="imkl:eigenUtilityFacilityReference"></xsl:template>
     <xsl:template match="imkl:Annotatie/imkl:opContainerLeidingElementen"></xsl:template>
     <xsl:template match="imkl:Annotatie/imkl:label"></xsl:template>
     <xsl:template match="imkl:dekking"></xsl:template>
+    <xsl:template match="imkl:Pipe"></xsl:template>
     <xsl:template match="imkl:standaardDekking"></xsl:template>
 </xsl:stylesheet>

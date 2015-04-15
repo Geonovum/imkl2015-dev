@@ -34,6 +34,7 @@ FILES = Sewer/basispakket/basispakket.nl.xml \
  uitgebreid-pakket-2/imklVoeren.nl.xml
 
 %.nl.xml: %.xml Makefile agiv2nl.xsl
+	mkdir -p $(dir voorbeeldbestanden-nl/$<)
 	cat $< |\
 	grep -v orientatie |\
 	grep -v liggingNauwkeurigheid |\
@@ -52,20 +53,32 @@ FILES = Sewer/basispakket/basispakket.nl.xml \
         sed 's#imkl:ExtraPlan#imkl:ExtraDetailinfo#g' |\
         sed 's#imkl:extraPlanType#imkl:extraInfoType#g' |\
         sed 's#imkl:heeftLeidingElement#imkl:heeftLeidingelement#g' |\
+        sed 's#imkl:SewerPipe#imkl:Rioolleiding#g' |\
         sed 's#imkl:heeftContainerLeidingElement#imkl:heeftKabelEnLeidingContainer#g' |\
+        sed 's#imkl:opContainerLeidingElementen#imkl:opContainerLeidingelementen#g' |\
+        sed 's#imkl:heeftUtilityNetwork#imkl:inNetwork#g' |\
         sed 's#imkl:Aansluiting#imkl:Aansluitschets#g' |\
+        sed 's#imkl:ThermalPipe#imkl:ThermischePijpleiding#g' |\
+        sed 's#imkl:TelecommunicationsCable#imkl:Telecommunicatiekabel#g' |\
+        sed 's#imkl:OilGasChemicalsPipe#imkl:OlieGasChemicalienPijpleiding#g' |\
+        sed 's#imkl:Tower#imkl:Toren#g' |\
+        sed 's#imkl:Cabinet#imkl:Kast#g' |\
+        sed 's#imkl:Pole#imkl:Mast#g' |\
+        sed 's#imkl:WaterPipe#imkl:Waterleiding#g' |\
         sed 's#imkl:diepteleggingPeil#imkl:dieptePeil#g' |\
         sed 's#imkl:straatnaam#imkl:naamOpenbareRuimte#g' |\
         sed 's#imkl:RelatieveDiepte#imkl:DiepteTovMaaiveld#g' |\
         sed 's#imkl:Manhole#imkl:Mangat#g' |\
         sed 's#imkl:UtilityNetwork#imkl:Utiliteitsnet#g' |\
         sed 's#imkl"=http://mir.agiv.be/cl/AGIV/v1/xmlns/IMKL2.2"#wion="http://www.geonovum.nl/wion/2015/1.0"#g' |\
-        sed 's#IMKL2.2_rc_12062014.xsd#../../../xsd/IMKL2015-wion.xsd#g' |\
+        sed 's#IMKL2.2_rc_12062014.xsd#../../../IMKL2015-wion.xsd#g' |\
+        sed 's#IMKL2.2-20141128.xsd#../../IMKL2015-wion.xsd#g' |\
         sed 's#http://mir.agiv.be/cl/AGIV/v1/xmlns/IMKL2.2#http://www.geonovum.nl/wion/2015/1.0#g' |\
-	xsltproc agiv2nl.xsl -  > $@
+	xsltproc agiv2nl.xsl -  > voorbeeldbestanden-nl/$<
 
 all: $(FILES)
 
 clean:
 	rm -rf $(FILES)
+	rm -rf voorbeeldbestanden-nl
 
