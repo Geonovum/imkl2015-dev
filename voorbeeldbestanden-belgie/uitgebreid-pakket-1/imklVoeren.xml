@@ -3915,12 +3915,6 @@
 					<imkl:email>Text</imkl:email>
 				</imkl:TechnischContactpersoon>
 			</imkl:technischContactpersoon>
-			<imkl:voorzorgsmaatregel>
-				<imkl:Voorzorgsmaatregel>
-					<imkl:bestandLocatie>Kabelbeschadiging.pdf</imkl:bestandLocatie>
-					<imkl:bestandMediaType xlink:href="http://mir.agiv.be/cl/IMKL/v2/BestandMediaTypeValue/PDF"/>  
-				</imkl:Voorzorgsmaatregel>
-			</imkl:voorzorgsmaatregel>
 			<imkl:eigenExtraInformatie xlink:href="http://mir.agiv.be/data/IMKL/v2.2/Annotatie/interstroom-be:E020"/>
 			<imkl:eigenExtraInformatie xlink:href="http://mir.agiv.be/data/IMKL/v2.2/Annotatie/interstroom-be:E021"/>
 			<imkl:eigenExtraInformatie xlink:href="http://mir.agiv.be/data/IMKL/v2.2/Annotatie/interstroom-be:E022"/>
