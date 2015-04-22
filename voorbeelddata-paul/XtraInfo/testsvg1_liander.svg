@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="105mm" viewBox="0 0 210 210" width="105mm">
+	<path GOSketch_ObjectType="Bebouwing" d="M 142.5,12.5 L 142.5,57.5" fill="none" id="path0" stroke="black" stroke-dasharray="none" stroke-width="1"/>
+	<path GOSketch_ObjectType="Bebouwing" d="M 142.5,57.5 L 20,57.5" fill="none" id="path1" stroke="black" stroke-dasharray="none" stroke-width="1"/>
+	<path GOSketch_ObjectType="Bebouwing" d="M 80,57.5 L 80,12.5" fill="none" id="path2" stroke="black" stroke-dasharray="none" stroke-width="1"/>
+	<path GOSketch_ObjectType="Bebouwing" d="M 22.5,57.5 L 22.5,10" fill="none" id="path3" stroke="black" stroke-dasharray="none" stroke-width="1"/>
+	<text fill="black" font-family="Arial" font-size="8" id="text0" text-anchor="middle" x="52.5" xml:space="preserve" y="35">78</text>
+	<text fill="black" font-family="Arial" font-size="8" id="text1" text-anchor="middle" x="107.5" xml:space="preserve" y="35">76</text>
+	<text fill="black" font-family="Arial" font-size="8" id="text2" text-anchor="middle" x="115" xml:space="preserve" y="157.5">hogestraat</text>
+	<path GOSketch_ObjectType="Straat" d="M 205,135 L 2.5,135" fill="none" id="path4" stroke="black" stroke-dasharray="none" stroke-width="1"/>
+	<path GOSketch_ObjectType="Straat" d="M 205,170 L 2.5,170" fill="none" id="path5" stroke="black" stroke-dasharray="none" stroke-width="1"/>
+	<path GOSketch_ObjectType="Distributieleiding" d="M 2.5,122.5 L 202.5,122.5" fill="none" id="path6" stroke="blue" stroke-dasharray="none" stroke-width="2"/>
+	<g GOSketch_ObjectType="aftakmof" fill="black" id="aftakmof0" stroke="black" transform="translate(35,122.5)">
+		<circle cx="0" cy="0" r="3"/>
+	</g>
+	<g GOSketch_ObjectType="nulpunt" fill="red" id="nulpunt0" stroke="red" transform="translate(142.5,57.5)">\t<path d="M -3,-3 L 3,3" stroke-width="1"/>\t<path d="M -3,3 L 3,-3" stroke-width="1"/>\t</g>
+	<path BPid="1" GOSketch_ObjectType="BPbase" Revision="True" d="M 142.5 57.5 L 143.5 57.5" fill="none" id="BPbase1" stroke="black" stroke-dasharray="none" stroke-width="1"/>
+	<path BPid="1" GOSketch_ObjectType="BPdirection" Revision="True" d="M 142.4999 17.5 L 143.4999 17.5" fill="none" id="BPdirection1" stroke="black" stroke-dasharray="none" stroke-width="1"/>
+	<path BPid="1" GOSketch_ObjectType="BPDimension" d="M 142.5002,132.4997 L 142.5002,122.4997" fill="none" id="dimline_1_0" stroke="gray" stroke-dasharray="2,2" stroke-width="1"/>
+	<path BPid="1" GOSketch_ObjectType="BPDimension" d="M 35,132.5 L 35,122.5" fill="none" id="dimline_2_0" stroke="gray" stroke-dasharray="2,2" stroke-width="1"/>
+	<path BPid="1" GOSketch_ObjectType="BPDimension" d="M 142.5,57.5 L 142.5,57.5" fill="none" id="dimline_1_1" stroke="gray" stroke-dasharray="2,2" stroke-width="1"/>
+	<path BPid="1" GOSketch_ObjectType="BPDimension" d="M 142.5002,122.4997 L 35,122.5" fill="none" id="dimline_2_1" stroke="gray" stroke-dasharray="2,2" stroke-width="1"/>
+	<path BPid="1" GOSketch_ObjectType="BPDimension" NPMdirection="l" d="M 142.5002,132.4997 L 35,132.5" fill="none" id="dimpath0" refpoint="35,122.5" stroke="black" stroke-width="0.2"/>
+	<path BPid="1" GOSketch_ObjectType="BPDimension" NPMdirection="l" d="M 142.5002,132.4997 L 139.6502,131.5497 L 139.6502,133.4497 L 142.5002,132.4997" fill="none" id="dimbeginarrow0" stroke="black" stroke-width="0.2"/>
+	<text BPid="1" GOSketch_ObjectType="BPDimension" NPMdirection="l" fill="black" font-family="Arial" font-size="6" id="dimtext0" text-anchor="middle" transform="rotate(-90,23.5,128.5)" x="23.5" xml:space="preserve" y="128.5">8,9</text>
+	<path BPid="1" GOSketch_ObjectType="BPDimension" NPMdirection="e" d="M 142.5,57.5 L 142.5002,122.4997" fill="none" id="dimpath1" refpoint="35,122.5" stroke="black" stroke-width="0.2"/>
+	<path BPid="1" GOSketch_ObjectType="BPDimension" NPMdirection="e" d="M 136.5002,126.4997 L 148.5002,118.4997" fill="none" id="dimendarrow1" stroke="black" stroke-width="0.2"/>
+	<text BPid="1" GOSketch_ObjectType="BPDimension" NPMdirection="e" fill="black" font-family="Arial" font-size="6" id="dimtext1" text-anchor="middle" transform="rotate(0,153.5002,128.4997)" x="153.5002" xml:space="preserve" y="128.4997">2,9</text>
+	<rect fill="none" height="0" id="selectrect" stroke="black" stroke-dasharray="1,1" stroke-width="1" width="0" x="38.86364" y="123.4091"/>
+</svg>
