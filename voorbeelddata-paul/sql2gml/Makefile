@@ -3,7 +3,7 @@ PGDATABASE=imkl
 PGUSER=imkl
 
 Best.gml: sql2gml.php  postprocess.sql
-	psql < postprocess.sql
+	psql -a < postprocess.sql
 	php ./sql2gml.php > Best.gml
 postprocess:
 	psql < postprocess.sql
