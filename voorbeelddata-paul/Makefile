@@ -3,7 +3,7 @@ PGDATABASE=imkl
 PGUSER=imkl
 
 load:
-	shp2pgsql -d -S -I -W LATIN1  -s 28992  5meter_AanduidingEisVoorzorgsmaatregel.shp| psql
+	shp2pgsql -d -S -I -W LATIN1  -s 28992 5meter_AanduidingEisVoorzorgsmaatregel.shp vijfmeteraanduiding| psql
 	shp2pgsql -d -S -I -W LATIN1  -s 28992  aanduidingEisVoorzorgsmaatregel.shp| psql
 	shp2pgsql -d -S -I -W LATIN1  -s 28992  Annotatie_lijn.shp| psql
 	shp2pgsql -d -S -I -W LATIN1  -s 28992  Annotatie.shp| psql
