@@ -66,8 +66,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
 #    echo "            <imkl:bovengrondsZichtbaar>" . $line["bzichtbaar"] . "\n";
 #    echo "            </imkl:bovengrondsZichtbaar>\n";
     echo "            <net:inNetwork xlink:href=\"" . $line["unetid"] . "\"/>\n";
-    echo "            <net:geometry>" . $line["geom"] . "\n";
-    echo "            </net:geometry>\n";
+    echo "            <net:geometry>" . $line["geom"] . "</net:geometry>\n";
     echo "            <us-net-common:currentStatus xlink:href=\"" . $line["status"] ."\"/>\n";
     echo "            <us-net-common:validFrom>2001-12-17T09:30:47.0Z</us-net-common:validFrom>\n";
     echo "            <us-net-common:validTo>2001-12-17T09:30:47.0Z</us-net-common:validTo>\n";
@@ -110,6 +109,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    </gml:featureMember>\n\n";
 }
 pg_free_result($result);
+
 //
 // Kabelbed
 //
@@ -132,6 +132,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    </gml:featureMember>\n\n";
 }
 pg_free_result($result);
+
 
 //
 // Process ms_kabelofleiding
@@ -182,6 +183,242 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
 }
 pg_free_result($result);
 
+
+
+#
+# Process waterleiding
+#
+$query = 'select gid,objectid,obj_id,ltyp,lbez,byear,aclass_id,gclass_id,gtype_id,enabled,cstype_id,length_mea,uttracewei,status,origobject,refscale,soort,medium,geo_kwalit,projectnum,functie,cp_ctrl_ar,cp_ctrl__1,cp_prot_ar,cp_prot__1,risicovol,crucialite,kb_nummer,diameter,materiaal,wanddikte,trace_nr,shape_len,thema,netbeheer,status_1,vertpositi,disttype,warningt,pipediam,pressure,producttyp,toelichtin,dieptetovm,dieptenap,xinfo,geom,geometryid,linkid from water_kabelofleiding ;';
+$result = pg_query($query) or die('Query failed: ' . pg_last_error());
+
+while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
+    echo "    <gml:featureMember>\n";
+    echo "        <imkl:Waterleiding gml:id=\"IDms_kabelofleiding" . $line["gid"] . "\">\n";
+    echo "            <net:beginLifespanVersion>2001-12-17T09:30:47.0Z</net:beginLifespanVersion>\n";
+    echo "            <net:inspireId>\n";
+    echo "                <base:Identifier>\n";
+    echo "                <base:localId>" . $line["gid"] . "</base:localId>\n";
+    echo "                <base:namespace>gascom-be</base:namespace>\n";
+    echo "            </base:Identifier>\n";
+    echo "            </net:inspireId>\n";
+    echo "            <net:inNetwork xlink:href=\"" . $line["thema"] . "\"/>\n";
+    echo "            <net:link xlink:href=\"" . $line["linkid"] . "\"/>\n";
+    echo "            <us-net-common:currentStatus xlink:href=\"" . $line["status"] ."\"/>\n";
+    echo "            <us-net-common:validFrom>2001-12-17T09:30:47.0Z</us-net-common:validFrom>\n";
+    echo "            <us-net-common:validTo>2001-12-17T09:30:47.0Z</us-net-common:validTo>\n";
+    echo "            <us-net-common:verticalPosition>underground</us-net-common:verticalPosition>\n";
+    echo "            <us-net-common:warningType xlink:href=\"http://inspire.ec.europa.eu/codelist/WarningTypeExtendedValue/net\"/>\n";
+    echo "            <us-net-common:pipeDiameter uom=\"urn:ogc:def:uom:OGC::cm\">" . $line["pipediam"] . "</us-net-common:pipeDiameter>\n";
+    echo "            <us-net-common:pressure uom=\"urn:ogc:def:uom:OGC::bar\">" . $line["pressure"] . "</us-net-common:pressure>\n";
+    echo "            <us-net-ogc:waterType xlink:href=\"" .  $line["producttyp"] . "\" />\n";
+    echo "        </imkl:Waterleiding>\n";
+    echo "    </gml:featureMember>\n\n";
+}
+pg_free_result($result);
+
+
+#
+# Process Riool_vv
+#
+$query = 'select gid,id,thema,netbeheer,status,vertpositi,disttype,warningt,pipediam,pressure,swatertype,toelichtin,dieptetovm,dieptenap,xinfo,geom,geometryid,linkid from rioolvv_kabelofleiding;';
+
+$result = pg_query($query) or die('Query failed: ' . pg_last_error());
+
+while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
+    echo "    <gml:featureMember>\n";
+    echo "        <imkl:Rioolleiding gml:id=\"IDms_kabelofleiding" . $line["gid"] . "\">\n";
+    echo "            <net:beginLifespanVersion>2001-12-17T09:30:47.0Z</net:beginLifespanVersion>\n";
+    echo "            <net:inspireId>\n";
+    echo "                <base:Identifier>\n";
+    echo "                <base:localId>" . $line["gid"] . "</base:localId>\n";
+    echo "                <base:namespace>gascom-be</base:namespace>\n";
+    echo "            </base:Identifier>\n";
+    echo "            </net:inspireId>\n";
+    echo "            <net:inNetwork xlink:href=\"" . $line["thema"] . "\"/>\n";
+    echo "            <net:link xlink:href=\"" . $line["linkid"] . "\"/>\n";
+    echo "            <us-net-common:currentStatus xlink:href=\"" . $line["status"] ."\"/>\n";
+    echo "            <us-net-common:validFrom>2001-12-17T09:30:47.0Z</us-net-common:validFrom>\n";
+    echo "            <us-net-common:validTo>2001-12-17T09:30:47.0Z</us-net-common:validTo>\n";
+    echo "            <us-net-common:verticalPosition>underground</us-net-common:verticalPosition>\n";
+    echo "            <us-net-common:warningType xlink:href=\"http://inspire.ec.europa.eu/codelist/WarningTypeExtendedValue/net\"/>\n";
+    echo "            <us-net-common:pipeDiameter uom=\"urn:ogc:def:uom:OGC::cm\">" . $line["pipediam"] . "</us-net-common:pipeDiameter>\n";
+    echo "            <us-net-common:pressure uom=\"urn:ogc:def:uom:OGC::bar\">" . $line["pressure"] . "</us-net-common:pressure>\n";
+    echo "            <us-net-ogc:sewerWaterType xlink:href=\"" .  $line["swatertype"] . "\" />\n";
+    echo "        </imkl:Rioolleiding>\n";
+    echo "    </gml:featureMember>\n\n";
+}
+pg_free_result($result);
+
+#
+# Process AaanduidingEisVoorzorgsmaatregel
+#
+$query = 'select gid,id,thema,netbeheer,eisvoorzm,geofict,geom from aanduidingeisvoorzorgsmaatregel;';
+
+$result = pg_query($query) or die('Query failed: ' . pg_last_error());
+
+while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
+    echo "    <gml:featureMember>\n";
+    echo "        <imkl:AanduidingEisVoorzorgsmaatregel gml:id=\"IDms_kabelofleiding" . $line["gid"] . "\">\n";
+    echo "            <net:beginLifespanVersion>2001-12-17T09:30:47.0Z</net:beginLifespanVersion>\n";
+    echo "            <net:inspireId>\n";
+    echo "                <base:Identifier>\n";
+    echo "                <base:localId>" . $line["gid"] . "</base:localId>\n";
+    echo "                <base:namespace>gascom-be</base:namespace>\n";
+    echo "            </base:Identifier>\n";
+    echo "            </net:inspireId>\n";
+    echo "            <net:inNetwork xlink:href=\"" . $line["thema"] . "\"/>\n";
+    echo "        <imkl:eisVoorzorgsmaatregel>" . $line["eisvoorzm"] . "</imkl:eisVoorzorgsmaatregel>\n";
+    echo "        </imkl:AanduidingEisVoorzorgsmaatregel>\n";
+    echo "    </gml:featureMember>\n\n";
+}
+pg_free_result($result);
+
+#
+# Process diepte
+#
+$query = 'select gid,id,thema,netbeheer,dtovmveld,dtovnap,nauwk from diepte;';
+
+$result = pg_query($query) or die('Query failed: ' . pg_last_error());
+
+while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
+    echo "    <gml:featureMember>\n";
+    echo "        <imkl:DiepteTovMaaiveld gml:id=\"IDms_kabelofleiding" . $line["gid"] . "\">\n";
+    echo "            <net:beginLifespanVersion>2001-12-17T09:30:47.0Z</net:beginLifespanVersion>\n";
+    echo "            <imkl:Dieptepeil uom=\"urn:ogc:def:uom:OGC::bar\">" . $line["dtovmveld"] . "</imkl:Dieptepeil>\n";
+    echo "            <net:inNetwork xlink:href=\"" . $line["thema"] . "\"/>\n";
+    echo "        </imkl:DiepteTovMaaiveld>\n";
+    echo "    </gml:featureMember>\n\n";
+}
+pg_free_result($result);
+
+
+#
+# Extra Geometrie
+#
+$query = 'select gid,id,thema,netbeheer,type,geom from extrageometrie;';
+
+$result = pg_query($query) or die('Query failed: ' . pg_last_error());
+
+while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
+    echo "    <gml:featureMember>\n";
+    echo "        <imkl:ExtraGeometrie gml:id=\"IDms_kabelofleiding" . $line["gid"] . "\">\n";
+    echo "            <net:beginLifespanVersion>2001-12-17T09:30:47.0Z</net:beginLifespanVersion>\n";
+    echo "            <net:inNetwork xlink:href=\"" . $line["thema"] . "\"/>\n";
+    echo "            <net:geometry>" . $line["geom"] . "</net:geometry>\n";
+    echo "        </imkl:ExtraGeometrie>\n";
+    echo "    </gml:featureMember>\n\n";
+}
+pg_free_result($result);
+
+#
+# Extra Topografie
+#
+$query = 'select gid,id,thema,netbeheer,type,typeobject,geom from extratopo;';
+
+$result = pg_query($query) or die('Query failed: ' . pg_last_error());
+
+while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
+    echo "    <gml:featureMember>\n";
+    echo "        <imkl:ExtraTopografie gml:id=\"IDms_kabelofleiding" . $line["gid"] . "\">\n";
+    echo "            <net:beginLifespanVersion>2001-12-17T09:30:47.0Z</net:beginLifespanVersion>\n";
+    echo "            <net:inNetwork xlink:href=\"" . $line["thema"] . "\"/>\n";
+    echo "            <net:geometry>" . $line["geom"] . "</net:geometry>\n";
+    echo "        </imkl:ExtraTopografie>\n";
+    echo "    </gml:featureMember>\n\n";
+}
+pg_free_result($result);
+
+#
+# Annotatie punt
+#
+$query = 'select gid,id,thema,netbeheer,geom from annotatie;';
+
+$result = pg_query($query) or die('Query failed: ' . pg_last_error());
+
+while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
+    echo "    <gml:featureMember>\n";
+    echo "        <imkl:Annotatie gml:id=\"IDms_kabelofleiding" . $line["gid"] . "\">\n";
+    echo "            <net:beginLifespanVersion>2001-12-17T09:30:47.0Z</net:beginLifespanVersion>\n";
+    echo "            <net:inNetwork xlink:href=\"" . $line["thema"] . "\"/>\n";
+    echo "            <imkl:ligging>" . $line["geom"] . "</imkl:ligging>\n";
+    echo "        </imkl:Annotatie>\n";
+    echo "    </gml:featureMember>\n\n";
+}
+pg_free_result($result);
+
+
+#
+# Annotatie lijn
+#
+$query = 'select gid,id,thema,netbeheer,geom from annotatie_lijn;';
+
+$result = pg_query($query) or die('Query failed: ' . pg_last_error());
+
+while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
+    echo "    <gml:featureMember>\n";
+    echo "        <imkl:Annotatie gml:id=\"IDms_kabelofleiding" . $line["gid"] . "\">\n";
+    echo "            <net:beginLifespanVersion>2001-12-17T09:30:47.0Z</net:beginLifespanVersion>\n";
+    echo "            <net:inNetwork xlink:href=\"" . $line["thema"] . "\"/>\n";
+    echo "            <imkl:ligging>" . $line["geom"] . "</imkl:ligging>\n";
+    echo "        </imkl:Annotatie>\n";
+    echo "    </gml:featureMember>\n\n";
+}
+pg_free_result($result);
+
+
+#
+# Maatvoering
+#
+$query = 'select gid,id,thema,netbeheer,type,geom from maatvoering;';
+
+$result = pg_query($query) or die('Query failed: ' . pg_last_error());
+
+while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
+    echo "    <gml:featureMember>\n";
+    echo "        <imkl:Maatvoering gml:id=\"IDms_kabelofleiding" . $line["gid"] . "\">\n";
+    echo "            <net:beginLifespanVersion>2001-12-17T09:30:47.0Z</net:beginLifespanVersion>\n";
+    echo "            <net:inNetwork xlink:href=\"" . $line["thema"] . "\"/>\n";
+    echo "            <imkl:geom>" . $line["geom"] . "</imkl:geom>\n";
+    echo "        </imkl:Maatvoering>\n";
+    echo "    </gml:featureMember>\n\n";
+}
+pg_free_result($result);
+
+#
+# Maatvoering_pijl
+#
+$query = 'select gid,id,thema,netbeheer,type,geom from maatvoering_pijl;';
+
+$result = pg_query($query) or die('Query failed: ' . pg_last_error());
+
+while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
+    echo "    <gml:featureMember>\n";
+    echo "        <imkl:Maatvoering gml:id=\"IDms_kabelofleiding" . $line["gid"] . "\">\n";
+    echo "            <net:beginLifespanVersion>2001-12-17T09:30:47.0Z</net:beginLifespanVersion>\n";
+    echo "            <net:inNetwork xlink:href=\"" . $line["thema"] . "\"/>\n";
+    echo "            <imkl:geom>" . $line["geom"] . "</imkl:geom>\n";
+    echo "        </imkl:Maatvoering>\n";
+    echo "    </gml:featureMember>\n\n";
+}
+pg_free_result($result);
+
+#
+# Maatvoering_label
+#
+$query = 'select gid,id,thema,netbeheer,geom from maatvoering_label;';
+
+$result = pg_query($query) or die('Query failed: ' . pg_last_error());
+
+while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
+    echo "    <gml:featureMember>\n";
+    echo "        <imkl:Maatvoering gml:id=\"IDms_kabelofleiding" . $line["gid"] . "\">\n";
+    echo "            <net:beginLifespanVersion>2001-12-17T09:30:47.0Z</net:beginLifespanVersion>\n";
+    echo "            <net:inNetwork xlink:href=\"" . $line["thema"] . "\"/>\n";
+    echo "            <imkl:geom>" . $line["geom"] . "</imkl:geom>\n";
+    echo "        </imkl:Maatvoering>\n";
+    echo "    </gml:featureMember>\n\n";
+}
+pg_free_result($result);
 
 // Closing connection
 pg_close($dbconn);

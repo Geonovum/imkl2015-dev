@@ -154,52 +154,50 @@ drop table if exists kabelb;
 create table kabelb
 as
     select 
-	 gid        , 
-	 id         , 
-	 thema      , 
-	 type       , 
-	 netbeheer  , 
-	 status     , 
-	 vertpositi , 
-	 disttype   , 
-	 warningt   , 
-	 ductwidth  , 
-	 bzichtbaar , 
-	 toelichtin , 
-	 aantalk    , 
-	 dieptetovm , 
-	 dieptenap  , 
-	 xinfo      , 
+	 gid, 
+	 id, 
+	 thema, 
+	 type, 
+	 netbeheer, 
+	 status, 
+	 vertpositi, 
+	 disttype, 
+	 warningt, 
+	 ductwidth, 
+	 bzichtbaar, 
+	 toelichtin, 
+	 aantalk, 
+	 dieptetovm, 
+	 dieptenap, 
+	 xinfo, 
 	 geom
     from kabelbed
 union all
     select 
-	 gid        , 
-	 id         , 
-	 thema      , 
-	 type       , 
-	 netbeheer  , 
-	 status     , 
-	 vertpositi , 
-	 disttype   , 
-	 warningt   , 
-	 ductwidth  , 
-	 bzichtbaar , 
-	 toelichtin , 
-	 aantalk    , 
-	 dieptetovm , 
-	 dieptenap  , 
-	 xinfo      , 
+	 gid, 
+	 id, 
+	 thema, 
+	 type, 
+	 netbeheer, 
+	 status, 
+	 vertpositi, 
+	 disttype, 
+	 warningt, 
+	 ductwidth, 
+	 bzichtbaar, 
+	 toelichtin, 
+	 aantalk, 
+	 dieptetovm, 
+	 dieptenap, 
+	 xinfo, 
 	 geom 
     from dt_kabelbed;
+update kabelb set ductwidth = '0.0' where ductwidth is null ;
 
 
 alter table kabelb drop column if exists linkid;
 alter table kabelb add column linkid text;
 update kabelb set linkid = 'kabelbed-' || gid ;
-
-
-
 
 
 
