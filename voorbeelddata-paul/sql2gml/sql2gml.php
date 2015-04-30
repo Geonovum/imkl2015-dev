@@ -1,9 +1,11 @@
 #!/usr/bin/php
 <?xml version="1.0"?>
 <gml:FeatureCollection
+    xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/3.0" 
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:imkl="http://www.geonovum.nl/wion/2015/1.0"
+    xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/3.0"
     xmlns:net="urn:x-inspire:specification:gmlas:Network:3.2"
     xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/3.0"
     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -15,6 +17,26 @@
 
 <?php
 date_default_timezone_set("Europe/Amsterdam");
+
+function printattribute($tag,$value)
+{
+    echo "            <" . $tag . ">" . $value . "</" . $tag . ">\n";
+}
+
+function printtagattribute($tag,$attribute,$value)
+{
+    if ($value == "")
+    {
+        echo "            <" . $tag . " " . $attribute . " xsi:nil=\"true\">" . $value . "</" . $tag . ">\n";
+    }
+    else
+    {
+        echo "            <" . $tag . " " . $attribute . ">" . $value . "</" . $tag . ">\n";
+    }
+}
+
+
+
 echo "<!-- File created by Wilko Quak via the sql2gml.php script on " .  date('Y-m-d') . " -->\n";
 
 //
@@ -38,7 +60,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "                <imkl:namespace>IMKL2005</imkl:namespace><imkl:lokaalID>" . $line["gmlid"] .  "</imkl:lokaalID>\n";
     echo "            </imkl:NEN3610ID>\n";
     echo "        </imkl:identificatie>\n";
-    echo "        <imkl:beginLifespanVersion>2001-12-17T09:30:47.0Z</imkl:beginLifespanVersion>\n";
+    printattribute("imkl:beginLifespanVersion","2001-12-17T09:30:47.0Z");
     echo "        <imkl:technischContactpersoon>\n";
     echo "            <imkl:TechnischContactpersoon>\n";
     echo "                <imkl:naam>" . $line["tcontpers"] . "</imkl:naam>\n";
@@ -46,8 +68,8 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "                <imkl:email>" . $line["email"] . "</imkl:email>\n";
     echo "            </imkl:TechnischContactpersoon>\n";
     echo "        </imkl:technischContactpersoon>\n";
-    echo "        <imkl:eisVoorzorgsmaatregelHoogstePrioriteit>" .  $line["eisvoorhp"] . "</imkl:eisVoorzorgsmaatregelHoogstePrioriteit>\n";
-    echo "        <imkl:thema xlink:href=\"" . $line["thema"] . "\"/>\n";
+    printattribute("imkl:eisVoorzorgsmaatregelHoogstePrioriteit",$line["eisvoorhp"]);
+    echo "        <imkl:thema xlink:href=\"http://www.geonovum.nl/imkl/2015/1.0/def/Thema/" . $line["thema"] . "\"/>\n";
     echo "        </imkl:Utiliteitsnet>\n";
     echo "    </gml:featureMember>\n\n";
 }
@@ -56,7 +78,7 @@ pg_free_result($result);
 //
 // Process leidingelement
 //
-$query = 'select gmlid,unetid,netbeheer,type,status,vertpositi,bzichtbaar,dieptetovm,dieptenap,xinfo,hoogte,detailsch,ST_AsGML(3,geom,5,0,null,gmlid || \'x\') as geom from leidingelement ;';
+$query = 'select gmlid,unetid,netbeheer,type,status,vertpositi,bzichtbaar,dieptetovm,dieptenap,xinfo,hoogte,detailsch,ST_AsGML(3,geom,5,0,null) as geom from leidingelement ;';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
@@ -68,9 +90,9 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "            <net:inNetwork xlink:href=\"" . $line["unetid"] . "\"/>\n";
     echo "            <net:geometry>" . $line["geom"] . "</net:geometry>\n";
     echo "            <us-net-common:currentStatus xlink:href=\"" . $line["status"] ."\"/>\n";
-    echo "            <us-net-common:validFrom>2001-12-17T09:30:47.0Z</us-net-common:validFrom>\n";
-    echo "            <us-net-common:validTo>2001-12-17T09:30:47.0Z</us-net-common:validTo>\n";
-    echo "            <us-net-common:verticalPosition>underground</us-net-common:verticalPosition>\n";
+    printattribute("us-net-common:validFrom","2001-12-17T09:30:47.0Z");
+    printattribute("us-net-common:validTo","2001-12-17T09:30:47.0Z");
+    printattribute("us-net-common:verticalPosition","underground");
     echo "            <us-net-common:appurtenanceType xlink:href=\"\"/>\n";
     echo "        </imkl:Appurtenance>\n";
     echo "    </gml:featureMember>\n\n";
@@ -164,7 +186,7 @@ pg_free_result($result);
 //
 // Process utilitylink
 //
-$query = 'select gmlid,status,unetid,ST_AsGML(3,geom,5,0,null,\'geoid-\' || gmlid) as geom from utilitylink;';
+$query = 'select gmlid,status,unetid,ST_AsGML(3,geom,5,0,null) as geom from utilitylink;';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
@@ -212,7 +234,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "            <us-net-common:warningType xlink:href=\"http://inspire.ec.europa.eu/codelist/WarningTypeExtendedValue/net\"/>\n";
     echo "            <us-net-common:pipeDiameter uom=\"urn:ogc:def:uom:OGC::cm\">" . $line["pipediam"] . "</us-net-common:pipeDiameter>\n";
     echo "            <us-net-common:pressure uom=\"urn:ogc:def:uom:OGC::bar\">" . $line["pressure"] . "</us-net-common:pressure>\n";
-    echo "            <us-net-ogc:waterType xlink:href=\"" .  $line["producttyp"] . "\" />\n";
+    echo "            <us-net-wa:waterType xlink:href=\"" .  $line["producttyp"] . "\" />\n";
     echo "        </imkl:Waterleiding>\n";
     echo "    </gml:featureMember>\n\n";
 }
@@ -244,8 +266,8 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "            <us-net-common:verticalPosition>underground</us-net-common:verticalPosition>\n";
     echo "            <us-net-common:warningType xlink:href=\"http://inspire.ec.europa.eu/codelist/WarningTypeExtendedValue/net\"/>\n";
     echo "            <us-net-common:pipeDiameter uom=\"urn:ogc:def:uom:OGC::cm\">" . $line["pipediam"] . "</us-net-common:pipeDiameter>\n";
-    echo "            <us-net-common:pressure uom=\"urn:ogc:def:uom:OGC::bar\">" . $line["pressure"] . "</us-net-common:pressure>\n";
-    echo "            <us-net-ogc:sewerWaterType xlink:href=\"" .  $line["swatertype"] . "\" />\n";
+    printtagattribute("us-net-common:pressure","uom=\"urn:ogc:def:uom:OGC::bar\"",$line["pressure"]);
+    echo "            <us-net-sw:sewerWaterType xlink:href=\"" .  $line["swatertype"] . "\" />\n";
     echo "        </imkl:Rioolleiding>\n";
     echo "    </gml:featureMember>\n\n";
 }
@@ -261,14 +283,12 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
     echo "        <imkl:AanduidingEisVoorzorgsmaatregel gml:id=\"" . $line["gmlid"] . "\">\n";
-    echo "            <net:beginLifespanVersion>2001-12-17T09:30:47.0Z</net:beginLifespanVersion>\n";
-    echo "            <net:inspireId>\n";
-    echo "                <base:Identifier>\n";
-    echo "                <base:localId>" . $line["gmlid"] . "</base:localId>\n";
-    echo "                <base:namespace>gascom-be</base:namespace>\n";
-    echo "            </base:Identifier>\n";
-    echo "            </net:inspireId>\n";
-    echo "            <net:inNetwork xlink:href=\"" . $line["unetid"] . "\"/>\n";
+    echo "        <imkl:identificatie>\n";
+    echo "            <imkl:NEN3610ID>\n";
+    echo "                <imkl:namespace>IMKL2005</imkl:namespace><imkl:lokaalID>" . $line["gmlid"] .  "</imkl:lokaalID>\n";
+    echo "            </imkl:NEN3610ID>\n";
+    echo "        </imkl:identificatie>\n";
+    echo "            <imkl:beginLifespanVersion>2001-12-17T09:30:47.0Z</imkl:beginLifespanVersion>\n";
     echo "        <imkl:eisVoorzorgsmaatregel>" . $line["eisvoorzm"] . "</imkl:eisVoorzorgsmaatregel>\n";
     echo "        </imkl:AanduidingEisVoorzorgsmaatregel>\n";
     echo "    </gml:featureMember>\n\n";
@@ -285,9 +305,15 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
     echo "        <imkl:DiepteTovMaaiveld gml:id=\"" .  $line["gmlid"] . "\">\n";
-    echo "            <net:beginLifespanVersion>2001-12-17T09:30:47.0Z</net:beginLifespanVersion>\n";
-    echo "            <imkl:Dieptepeil uom=\"urn:ogc:def:uom:OGC::bar\">" . $line["dtovmveld"] . "</imkl:Dieptepeil>\n";
-    echo "            <net:inNetwork xlink:href=\"" . $line["unetid"] . "\"/>\n";
+    echo "        <imkl:identificatie>\n";
+    echo "            <imkl:NEN3610ID>\n";
+    echo "                <imkl:namespace>IMKL2005</imkl:namespace><imkl:lokaalID>" . $line["gmlid"] .  "</imkl:lokaalID>\n";
+    echo "            </imkl:NEN3610ID>\n";
+    echo "        </imkl:identificatie>\n";
+    echo "            <imkl:beginLifespanVersion>2001-12-17T09:30:47.0Z</imkl:beginLifespanVersion>\n";
+    echo "            <imkl:diepteNauwkeurigheid xlink:href=\"TODO\"/>\n";
+    echo "            <imkl:dieptePeil uom=\"urn:ogc:def:uom:OGC::bar\">" .  $line["dtovmveld"] . "</imkl:dieptePeil>\n";
+    echo "            <imkl:inNetwork xlink:href=\"" . $line["unetid"] . "\"/>\n";
     echo "        </imkl:DiepteTovMaaiveld>\n";
     echo "    </gml:featureMember>\n\n";
 }
@@ -297,16 +323,20 @@ pg_free_result($result);
 #
 # Extra Geometrie
 #
-$query = 'select gmlid,unetid,netbeheer,type,ST_AsGML(3,geom,5,0,null,\'geoid-\' || gmlid) as geom from extrageometrie;';
+$query = 'select gmlid,unetid,netbeheer,type,ST_AsGML(3,geom,5,0,null) as geom from extrageometrie;';
 
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
     echo "        <imkl:ExtraGeometrie gml:id=\"" .  $line["gmlid"] . "\">\n";
-    echo "            <net:beginLifespanVersion>2001-12-17T09:30:47.0Z</net:beginLifespanVersion>\n";
-    echo "            <net:inNetwork xlink:href=\"" . $line["unetid"] . "\"/>\n";
-    echo "            <net:geometry>" . $line["geom"] . "</net:geometry>\n";
+    echo "        <imkl:identificatie>\n";
+    echo "            <imkl:NEN3610ID>\n";
+    echo "                <imkl:namespace>IMKL2005</imkl:namespace><imkl:lokaalID>" . $line["gmlid"] .  "</imkl:lokaalID>\n";
+    echo "            </imkl:NEN3610ID>\n";
+    echo "        </imkl:identificatie>\n";
+    echo "        <imkl:beginLifespanVersion>2001-12-17T09:30:47.0Z</imkl:beginLifespanVersion>\n";
+    echo "        <imkl:vlakgeometrie2.5D>" . $line["geom"] .  "</imkl:vlakgeometrie2.5D>\n";
     echo "        </imkl:ExtraGeometrie>\n";
     echo "    </gml:featureMember>\n\n";
 }
@@ -316,17 +346,23 @@ pg_free_result($result);
 # Extra Topografie
 #
 $query = 'select
-gmlid,unetid,netbeheer,type,typeobject,ST_AsGML(3,geom,5,0,null,\'geoid-\' ||
-gmlid) as geom from extratopo;';
+gmlid,unetid,netbeheer,type,typeobject,ST_AsGML(3,geom,5,0,null) as geom from extratopo;';
 
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
     echo "        <imkl:ExtraTopografie gml:id=\"" . $line["gmlid"] . "\">\n";
-    echo "            <net:beginLifespanVersion>2001-12-17T09:30:47.0Z</net:beginLifespanVersion>\n";
-    echo "            <net:inNetwork xlink:href=\"" . $line["unetid"] . "\"/>\n";
-    echo "            <net:geometry>" . $line["geom"] . "</net:geometry>\n";
+    echo "        <imkl:identificatie>\n";
+    echo "            <imkl:NEN3610ID>\n";
+    echo "                <imkl:namespace>IMKL2005</imkl:namespace><imkl:lokaalID>" . $line["gmlid"] .  "</imkl:lokaalID>\n";
+    echo "            </imkl:NEN3610ID>\n";
+    echo "        </imkl:identificatie>\n";
+    echo "        <imkl:beginLifespanVersion>2001-12-17T09:30:47.0Z</imkl:beginLifespanVersion>\n";
+    echo "        <imkl:extraTopografieType xlink:href=\"http://www.geonovum.nl/imkl/2015/1.0/def/Thema/" . $line["type"] . "\"/>\n";
+    echo "        <imkl:typeTopografischObject xlink:href=\"http://www.geonovum.nl/imkl/2015/1.0/def/Thema/" .  $line["typeobject"] . "\"/>\n";
+    echo "        <imkl:ligging>" . $line["geom"] . "</imkl:ligging>\n";
+    echo "        <imkl:inNetwork xlink:href=\"" . $line["unetid"] . "\"/>\n";
     echo "        </imkl:ExtraTopografie>\n";
     echo "    </gml:featureMember>\n\n";
 }
@@ -335,56 +371,68 @@ pg_free_result($result);
 #
 # Annotatie punt
 #
-$query = 'select gmlid,unetid,netbeheer,ST_AsGML(3,geom,5,0,null,\'geoid-\' ||
-gmlid) as geom from annotatie;';
+
+$query = 'select gmlid,unetid,netbeheer,label,beschrijvi,ST_AsGML(3,geom,5,0,null) as geom from annotatie;';
 
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
     echo "        <imkl:Annotatie gml:id=\"" . $line["gmlid"] . "\">\n";
-    echo "            <net:beginLifespanVersion>2001-12-17T09:30:47.0Z</net:beginLifespanVersion>\n";
-    echo "            <net:inNetwork xlink:href=\"" . $line["unetid"] . "\"/>\n";
-    echo "            <imkl:ligging>" . $line["geom"] . "</imkl:ligging>\n";
+    echo "        <imkl:identificatie>\n";
+    echo "            <imkl:NEN3610ID>\n";
+    echo "                <imkl:namespace>IMKL2005</imkl:namespace><imkl:lokaalID>" . $line["gmlid"] .  "</imkl:lokaalID>\n";
+    echo "            </imkl:NEN3610ID>\n";
+    echo "        </imkl:identificatie>\n";
+    echo "        <imkl:beginLifespanVersion>2001-12-17T09:30:47.0Z</imkl:beginLifespanVersion>\n";
+    echo "        <imkl:annotatieType>" . $line["beschrijvi"] . "</imkl:annotatieType>\n";
+    echo "        <imkl:ligging>" . $line["geom"] . "</imkl:ligging>\n";
     echo "        </imkl:Annotatie>\n";
     echo "    </gml:featureMember>\n\n";
 }
 pg_free_result($result);
-
 
 #
 # Annotatie lijn
 #
-$query = 'select gmlid,unetid,netbeheer,ST_AsGML(3,geom,5,0,null,\'geoid-\' ||
-gmlid) as geom from annotatie_lijn;';
+$query = 'select gmlid,unetid,thema,type,netbeheer,ST_AsGML(3,geom,5,0,null) as geom from annotatie_lijn;';
 
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
     echo "        <imkl:Annotatie gml:id=\"" . $line["gmlid"] . "\">\n";
-    echo "            <net:beginLifespanVersion>2001-12-17T09:30:47.0Z</net:beginLifespanVersion>\n";
-    echo "            <net:inNetwork xlink:href=\"" . $line["unetid"] . "\"/>\n";
-    echo "            <imkl:ligging>" . $line["geom"] . "</imkl:ligging>\n";
+    echo "        <imkl:identificatie>\n";
+    echo "            <imkl:NEN3610ID>\n";
+    echo "                <imkl:namespace>IMKL2005</imkl:namespace><imkl:lokaalID>" . $line["gmlid"] .  "</imkl:lokaalID>\n";
+    echo "            </imkl:NEN3610ID>\n";
+    echo "        </imkl:identificatie>\n";
+    echo "        <imkl:beginLifespanVersion>2001-12-17T09:30:47.0Z</imkl:beginLifespanVersion>\n";
+    echo "        <imkl:annotatieType xlink:href=\"" . $line["type"] . "\"/>\n";
+    echo "        <imkl:ligging>" . $line["geom"] . "</imkl:ligging>\n";
     echo "        </imkl:Annotatie>\n";
     echo "    </gml:featureMember>\n\n";
 }
 pg_free_result($result);
 
-
 #
 # Maatvoering
 #
-$query = 'select gmlid,unetid,netbeheer,type,ST_AsGML(3,geom,5,0,null,\'geoid-\' || gmlid) as geom from maatvoering;';
+$query = 'select gmlid,unetid,netbeheer,type,ST_AsGML(3,geom,5,0,null) as geom from maatvoering;';
 
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
     echo "        <imkl:Maatvoering gml:id=\"" . $line["gmlid"] . "\">\n";
-    echo "            <net:beginLifespanVersion>2001-12-17T09:30:47.0Z</net:beginLifespanVersion>\n";
-    echo "            <net:inNetwork xlink:href=\"" . $line["unetid"] . "\"/>\n";
-    echo "            <imkl:geom>" . $line["geom"] . "</imkl:geom>\n";
+    echo "        <imkl:identificatie>\n";
+    echo "            <imkl:NEN3610ID>\n";
+    echo "                <imkl:namespace>IMKL2005</imkl:namespace><imkl:lokaalID>" . $line["gmlid"] .  "</imkl:lokaalID>\n";
+    echo "            </imkl:NEN3610ID>\n";
+    echo "        </imkl:identificatie>\n";
+    echo "        <imkl:beginLifespanVersion>2001-12-17T09:30:47.0Z</imkl:beginLifespanVersion>\n";
+    echo "        <imkl:maatvoeringsType xlink:href=\"" . $line["type"] . "\"/>\n";
+    echo "        <imkl:ligging>" . $line["geom"] . "</imkl:ligging>\n";
     echo "        </imkl:Maatvoering>\n";
     echo "    </gml:featureMember>\n\n";
 }
@@ -393,16 +441,20 @@ pg_free_result($result);
 #
 # Maatvoering_pijl
 #
-$query = 'select gmlid,unetid,netbeheer,type,ST_AsGML(3,geom,5,0,null,\'geoid-\' || gmlid) as geom from maatvoering_pijl;';
-
+$query = 'select gmlid,unetid,netbeheer,type,ST_AsGML(3,geom,5,0,null) as geom from maatvoering_pijl;';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
     echo "        <imkl:Maatvoering gml:id=\"" . $line["gmlid"] . "\">\n";
-    echo "            <net:beginLifespanVersion>2001-12-17T09:30:47.0Z</net:beginLifespanVersion>\n";
-    echo "            <net:inNetwork xlink:href=\"" . $line["unetid"] . "\"/>\n";
-    echo "            <imkl:geom>" . $line["geom"] . "</imkl:geom>\n";
+    echo "        <imkl:identificatie>\n";
+    echo "            <imkl:NEN3610ID>\n";
+    echo "                <imkl:namespace>IMKL2005</imkl:namespace><imkl:lokaalID>" . $line["gmlid"] .  "</imkl:lokaalID>\n";
+    echo "            </imkl:NEN3610ID>\n";
+    echo "        </imkl:identificatie>\n";
+    echo "        <imkl:beginLifespanVersion>2001-12-17T09:30:47.0Z</imkl:beginLifespanVersion>\n";
+    echo "        <imkl:maatvoeringsType xlink:href=\"" . $line["type"] . "\"/>\n";
+    echo "        <imkl:ligging>" . $line["geom"] . "</imkl:ligging>\n";
     echo "        </imkl:Maatvoering>\n";
     echo "    </gml:featureMember>\n\n";
 }
@@ -411,17 +463,20 @@ pg_free_result($result);
 #
 # Maatvoering_label
 #
-$query = 'select gmlid,unetid,netbeheer,ST_AsGML(3,geom,5,0,null,\'geoid-\' ||
-gmlid) as geom from maatvoering_label;';
-
+$query = 'select gmlid,unetid,netbeheer,toelichtin,label,ST_AsGML(3,geom,5,0,null) as geom from maatvoering_label;';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
     echo "        <imkl:Maatvoering gml:id=\"" . $line["gmlid"] . "\">\n";
-    echo "            <net:beginLifespanVersion>2001-12-17T09:30:47.0Z</net:beginLifespanVersion>\n";
-    echo "            <net:inNetwork xlink:href=\"" . $line["unetid"] . "\"/>\n";
-    echo "            <imkl:geom>" . $line["geom"] . "</imkl:geom>\n";
+    echo "        <imkl:identificatie>\n";
+    echo "            <imkl:NEN3610ID>\n";
+    echo "                <imkl:namespace>IMKL2005</imkl:namespace><imkl:lokaalID>" . $line["gmlid"] .  "</imkl:lokaalID>\n";
+    echo "            </imkl:NEN3610ID>\n";
+    echo "        </imkl:identificatie>\n";
+    echo "        <imkl:beginLifespanVersion>2001-12-17T09:30:47.0Z</imkl:beginLifespanVersion>\n";
+    echo "        <imkl:maatvoeringsType xlink:href=\"" . $line["toelichtin"] . "\"/>\n";
+    echo "        <imkl:ligging>" . $line["geom"] . "</imkl:ligging>\n";
     echo "        </imkl:Maatvoering>\n";
     echo "    </gml:featureMember>\n\n";
 }

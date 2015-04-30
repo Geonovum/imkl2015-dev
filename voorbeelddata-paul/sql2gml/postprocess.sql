@@ -396,14 +396,17 @@ alter table kabelb add column ulinkid text;
 update kabelb set ulinkid = 'ulinkid-' || gmlid;
 
 
-
 update kabelb set ductwidth = '0.0' where ductwidth is null ;
-
-update elektriciteitskabel set nomvolt = 0.0 where nomvolt is null;
-update elektriciteitskabel set opvolt = 0.0 where opvolt is null;
+update rioolvv_kabelofleiding set pipediam = '0.0' where pipediam is null ;
+update oliegaschemicalien set pipediam = '0.0' where pipediam is null ;
+update water_kabelofleiding  set pipediam = '0.0' where pipediam is null ;
+update elektriciteitskabel set nomvolt = '0.0' where nomvolt is null;
+update elektriciteitskabel set opvolt = '0.0' where opvolt is null;
 
 update oliegaschemicalien set pipediam = '0.0' where pipediam is null ;
 update oliegaschemicalien set pressure = '0.0' where pressure is null ;
 
 update water_kabelofleiding set pressure = '0.0' where pressure is null ;
 update water_kabelofleiding set pipediam = '0.0' where pressure is null ;
+
+update diepte set nauwk = '0.0' where nauwk is null ;
