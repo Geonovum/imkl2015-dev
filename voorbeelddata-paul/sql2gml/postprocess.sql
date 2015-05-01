@@ -325,31 +325,46 @@ alter table elektriciteitskabel add column unetid text;
 alter table oliegaschemicalien add column unetid text;
 alter table kabelb add column unetid text;
 
-update vijfmeteraanduiding l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema);
-update aanduidingEisVoorzorgsmaatregel l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema);
-update Annotatie_lijn l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema);
-update Annotatie l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema);
-update BGevaarlijkeInhoud l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema);
-update Containerelement l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema);
-update Diepte l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema);
-update DT_KabelOfLeiding l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema);
-update ExtraDetailInfo l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema);
-update ExtraGeometrie l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema);
-update ExtraTopo l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema);
-update kabelbedAlgemeen l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema);
-update KabelEnLeidingContainer l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema);
-update Kunstwerk_Containerelement l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema);
-update Leidingelement l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema);
-update LS_Kabelbed l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema);
-update maatvoering_label l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema);
-update maatvoering_pijl l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema);
-update maatvoering l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema);
-update MS_Kabelbed l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema);
-update RioolVV_KabelOfLeiding l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema);
-update Water_KabelOfLeiding l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema);
-update elektriciteitskabel l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema);
-update oliegaschemicalien l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema);
-update kabelb l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema);
+update vijfmeteraanduiding l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update aanduidingEisVoorzorgsmaatregel l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update Annotatie_lijn l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update Annotatie l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update BGevaarlijkeInhoud l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update Containerelement l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update Diepte l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update DT_KabelOfLeiding l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update ExtraDetailInfo l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update ExtraGeometrie l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update ExtraTopo l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update kabelbedAlgemeen l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update KabelEnLeidingContainer l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update Kunstwerk_Containerelement l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update Leidingelement l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update LS_Kabelbed l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update maatvoering_label l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update maatvoering_pijl l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update maatvoering l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update MS_Kabelbed l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update RioolVV_KabelOfLeiding l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update Water_KabelOfLeiding l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update elektriciteitskabel l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update oliegaschemicalien l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update kabelb l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+
+--
+--
+--
+drop table if exists relatedparty;
+create table relatedparty
+as
+    select 'party-' || gmlid as partyid,authority,authrole
+    from utiliteitsnet
+    ;
+
+alter table utiliteitsnet drop column if exists partyid;
+alter table utiliteitsnet add column partyid text;
+update utiliteitsnet
+set partyid = 'party-' || gmlid;
 
 --
 -- The following tables need to be forked. They are two objects in the targed

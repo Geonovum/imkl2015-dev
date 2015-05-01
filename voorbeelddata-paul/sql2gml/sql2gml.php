@@ -10,6 +10,7 @@
     xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/3.0"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:base="urn:x-inspire:specification:gmlas:BaseTypes:3.2"
+    xmlns:base2="http://inspire.ec.europa.eu/schemas/base2/1.0"
     xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/3.0"
     xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/3.0"
     gml:id="ID_1c0c5554-5c4a-467a-a9ef-9f36b5af2bfq"
@@ -47,14 +48,14 @@ $dbconn = pg_connect("");
 //
 // Process utiliteitsnet.
 //
-$query = 'select gmlid,thema,eisvoorhp,tcontpers,telefoon,email,authority,authrole,unetworkty from utiliteitsnet ;';
+$query = 'select partyid,gmlid,thema,eisvoorhp,tcontpers,telefoon,email,authority,authrole,unetworkty from utiliteitsnet ;';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
     echo "        <imkl:Utiliteitsnet gml:id=\"" . $line["gmlid"] . "\">\n";
     echo "        <us-net-common:utilityNetworkType xlink:href=\"http://inspire.ec.europa.eu/codelist/UtilityNetworkTypeValue/" . $line["unetworkty"] . "\"/>\n";
-    echo "        <us-net-common:authorityRole xlink:href=\"" .  $line["authrole"] ."\"/>\n";
+    echo "        <us-net-common:authorityRole xlink:href=\"" .  $line["partyid"] ."\"/>\n";
     echo "        <imkl:identificatie>\n";
     echo "            <imkl:NEN3610ID>\n";
     echo "                <imkl:namespace>IMKL2005</imkl:namespace><imkl:lokaalID>" . $line["gmlid"] .  "</imkl:lokaalID>\n";
@@ -93,7 +94,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printattribute("us-net-common:validFrom","2001-12-17T09:30:47.0Z");
     printattribute("us-net-common:validTo","2001-12-17T09:30:47.0Z");
     printattribute("us-net-common:verticalPosition","underground");
-    echo "            <us-net-common:appurtenanceType xlink:href=\"\"/>\n";
+    echo "            <us-net-common:appurtenanceType xlink:href=\"" .  $line["type"] . "\"/>\n";
     echo "        </imkl:Appurtenance>\n";
     echo "    </gml:featureMember>\n\n";
 }
@@ -441,7 +442,7 @@ pg_free_result($result);
 #
 # Maatvoering_pijl
 #
-$query = 'select gmlid,unetid,netbeheer,type,ST_AsGML(3,geom,5,0,null) as geom from maatvoering_pijl;';
+$query = 'select gmlid,rotatie,unetid,netbeheer,type,ST_AsGML(3,geom,5,0,null) as geom from maatvoering_pijl;';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
@@ -454,6 +455,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "        </imkl:identificatie>\n";
     echo "        <imkl:beginLifespanVersion>2001-12-17T09:30:47.0Z</imkl:beginLifespanVersion>\n";
     echo "        <imkl:maatvoeringsType xlink:href=\"" . $line["type"] . "\"/>\n";
+    echo "        <imkl:rotatiehoek uom=\"urn:ogc:def:uom:OGC::deg\">" .  $line["rotatie"] . "</imkl:rotatiehoek>\n";
     echo "        <imkl:ligging>" . $line["geom"] . "</imkl:ligging>\n";
     echo "        </imkl:Maatvoering>\n";
     echo "    </gml:featureMember>\n\n";
@@ -469,13 +471,15 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
     echo "        <imkl:Maatvoering gml:id=\"" . $line["gmlid"] . "\">\n";
+    echo "        <imkl:label>" . $line["label"] . "</imkl:label>\n";
+    echo "        <imkl:omschrijving>" . $line["toelichtin"] . "</imkl:omschrijving>\n";
     echo "        <imkl:identificatie>\n";
     echo "            <imkl:NEN3610ID>\n";
     echo "                <imkl:namespace>IMKL2005</imkl:namespace><imkl:lokaalID>" . $line["gmlid"] .  "</imkl:lokaalID>\n";
     echo "            </imkl:NEN3610ID>\n";
     echo "        </imkl:identificatie>\n";
     echo "        <imkl:beginLifespanVersion>2001-12-17T09:30:47.0Z</imkl:beginLifespanVersion>\n";
-    echo "        <imkl:maatvoeringsType xlink:href=\"" . $line["toelichtin"] . "\"/>\n";
+    echo "        <imkl:maatvoeringsType xlink:href=\"maatvoeringslabel\"/>\n";
     echo "        <imkl:ligging>" . $line["geom"] . "</imkl:ligging>\n";
     echo "        </imkl:Maatvoering>\n";
     echo "    </gml:featureMember>\n\n";
