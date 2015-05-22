@@ -79,7 +79,7 @@
             <layer_coordinate_transform destAuthId="EPSG:28992" srcAuthId="EPSG:28992" srcDatumTransform="-1" destDatumTransform="-1" layerid="AN_datatransport_KPN_0000546663_15O00932220150316175207169"/>
         </layer_coordinate_transform_info>
     </mapcanvas>
-    <legend updateDrawingOrder="true" activeLayer="aanduidingEisVoorzorgsmaatregel20150410135414538">
+    <legend updateDrawingOrder="true" activeLayer="Diepte20150322112950382">
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Utiliteitsnet" showFeatureCount="0">
             <filegroup open="true" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="Utiliteitsnet20150410143240849" visible="0"/>

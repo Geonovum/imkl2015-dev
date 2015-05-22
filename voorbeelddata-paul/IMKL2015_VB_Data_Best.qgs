@@ -5,10 +5,10 @@
     <mapcanvas>
         <units>meters</units>
         <extent>
-            <xmin>154180.57271809622761793</xmin>
-            <ymin>388911.64326314232312143</ymin>
-            <xmax>155544.78769310921779834</xmax>
-            <ymax>389804.5839740599039942</ymax>
+            <xmin>154787.2714106235653162</xmin>
+            <ymin>389200.06299023504834622</ymin>
+            <xmax>154917.17710141348652542</xmax>
+            <ymax>389279.18736553436610848</ymax>
         </extent>
         <projections>1</projections>
         <destinationsrs>
@@ -79,7 +79,7 @@
             <layer_coordinate_transform destAuthId="EPSG:28992" srcAuthId="EPSG:28992" srcDatumTransform="-1" destDatumTransform="-1" layerid="AN_datatransport_KPN_0000546663_15O00932220150316175207169"/>
         </layer_coordinate_transform_info>
     </mapcanvas>
-    <legend updateDrawingOrder="true" activeLayer="Diepte20150322112950382">
+    <legend updateDrawingOrder="true" activeLayer="Leidingelement20150322112023959">
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Utiliteitsnet" showFeatureCount="0">
             <filegroup open="true" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="Utiliteitsnet20150410143240849" visible="0"/>
