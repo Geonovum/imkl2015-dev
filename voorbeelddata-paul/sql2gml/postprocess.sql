@@ -299,6 +299,61 @@ union all
 -- Now we fix that all objects have to refer to a utilitynet while they do refer
 -- refer to the thema only.
 -- 
+alter table vijfmeteraanduiding add column bhcode text;
+alter table aanduidingEisVoorzorgsmaatregel add column bhcode text;
+alter table Annotatie_lijn add column bhcode text;
+alter table Annotatie add column bhcode text;
+alter table BGevaarlijkeInhoud add column bhcode text;
+alter table Containerelement add column bhcode text;
+alter table Diepte add column bhcode text;
+alter table DT_KabelOfLeiding add column bhcode text;
+alter table ExtraDetailInfo add column bhcode text;
+alter table ExtraGeometrie add column bhcode text;
+alter table ExtraTopo add column bhcode text;
+alter table kabelbedAlgemeen add column bhcode text;
+alter table KabelEnLeidingContainer add column bhcode text;
+alter table Kunstwerk_Containerelement add column bhcode text;
+alter table Leidingelement add column bhcode text;
+alter table LS_Kabelbed add column bhcode text;
+alter table maatvoering_label add column bhcode text;
+alter table maatvoering_pijl add column bhcode text;
+alter table maatvoering add column bhcode text;
+alter table MS_Kabelbed add column bhcode text;
+alter table RioolVV_KabelOfLeiding add column bhcode text;
+alter table Water_KabelOfLeiding add column bhcode text;
+alter table elektriciteitskabel add column bhcode text;
+alter table oliegaschemicalien add column bhcode text;
+alter table kabelb add column bhcode text;
+
+update vijfmeteraanduiding l set bhcode = (select bhcode from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update aanduidingEisVoorzorgsmaatregel l set bhcode = (select bhcode from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update Annotatie_lijn l set bhcode = (select bhcode from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update Annotatie l set bhcode = (select bhcode from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update BGevaarlijkeInhoud l set bhcode = (select bhcode from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update Containerelement l set bhcode = (select bhcode from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update Diepte l set bhcode = (select bhcode from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update DT_KabelOfLeiding l set bhcode = (select bhcode from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update ExtraDetailInfo l set bhcode = (select bhcode from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update ExtraGeometrie l set bhcode = (select bhcode from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update ExtraTopo l set bhcode = (select bhcode from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update kabelbedAlgemeen l set bhcode = (select bhcode from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update KabelEnLeidingContainer l set bhcode = (select bhcode from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update Kunstwerk_Containerelement l set bhcode = (select bhcode from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update Leidingelement l set bhcode = (select bhcode from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update LS_Kabelbed l set bhcode = (select bhcode from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update maatvoering_label l set bhcode = (select bhcode from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update maatvoering_pijl l set bhcode = (select bhcode from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update maatvoering l set bhcode = (select bhcode from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update MS_Kabelbed l set bhcode = (select bhcode from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update RioolVV_KabelOfLeiding l set bhcode = (select bhcode from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update Water_KabelOfLeiding l set bhcode = (select bhcode from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update elektriciteitskabel l set bhcode = (select bhcode from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update oliegaschemicalien l set bhcode = (select bhcode from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+update kabelb l set bhcode = (select bhcode from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
+--
+-- Now we fix that all objects have to refer to a utilitynet while they do refer
+-- refer to the thema only.
+-- 
 alter table vijfmeteraanduiding add column unetid text;
 alter table aanduidingEisVoorzorgsmaatregel add column unetid text;
 alter table Annotatie_lijn add column unetid text;
@@ -373,19 +428,19 @@ set partyid = 'party-' || gmlid;
 drop table if exists utilitylink;
 create table utilitylink
 as
-    select 'ulinkid-' || gmlid as gmlid,unetid,geom,status::text
+    select 'ulinkid-' || gmlid as gmlid,bhcode,unetid,geom,status::text
     from elektriciteitskabel
        union all
-    select 'ulinkid-' || gmlid as gmlid,unetid,geom,status::text
+    select 'ulinkid-' || gmlid as gmlid,bhcode,unetid,geom,status::text
     from rioolvv_kabelofleiding
        union all
-    select 'ulinkid-' || gmlid as gmlid,unetid,geom,status::text
+    select 'ulinkid-' || gmlid as gmlid,bhcode,unetid,geom,status::text
     from water_kabelofleiding
        union all
-    select 'ulinkid-' || gmlid as gmlid,unetid,geom,status::text
+    select 'ulinkid-' || gmlid as gmlid,bhcode,unetid,geom,status::text
     from oliegaschemicalien
        union all
-    select 'ulinkid-' || gmlid as gmlid,unetid,geom,status::text
+    select 'ulinkid-' || gmlid as gmlid,bhcode,unetid,geom,status::text
     from kabelb
 ;
 
