@@ -24,7 +24,13 @@ function printattribute($tag,$value)
     echo "        <" . $tag . ">" . $value . "</" . $tag . ">\n";
 }
 
-function printcodelistvalue($attribute,$codelist,$value)
+function printINSPIREcodelistvalue($attribute,$codelist,$value)
+{
+    echo "        <" . $attribute . " xlink:href=\" http://inspire.ec.europa.eu/codelist/" . $codelist . "/" .  $value . "\"/>\n";
+}
+
+
+function printNENcodelistvalue($attribute,$codelist,$value)
 {
     echo "        <" . $attribute . " xlink:href=\"http://www.geonovum.nl/imkl/2015/1.0/def/" . $codelist . "/" .  $value . "\"/>\n";
 }
@@ -37,8 +43,13 @@ function printtagattribute($tag,$attribute,$value)
     }
     else
     {
-        echo "            <" . $tag . " " . $attribute . ">" . $value . "</" . $tag . ">\n";
+        echo "            <" . $tag . " " . $attribute . "=\"" . $value . "\"/>\n";
     }
+}
+
+function openfeature($featuretype,$bronhoudercode,$lokaalid)
+{
+    return "<" . $featuretype . " gml:id=\"nl.imkl." . $bronhoudercode .  "." . $lokaalid . "\">";
 }
 
 function printNEN3610ID($bronhoudercode,$lokaalid)
@@ -88,15 +99,15 @@ $dbconn = pg_connect("");
 //
 // Process utiliteitsnet.
 //
-$query = 'select partyid,bhcode,gmlid,thema,eisvoorhp,tcontpers,telefoon,email,authority,authrole,unetworkty from utiliteitsnet ;';
+$query = 'select bhcode,unetid,thema,eisvoorhp,tcontpers,telefoon,email,authority,authrole,unetworkty from utiliteitsnet ;';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
-    echo "        <imkl:Utiliteitsnet gml:id=\"" . $line["gid"] . "\">\n";
+    echo "        " .  openfeature("imkl:Utiliteitsnet",$line["bhcode"],$line["unetid"]) . "\n";
     echo "        <us-net-common:utilityNetworkType xlink:href=\"http://inspire.ec.europa.eu/codelist/UtilityNetworkTypeValue/" . $line["unetworkty"] . "\"/>\n";
-    echo "        <us-net-common:authorityRole xlink:href=\"" .  $line["partyid"] ."\"/>\n";
-    printNEN3610ID($line["bhcode"],$line["gmlid"]);
+    echo "        <us-net-common:authorityRole xlink:href=\"" .  $line["bhcode"] ."\"/>\n";
+    printNEN3610ID($line["bhcode"],$line["unetid"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
     echo "        <imkl:technischContactpersoon>\n";
     echo "            <imkl:TechnischContactpersoon>\n";
@@ -106,7 +117,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "            </imkl:TechnischContactpersoon>\n";
     echo "        </imkl:technischContactpersoon>\n";
     printattribute("imkl:eisVoorzorgsmaatregelHoogstePrioriteit",$line["eisvoorhp"]);
-    printcodelistvalue('imkl:thema','Thema',$line["thema"]);
+    printNENcodelistvalue('imkl:thema','Thema',$line["thema"]);
     echo "        </imkl:Utiliteitsnet>\n";
     echo "    </gml:featureMember>\n\n";
 }
@@ -120,14 +131,14 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
-    echo "        <imkl:Appurtenance gml:id=\"" . $line["gmlid"] . "\">\n";
+    echo "        " .  openfeature("imkl:Appurtenance",$line["bhcode"],$line["gmlid"]) . "\n";
     printLifespan("net","2001-12-17T09:30:47.0Z","");
     echo "            <net:inNetwork xlink:href=\"" . $line["unetid"] . "\"/>\n";
     echo "            <net:geometry>" . $line["geom"] . "</net:geometry>\n";
-    echo "            <us-net-common:currentStatus xlink:href=\"" . $line["status"] ."\"/>\n";
+    printINSPIREcodelistvalue("us-net-common:currentStatus","TODO",$line["status"]);
     printValidity("2001-12-17T09:30:47.0Z","2001-12-17T09:30:47.0Z");
     printattribute("us-net-common:verticalPosition","underground");
-    printcodelistvalue("us-net-common:appurtenanceType","appurtenaceTypeValue",$line["type"]);
+    printNENcodelistvalue("us-net-common:appurtenanceType","appurtenaceTypeValue",$line["type"]);
     echo "        </imkl:Appurtenance>\n";
     echo "    </gml:featureMember>\n\n";
 }
@@ -141,20 +152,19 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
-    echo "        <imkl:OlieGasChemicalienPijpleiding gml:id=\"" . $line["gmlid"] . "\">\n";
+    echo "        " .  openfeature("imkl:OlieGasChemicalienPijpleiding",$line["bhcode"],$line["gmlid"]) . "\n";
     printLifespan("net","2001-12-17T09:30:47.0Z","");
     printINSPIREID($line["bhcode"],$line["gmlid"]);
     echo "            <net:inNetwork xlink:href=\"" . $line["unetid"] . "\"/>\n";
-    echo "            <net:link xlink:href=\"ulinkid-" . $line["gmlid"] . "\"/>\n";
+    echo "            <net:link xlink:href=\"nl.imkl." . $line["bhcode"] .  ".ulinkid-" . $line["gmlid"] . "\"/>\n";
     echo "            <us-net-common:currentStatus xlink:href=\"" . $line["status"] ."\"/>\n";
     printValidity("2001-12-17T09:30:47.0Z","2001-12-17T09:30:47.0Z");
     echo "            <us-net-common:verticalPosition>underground</us-net-common:verticalPosition>\n";
-    echo "            <us-net-common:utilityFacilityReference xlink:href=\"xxxxTODO\"/>\n";
-#echo "            <us-net-common:utilityDeliveryType xlink:href="http://inspire.ec.europa.eu/codelist/UtilityDeliveryTypeExtendedValue/distribution"/
-    echo "            <us-net-common:warningType xlink:href=\"http://inspire.ec.europa.eu/codelist/WarningTypeExtendedValue/net\"/>\n";
+    echo "            <us-net-common:utilityFacilityReference xsi:nil=\"true\"/>\n";
+    printINSPIREcodelistvalue("us-net-common:warningType","WarningTypeValue","net");
     echo "            <us-net-common:pipeDiameter uom=\"urn:ogc:def:uom:OGC::cm\">" . $line["pipediam"] . "</us-net-common:pipeDiameter>\n";
     echo "            <us-net-common:pressure uom=\"urn:ogc:def:uom:OGC::bar\">" . $line["pressure"] . "</us-net-common:pressure>\n";
-    echo "            <us-net-ogc:oilGasChemicalsProductType xlink:href=\"" .  $line["producttyp"] . "\" />\n";
+    printINSPIREcodelistvalue("us-net-ogc:oilGasChemicalsProductType","TODO",$line["producttyp"]);
     echo "        </imkl:OlieGasChemicalienPijpleiding>\n";
     echo "    </gml:featureMember>\n\n";
 }
@@ -168,10 +178,10 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
-    echo "        <imkl:Kabelbed gml:id=\"" . $line["gmlid"] . "\">\n";
+    echo "        " .  openfeature("imkl:Kabelbed",$line["bhcode"],$line["gmlid"]) . "\n";
     printLifespan("net","2001-12-17T09:30:47.0Z","");
     echo "            <net:inNetwork xlink:href=\"" . $line["unetid"] . "\"/>\n";
-    echo "            <net:link xlink:href=\"ulinkid-" . $line["gmlid"] . "\"/>\n";
+    echo "            <net:link xlink:href=\"nl.imkl." . $line["bhcode"] .  ".ulinkid-" . $line["gmlid"] . "\"/>\n";
     echo "            <us-net-common:currentStatus xlink:href=\"" . $line["status"] ."\"/>\n";
     printValidity("2001-12-17T09:30:47.0Z","2001-12-17T09:30:47.0Z");
     echo "            <us-net-common:verticalPosition>underground</us-net-common:verticalPosition>\n";
@@ -191,12 +201,12 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
-    echo "        <imkl:Elektriciteitskabel gml:id=\"" .  $line["gmlid"] . "\">\n";
+    echo "        " .  openfeature("imkl:Elektriciteitskabel",$line["bhcode"],$line["gmlid"]) . "\n";
     printLifespan("net","2001-12-17T09:30:47.0Z","");
 #    echo "            <imkl:bovengrondsZichtbaar>" . $line["bzichtbaar"] . "\n";
 #    echo "            </imkl:bovengrondsZichtbaar>\n";
     echo "            <net:inNetwork xlink:href=\"" . $line["unetid"] . "\"/>\n";
-    echo "            <net:link xlink:href=\"ulinkid-" . $line["gmlid"] . "\"/>\n";
+    echo "            <net:link xlink:href=\"nl.imkl." . $line["bhcode"] .  ".ulinkid-" . $line["gmlid"] . "\"/>\n";
     echo "            <us-net-common:currentStatus xlink:href=\"" . $line["status"] ."\"/>\n";
     printValidity("2001-12-17T09:30:47.0Z","2001-12-17T09:30:47.0Z");
     echo "            <us-net-common:verticalPosition>underground</us-net-common:verticalPosition>\n";
@@ -216,7 +226,7 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
-    echo "        <us-net-common:UtilityLink gml:id=\"" . $line["gmlid"] . "\">\n";
+    echo "        " .  openfeature("us-net-common:UtilityLink",$line["bhcode"],$line["gmlid"]) . "\n";
     printLifespan("net","2001-12-17T09:30:47.0Z","");
     echo "            <net:inNetwork xlink:href=\"" . $line["unetid"] . "\"/>\n";
     echo "            <net:centrelineGeometry>" . $line["geom"] . "\n";
@@ -242,11 +252,11 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
-    echo "        <imkl:Waterleiding gml:id=\"" .  $line["gmlid"] . "\">\n";
+    echo "        " .  openfeature("imkl:Waterleiding",$line["bhcode"],$line["gmlid"]) . "\n";
     printLifespan("net","2001-12-17T09:30:47.0Z","");
     printINSPIREID($line["bhcode"],$line["gmlid"]);
     echo "            <net:inNetwork xlink:href=\"" . $line["unetid"] . "\"/>\n";
-    echo "            <net:link xlink:href=\"" . $line["gmlid"] . "\"/>\n";
+    echo "            <net:link xlink:href=\"nl.imkl." . $line["bhcode"] .  ".ulinkid-" . $line["gmlid"] . "\"/>\n";
     echo "            <us-net-common:currentStatus xlink:href=\"" . $line["status"] ."\"/>\n";
     printValidity("2001-12-17T09:30:47.0Z","2001-12-17T09:30:47.0Z");
     echo "            <us-net-common:verticalPosition>underground</us-net-common:verticalPosition>\n";
@@ -271,17 +281,17 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
-    echo "        <imkl:Rioolleiding gml:id=\"" .  $line["gmlid"] . "\">\n";
+    echo "        " .  openfeature("imkl:Rioolleiding",$line["bhcode"],$line["gmlid"]) . "\n";
     printLifespan("net","2001-12-17T09:30:47.0Z","");
     printINSPIREID($line["bhcode"],$line["gmlid"]);
     echo "            <net:inNetwork xlink:href=\"" . $line["unetid"] . "\"/>\n";
-    echo "            <net:link xlink:href=\"ulinkid-" . $line["gmlid"] . "\"/>\n";
+    echo "            <net:link xlink:href=\"nl.imkl." . $line["bhcode"] .  ".ulinkid-" . $line["gmlid"] . "\"/>\n";
     echo "            <us-net-common:currentStatus xlink:href=\"" . $line["status"] ."\"/>\n";
     printValidity("2001-12-17T09:30:47.0Z","2001-12-17T09:30:47.0Z");
     echo "            <us-net-common:verticalPosition>underground</us-net-common:verticalPosition>\n";
     echo "            <us-net-common:warningType xlink:href=\"http://inspire.ec.europa.eu/codelist/WarningTypeExtendedValue/net\"/>\n";
     echo "            <us-net-common:pipeDiameter uom=\"urn:ogc:def:uom:OGC::cm\">" . $line["pipediam"] . "</us-net-common:pipeDiameter>\n";
-    printtagattribute("us-net-common:pressure","uom=\"urn:ogc:def:uom:OGC::bar\"",$line["pressure"]);
+    echo "            <us-net-common:pressure uom=\"urn:ogc:def:uom:OGC::bar\">" . $line["pressure"] . "</us-net-common:pressure>\n";
     echo "            <us-net-sw:sewerWaterType xlink:href=\"" .  $line["swatertype"] . "\" />\n";
     echo "        </imkl:Rioolleiding>\n";
     echo "    </gml:featureMember>\n\n";
@@ -297,7 +307,7 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
-    echo "        <imkl:AanduidingEisVoorzorgsmaatregel gml:id=\"" . $line["gmlid"] . "\">\n";
+    echo "        " .  openfeature("imkl:AanduidingEisVoorzorgsmaatregel",$line["bhcode"],$line["gmlid"]) . "\n";
     printNEN3610ID($line["bhcode"],$line["gmlid"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
     echo "        <imkl:eisVoorzorgsmaatregel>" . $line["eisvoorzm"] . "</imkl:eisVoorzorgsmaatregel>\n";
@@ -315,7 +325,7 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
-    echo "        <imkl:DiepteTovMaaiveld gml:id=\"" .  $line["gmlid"] . "\">\n";
+    echo "        " .  openfeature("imkl:DiepteTovMaaiveld",$line["bhcode"],$line["gmlid"]) . "\n";
     printNEN3610ID($line["bhcode"],$line["gmlid"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
     echo "            <imkl:diepteNauwkeurigheid xlink:href=\"TODO\"/>\n";
@@ -336,7 +346,7 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
-    echo "        <imkl:ExtraGeometrie gml:id=\"" .  $line["gmlid"] . "\">\n";
+    echo "        " .  openfeature("imkl:ExtraGeometrie",$line["bhcode"],$line["gmlid"]) . "\n";
     printNEN3610ID($line["bhcode"],$line["gmlid"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
     echo "        <imkl:vlakgeometrie2.5D>" . $line["geom"] .  "</imkl:vlakgeometrie2.5D>\n";
@@ -355,11 +365,11 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
-    echo "        <imkl:ExtraTopografie gml:id=\"" . $line["gmlid"] . "\">\n";
+    echo "        " .  openfeature("imkl:ExtraTopografie",$line["bhcode"],$line["gmlid"]) . "\n";
     printNEN3610ID($line["bhcode"],$line["gmlid"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
-    printcodelistvalue('imkl:extraTopografieType','Thema',$line["type"]);
-    printcodelistvalue('imkl:typeTopografischObject','Thema',$line["typeobject"]);
+    printNENcodelistvalue('imkl:extraTopografieType','Thema',$line["type"]);
+    printNENcodelistvalue('imkl:typeTopografischObject','Thema',$line["typeobject"]);
     echo "        <imkl:ligging>" . $line["geom"] . "</imkl:ligging>\n";
     echo "        <imkl:inNetwork xlink:href=\"" . $line["unetid"] . "\"/>\n";
     echo "        </imkl:ExtraTopografie>\n";
@@ -377,7 +387,7 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
-    echo "        <imkl:Annotatie gml:id=\"" . $line["gmlid"] . "\">\n";
+    echo "        " .  openfeature("imkl:Annotatie",$line["bhcode"],$line["gmlid"]) . "\n";
     printNEN3610ID($line["bhcode"],$line["gmlid"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
     echo "        <imkl:annotatieType>" . $line["beschrijvi"] . "</imkl:annotatieType>\n";
@@ -396,7 +406,7 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
-    echo "        <imkl:Annotatie gml:id=\"" . $line["gmlid"] . "\">\n";
+    echo "        " .  openfeature("imkl:Annotatie",$line["bhcode"],$line["gmlid"]) . "\n";
     printNEN3610ID($line["bhcode"],$line["gmlid"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
     echo "        <imkl:annotatieType xlink:href=\"" . $line["type"] . "\"/>\n";
@@ -415,7 +425,7 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
-    echo "        <imkl:Maatvoering gml:id=\"" . $line["gmlid"] . "\">\n";
+    echo "        " .  openfeature("imkl:Maatvoering",$line["bhcode"],$line["gmlid"]) . "\n";
     printNEN3610ID($line["bhcode"],$line["gmlid"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
     echo "        <imkl:maatvoeringsType xlink:href=\"" . $line["type"] . "\"/>\n";
@@ -433,7 +443,7 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
-    echo "        <imkl:Maatvoering gml:id=\"" . $line["gmlid"] . "\">\n";
+    echo "        " .  openfeature("imkl:Maatvoering",$line["bhcode"],$line["gmlid"]) . "\n";
     printNEN3610ID($line["bhcode"],$line["gmlid"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
     echo "        <imkl:maatvoeringsType xlink:href=\"" . $line["type"] . "\"/>\n";
@@ -452,7 +462,7 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
-    echo "        <imkl:Maatvoering gml:id=\"" . $line["gmlid"] . "\">\n";
+    echo "        " .  openfeature("imkl:Maatvoering",$line["bhcode"],$line["gmlid"]) . "\n";
     echo "        <imkl:label>" . $line["label"] . "</imkl:label>\n";
     echo "        <imkl:omschrijving>" . $line["toelichtin"] . "</imkl:omschrijving>\n";
     printNEN3610ID($line["bhcode"],$line["gmlid"]);
