@@ -1,0 +1,155 @@
+<?xml-stylesheet type='text/xsl' href='./CodelistDictionary-v32.xsl'?><Dictionary xmlns="http://www.opengis.net/gml/3.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="Thema" xsi:schemaLocation="http://www.opengis.net/gml/3.2 null">
+  <description>-- Name --&#13;
+-- Definition --&#13;
+Thema of discipline waar een leiding of leidingelement toe behoort.&#13;
+-- Description --&#13;
+OPMERKING: Zijn de definities nog actueel?&#13;
+-- Source --</description>
+  <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0">Thema</identifier>
+  <dictionaryEntry>
+    <Definition gml:id="_5297_7705">
+      <description>-- Definition --&#13;
+a. aardgasleidingen met een uitwendige diameter van meer dan 50 mm en een druk van meer dan 1600 kPa;&#13;
+b. buisleidingen voor het vervoer van brandbare vloeistoffen van de categorien K1, K2 of K3, met een uitwendige diameter van meer dan 100 mm;&#13;
+c. buisleidingen voor andere gevaarlijke stoffen dan bedoeld onder a en b, waarvoor het plaatsgebonden risico op een afstand van 5 m gemeten vanaf het hart van de buisleiding hoger is dan 10-6 per jaar.&#13;
+Artikel 1 (lid g,h,i en j)&#13;
+g. plaatsgebonden risico: risico op een plaats buiten een inrichting, een transportroute of een buisleiding, uitgedrukt als de kans per jaar dat een persoon die onafgebroken en onbeschermd op die plaats zou verblijven, overlijdt als rechtstreeks gevolg van een ongewoon voorval binnen die inrichting, op die transportroute of met die buisleiding, waarbij een gevaarlijke stof betrokken is;&#13;
+h. categorie K1: een product niet zijnde een brandbaar gas met een vlampunt dat, bepaald met het toestel van Abel-Pensky, bij een druk van 100 kPa lager is dan 21C;&#13;
+i. categorie K2: een product met een vlampunt dat, bepaald met het toestel van Abel-Pensky, bij een druk van 100 kPa ligt tussen de 21C en 55C;&#13;
+j. categorie K3: een product met een vlampunt dat, bepaald met het toestel van Pensky-Martens, bij een druk van 100 kPa hoger is dan 55C en lager is dan 100C;</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/Thema">buisleiding gevaarlijke inhoud</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5297_7706">
+      <description>-- Definition --&#13;
+De elektronische overdracht van signaalinformatie tussen punten via kabels die deel uitmaken van een net.&#13;
+NB: De aansluitleiding kan ook alleen op (huis)aansluitschetsen voorkomen.</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/Thema">datatransport</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5297_7707">
+      <description>-- Definition --&#13;
+Een gasleiding hogedruk (HD) heeft een drukniveau hoger dan 200  mBar en bestaat uit een hoofdleiding en een aansluitleiding. HD druksoorten: 8, 4, 1 Bar.&#13;
+NB: De aansluitleiding kan ook alleen op (huis)aansluitschetsen voorkomen.&#13;
+Opmerking: In de praktijk kunnen netten vanaf 200 mBar op de HD themakaart voorkomen.</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/Thema">gas hoge druk</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5297_7708">
+      <description>-- Definition --&#13;
+Een gasleiding lagedruk (LD) heeft een drukniveau lager dan 200 mBar en bestaat uit een hoofdleiding en een aansluitleiding. LD druksoorten: 100, 30 mBar.&#13;
+NB: De aansluitleiding kan ook alleen op (huis)aansluitschetsen voorkomen.&#13;
+Opmerking: In de praktijk kunnen netten tot en met 500 mBar op de LD themakaart voorkomen.</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/Thema">gas lage druk</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5297_7709">
+      <description>-- Definition --&#13;
+Leiding voor transport van olie of chemicalin, niet vallend onder het thema ‘Buisleiding gevaarlijke inhoud’.</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/Thema">(petro)chemie</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5297_7710">
+      <description>-- Definition --&#13;
+LS kabel bestaat uit hoofdnet en aansluitnet. LS = laagspanning (230 V en 400 V)&#13;
+NB: De aansluitleiding kan ook alleen op (huis)aansluitschetsen voorkomen.&#13;
+Opmerking: In de praktijk kunnen netten tot en met 1000 Volt op de LS themakaart voorkomen</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/Thema">laagspanning</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5297_7704">
+      <description>-- Definition --&#13;
+MS kabel bestaat uit hoofdnet en aansluitnet. MS = middenspanning (0,4 kV tot 30 kV)&#13;
+NB: De aansluitleiding kan ook alleen op (huis)aansluitschetsen voorkomen.&#13;
+Opmerking: In de praktijk kunnen netten van 400 Volt op de MS themakaart voorkomen.</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/Thema">middenspanning</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5297_7711">
+      <description>-- Definition --&#13;
+Toestand waarin het mogelijk is een elektrische stroom te creren; HS = hoogspanning (36 tot en met 220 kV).&#13;
+Opmerking: In de praktijk kunnen netten vanaf 20 kV t/m 220 kV op de HS themakaart voorkomen.</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/Thema">hoogspanning</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5297_7712">
+      <description>-- Definition --&#13;
+Toestand waarin het mogelijk is een elektrische stroom te creren;ZHS = zeer hoge spanning (110 kV tot en met 380 kV). </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/Thema">landelijk hoogspanningsnet</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5297_7713">
+      <description>-- Definition --&#13;
+Een waterleiding bestaat uit transport-, distributie- en aansluitleidingen ten behoeve van (drink)water.&#13;
+NB: De aansluitleiding kan ook alleen op (huis)aansluitschetsen voorkomen.</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/Thema">water</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5297_7714">
+      <description>-- Definition --&#13;
+Een warmtenet kan bestaan uit stadswarmte, centraal tapwater en een koude net.&#13;
+Een stadswarmtenet bestaat uit aanvoer- en retourleidingen.&#13;
+Onderverdeeld in: &#13;
+Transport-, en/of Wijknet en Aansluitleidingen.&#13;
+Leidingdiameters 40–1100 mm.&#13;
+Temp. 40-120°&#13;
+Druk 4-25 bar&#13;
+NB: De aansluitleiding kan ook alleen op (huis)aansluitschetsen voorkomen.&#13;
+&#13;
+Een centraal tapwaternet bestaat uit aanvoer- en recirculatieleidingen,&#13;
+Onderverdeeld in:&#13;
+Wijknet en Aansluitleidingen.&#13;
+Waarbij het mogelijk is dat aanvoer- en recirculatieleiding gecombineerd zijn in én mantel, of een gescheiden trac hebben.&#13;
+Temp. 66°&#13;
+Druk 2-4 bar&#13;
+NB: De aansluitleiding kan ook alleen op (huis)aansluitschetsen voorkomen.&#13;
+&#13;
+Een koudenet bestaat uit aanvoer- en retourleidingen.&#13;
+Onderverdeeld in: &#13;
+Transportnet, en Aansluitleidingen.&#13;
+Leidingdiameters 150–800 mm.&#13;
+Temp. 5-16°&#13;
+Druk 2-16 bar&#13;
+NB: De aansluitleiding kan ook alleen op (huis)aansluitschetsen voorkomen.</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/Thema">warmte</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5297_7715">
+      <description>-- Definition --&#13;
+Riolering waarbij het transport plaatsvindt door overdruk (uit NEN 3300, Buitenriolering) dan wel onderdruk.</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/Thema">riool onder over- of onderdruk</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5297_7716">
+      <description>-- Definition --&#13;
+Riool waardoor afvalwater door de zwaartekracht wordt getransporteerd (uit NEN 3300, Buitenriolering).</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/Thema">riool vrijverval</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5297_7717">
+      <description>-- Definition --&#13;
+Alle onbekende leidingen welke bij een eerdere grondroering zijn geconstateerd, die ook na onderzoek niet aan een beheerder waren toe te wijzen en waarvoor de gemeente ingevolge de WION de beheerdersverplichtingen vervult.</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/Thema">wees</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5297_7718">
+      <description>-- Definition --&#13;
+Alle, niet bij de andere thema’s omschreven vormen van transport door middel van kabels en leidingen.</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/Thema">overig</identifier>
+    </Definition>
+  </dictionaryEntry>
+</Dictionary>

@@ -88,15 +88,15 @@ $dbconn = pg_connect("");
 //
 // Process utiliteitsnet.
 //
-$query = 'select bhcode,gid,thema,eisvoorhp,tcontpers,telefoon,email,authority,authrole,unetworkty from utiliteitsnet ;';
+$query = 'select partyid,bhcode,gmlid,thema,eisvoorhp,tcontpers,telefoon,email,authority,authrole,unetworkty from utiliteitsnet ;';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo "    <gml:featureMember>\n";
     echo "        <imkl:Utiliteitsnet gml:id=\"" . $line["gid"] . "\">\n";
     echo "        <us-net-common:utilityNetworkType xlink:href=\"http://inspire.ec.europa.eu/codelist/UtilityNetworkTypeValue/" . $line["unetworkty"] . "\"/>\n";
-    echo "        <us-net-common:authorityRole xlink:href=\"party-" .  $line["gid"] ."\"/>\n";
-    printNEN3610ID($line["bhcode"],$line["gid"]);
+    echo "        <us-net-common:authorityRole xlink:href=\"" .  $line["partyid"] ."\"/>\n";
+    printNEN3610ID($line["bhcode"],$line["gmlid"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
     echo "        <imkl:technischContactpersoon>\n";
     echo "            <imkl:TechnischContactpersoon>\n";
@@ -136,8 +136,7 @@ pg_free_result($result);
 #
 # Process oliegaschemicalien
 #
-$query = 'select
-bhcode,gmlid,unetid,netbeheer,status,vertpositi,producttyp,warningt,toelichtin,pressure,pipediam,dieptetovm,dieptenap,xinfo,disttype from v_oliegaschemicalien ;';
+$query = 'select bhcode,gmlid,unetid,netbeheer,status,vertpositi,producttyp,warningt,toelichtin,pressure,pipediam,dieptetovm,dieptenap,xinfo,disttype from v_oliegaschemicalien ;';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
@@ -164,9 +163,7 @@ pg_free_result($result);
 //
 // Kabelbed
 //
-$query = 'select
-bhcode,gmlid,unetid,type,netbeheer,status,vertpositi,disttype,warningt,ductwidth,bzichtbaar,toelichtin,aantalk,dieptetovm,dieptenap,xinfo,geom
-from v_kabelb;';
+$query = 'select bhcode,gmlid,unetid,type,netbeheer,status,vertpositi,disttype,warningt,ductwidth,bzichtbaar,toelichtin,aantalk,dieptetovm,dieptenap,xinfo,geom from v_kabelb;';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
@@ -189,8 +186,7 @@ pg_free_result($result);
 //
 // Process elektriciteitskabel
 //
-$query = 'select
-bhcode,gmlid,unetid,netbeheer,status,vertpositi,warningt,opvolt,nomvolt,toelichtin,dieptetovm,dieptenap,xinfo,disttype from v_elektriciteitskabel ;';
+$query = 'select bhcode,gmlid,unetid,netbeheer,status,vertpositi,warningt,opvolt,nomvolt,toelichtin,dieptetovm,dieptenap,xinfo,disttype from v_elektriciteitskabel ;';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
@@ -215,7 +211,7 @@ pg_free_result($result);
 //
 // Process utilitylink
 //
-$query = 'select gmlid,status,unetid,ST_AsGML(3,geom,5,0,null) as geom from utilitylink;';
+$query = 'select bhcode,gmlid,status,unetid,ST_AsGML(3,geom,5,0,null) as geom from utilitylink;';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
@@ -334,8 +330,7 @@ pg_free_result($result);
 #
 # Extra Geometrie
 #
-$query = 'select bhcode,gmlid,unetid,netbeheer,type,ST_AsGML(3,geom,5,0,null) as
-geom from v_extrageometrie;';
+$query = 'select bhcode,gmlid,unetid,netbeheer,type,ST_AsGML(3,geom,5,0,null) as geom from v_extrageometrie;';
 
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
@@ -354,8 +349,7 @@ pg_free_result($result);
 # Extra Topografie
 #
 $query = 'select
-bhcode,gmlid,unetid,netbeheer,type,typeobject,ST_AsGML(3,geom,5,0,null) as geom
-from v_extratopo;';
+bhcode,gmlid,unetid,netbeheer,type,typeobject,ST_AsGML(3,geom,5,0,null) as geom from v_extratopo;';
 
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
@@ -377,9 +371,7 @@ pg_free_result($result);
 # Annotatie punt
 #
 
-$query = 'select
-bhcode,gmlid,unetid,netbeheer,label,beschrijvi,ST_AsGML(3,geom,5,0,null) as geom
-from v_annotatie;';
+$query = 'select bhcode,gmlid,unetid,netbeheer,label,beschrijvi,ST_AsGML(3,geom,5,0,null) as geom from v_annotatie;';
 
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
@@ -398,9 +390,7 @@ pg_free_result($result);
 #
 # Annotatie lijn
 #
-$query = 'select
-bhcode,gmlid,unetid,thema,type,netbeheer,ST_AsGML(3,geom,5,0,null) as geom from
-v_annotatie_lijn;';
+$query = 'select bhcode,gmlid,unetid,thema,type,netbeheer,ST_AsGML(3,geom,5,0,null) as geom from v_annotatie_lijn;';
 
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
@@ -419,8 +409,7 @@ pg_free_result($result);
 #
 # Maatvoering
 #
-$query = 'select bhcode,gmlid,unetid,netbeheer,type,ST_AsGML(3,geom,5,0,null) as
-geom from v_maatvoering;';
+$query = 'select bhcode,gmlid,unetid,netbeheer,type,ST_AsGML(3,geom,5,0,null) as geom from v_maatvoering;';
 
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
@@ -439,9 +428,7 @@ pg_free_result($result);
 #
 # Maatvoering_pijl
 #
-$query = 'select
-bhcode,gmlid,rotatie,unetid,netbeheer,type,ST_AsGML(3,geom,5,0,null) as geom
-from v_maatvoering_pijl;';
+$query = 'select bhcode,gmlid,rotatie,unetid,netbeheer,type,ST_AsGML(3,geom,5,0,null) as geom from v_maatvoering_pijl;';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
@@ -460,9 +447,7 @@ pg_free_result($result);
 #
 # Maatvoering_label
 #
-$query = 'select
-bhcode,gmlid,unetid,netbeheer,toelichtin,label,ST_AsGML(3,geom,5,0,null) as geom
-from v_maatvoering_label;';
+$query = 'select bhcode,gmlid,unetid,netbeheer,toelichtin,label,ST_AsGML(3,geom,5,0,null) as geom from v_maatvoering_label;';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {

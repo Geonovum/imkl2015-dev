@@ -1,0 +1,49 @@
+<?xml-stylesheet type='text/xsl' href='./CodelistDictionary-v32.xsl'?><Dictionary xmlns="http://www.opengis.net/gml/3.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="NauwkeurigheidDiepteValue" xsi:schemaLocation="http://www.opengis.net/gml/3.2 null">
+  <description>-- Name --&#13;
+-- Definition --&#13;
+Codelijst met nauwkeurigheid van dieptegegevens.&#13;
+-- Description --&#13;
+-- Source --</description>
+  <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0">NauwkeurigheidDiepteValue</identifier>
+  <dictionaryEntry>
+    <Definition gml:id="_5271_7552">
+      <description>-- Name --&#13;
+-- Definition --&#13;
+Nauwkeurigheidsgraad is onbekend.&#13;
+-- Description --&#13;
+-- Source --</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/NauwkeurigheidDiepteValue">onbekend</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5271_7554">
+      <description>-- Name --&#13;
+-- Definition --&#13;
+Nauwkeurigheidsgraad tot op 30 cm.&#13;
+-- Description --&#13;
+-- Source --&#13;
+p 30 cm.</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/NauwkeurigheidDiepteValue">tot30cm</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5271_7553">
+      <description>-- Name --&#13;
+-- Definition --&#13;
+Nauwkeurigheidsgraad tot op 50 cm.&#13;
+-- Description --&#13;
+-- Source --</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/NauwkeurigheidDiepteValue">tot50cm</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5271_7555">
+      <description>-- Name --&#13;
+-- Definition --&#13;
+Nauwkeurigheidsgraad tot op 100 cm.&#13;
+-- Description --&#13;
+-- Source --</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/NauwkeurigheidDiepteValue">tot100cm</identifier>
+    </Definition>
+  </dictionaryEntry>
+</Dictionary>

@@ -1,0 +1,407 @@
+<?xml-stylesheet type='text/xsl' href='./CodelistDictionary-v32.xsl'?><Dictionary xmlns="http://www.opengis.net/gml/3.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="WaterAppurtenanceTypeIMKLValue" xsi:schemaLocation="http://www.opengis.net/gml/3.2 null">
+  <description>
+  </description>
+  <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0">WaterAppurtenanceTypeIMKLValue</identifier>
+  <dictionaryEntry>
+    <Definition gml:id="_5207_7672">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">afsluitklep</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5207_7673">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">aftappunt</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5207_7674">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">afvoerpunt</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5207_7675">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">anode</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5207_7676">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">brandkraan</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5207_7677">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">bron</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5207_7678">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">controleventiel</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5207_7679">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">drukregelaar</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5207_7680">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">knooppunt</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5207_7681">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">lateraal punt</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5207_7682">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">meetstation</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5207_7683">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">meter</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5207_7684">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">ontluchtingsventiel</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5207_7685">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">opslagfaciliteit</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5207_7686">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">pompstation</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5207_7687">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">toevoerpunt</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5207_7688">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">zuiveringsinstallatie</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6587">
+      <description>-- Definition --&#13;
+Anode.&#13;
+&#13;
+-- Description --&#13;
+An &lt;i&gt;anode &lt;/i&gt;is a feature (specifically, an electrical mechanism) that&amp;rsquo;s applied to system components for the prevention of rust, pitting, and the corrosion of metal surfaces that are in contact with water or soil. A low-voltage current is applied to the water or soil in contact with the metal, such that the&#13;
+electromotive force renders the metal component cathodic. Corrosion is concentrated on the anodes instead of on the associated (and protected) water system components. This type of corrosion may occur in copper, steel, stainless steel, cast iron, and ductile iron pipes.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">anode</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6588">
+      <description>-- Definition --&#13;
+Clear well.&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;clear well &lt;/i&gt;is an enclosed tank that is associated with a treatment plant. Clear wells are used to store filtered water of sufficient capacity to prevent the need to vary the filtration rate with variations in demand. Clear wells are also used to provide chlorine contact time for disinfection. Pumps are&#13;
+used to move the water from the clear well to the treatment plant or to a distribution system.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">clearWell</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6589">
+      <description>-- Definition --&#13;
+Control valve.&#13;
+&#13;
+-- Description --&#13;
+&lt;i&gt;Control valves &lt;/i&gt;represent set of valves that operate in special ways. There are three fundamental types of control valves: backflow control, air control, and altitude.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">controlValve</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6590">
+      <description>-- Definition --&#13;
+Fitting.&#13;
+&#13;
+-- Description --&#13;
+The &lt;i&gt;fitting &lt;/i&gt;represents the facility found at the joint between two lines where a transition of some sort must occur. The basic connecting devices between pipes; fittings are rarely used to control the flow of water through the network. &#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">fitting</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6591">
+      <description>-- Definition --&#13;
+Hydrant.&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;hydrant &lt;/i&gt;enables fire fighters to attach fire hoses to the distribution network. Hydrants also have secondary uses that include flushing main lines and laterals, filling tank trucks, and providing a temporary water source for construction jobs.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">hydrant</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6592">
+      <description>-- Definition --&#13;
+Junction.&#13;
+&#13;
+-- Description --&#13;
+The &lt;i&gt;junction &lt;/i&gt;is a water network node where two or more pipes combine, or a point where water consumption is allocated and defined as demand.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">junction</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6593">
+      <description>-- Definition --&#13;
+Lateral point.&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;lateral point &lt;/i&gt;represents the location of the connection between the customer and the distribution system.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">lateralPoint</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6594">
+      <description>-- Definition --&#13;
+Meter.&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;meter &lt;/i&gt;is a facility that is used to measure water consumption (volume). Being a facility, a meter plays the role of a junction on the active network. &#13;
+&#13;
+NOTE Meters are also much like hydrants as they also have an associated warehouse object, namely, a WarehouseMeter.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">meter</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6595">
+      <description>-- Definition --&#13;
+Pump.&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;pump &lt;/i&gt;is a piece of equipment that moves, compresses, or alters the pressure of a fluid, such as water or air, being conveyed through a natural or artificial channel. &#13;
+&#13;
+NOTE Pump types include AxialFlow, Centrifugal, Jet, Reciprocating, Rotary,&#13;
+Screw, and Turbine.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">pump</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6596">
+      <description>-- Definition --&#13;
+Pump station.&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;pump station &lt;/i&gt;is a facility for pumping water on the network to transport to another part of the network (lift pump). &#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">pumpStation</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6597">
+      <description>-- Definition --&#13;
+Sampling station.&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;sampling station &lt;/i&gt;is a facility that is used for collecting water samples. Sampling stations may be dedicated sampling devices, or they may be other devices of the system where a sample may be obtained.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">samplingStation</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6598">
+      <description>-- Definition --&#13;
+SCADA sensor.&#13;
+&#13;
+-- Description --&#13;
+The &lt;i&gt;SCADA sensor &lt;/i&gt;is a feature that&amp;rsquo;s used to remotely measure the status of network components as part of a supervisory control and data acquisition (SCADA) system. SCADA systems provide alarms, responses, data acquisition, and control for collection and distribution systems. Operators use the SCADA system to monitor and adjust processes and facilities.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">scadaSensor</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6599">
+      <description>-- Definition --&#13;
+Storage basin.&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;storage basin&lt;/i&gt; represents artificially enclosed area of a river or harbor designed so that the water level remains unaffected by tidal changes.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">storageBasin</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6600">
+      <description>-- Definition --&#13;
+Enclosed storage facility.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">storageFacility</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6601">
+      <description>-- Definition --&#13;
+Surge relief tank.&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;surge relief tank &lt;/i&gt;is a piece of equipment used to absorb pressure increases in the water system. Surge relief tanks provide a buffer against throttling within the system by accepting water into a tank through a pressure valve.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">surgeReliefTank</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6602">
+      <description>-- Definition --&#13;
+System valve.&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;system valve &lt;/i&gt;is a facility that is fitted to a pipeline or orifice in which the closure member is either rotated or moved transversely or longitudinally in the waterway so as to control or stop the flow. System valves are used to regulate pressure, isolate, throttle flow, prevent backflow, and relieve&#13;
+pressure.&#13;
+&#13;
+NOTE System valve types include Gate, Plug, Ball, Cone, and Butterfly. These specific types may be classified as isolation valves.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">systemValve</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6603">
+      <description>-- Definition --&#13;
+Thrust protection.&#13;
+&#13;
+-- Description --&#13;
+The &lt;i&gt;thrust protection &lt;/i&gt;represents a type of line protector that&amp;rsquo;s used to prevent pipe movement. Thrust protection is commonly implemented as thrust blocks (masses of concrete material) that are placed at bends and around valve structures. &#13;
+&#13;
+NOTE The types of thrust protection include Anchor,&#13;
+Blocking, Deadman, and Kicker.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">thrustProtection</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6604">
+      <description>-- Definition --&#13;
+Treatment plant.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">treatmentPlant</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6605">
+      <description>-- Definition --&#13;
+Production well.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">well</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6606">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">pressureRelieveValve</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6607">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">airRelieveValve</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6608">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">checkValve</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6609">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">waterExhaustPoint</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6610">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">waterServicePoint</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6611">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">fountain</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6612">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">pressureController</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6613">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">vent</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6614">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">recoilCheckValve</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4722_6615">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/WaterAppurtenanceTypeIMKLValue">waterDischargePoint</identifier>
+    </Definition>
+  </dictionaryEntry>
+</Dictionary>

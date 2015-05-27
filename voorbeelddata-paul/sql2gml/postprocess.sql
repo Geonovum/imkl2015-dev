@@ -220,19 +220,19 @@ drop table if exists utilitylink cascade;
 
 create temporary table t_utilitylink
 as
-    select 'ulinkid-' || gid as gmlid,thema,netbeheer,geom,status::text
+    select 'ulinkid-' || gmlid as gmlid,bhcode,unetid,geom,status::text
     from elektriciteitskabel
        union all
-    select 'ulinkid-' || gid as gmlid,thema,netbeheer,geom,status::text
+    select 'ulinkid-' || gmlid as gmlid,bhcode,unetid,geom,status::text
     from rioolvv_kabelofleiding
        union all
-    select 'ulinkid-' || gid as gmlid,thema,netbeheer,geom,status::text
+    select 'ulinkid-' || gmlid as gmlid,bhcode,unetid,geom,status::text
     from water_kabelofleiding
        union all
-    select 'ulinkid-' || gid as gmlid,thema,netbeheer,geom,status::text
+    select 'ulinkid-' || gmlid as gmlid,bhcode,unetid,geom,status::text
     from oliegaschemicalien
        union all
-    select 'ulinkid-' || gid as gmlid,thema,netbeheer,geom,status::text
+    select 'ulinkid-' || gmlid as gmlid,bhcode,unetid,geom,status::text
     from kabelb
 ;
 create table utilitylink

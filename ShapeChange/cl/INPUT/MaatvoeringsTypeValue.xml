@@ -1,0 +1,33 @@
+<?xml-stylesheet type='text/xsl' href='./CodelistDictionary-v32.xsl'?><Dictionary xmlns="http://www.opengis.net/gml/3.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="MaatvoeringsTypeValue" xsi:schemaLocation="http://www.opengis.net/gml/3.2 null">
+  <description>
+  </description>
+  <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0">MaatvoeringsTypeValue</identifier>
+  <dictionaryEntry>
+    <Definition gml:id="_5137_7323">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/MaatvoeringsTypeValue">maatvoeringshulplijn</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5137_7322">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/MaatvoeringsTypeValue">maatvoeringslijn</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5137_7324">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/MaatvoeringsTypeValue">maatvoeringslabel</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5137_7325">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/MaatvoeringsTypeValue">maatvoeringspijl</identifier>
+    </Definition>
+  </dictionaryEntry>
+</Dictionary>

@@ -1,0 +1,46 @@
+<?xml-stylesheet type='text/xsl' href='./CodelistDictionary-v32.xsl'?><Dictionary xmlns="http://www.opengis.net/gml/3.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="ExtraDetailInfoTypeValue" xsi:schemaLocation="http://www.opengis.net/gml/3.2 null">
+  <description>-- Name --&#13;
+-- Definition --&#13;
+Verschillende vormen van extra detailinformatie die opgenomen worden bij een utiliteitsnet. &#13;
+-- Description --&#13;
+-- Source --</description>
+  <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0">ExtraDetailInfoTypeValue</identifier>
+  <dictionaryEntry>
+    <Definition gml:id="_5078_7302">
+      <description>-- Name --&#13;
+-- Definition --&#13;
+Algemene aanduiding voor een nader detail van een situatie.&#13;
+-- Description --&#13;
+-- Source --</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/ExtraDetailInfoTypeValue">detail</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5078_7245">
+      <description>-- Name --&#13;
+-- Definition --&#13;
+De kabel of leiding die een kabel of leiding verbindt met een aansluitpunt.&#13;
+-- Description --&#13;
+-- Source --</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/ExtraDetailInfoTypeValue">aansluiting</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5078_7246">
+      <description>-- Name --&#13;
+-- Definition --&#13;
+-- Description --&#13;
+-- Source --</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/ExtraDetailInfoTypeValue">lengteprofiel</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5078_7268">
+      <description>-- Name --&#13;
+-- Definition --&#13;
+-- Description --&#13;
+-- Source --</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/ExtraDetailInfoTypeValue">dwarsprofiel</identifier>
+    </Definition>
+  </dictionaryEntry>
+</Dictionary>

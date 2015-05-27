@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='./CodelistDictionary-v32.xsl'?><Dictionary xmlns="http://www.opengis.net/gml/3.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="TelecommunicationsAppurtenanceTypeIMKLValue" xsi:schemaLocation="http://www.opengis.net/gml/3.2 null">
+  <description>
+  </description>
+  <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0">TelecommunicationsAppurtenanceTypeIMKLValue</identifier>
+  <dictionaryEntry>
+    <Definition gml:id="_5209_7618">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/TelecommunicationsAppurtenanceTypeIMKLValue">antenna</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5209_7619">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/TelecommunicationsAppurtenanceTypeIMKLValue">termination</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4716_6561">
+      <description>-- Definition --&#13;
+Antenna.&#13;
+&#13;
+-- Description --&#13;
+An &lt;i&gt;antenna &lt;/i&gt;(or aerial) is a transducer that transmits or receives electromagnetic waves. In other words, antennas convert electromagnetic radiation into electric current, or vice versa.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/TelecommunicationsAppurtenanceTypeIMKLValue">antenna</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4716_6562">
+      <description>-- Definition --&#13;
+Copper (twisted-pair) maintenance loop.&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;m&lt;/i&gt;&lt;i&gt;aintenance &lt;/i&gt;&lt;i&gt;l&lt;/i&gt;&lt;i&gt;oop&lt;/i&gt; is a coil of slack copper cable that is used to support future joining or other maintenance activities.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/TelecommunicationsAppurtenanceTypeIMKLValue">copperMaintenanceLoop</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4716_6563">
+      <description>-- Definition --&#13;
+Copper repeater.&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;c&lt;/i&gt;&lt;i&gt;opper &lt;/i&gt;&lt;i&gt;r&lt;/i&gt;&lt;i&gt;epeater &lt;/i&gt;is copper line conditioning equipment that amplifies the analog or digital input signal. &#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/TelecommunicationsAppurtenanceTypeIMKLValue">copperRepeater</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4716_6564">
+      <description>-- Definition --&#13;
+Digital cross connect (DXC).&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;d&lt;/i&gt;&lt;i&gt;igital &lt;/i&gt;&lt;i&gt;c&lt;/i&gt;&lt;i&gt;ross &lt;/i&gt;&lt;i&gt;c&lt;/i&gt;&lt;i&gt;onnect&lt;/i&gt; is a patch panel for copper cables that are used to provide digital service. Fibers in cables are connected to signal ports in this equipment.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/TelecommunicationsAppurtenanceTypeIMKLValue">digitalCrossConnect</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4716_6565">
+      <description>-- Definition --&#13;
+Digital loop carrier (DLC).&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;d&lt;/i&gt;&lt;i&gt;igital &lt;/i&gt;&lt;i&gt;l&lt;/i&gt;&lt;i&gt;oop &lt;/i&gt;&lt;i&gt;c&lt;/i&gt;&lt;i&gt;arrier&lt;/i&gt; is a device that multiplexes an optical signal in to multiple lower level digital signals. Fibers in cables are connected to signal ports in this equipment. &#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/TelecommunicationsAppurtenanceTypeIMKLValue">digitalLoopCarrier</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4716_6566">
+      <description>-- Definition --&#13;
+Exchange (switch).&#13;
+&#13;
+-- Description --&#13;
+The &lt;i&gt;exchange&lt;/i&gt; (central office) is the physical building used to house the inside plant equipment (distribution frames, lasers, switches etc).&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/TelecommunicationsAppurtenanceTypeIMKLValue">exchange</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4716_6567">
+      <description>-- Definition --&#13;
+Fiber interconnect (FIC).&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;f&lt;/i&gt;&lt;i&gt;iber &lt;/i&gt;&lt;i&gt;i&lt;/i&gt;&lt;i&gt;nterconnect &lt;/i&gt;terminates individual fibers or establishes a connection between two or more fiber cables. Fibers in cables are connected to signal ports in the equipment. &#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/TelecommunicationsAppurtenanceTypeIMKLValue">fiberInterconnect</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4716_6568">
+      <description>-- Definition --&#13;
+Joint closure (copper of fiber).&#13;
+&#13;
+-- Description --&#13;
+A protective&lt;i&gt; joint closure&lt;/i&gt; for either copper or fiber-optic cable joints. A cable joint consists of spliced conductors and a closure.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/TelecommunicationsAppurtenanceTypeIMKLValue">jointClosure</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4716_6569">
+      <description>-- Definition --&#13;
+Load coil.&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;l&lt;/i&gt;&lt;i&gt;oad &lt;/i&gt;&lt;i&gt;c&lt;/i&gt;&lt;i&gt;oil&lt;/i&gt; is a copper line conditioning equipment. Standard voice phone calls degrade noticeably when the copper portion of a phone line is greater than 18 kilofeet long. In order to restore call quality, load coils are inserted at specific intervals along the loop. &#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/TelecommunicationsAppurtenanceTypeIMKLValue">loadCoil</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4716_6570">
+      <description>-- Definition --&#13;
+Main distribution frame (MDF).&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;m&lt;/i&gt;&lt;i&gt;ain &lt;/i&gt;&lt;i&gt;d&lt;/i&gt;&lt;i&gt;istribution &lt;/i&gt;&lt;i&gt;f&lt;/i&gt;&lt;i&gt;rame&lt;/i&gt; is often found at the local exchange (Central Office) and is used to terminate the copper cables running from the customer's site. The frame allows these cables to be cross connected using patch cords to other equipment such as a concentrator or switch.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/TelecommunicationsAppurtenanceTypeIMKLValue">mainDistributionFrame</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4716_6571">
+      <description>-- Definition --&#13;
+Multiplexer (MUX).&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;m&lt;/i&gt;&lt;i&gt;ultiplexer&lt;/i&gt; is a device that combines multiple inputs into an aggregate signal to be transported via a single transmission channel. Fibers in cables are connected to signal ports in this equipment.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/TelecommunicationsAppurtenanceTypeIMKLValue">multiplexer</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4716_6572">
+      <description>-- Definition --&#13;
+Optical maintenance loop.&#13;
+&#13;
+-- Description --&#13;
+An &lt;i&gt;optical maintenance loop&lt;/i&gt; is a coil of slack fiber cable that is used to support future splicing or other maintenance activities.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/TelecommunicationsAppurtenanceTypeIMKLValue">opticalMaintenanceLoop</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4716_6573">
+      <description>-- Definition --&#13;
+Optical repeater.&#13;
+&#13;
+-- Description --&#13;
+An &lt;i&gt;o&lt;/i&gt;&lt;i&gt;ptical &lt;/i&gt;&lt;i&gt;r&lt;/i&gt;&lt;i&gt;epeater &lt;/i&gt;is a device that receives an optical signal, amplifies it (or, in the case of a digital signal, reshapes, retimes, or otherwise reconstructs it), and retransmits it as an optical signal. Fibers in cables are connected to signal ports in this equipment. &#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/TelecommunicationsAppurtenanceTypeIMKLValue">opticalRepeater</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4716_6574">
+      <description>-- Definition --&#13;
+Patch panel.&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;p&lt;/i&gt;&lt;i&gt;atch &lt;/i&gt;&lt;i&gt;p&lt;/i&gt;&lt;i&gt;anel&lt;/i&gt; is device where connections are made between incoming and outgoing fibers. Fibers in cables are connected to signal ports in this equipment. &#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/TelecommunicationsAppurtenanceTypeIMKLValue">patchPanel</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4716_6575">
+      <description>-- Definition --&#13;
+Splice closure.&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;splice closure &lt;/i&gt;is usually a weatherproof encasement, commonly made of tough plastic, that envelops the exposed area between spliced cables, i.e., where the jackets have been removed to expose the individual transmission media, optical or metallic, to be joined. The closure usually contains some device or means to maintain continuity of the tensile strength members of the cables involved, and also may maintain electrical continuity of metallic armor, and/or provide external connectivity to such armor for electrical grounding. In the case of fiber optic cables, it also contains a splice organizer to facilitate the splicing process and protect the exposed fibers from mechanical damage. In addition to the seals at its seams and points of cable entry, the splice closure may be filled with an encapsulate to further retard the entry of water.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/TelecommunicationsAppurtenanceTypeIMKLValue">spliceClosure</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4716_6576">
+      <description>-- Definition --&#13;
+Splitter.&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;s&lt;/i&gt;&lt;i&gt;plitter &lt;/i&gt;is a transmission coupling device for separately sampling (through a known coupling loss) either the forward (incident) or the backward (reflected) wave in a transmission line. Fibers in cables are connected to signal ports in this equipment. &#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/TelecommunicationsAppurtenanceTypeIMKLValue">splitter</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4716_6577">
+      <description>-- Definition --&#13;
+Terminal.&#13;
+&#13;
+-- Description --&#13;
+&lt;i&gt;Terminals &lt;/i&gt;are in-loop plant hardware, specifically designed to facilitate connection and removal of distribution cable, drop or service wire to and from cable pairs at a particular location. Terminals are a class of equipment that establishes the end point of a section of the transmission network between the CO and the customer. &#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/TelecommunicationsAppurtenanceTypeIMKLValue">terminal</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4716_6578">
+      <description>-- Definition --&#13;
+Termination.&#13;
+&#13;
+-- Description --&#13;
+&lt;i&gt;Terminations &lt;/i&gt;are a generic feature class for the end points of cables. These may be considered similar to service drops to buildings. They represent a point at which the telephone company network ends and connects with the wiring at the customer premises.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/TelecommunicationsAppurtenanceTypeIMKLValue">termination</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4716_6579">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/TelecommunicationsAppurtenanceTypeIMKLValue">noticeBoard</identifier>
+    </Definition>
+  </dictionaryEntry>
+</Dictionary>

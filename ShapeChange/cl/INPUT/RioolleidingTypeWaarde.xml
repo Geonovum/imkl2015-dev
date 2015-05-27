@@ -1,0 +1,92 @@
+<?xml-stylesheet type='text/xsl' href='./CodelistDictionary-v32.xsl'?><Dictionary xmlns="http://www.opengis.net/gml/3.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="RioolleidingTypeWaarde" xsi:schemaLocation="http://www.opengis.net/gml/3.2 null">
+  <description>-- Name --&#13;
+-- Definition --&#13;
+Typering van soort rioolleiding.&#13;
+-- Description --&#13;
+-- Source --</description>
+  <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0">RioolleidingTypeWaarde</identifier>
+  <dictionaryEntry>
+    <Definition gml:id="_5203_7453">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/RioolleidingTypeWaarde">aansluitsleiding</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5203_7454">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/RioolleidingTypeWaarde">bergbezinkleiding</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5203_7455">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/RioolleidingTypeWaarde">bergingsleiding</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5203_7456">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/RioolleidingTypeWaarde">gemengd riool</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5203_7452">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/RioolleidingTypeWaarde">hemelwaterriool</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5203_7457">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/RioolleidingTypeWaarde">overstortleiding</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5203_7458">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/RioolleidingTypeWaarde">stuwrioolleiding</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5203_7462">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/RioolleidingTypeWaarde">doorlatendeleiding</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5203_7459">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/RioolleidingTypeWaarde">vuilwaterriool</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5203_7460">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/RioolleidingTypeWaarde">transportrioolleiding</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5203_7461">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/RioolleidingTypeWaarde">zinker</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5203_7464">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/RioolleidingTypeWaarde">openLeiding</identifier>
+    </Definition>
+  </dictionaryEntry>
+</Dictionary>

@@ -1,0 +1,236 @@
+<?xml-stylesheet type='text/xsl' href='./CodelistDictionary-v32.xsl'?><Dictionary xmlns="http://www.opengis.net/gml/3.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="SewerAppurtenanceTypeIMKLValue" xsi:schemaLocation="http://www.opengis.net/gml/3.2 null">
+  <description>-- Name --&#13;
+-- Definition --&#13;
+-- Description --&#13;
+OPMERKING: waar zit dit in model?&#13;
+-- Source --</description>
+  <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0">SewerAppurtenanceTypeIMKLValue</identifier>
+  <dictionaryEntry>
+    <Definition gml:id="_5170_7372">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/SewerAppurtenanceTypeIMKLValue">aansluiting</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5170_7373">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/SewerAppurtenanceTypeIMKLValue">afsluiter</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5170_7374">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/SewerAppurtenanceTypeIMKLValue">mangatbuis</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5170_7375">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/SewerAppurtenanceTypeIMKLValue">opvangbekken</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5170_7376">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/SewerAppurtenanceTypeIMKLValue">specifieke structuur</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_5170_7465">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/SewerAppurtenanceTypeIMKLValue">watertank of -kelder</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4715_6542">
+      <description>-- Definition --&#13;
+Anode.&#13;
+&#13;
+-- Description --&#13;
+An &lt;i&gt;anode &lt;/i&gt;is a feature (specifically, an electrical mechanism) that&amp;rsquo;s applied to system components for the prevention of rust, pitting, and the corrosion of metal surfaces that are in contact with water or soil. A low-voltage current is applied to the water or soil in contact with the metal, such that the&#13;
+electromotive force renders the metal component cathodic. Corrosion is concentrated on the anodes instead of on the associated (and protected) water system components. This type of corrosion may occur in copper, steel, stainless steel, cast iron, and ductile iron pipes.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/SewerAppurtenanceTypeIMKLValue">anode</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4715_6543">
+      <description>-- Definition --&#13;
+Barrel.&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;barrel &lt;/i&gt;is the cylindrical part of a manhole between the cone and the shelf. Barrels are only found in wastewater and stormwater systems.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/SewerAppurtenanceTypeIMKLValue">barrel</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4715_6544">
+      <description>-- Definition --&#13;
+Bar screen.&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;bar screen &lt;/i&gt;is a set of parallel bars, either vertical&#13;
+or inclined, that is placed in a sewer or other waterway to catch debris. Bar screens are only found in wastewater and stormwater systems.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/SewerAppurtenanceTypeIMKLValue">barScreen</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4715_6545">
+      <description>-- Definition --&#13;
+Catch basin.&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;catch basin &lt;/i&gt;is a chamber or well used with storm or combined sewers to receive runoff into the collection system. Catch basins are used as a means of removing debris and solids that could enter thecollection system. Catch basins may also be modeled as curb inlets or stormwater inlets.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/SewerAppurtenanceTypeIMKLValue">catchBasin</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4715_6546">
+      <description>-- Definition --&#13;
+Clean out.&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;cleanout &lt;/i&gt;is a sewer and stormwater-specific facility that is used as an opening in a collection system for inserting tools, rods, or snakes while cleaning a pipeline or clearing a stoppage. Cleanout types include two-way cleanouts, which are designed for working a snake into the pipe in either&#13;
+direction. Two-way cleanouts are commonly found in laterals or near a property line.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/SewerAppurtenanceTypeIMKLValue">cleanOut</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4715_6547">
+      <description>-- Definition --&#13;
+Discharge structure.&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;discharge structure &lt;/i&gt;is a sewer and stormwater-specific facility where wastewater drainage is discharged from the system. A discharge point may be located at the terminus of an outfall.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/SewerAppurtenanceTypeIMKLValue">dischargeStructure</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4715_6548">
+      <description>-- Definition --&#13;
+Meter.&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;meter &lt;/i&gt;is a facility that is used to measure wastewater volume. Being a facility, a meter plays the role of a junction on the active network. &#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/SewerAppurtenanceTypeIMKLValue">meter</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4715_6549">
+      <description>-- Definition --&#13;
+Pump.&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;pump &lt;/i&gt;is a piece of equipment that moves, compresses, or alters the pressure of a fluid, such as water or air, being conveyed through a natural or artificial channel. Pump types include AxialFlow, Centrifugal, Jet, Reciprocating, Rotary,&#13;
+Screw, and Turbine.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/SewerAppurtenanceTypeIMKLValue">pump</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4715_6550">
+      <description>-- Definition --&#13;
+Regulator.&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;regulator &lt;/i&gt;is a device that is used in combined sewer systems to control or regulate the diversion flow.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/SewerAppurtenanceTypeIMKLValue">regulator</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4715_6551">
+      <description>-- Definition --&#13;
+SCADA sensor.&#13;
+&#13;
+-- Description --&#13;
+The &lt;i&gt;SCADA sensor &lt;/i&gt;is a feature that&amp;rsquo;s used to remotely measure the status of network components as part of a supervisory control and data acquisition (SCADA) system. SCADA systems provide alarms, responses, data acquisition, and control for collection and distribution systems. Operators use the SCADA system to monitor and adjust processes and facilities.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/SewerAppurtenanceTypeIMKLValue">scadaSensor</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4715_6552">
+      <description>-- Definition --&#13;
+Thrust protection.&#13;
+&#13;
+-- Description --&#13;
+The &lt;i&gt;t&lt;/i&gt;&lt;i&gt;hrust&lt;/i&gt;&lt;i&gt; p&lt;/i&gt;&lt;i&gt;rotection &lt;/i&gt;represents a type of line protector that&amp;rsquo;s used to prevent pipe movement. Thrust protection is commonly implemented as thrust blocks (masses of concrete material) that are placed at bends and around valve structures. The types of thrust protection include Anchor,&#13;
+Blocking, Deadman, and Kicker.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/SewerAppurtenanceTypeIMKLValue">thrustProtection</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4715_6553">
+      <description>-- Definition --&#13;
+Tide gate.&#13;
+&#13;
+-- Description --&#13;
+A &lt;i&gt;tide gate &lt;/i&gt;is a device used in sewer and stormwater systems that is suspended from a free-swinging horizontal hinge and is usually placed at the end of a conduit, discharging into a body of water with a fluctuating surface elevation. This piece of equipment is also termed a backwater gate, flap gate, or check gate.&#13;
+</description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/SewerAppurtenanceTypeIMKLValue">tideGate</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4715_6554">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/SewerAppurtenanceTypeIMKLValue">other</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4715_6555">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/SewerAppurtenanceTypeIMKLValue">node</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4715_6556">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/SewerAppurtenanceTypeIMKLValue">connection</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4715_6557">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/SewerAppurtenanceTypeIMKLValue">specificStructure</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4715_6558">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/SewerAppurtenanceTypeIMKLValue">mechanicAndElectromechanicEquipment</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4715_6559">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/SewerAppurtenanceTypeIMKLValue">rainwaterCollector</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4715_6560">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/SewerAppurtenanceTypeIMKLValue">watertankOrChamber</identifier>
+    </Definition>
+  </dictionaryEntry>
+</Dictionary>

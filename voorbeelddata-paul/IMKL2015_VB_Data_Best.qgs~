@@ -5,10 +5,10 @@
     <mapcanvas>
         <units>meters</units>
         <extent>
-            <xmin>154363.9408369668526575</xmin>
-            <ymin>389345.05206401064060628</ymin>
-            <xmax>154559.54542919737286866</xmax>
-            <ymax>389515.46360404812730849</ymax>
+            <xmin>154180.57271809622761793</xmin>
+            <ymin>388911.64326314232312143</ymin>
+            <xmax>155544.78769310921779834</xmax>
+            <ymax>389804.5839740599039942</ymax>
         </extent>
         <projections>1</projections>
         <destinationsrs>
@@ -79,7 +79,12 @@
             <layer_coordinate_transform destAuthId="EPSG:28992" srcAuthId="EPSG:28992" srcDatumTransform="-1" destDatumTransform="-1" layerid="AN_datatransport_KPN_0000546663_15O00932220150316175207169"/>
         </layer_coordinate_transform_info>
     </mapcanvas>
-    <legend updateDrawingOrder="true" activeLayer="MS_KabelOfLeiding20150322114039184">
+    <legend updateDrawingOrder="true" activeLayer="Diepte20150322112950382">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Utiliteitsnet" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="Utiliteitsnet20150410143240849" visible="0"/>
+            </filegroup>
+        </legendlayer>
         <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="Leidingelement" showFeatureCount="0">
             <filegroup open="false" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="Leidingelement20150322112023959" visible="1"/>
@@ -100,9 +105,9 @@
                 <legendlayerfile isInOverview="0" layerid="RioolVV_KabelOfLeiding20150326160435082" visible="1"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="HS_KabelOfLeiding" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="HS_KabelOfLeiding" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="HS_KabelOfLeiding20150322113639509" visible="0"/>
+                <legendlayerfile isInOverview="0" layerid="HS_KabelOfLeiding20150322113639509" visible="1"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Water_KabelOfLeiding" showFeatureCount="0">
@@ -115,19 +120,14 @@
                 <legendlayerfile isInOverview="0" layerid="ExtraGeometrie20150322114122938" visible="1"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="DT_Kabelbed" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="DT_Kabelbed" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="DT_Kabelbed20150323125731008" visible="0"/>
+                <legendlayerfile isInOverview="0" layerid="DT_Kabelbed20150323125731008" visible="1"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="DT_KabelOfLeiding" showFeatureCount="0">
             <filegroup open="true" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="DT_KabelOfLeiding20150322114536753" visible="0"/>
-            </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="LG_datatransport_KPN_0000546663_15O009322" showFeatureCount="0">
-            <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="LG_datatransport_KPN_0000546663_15O00932220150409211215149" visible="0"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="BGevaarlijkeInhoud" showFeatureCount="0">
@@ -150,34 +150,29 @@
                 <legendlayerfile isInOverview="0" layerid="LD_Gas_KabelOfLeiding20150322114610686" visible="1"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Annotatie_lijn" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Annotatie_lijn" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="Annotatie_lijn20150410130602285" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="Annotatie_lijn20150410130602285" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Annotatie_punt" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Annotatie_punt" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="Annotatie20150409173847210" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="Annotatie20150409173847210" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="ExtraTopografie" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="ExtraTopografie" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="ExtraTopo20150409175328956" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="ExtraTopo20150409175328956" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="maatvoering_label" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="maatvoering_label" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="maatvoering_label20150410103630438" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="maatvoering_label20150410103630438" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="maatvoering_pijl" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="maatvoering_pijl" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="maatvoering_pijl20150415111545121" visible="1"/>
-            </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="maatvoering_lijn" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="maatvoering20150409173120069" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="maatvoering_pijl20150415111545121" visible="0"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="MS_KabelOfLeiding" showFeatureCount="0">
@@ -190,19 +185,19 @@
                 <legendlayerfile isInOverview="0" layerid="LS_KabelOfLeiding20150322114305649" visible="1"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Kabelbed" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Kabelbed" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="Kabelbed20150326145114029" visible="0"/>
+                <legendlayerfile isInOverview="0" layerid="Kabelbed20150326145114029" visible="1"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Mantelbuis" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Mantelbuis" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="KabelEnLeidingContainer20150322113137090" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="KabelEnLeidingContainer20150322113137090" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Duct_kabelEnLeidingContainer" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Duct_kabelEnLeidingContainer" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="Kunstwerk_Containerelement20150322112916553" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="Kunstwerk_Containerelement20150322112916553" visible="0"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="verblijfsobject [bagviewer_verblijfsobject]" showFeatureCount="0">
@@ -210,14 +205,9 @@
                 <legendlayerfile isInOverview="0" layerid="verblijfsobject__bagviewer_verblijfsobject_20150410150021255" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Utiliteitsnet" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="aanduidingEisVoorzorgsmaatregel" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="Utiliteitsnet20150410143240849" visible="1"/>
-            </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="aanduidingEisVoorzorgsmaatregel" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="aanduidingEisVoorzorgsmaatregel20150410135414538" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="aanduidingEisVoorzorgsmaatregel20150410135414538" visible="0"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="bgtstandaard" showFeatureCount="0">
@@ -230,9 +220,9 @@
                 <legendlayerfile isInOverview="0" layerid="top10nl20150316163927778" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="bgtachtergrond" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="bgtachtergrond" showFeatureCount="0">
             <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="bgtachtergrond20150316211726269" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="bgtachtergrond20150316211726269" visible="0"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="gemeenten2009" showFeatureCount="0">
@@ -241,7 +231,7 @@
             </filegroup>
         </legendlayer>
     </legend>
-    <projectlayers layercount="33">
+    <projectlayers layercount="30">
         <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
             <id>Annotatie20150409173847210</id>
             <datasource>./Annotatie.shp</datasource>
@@ -3488,94 +3478,6 @@
             <excludeAttributesWFS/>
             <attributeactions/>
         </maplayer>
-        <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
-            <id>LG_datatransport_KPN_0000546663_15O00932220150409211215149</id>
-            <datasource>../Best/15O009322_1/LG_datatransport_KPN_0000546663_15O009322.png</datasource>
-            <title></title>
-            <abstract></abstract>
-            <keywordList>
-                <value></value>
-            </keywordList>
-            <layername>LG_datatransport_KPN_0000546663_15O009322</layername>
-            <srs>
-                <spatialrefsys>
-                    <proj4>+proj=sterea +lat_0=52.15616055555555 +lon_0=5.38763888888889 +k=0.9999079 +x_0=155000 +y_0=463000 +ellps=bessel +towgs84=565.417,50.3319,465.552,-0.398957,0.343988,-1.8774,4.0725 +units=m +no_defs</proj4>
-                    <srsid>2517</srsid>
-                    <srid>28992</srid>
-                    <authid>EPSG:28992</authid>
-                    <description>Amersfoort / RD New</description>
-                    <projectionacronym>sterea</projectionacronym>
-                    <ellipsoidacronym>bessel</ellipsoidacronym>
-                    <geographicflag>false</geographicflag>
-                </spatialrefsys>
-            </srs>
-            <customproperties>
-                <property key="identify/format" value="Value"/>
-            </customproperties>
-            <provider>gdal</provider>
-            <pipe>
-                <rasterrenderer opacity="1" alphaBand="-1" band="1" type="paletted">
-                    <rasterTransparency/>
-                    <colorPalette>
-                        <paletteEntry value="0" color="#ffffff" label="0"/>
-                        <paletteEntry value="1" color="#3cff3c" label="1"/>
-                        <paletteEntry value="2" color="#47ff47" label="2"/>
-                        <paletteEntry value="3" color="#5bff5b" label="3"/>
-                        <paletteEntry value="4" color="#70ff70" label="4"/>
-                        <paletteEntry value="5" color="#72ff72" label="5"/>
-                        <paletteEntry value="6" color="#75ff75" label="6"/>
-                        <paletteEntry value="7" color="#79ff79" label="7"/>
-                        <paletteEntry value="8" color="#7cff7c" label="8"/>
-                        <paletteEntry value="9" color="#7dff7d" label="9"/>
-                        <paletteEntry value="10" color="#81ff81" label="10"/>
-                        <paletteEntry value="11" color="#82ff82" label="11"/>
-                        <paletteEntry value="12" color="#88ff88" label="12"/>
-                        <paletteEntry value="13" color="#8aff8a" label="13"/>
-                        <paletteEntry value="14" color="#8cff8c" label="14"/>
-                        <paletteEntry value="15" color="#8dff8d" label="15"/>
-                        <paletteEntry value="16" color="#90ff90" label="16"/>
-                        <paletteEntry value="17" color="#91ff91" label="17"/>
-                        <paletteEntry value="18" color="#93ff93" label="18"/>
-                        <paletteEntry value="19" color="#95ff95" label="19"/>
-                        <paletteEntry value="20" color="#97ff97" label="20"/>
-                        <paletteEntry value="21" color="#9aff9a" label="21"/>
-                        <paletteEntry value="22" color="#a0ffa0" label="22"/>
-                        <paletteEntry value="23" color="#a1ffa1" label="23"/>
-                        <paletteEntry value="24" color="#a3ffa3" label="24"/>
-                        <paletteEntry value="25" color="#a6ffa6" label="25"/>
-                        <paletteEntry value="26" color="#aaffaa" label="26"/>
-                        <paletteEntry value="27" color="#afffaf" label="27"/>
-                        <paletteEntry value="28" color="#b1ffb1" label="28"/>
-                        <paletteEntry value="29" color="#b2ffb2" label="29"/>
-                        <paletteEntry value="30" color="#b5ffb5" label="30"/>
-                        <paletteEntry value="31" color="#b7ffb7" label="31"/>
-                        <paletteEntry value="32" color="#bcffbc" label="32"/>
-                        <paletteEntry value="33" color="#bdffbd" label="33"/>
-                        <paletteEntry value="34" color="#c2ffc2" label="34"/>
-                        <paletteEntry value="35" color="#c4ffc4" label="35"/>
-                        <paletteEntry value="36" color="#c6ffc6" label="36"/>
-                        <paletteEntry value="37" color="#c7ffc7" label="37"/>
-                        <paletteEntry value="38" color="#c8ffc8" label="38"/>
-                        <paletteEntry value="39" color="#c9ffc9" label="39"/>
-                        <paletteEntry value="40" color="#cdffcd" label="40"/>
-                        <paletteEntry value="41" color="#d0ffd0" label="41"/>
-                        <paletteEntry value="42" color="#d5ffd5" label="42"/>
-                        <paletteEntry value="43" color="#d9ffd9" label="43"/>
-                        <paletteEntry value="44" color="#dbffdb" label="44"/>
-                        <paletteEntry value="45" color="#dcffdc" label="45"/>
-                        <paletteEntry value="46" color="#e1ffe1" label="46"/>
-                        <paletteEntry value="47" color="#e2ffe2" label="47"/>
-                        <paletteEntry value="48" color="#e9ffe9" label="48"/>
-                        <paletteEntry value="49" color="#f0fff0" label="49"/>
-                        <paletteEntry value="50" color="#00ff00" label="50"/>
-                    </colorPalette>
-                </rasterrenderer>
-                <brightnesscontrast brightness="0" contrast="0"/>
-                <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
-                <rasterresampler maxOversampling="2"/>
-            </pipe>
-            <blendMode>0</blendMode>
-        </maplayer>
         <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
             <id>LS_KabelOfLeiding20150322114305649</id>
             <datasource>./LS_KabelOfLeiding.shp</datasource>
@@ -4213,46 +4115,6 @@
             <excludeAttributesWMS/>
             <excludeAttributesWFS/>
             <attributeactions/>
-        </maplayer>
-        <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
-            <id>Raster20150316224107044</id>
-            <datasource>../Best/15O009322_1/LG_buisleiding+gevaarlijke+inhoud_DPO_0000546659_15O009322.png</datasource>
-            <title></title>
-            <abstract></abstract>
-            <keywordList>
-                <value></value>
-            </keywordList>
-            <layername>Raster</layername>
-            <srs>
-                <spatialrefsys>
-                    <proj4>+proj=sterea +lat_0=52.15616055555555 +lon_0=5.38763888888889 +k=0.9999079 +x_0=155000 +y_0=463000 +ellps=bessel +towgs84=565.417,50.3319,465.552,-0.398957,0.343988,-1.8774,4.0725 +units=m +no_defs</proj4>
-                    <srsid>2517</srsid>
-                    <srid>28992</srid>
-                    <authid>EPSG:28992</authid>
-                    <description>Amersfoort / RD New</description>
-                    <projectionacronym>sterea</projectionacronym>
-                    <ellipsoidacronym>bessel</ellipsoidacronym>
-                    <geographicflag>false</geographicflag>
-                </spatialrefsys>
-            </srs>
-            <customproperties>
-                <property key="identify/format" value="Value"/>
-            </customproperties>
-            <provider>gdal</provider>
-            <pipe>
-                <rasterrenderer opacity="1" alphaBand="-1" band="1" type="paletted">
-                    <rasterTransparency/>
-                    <colorPalette>
-                        <paletteEntry value="0" color="#ffffff" label="0"/>
-                        <paletteEntry value="1" color="#ff7f00" label="1"/>
-                        <paletteEntry value="2" color="#000000" label="2"/>
-                    </colorPalette>
-                </rasterrenderer>
-                <brightnesscontrast brightness="0" contrast="0"/>
-                <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
-                <rasterresampler maxOversampling="2"/>
-            </pipe>
-            <blendMode>0</blendMode>
         </maplayer>
         <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
             <id>RioolVV_KabelOfLeiding20150326160435082</id>
@@ -5125,210 +4987,6 @@
             <editforminit></editforminit>
             <featformsuppress>0</featformsuppress>
             <annotationform>..</annotationform>
-            <editorlayout>generatedlayout</editorlayout>
-            <excludeAttributesWMS/>
-            <excludeAttributesWFS/>
-            <attributeactions/>
-        </maplayer>
-        <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-            <id>maatvoering20150409173120069</id>
-            <datasource>../geodanvdberg/maatvoering.shp</datasource>
-            <title></title>
-            <abstract></abstract>
-            <keywordList>
-                <value></value>
-            </keywordList>
-            <layername>maatvoering_lijn</layername>
-            <srs>
-                <spatialrefsys>
-                    <proj4>+proj=sterea +lat_0=52.15616055555555 +lon_0=5.38763888888889 +k=0.9999079 +x_0=155000 +y_0=463000 +ellps=bessel +towgs84=565.417,50.3319,465.552,-0.398957,0.343988,-1.8774,4.0725 +units=m +no_defs</proj4>
-                    <srsid>2517</srsid>
-                    <srid>28992</srid>
-                    <authid>EPSG:28992</authid>
-                    <description>Amersfoort / RD New</description>
-                    <projectionacronym>sterea</projectionacronym>
-                    <ellipsoidacronym>bessel</ellipsoidacronym>
-                    <geographicflag>false</geographicflag>
-                </spatialrefsys>
-            </srs>
-            <provider encoding="System">ogr</provider>
-            <previewExpression>COALESCE( "id", '&lt;NULL>' )</previewExpression>
-            <vectorjoins/>
-            <renderer-v2 symbollevels="0" type="singleSymbol">
-                <symbols>
-                    <symbol alpha="1" type="line" name="0">
-                        <layer pass="0" class="SimpleLine" locked="0">
-                            <prop k="capstyle" v="square"/>
-                            <prop k="color" v="0,0,0,255"/>
-                            <prop k="customdash" v="5;2"/>
-                            <prop k="customdash_unit" v="MM"/>
-                            <prop k="draw_inside_polygon" v="0"/>
-                            <prop k="joinstyle" v="bevel"/>
-                            <prop k="offset" v="0"/>
-                            <prop k="offset_unit" v="MM"/>
-                            <prop k="penstyle" v="solid"/>
-                            <prop k="use_custom_dash" v="0"/>
-                            <prop k="width" v="0.26"/>
-                            <prop k="width_unit" v="MM"/>
-                        </layer>
-                    </symbol>
-                </symbols>
-                <rotation/>
-                <sizescale scalemethod="area"/>
-            </renderer-v2>
-            <customproperties>
-                <property key="labeling" value="pal"/>
-                <property key="labeling/addDirectionSymbol" value="false"/>
-                <property key="labeling/angleOffset" value="0"/>
-                <property key="labeling/blendMode" value="0"/>
-                <property key="labeling/bufferBlendMode" value="0"/>
-                <property key="labeling/bufferColorA" value="255"/>
-                <property key="labeling/bufferColorB" value="255"/>
-                <property key="labeling/bufferColorG" value="255"/>
-                <property key="labeling/bufferColorR" value="255"/>
-                <property key="labeling/bufferDraw" value="false"/>
-                <property key="labeling/bufferJoinStyle" value="64"/>
-                <property key="labeling/bufferNoFill" value="false"/>
-                <property key="labeling/bufferSize" value="1"/>
-                <property key="labeling/bufferSizeInMapUnits" value="false"/>
-                <property key="labeling/bufferTransp" value="0"/>
-                <property key="labeling/centroidWhole" value="false"/>
-                <property key="labeling/decimals" value="3"/>
-                <property key="labeling/displayAll" value="false"/>
-                <property key="labeling/dist" value="0"/>
-                <property key="labeling/distInMapUnits" value="false"/>
-                <property key="labeling/enabled" value="false"/>
-                <property key="labeling/fieldName" value=""/>
-                <property key="labeling/fontBold" value="false"/>
-                <property key="labeling/fontCapitals" value="0"/>
-                <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
-                <property key="labeling/fontItalic" value="false"/>
-                <property key="labeling/fontLetterSpacing" value="0"/>
-                <property key="labeling/fontLimitPixelSize" value="false"/>
-                <property key="labeling/fontMaxPixelSize" value="10000"/>
-                <property key="labeling/fontMinPixelSize" value="3"/>
-                <property key="labeling/fontSize" value="8.25"/>
-                <property key="labeling/fontSizeInMapUnits" value="false"/>
-                <property key="labeling/fontStrikeout" value="false"/>
-                <property key="labeling/fontUnderline" value="false"/>
-                <property key="labeling/fontWeight" value="50"/>
-                <property key="labeling/fontWordSpacing" value="0"/>
-                <property key="labeling/formatNumbers" value="false"/>
-                <property key="labeling/isExpression" value="false"/>
-                <property key="labeling/labelOffsetInMapUnits" value="true"/>
-                <property key="labeling/labelPerPart" value="false"/>
-                <property key="labeling/leftDirectionSymbol" value="&lt;"/>
-                <property key="labeling/limitNumLabels" value="false"/>
-                <property key="labeling/maxCurvedCharAngleIn" value="20"/>
-                <property key="labeling/maxCurvedCharAngleOut" value="-20"/>
-                <property key="labeling/maxNumLabels" value="2000"/>
-                <property key="labeling/mergeLines" value="false"/>
-                <property key="labeling/minFeatureSize" value="0"/>
-                <property key="labeling/multilineAlign" value="0"/>
-                <property key="labeling/multilineHeight" value="1"/>
-                <property key="labeling/namedStyle" value="Normal"/>
-                <property key="labeling/obstacle" value="true"/>
-                <property key="labeling/placeDirectionSymbol" value="0"/>
-                <property key="labeling/placement" value="2"/>
-                <property key="labeling/placementFlags" value="10"/>
-                <property key="labeling/plussign" value="false"/>
-                <property key="labeling/preserveRotation" value="true"/>
-                <property key="labeling/previewBkgrdColor" value="#ffffff"/>
-                <property key="labeling/priority" value="5"/>
-                <property key="labeling/quadOffset" value="4"/>
-                <property key="labeling/reverseDirectionSymbol" value="false"/>
-                <property key="labeling/rightDirectionSymbol" value=">"/>
-                <property key="labeling/scaleMax" value="10000000"/>
-                <property key="labeling/scaleMin" value="1"/>
-                <property key="labeling/scaleVisibility" value="false"/>
-                <property key="labeling/shadowBlendMode" value="6"/>
-                <property key="labeling/shadowColorB" value="0"/>
-                <property key="labeling/shadowColorG" value="0"/>
-                <property key="labeling/shadowColorR" value="0"/>
-                <property key="labeling/shadowDraw" value="false"/>
-                <property key="labeling/shadowOffsetAngle" value="135"/>
-                <property key="labeling/shadowOffsetDist" value="1"/>
-                <property key="labeling/shadowOffsetGlobal" value="true"/>
-                <property key="labeling/shadowOffsetUnits" value="1"/>
-                <property key="labeling/shadowRadius" value="1.5"/>
-                <property key="labeling/shadowRadiusAlphaOnly" value="false"/>
-                <property key="labeling/shadowRadiusUnits" value="1"/>
-                <property key="labeling/shadowScale" value="100"/>
-                <property key="labeling/shadowTransparency" value="30"/>
-                <property key="labeling/shadowUnder" value="0"/>
-                <property key="labeling/shapeBlendMode" value="0"/>
-                <property key="labeling/shapeBorderColorA" value="255"/>
-                <property key="labeling/shapeBorderColorB" value="128"/>
-                <property key="labeling/shapeBorderColorG" value="128"/>
-                <property key="labeling/shapeBorderColorR" value="128"/>
-                <property key="labeling/shapeBorderWidth" value="0"/>
-                <property key="labeling/shapeBorderWidthUnits" value="1"/>
-                <property key="labeling/shapeDraw" value="false"/>
-                <property key="labeling/shapeFillColorA" value="255"/>
-                <property key="labeling/shapeFillColorB" value="255"/>
-                <property key="labeling/shapeFillColorG" value="255"/>
-                <property key="labeling/shapeFillColorR" value="255"/>
-                <property key="labeling/shapeJoinStyle" value="64"/>
-                <property key="labeling/shapeOffsetUnits" value="1"/>
-                <property key="labeling/shapeOffsetX" value="0"/>
-                <property key="labeling/shapeOffsetY" value="0"/>
-                <property key="labeling/shapeRadiiUnits" value="1"/>
-                <property key="labeling/shapeRadiiX" value="0"/>
-                <property key="labeling/shapeRadiiY" value="0"/>
-                <property key="labeling/shapeRotation" value="0"/>
-                <property key="labeling/shapeRotationType" value="0"/>
-                <property key="labeling/shapeSVGFile" value=""/>
-                <property key="labeling/shapeSizeType" value="0"/>
-                <property key="labeling/shapeSizeUnits" value="1"/>
-                <property key="labeling/shapeSizeX" value="0"/>
-                <property key="labeling/shapeSizeY" value="0"/>
-                <property key="labeling/shapeTransparency" value="0"/>
-                <property key="labeling/shapeType" value="0"/>
-                <property key="labeling/textColorA" value="255"/>
-                <property key="labeling/textColorB" value="0"/>
-                <property key="labeling/textColorG" value="0"/>
-                <property key="labeling/textColorR" value="0"/>
-                <property key="labeling/textTransp" value="0"/>
-                <property key="labeling/upsidedownLabels" value="0"/>
-                <property key="labeling/wrapChar" value=""/>
-                <property key="labeling/xOffset" value="0"/>
-                <property key="labeling/yOffset" value="0"/>
-            </customproperties>
-            <blendMode>0</blendMode>
-            <featureBlendMode>0</featureBlendMode>
-            <layerTransparency>0</layerTransparency>
-            <displayfield>id</displayfield>
-            <label>0</label>
-            <labelattributes>
-                <label fieldname="" text="Label"/>
-                <family fieldname="" name="MS Shell Dlg 2"/>
-                <size fieldname="" units="pt" value="12"/>
-                <bold fieldname="" on="0"/>
-                <italic fieldname="" on="0"/>
-                <underline fieldname="" on="0"/>
-                <strikeout fieldname="" on="0"/>
-                <color fieldname="" red="0" blue="0" green="0"/>
-                <x fieldname=""/>
-                <y fieldname=""/>
-                <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
-                <angle fieldname="" value="0" auto="0"/>
-                <alignment fieldname="" value="center"/>
-                <buffercolor fieldname="" red="255" blue="255" green="255"/>
-                <buffersize fieldname="" units="pt" value="1"/>
-                <bufferenabled fieldname="" on=""/>
-                <multilineenabled fieldname="" on=""/>
-                <selectedonly on=""/>
-            </labelattributes>
-            <edittypes>
-                <edittype labelontop="0" editable="1" type="0" name="id"/>
-                <edittype labelontop="0" editable="1" type="0" name="netbeheer"/>
-                <edittype labelontop="0" editable="1" type="0" name="thema"/>
-                <edittype labelontop="0" editable="1" type="0" name="type"/>
-            </edittypes>
-            <editform>.</editform>
-            <editforminit></editforminit>
-            <featformsuppress>0</featformsuppress>
-            <annotationform>.</annotationform>
             <editorlayout>generatedlayout</editorlayout>
             <excludeAttributesWMS/>
             <excludeAttributesWFS/>

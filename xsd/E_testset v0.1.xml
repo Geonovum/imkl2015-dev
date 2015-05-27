@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gml:FeatureCollection gml:id="ID_1c0c5554-5c4a-467a-a9ef-9f36b5af2bf7" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:imkl2015="http://www.geonovum.nl/imkl/2015/1.0" xsi:schemaLocation="http://www.geonovum.nl/imkl/2015/1.0 IMKL2015.xsd">
+  <gml:featureMember>
+    <us-net-common:UtilityLink gml:id="ID_2d6e1e45-75c5-457a-ab1c-3fb4bb3694a6" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:net="urn:x-inspire:specification:gmlas:Network:3.2" xmlns:base="urn:x-inspire:specification:gmlas:BaseTypes:3.2">
+      <net:beginLifespanVersion>2001-12-17T09:30:47.0Z</net:beginLifespanVersion>
+      <net:inspireId>
+        <base:Identifier>
+          <base:localId>NETBH.001</base:localId>
+          <base:namespace>NL.IMKL</base:namespace>
+        </base:Identifier>
+      </net:inspireId>
+      <net:endLifespanVersion nilReason="inapplicable">2001-12-17T09:30:47.0Z</net:endLifespanVersion>
+      <net:inNetwork xlink:href="http://www.geonovum.nl/imkl/2015/1.0/Utiliteitsnet/NL.IMKL:NETBH.001" />
+      <net:centrelineGeometry>
+        <gml:LineString gml:id="ID_f5a5de6b-6a32-48e8-8600-819a475985ef" srsName="http://spatialreference.org/ref/epsg/28992/">
+          <gml:posList>154841.468 391265.637 154954.231 391280.767 155086.231 391320.767 155330.231 391360.767</gml:posList>
+        </gml:LineString>
+      </net:centrelineGeometry>
+      <net:fictitious>false</net:fictitious>
+      <us-net-common:currentStatus  xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional" />
+      <us-net-common:validFrom nilReason="inapplicable" xsi:nil="true"/>
+      <us-net-common:verticalPosition nilReason="missing" xsi:nil="true"/>
+    </us-net-common:UtilityLink>
+  </gml:featureMember>
+  <gml:featureMember>
+    <us-net-common:UtilityLink gml:id="ID_bafdfd5f-8163-45f6-a2f6-decaeb8d8664" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:net="urn:x-inspire:specification:gmlas:Network:3.2" xmlns:base="urn:x-inspire:specification:gmlas:BaseTypes:3.2">
+      <net:beginLifespanVersion>2001-12-17T09:30:47.0Z</net:beginLifespanVersion>
+      <net:inspireId>
+        <base:Identifier>
+          <base:localId>NETBH.002</base:localId>
+          <base:namespace>NL.IMKL</base:namespace>
+        </base:Identifier>
+      </net:inspireId>
+      <net:endLifespanVersion>2001-12-17T09:30:47.0Z</net:endLifespanVersion>
+      <net:inNetwork xlink:href="http://www.geonovum.nl/imkl/2015/1.0/Utiliteitsnet/NL.IMKL:NETBH.001" />
+      <net:centrelineGeometry>
+        <gml:LineString gml:id="ID_7fdbc52d-18e3-4df6-8b40-5221d339dc31" srsName="http://spatialreference.org/ref/epsg/28992/">
+          <gml:posList>154831.468 391245.637 154941.231 391260.767 155310.231 391300.767</gml:posList>
+        </gml:LineString>
+      </net:centrelineGeometry>
+      <net:fictitious>false</net:fictitious>
+      <us-net-common:currentStatus  xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional" />
+      <us-net-common:validFrom nilReason="inapplicable" xsi:nil="true"/>
+      <us-net-common:verticalPosition nilReason="missing" xsi:nil="true"/>
+    </us-net-common:UtilityLink>
+  </gml:featureMember>
+  <gml:featureMember>
+    <us-net-common:UtilityLink gml:id="ID_c979bd8e-1f5d-4143-b69c-1fe66694350d" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/3.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:net="urn:x-inspire:specification:gmlas:Network:3.2" xmlns:base="urn:x-inspire:specification:gmlas:BaseTypes:3.2">
+      <net:beginLifespanVersion>2001-12-17T09:30:47.0Z</net:beginLifespanVersion>
+      <net:inspireId>
+        <base:Identifier>
+          <base:localId>NETBH.003</base:localId>
+          <base:namespace>NL.IMKL</base:namespace>
+        </base:Identifier>
+      </net:inspireId>
+      <net:endLifespanVersion>2001-12-17T09:30:47.0Z</net:endLifespanVersion>
+      <net:inNetwork xlink:href="http://www.geonovum.nl/imkl/2015/1.0/Utiliteitsnet/NL.IMKL:NETBH.001" />
+      <net:centrelineGeometry>
+        <gml:LineString gml:id="ID_969dd2e9-b401-4dac-a6fa-5ba424cfe3ea" srsName="http://spatialreference.org/ref/epsg/28992/">
+          <gml:posList>154941.0 391260.0 155310.231 390990.767 155340.231 390960.001</gml:posList>
+        </gml:LineString>
+      </net:centrelineGeometry>
+      <net:fictitious>false</net:fictitious>
+      <us-net-common:currentStatus  xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/projected" />
+      <us-net-common:validFrom nilReason="inapplicable" xsi:nil="true"/>
+      <us-net-common:verticalPosition nilReason="missing" xsi:nil="true"/>
+    </us-net-common:UtilityLink>
+  </gml:featureMember>
+  <gml:featureMember>
+    <imkl2015:Elektriciteitskabel gml:id="ID_1" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/3.0" xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/3.0" xmlns:imkl="http://www.geonovum.nl/imkl/2015/1.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:net="urn:x-inspire:specification:gmlas:Network:3.2" xmlns:base="urn:x-inspire:specification:gmlas:BaseTypes:3.2">
+      <net:beginLifespanVersion>2001-12-17T09:30:47.0Z</net:beginLifespanVersion>
+      <net:inspireId>
+        <base:Identifier>
+          <base:localId>NETBH.001</base:localId>
+          <base:namespace>NL.IMKL</base:namespace>
+        </base:Identifier>
+      </net:inspireId>
+      <net:inNetwork xlink:href="http://www.geonovum.nl/imkl/2015/1.0/Utiliteitsnet/NL.IMKL:NETBH.001" />
+      <net:link xlink:href="http://www.geostandaarden.nl/INSPIRE-US/v3/UtilityLink/NL.IMKL:NETBH.001" />
+      <us-net-common:currentStatus xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/disused" />
+      <us-net-common:validFrom>2005-03-13T09:30:47.0Z</us-net-common:validFrom>
+      <us-net-common:verticalPosition>underground</us-net-common:verticalPosition>
+      <us-net-common:utilityDeliveryType xlink:href="http://inspire.ec.europa.eu/codelist/UtilityDeliveryTypeExtendedValue/distribution" />
+      <us-net-common:warningType xlink:href="http://inspire.ec.europa.eu/codelist/WarningTypeExtendedValue/net" />
+      <us-net-el:operatingVoltage uom="urn:ogc:def:uom:OGC::V">220</us-net-el:operatingVoltage>
+      <us-net-el:nominalVoltage uom="urn:ogc:def:uom:OGC::V">220</us-net-el:nominalVoltage>
+      <imkl2015:kabelDiameter uom="urn:ogc:def:uom:OGC::cm">3</imkl2015:kabelDiameter>
+      <imkl2015:geoNauwkeurigheidXY xlink:href="http://www.geonovum.nl/imkl/2015/1.0/NauwkeurigheidValue/tot30cm" />
+      <imkl2015:toelichting>Toelichting bij Elektriciteitskabel ID_1</imkl2015:toelichting>
+      <!--<imkl2015:ExtraGeometrie/>-->
+      <!--<imkl2015:dieptelegging/>-->
+      <!--<imkl2015:heeftExtraInformatie/>-->
+      <imkl2015:label>Label bij Elektriciteitskabel ID_1</imkl2015:label>
+      <imkl2015:omschrijving>Omschrijving bij Elektriciteitskabel ID_1</imkl2015:omschrijving>
+    </imkl2015:Elektriciteitskabel>
+  </gml:featureMember>
+  <gml:featureMember>
+     <imkl2015:Elektriciteitskabel gml:id="ID_2" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/3.0" xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/3.0" xmlns:imkl="http://www.geonovum.nl/imkl/2015/1.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:net="urn:x-inspire:specification:gmlas:Network:3.2" xmlns:base="urn:x-inspire:specification:gmlas:BaseTypes:3.2">
+       <net:beginLifespanVersion>2001-12-17T09:30:47.0Z</net:beginLifespanVersion>
+      <net:inspireId>
+        <base:Identifier>
+          <base:localId>NETBH.002</base:localId>
+          <base:namespace>NL.IMKL</base:namespace>
+        </base:Identifier>
+      </net:inspireId>
+      <net:inNetwork xlink:href="http://www.geonovum.nl/imkl/2015/1.0/Utiliteitsnet/NL.IMKL:NETBH.001" />
+      <net:link xlink:href="http://www.geostandaarden.nl/INSPIRE-US/v3/UtilityLink/NL.IMKL:NETBH.002" />
+      <net:link xlink:href="http://www.geostandaarden.nl/INSPIRE-US/v3/UtilityLink/NL.IMKL:NETBH.003" />
+      <us-net-common:currentStatus xlink:href="http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/projected" />
+	  <us-net-common:validFrom nilReason="inapplicable" xsi:nil="true"/>
+	  <!--wanneer voor verticalposition geen waarde wordt meegegeven dan wordt aangenomen dat het underground is-->
+      <us-net-common:verticalPosition nilReason="inapplicable" xsi:nil="true"/>
+      <us-net-common:utilityDeliveryType xlink:href="http://inspire.ec.europa.eu/codelist/UtilityDeliveryTypeExtendedValue/distribution" />
+      <us-net-common:warningType xlink:href="http://inspire.ec.europa.eu/codelist/WarningTypeExtendedValue/net" />
+      <us-net-el:operatingVoltage uom="urn:ogc:def:uom:OGC::V">220</us-net-el:operatingVoltage>
+      <us-net-el:nominalVoltage uom="urn:ogc:def:uom:OGC::V">220</us-net-el:nominalVoltage>
+      <imkl2015:kabelDiameter uom="urn:ogc:def:uom:OGC::cm">6</imkl2015:kabelDiameter>
+      <imkl2015:geoNauwkeurigheidXY xlink:href="http://www.geonovum.nl/imkl/2015/1.0/NauwkeurigheidValue/tot30cm" />
+      <imkl2015:toelichting>Toelichting bij Elektriciteitskabel ID_2</imkl2015:toelichting>
+	<!--<imkl2015:ExtraGeometrie/>-->
+	<!--<imkl2015:dieptelegging/>-->
+	<!--<imkl2015:heeftExtraInformatie/>-->
+      <imkl2015:label>Label bij Elektriciteitskabel ID_2</imkl2015:label>
+      <imkl2015:omschrijving>Omschrijving bij Elektriciteitskabel ID_2</imkl2015:omschrijving>
+     </imkl2015:Elektriciteitskabel>
+  </gml:featureMember>
+  <gml:featureMember>
+    <imkl2015:Utiliteitsnet gml:id="ID_230dbcf3-4fbd-4118-9f57-b2f370f04107" xmlns:imkl="http://www.geonovum.nl/imkl/2015/1.0" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/3.0" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gn="urn:x-inspire:specification:gmlas:GeographicalNames:3.0" xmlns:net="urn:x-inspire:specification:gmlas:Network:3.2" xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3">
+      <net:elements xlink:href="http://www.geonovum.nl/imkl/2015/1.0/Elektriciteitskabel/NL.IMKL:NETBH.001" />
+      <net:elements xlink:href="http://www.geonovum.nl/imkl/2015/1.0/Elektriciteitskabel/NL.IMKL:NETBH.002" />
+      <net:elements xlink:href="http://www.geostandaarden.nl/INSPIRE-US/v3/UtilityLink/NL.IMKL:NETBH.001" />
+      <net:elements xlink:href="http://www.geostandaarden.nl/INSPIRE-US/v3/UtilityLink/NL.IMKL:NETBH.002" />
+      <net:elements xlink:href="http://www.geostandaarden.nl/INSPIRE-US/v3/UtilityLink/NL.IMKL:NETBH.003" />
+      <us-net-common:utilityNetworkType xlink:href="http://inspire.ec.europa.eu/codelist/UtilityNetworkTypeExtendedValue/electricity" />
+      <us-net-common:authorityRole/>
+      <us-net-common:disclaimer>
+        <gmd:PT_FreeText>
+          <gmd:textGroup>
+            <gmd:LocalisedCharacterString>Als een netbeheerder een disclaimer heeft die geldt voor heel het utiliteitsnet dan kan die hier geplaatst worden. Alle data in dit voorbeeldpakket zijn fictief, elke gelijkenis met bestaande situaties is puur toeval.</gmd:LocalisedCharacterString>
+          </gmd:textGroup>
+        </gmd:PT_FreeText>
+      </us-net-common:disclaimer>
+      <imkl2015:label>Label bij utiliteitsnet</imkl2015:label>
+      <imkl2015:omschrijving>Omschrijving bij utiliteitsnet</imkl2015:omschrijving>
+      <imkl2015:identificatie>
+        <imkl2015:NEN3610ID>
+          <imkl2015:namespace>NL.IMKL</imkl2015:namespace>
+          <imkl2015:lokaalID>NETBH.001</imkl2015:lokaalID>
+        </imkl2015:NEN3610ID>
+      </imkl2015:identificatie>
+      <imkl2015:beginLifespanVersion>2001-12-17T09:30:47.0Z</imkl2015:beginLifespanVersion>
+      <imkl2015:endLifespanVersion>2001-12-17T09:30:47.0Z</imkl2015:endLifespanVersion>
+      <imkl2015:technischContactpersoon>
+				<imkl2015:TechnischContactpersoon>
+					<imkl2015:naam>Jan Contactpersoon</imkl2015:naam>
+					<imkl2015:telefoon>06-12345678</imkl2015:telefoon>
+					<imkl2015:email>jan.contactpersoon@NB.nl</imkl2015:email>
+				</imkl2015:TechnischContactpersoon>
+	</imkl2015:technischContactpersoon>
+	<!--<imkl2015:eisVoorzorgsmaatregelHoogstePrioriteit/>-->
+	<imkl2015:thema>laagspanning</imkl2015:thema>
+	<!--<imkl2015:heeftDieptes/>-->
+	<!--<imkl2015:heeftExtraTopografieen/>-->
+	<!--<imkl2015:standaardDieptelegging/>-->
+	<!--<imkl2015:heeftExtraInformatie/>-->
+    </imkl2015:Utiliteitsnet>
+  </gml:featureMember>
+</gml:FeatureCollection>

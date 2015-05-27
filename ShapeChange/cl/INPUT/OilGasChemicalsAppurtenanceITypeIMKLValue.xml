@@ -1,0 +1,68 @@
+<?xml-stylesheet type='text/xsl' href='./CodelistDictionary-v32.xsl'?><Dictionary xmlns="http://www.opengis.net/gml/3.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="OilGasChemicalsAppurtenanceITypeIMKLValue" xsi:schemaLocation="http://www.opengis.net/gml/3.2 null">
+  <description>
+  </description>
+  <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0">OilGasChemicalsAppurtenanceITypeIMKLValue</identifier>
+  <dictionaryEntry>
+    <Definition gml:id="_4712_6528">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/OilGasChemicalsAppurtenanceITypeIMKLValue">pump</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4712_6529">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/OilGasChemicalsAppurtenanceITypeIMKLValue">gasStation</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4712_6530">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/OilGasChemicalsAppurtenanceITypeIMKLValue">node</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4712_6531">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/OilGasChemicalsAppurtenanceITypeIMKLValue">compression</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4712_6532">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/OilGasChemicalsAppurtenanceITypeIMKLValue">terminal</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4712_6533">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/OilGasChemicalsAppurtenanceITypeIMKLValue">deliveryPoint</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4712_6534">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/OilGasChemicalsAppurtenanceITypeIMKLValue">frontier</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4712_6535">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/OilGasChemicalsAppurtenanceITypeIMKLValue">marker</identifier>
+    </Definition>
+  </dictionaryEntry>
+  <dictionaryEntry>
+    <Definition gml:id="_4712_6536">
+      <description>
+      </description>
+      <identifier codeSpace="http://www.geonovum.nl/imkl/2015/1.0/OilGasChemicalsAppurtenanceITypeIMKLValue">beacon</identifier>
+    </Definition>
+  </dictionaryEntry>
+</Dictionary>
