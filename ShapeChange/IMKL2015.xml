@@ -41,6 +41,11 @@
 		</Transformer>
 	</transformers>
 	<targets>
+		<Target class="de.interactive_instruments.ShapeChange.Target.Ontology.RDF" mode="enabled">
+		  <targetParameter name="outputDirectory" value="codelists"/>
+		  <targetParameter name="language" value="en"/>
+		  <targetParameter name="codeListOnly" value="true"/>
+		</Target>
 		<TargetXmlSchema class="de.interactive_instruments.ShapeChange.Target.XmlSchema.XmlSchema" mode="enabled">
 			<targetParameter name="outputDirectory" value="xsd"/>
 			<targetParameter name="defaultEncodingRule" value="iso19136_2007_INSPIRE_Extensions"/>
@@ -77,6 +82,7 @@
 				<XsdMapEntry type="LC_LandCoverClassificationSystem" xsdEncodingRules="iso19136_2007 gml33" xmlPropertyType="anyType" xmlType="anyType" xmlTypeType="simple" xmlTypeContent="simple"/>
 				<XsdMapEntry type="Quantity" xsdEncodingRules="iso19136_2007 gml33" xmlType="swe:QuantityType" xmlElement="swe:Quantity" xmlPropertyType="swe:QuantityPropertyType"/>
 				<XsdMapEntry type="GF_PropertyType" xsdEncodingRules="iso19136_2007_INSPIRE_Extensions" xmlPropertyType="gml:ReferenceType" xmlTypeNilReason="true" />
+				<XsdMapEntry type="stringOrNilReason" xsdEncodingRules="iso19136_2007 gml33" xmlPropertyType="gml:stringOrNilReason" xmlType="gml:stringOrNilReason" xmlTypeType="simple" xmlTypeContent="simple"/>
 			</xsdMapEntries>
 		</TargetXmlSchema>
 		<TargetXmlSchema class="de.interactive_instruments.ShapeChange.Target.XmlSchema.XmlSchema" inputs="WION" mode="enabled">
@@ -115,6 +121,7 @@
 				<XsdMapEntry type="LC_LandCoverClassificationSystem" xsdEncodingRules="iso19136_2007 gml33" xmlPropertyType="anyType" xmlType="anyType" xmlTypeType="simple" xmlTypeContent="simple"/>
 				<XsdMapEntry type="Quantity" xsdEncodingRules="iso19136_2007 gml33" xmlType="swe:QuantityType" xmlElement="swe:Quantity" xmlPropertyType="swe:QuantityPropertyType"/>
 				<XsdMapEntry type="GF_PropertyType" xsdEncodingRules="iso19136_2007_INSPIRE_Extensions" xmlPropertyType="gml:ReferenceType" xmlTypeNilReason="true" />
+				<XsdMapEntry type="stringOrNilReason" xsdEncodingRules="iso19136_2007 gml33" xmlPropertyType="gml:stringOrNilReason" xmlType="gml:stringOrNilReason" xmlTypeType="simple" xmlTypeContent="simple"/>
 			</xsdMapEntries>
 		</TargetXmlSchema>
 		<TargetXmlSchema class="de.interactive_instruments.ShapeChange.Target.XmlSchema.XmlSchema" inputs="RRB" mode="enabled">
@@ -153,11 +160,23 @@
 				<XsdMapEntry type="LC_LandCoverClassificationSystem" xsdEncodingRules="iso19136_2007 gml33" xmlPropertyType="anyType" xmlType="anyType" xmlTypeType="simple" xmlTypeContent="simple"/>
 				<XsdMapEntry type="Quantity" xsdEncodingRules="iso19136_2007 gml33" xmlType="swe:QuantityType" xmlElement="swe:Quantity" xmlPropertyType="swe:QuantityPropertyType"/>
 				<XsdMapEntry type="GF_PropertyType" xsdEncodingRules="iso19136_2007_INSPIRE_Extensions" xmlPropertyType="gml:ReferenceType" xmlTypeNilReason="true" />
+				<XsdMapEntry type="stringOrNilReason" xsdEncodingRules="iso19136_2007 gml33" xmlPropertyType="gml:stringOrNilReason" xmlType="gml:stringOrNilReason" xmlTypeType="simple" xmlTypeContent="simple"/>
 			</xsdMapEntries>
 		</TargetXmlSchema>
 		<Target class="de.interactive_instruments.ShapeChange.Target.Codelists.CodelistDictionaries" mode="enabled">
 			<targetParameter name="outputDirectory" value="cl"/>
 			<targetParameter name="enumerations" value="true"/>
+		</Target>
+		<Target class="de.interactive_instruments.ShapeChange.Target.SQL.SqlDdl" inputs="WION"
+		  mode="disabled">
+		  <targetParameter name="defaultEncodingRule" value="sql"/>
+		  <targetParameter name="outputDirectory" value="sql"/>
+		  <targetParameter name="size" value="-1"/>
+		  <targetParameter name="srid" value="28992"/>
+		  <targetParameter name="createReferences" value="true"/>
+		  <targetParameter name="idColumnName" value="id"/>
+		  <targetParameter name="createDocumentation" value="false"/>
+		  <xi:include href="http://shapechange.net/resources/config/StandardSqlMapEntries-PostgreSQL.xml"/>
 		</Target>
 	</targets>
 </ShapeChangeConfiguration>
