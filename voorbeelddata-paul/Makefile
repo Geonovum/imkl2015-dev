@@ -33,6 +33,7 @@ load:
 	shp2pgsql -d -S -I -W LATIN1  -s 28992  RioolVV_KabelOfLeiding.shp| psql
 	shp2pgsql -d -S -I -W LATIN1  -s 28992  Utiliteitsnet.shp | psql
 	shp2pgsql -d -S -I -W LATIN1  -s 28992  Water_KabelOfLeiding.shp| psql
+drop:
 
 createdb:
 	createdb imkl

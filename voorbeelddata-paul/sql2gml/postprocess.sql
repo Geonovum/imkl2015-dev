@@ -1,105 +1,12 @@
-alter table vijfmeteraanduiding drop column if exists gmlid;
-alter table aanduidingEisVoorzorgsmaatregel drop column if exists gmlid;
-alter table Annotatie_lijn drop column if exists gmlid;
-alter table Annotatie drop column if exists gmlid;
-alter table BGevaarlijkeInhoud drop column if exists gmlid;
-alter table Containerelement drop column if exists gmlid;
-alter table Diepte drop column if exists gmlid;
-alter table DT_Kabelbed drop column if exists gmlid;
-alter table DT_KabelOfLeiding drop column if exists gmlid;
-alter table ExtraDetailInfo drop column if exists gmlid;
-alter table ExtraGeometrie drop column if exists gmlid;
-alter table ExtraTopo drop column if exists gmlid;
-alter table HD_Gas_KabelOfLeiding drop column if exists gmlid;
-alter table HS_KabelOfLeiding drop column if exists gmlid;
-alter table kabelbedAlgemeen drop column if exists gmlid;
-alter table Kabelbed drop column if exists gmlid;
-alter table KabelEnLeidingContainer drop column if exists gmlid;
-alter table Kunstwerk_Containerelement drop column if exists gmlid;
-alter table LD_Gas_KabelOfLeiding drop column if exists gmlid;
-alter table Leidingelement drop column if exists gmlid;
-alter table LS_Kabelbed drop column if exists gmlid;
-alter table LS_KabelOfLeiding drop column if exists gmlid;
-alter table maatvoering_label drop column if exists gmlid;
-alter table maatvoering_pijl drop column if exists gmlid;
-alter table maatvoering drop column if exists gmlid;
-alter table MS_Kabelbed drop column if exists gmlid;
-alter table MS_KabelOfLeiding drop column if exists gmlid;
-alter table RioolVV_KabelOfLeiding drop column if exists gmlid;
-alter table Utiliteitsnet drop column if exists gmlid;
-alter table Water_KabelOfLeiding drop column if exists gmlid;
-
-alter table vijfmeteraanduiding add column gmlid text;
-alter table aanduidingEisVoorzorgsmaatregel add column gmlid text;
-alter table Annotatie_lijn add column gmlid text;
-alter table Annotatie add column gmlid text;
-alter table BGevaarlijkeInhoud add column gmlid text;
-alter table Containerelement add column gmlid text;
-alter table Diepte add column gmlid text;
-alter table DT_Kabelbed add column gmlid text;
-alter table DT_KabelOfLeiding add column gmlid text;
-alter table ExtraDetailInfo add column gmlid text;
-alter table ExtraGeometrie add column gmlid text;
-alter table ExtraTopo add column gmlid text;
-alter table HD_Gas_KabelOfLeiding add column gmlid text;
-alter table HS_KabelOfLeiding add column gmlid text;
-alter table kabelbedAlgemeen add column gmlid text;
-alter table Kabelbed add column gmlid text;
-alter table KabelEnLeidingContainer add column gmlid text;
-alter table Kunstwerk_Containerelement add column gmlid text;
-alter table LD_Gas_KabelOfLeiding add column gmlid text;
-alter table Leidingelement add column gmlid text;
-alter table LS_Kabelbed add column gmlid text;
-alter table LS_KabelOfLeiding add column gmlid text;
-alter table maatvoering_label add column gmlid text;
-alter table maatvoering_pijl add column gmlid text;
-alter table maatvoering add column gmlid text;
-alter table MS_Kabelbed add column gmlid text;
-alter table MS_KabelOfLeiding add column gmlid text;
-alter table RioolVV_KabelOfLeiding add column gmlid text;
-alter table Utiliteitsnet add column gmlid text;
-alter table Water_KabelOfLeiding add column gmlid text;
-
-update vijfmeteraanduiding set gmlid = 'a-' || gid;
-update aanduidingEisVoorzorgsmaatregel set gmlid = 'a-' || gid;
-update Annotatie_lijn set gmlid = 'b-' || gid;
-update Annotatie set gmlid = 'c-' || gid;
-update BGevaarlijkeInhoud set gmlid = 'd-' || gid;
-update Containerelement set gmlid = 'e-' || gid;
-update Diepte set gmlid = 'f-' || gid;
-update DT_Kabelbed set gmlid = 'g-' || gid;
-update DT_KabelOfLeiding set gmlid = 'h-' || gid;
-update ExtraDetailInfo set gmlid = 'i-' || gid;
-update ExtraGeometrie set gmlid = 'j-' || gid;
-update ExtraTopo set gmlid = 'k-' || gid;
-update HD_Gas_KabelOfLeiding set gmlid = 'l-' || gid;
-update HS_KabelOfLeiding set gmlid = 'm-' || gid;
-update kabelbedAlgemeen set gmlid = 'n-' || gid;
-update Kabelbed set gmlid = 'o-' || gid;
-update KabelEnLeidingContainer set gmlid = 'p-' || gid;
-update Kunstwerk_Containerelement set gmlid = 'q-' || gid;
-update LD_Gas_KabelOfLeiding set gmlid = 's-' || gid;
-update Leidingelement set gmlid = 't-' || gid;
-update LS_Kabelbed set gmlid = 'u-' || gid;
-update LS_KabelOfLeiding set gmlid = 'v-' || gid;
-update maatvoering_label set gmlid = 'w-' || gid;
-update maatvoering_pijl set gmlid = 'x-' || gid;
-update maatvoering set gmlid = 'maatvoering-' || gid;
-update MS_Kabelbed set gmlid = 'mskabelb-' || gid;
-update MS_KabelOfLeiding set gmlid = 'ms-' || gid;
-update RioolVV_KabelOfLeiding set gmlid = 'rioolvv-' || gid;
-update Utiliteitsnet set gmlid = 'unet-' || gid;
-update Water_KabelOfLeiding set gmlid = 'water-' || gid;
-
 -- First merge some tables
 --
 -- hs_kabelofleiding hs_kabelofleiding hs_kabelofleiding --> elektriciteitskabel
 -- 
-drop table if exists elektriciteitskabel;
+drop table if exists elektriciteitskabel cascade;
 create table elektriciteitskabel
 as
    select 
-	gmlid,
+	'hs' || gid as gid,
 	id::text,
 	thema::text,
 	netbeheer::text,
@@ -117,7 +24,7 @@ as
      from hs_kabelofleiding
    union all
    select
-	gmlid,
+	'ls' || gid as gid,
 	id::text,
 	thema::text,
 	netbeheer::text,
@@ -135,7 +42,7 @@ as
       from ls_kabelofleiding
    union all
    select 
-	gmlid,
+	'ms' || gid as gid,
 	id::text,
 	thema::text,
 	netbeheer::text,
@@ -156,11 +63,11 @@ as
 --
 -- OlieGasChemicalien
 -- 
-drop table if exists oliegaschemicalien;
+drop table if exists oliegaschemicalien cascade;
 create table oliegaschemicalien
 as
     select
-	 gmlid,
+	 'hd' || gid as gid,
 	 id,
 	 thema,
 	 netbeheer,
@@ -179,7 +86,7 @@ as
     from hd_gas_kabelofleiding
     union all
     select
-	 gmlid,
+	 'ld' || gid as gid,
 	 id,
 	 thema,
 	 netbeheer,
@@ -198,7 +105,7 @@ as
     from ld_gas_kabelofleiding
     union all
     select
-	 gmlid,
+	 'bgv' || gid as gid,
 	 id,
 	 thema,
 	 netbeheer,
@@ -220,11 +127,11 @@ as
 --
 --
 --
-drop table if exists kabelb;
+drop table if exists kabelb cascade;
 create table kabelb
 as
     select 
-	 gmlid, 
+	 'kab' || gid as gid,
 	 id, 
 	 thema, 
 	 type, 
@@ -244,7 +151,7 @@ as
     from kabelbed
 union all
     select 
-	 gmlid, 
+	 'dt' || gid as gid,
 	 id, 
 	 thema, 
 	 type, 
@@ -262,7 +169,6 @@ union all
 	 xinfo, 
 	 geom 
     from dt_kabelbed;
-
 
 --
 -- Now we have the following tables left...
@@ -296,119 +202,43 @@ union all
 -- kabelb
 
 --
--- Now we fix that all objects have to refer to a utilitynet while they do refer
--- refer to the thema only.
--- 
-alter table vijfmeteraanduiding add column unetid text;
-alter table aanduidingEisVoorzorgsmaatregel add column unetid text;
-alter table Annotatie_lijn add column unetid text;
-alter table Annotatie add column unetid text;
-alter table BGevaarlijkeInhoud add column unetid text;
-alter table Containerelement add column unetid text;
-alter table Diepte add column unetid text;
-alter table DT_KabelOfLeiding add column unetid text;
-alter table ExtraDetailInfo add column unetid text;
-alter table ExtraGeometrie add column unetid text;
-alter table ExtraTopo add column unetid text;
-alter table kabelbedAlgemeen add column unetid text;
-alter table KabelEnLeidingContainer add column unetid text;
-alter table Kunstwerk_Containerelement add column unetid text;
-alter table Leidingelement add column unetid text;
-alter table LS_Kabelbed add column unetid text;
-alter table maatvoering_label add column unetid text;
-alter table maatvoering_pijl add column unetid text;
-alter table maatvoering add column unetid text;
-alter table MS_Kabelbed add column unetid text;
-alter table RioolVV_KabelOfLeiding add column unetid text;
-alter table Water_KabelOfLeiding add column unetid text;
-alter table elektriciteitskabel add column unetid text;
-alter table oliegaschemicalien add column unetid text;
-alter table kabelb add column unetid text;
-
-update vijfmeteraanduiding l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
-update aanduidingEisVoorzorgsmaatregel l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
-update Annotatie_lijn l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
-update Annotatie l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
-update BGevaarlijkeInhoud l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
-update Containerelement l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
-update Diepte l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
-update DT_KabelOfLeiding l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
-update ExtraDetailInfo l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
-update ExtraGeometrie l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
-update ExtraTopo l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
-update kabelbedAlgemeen l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
-update KabelEnLeidingContainer l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
-update Kunstwerk_Containerelement l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
-update Leidingelement l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
-update LS_Kabelbed l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
-update maatvoering_label l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
-update maatvoering_pijl l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
-update maatvoering l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
-update MS_Kabelbed l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
-update RioolVV_KabelOfLeiding l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
-update Water_KabelOfLeiding l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
-update elektriciteitskabel l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
-update oliegaschemicalien l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
-update kabelb l set unetid = (select gmlid from utiliteitsnet u where u.thema = l.thema and l.netbeheer = u.authority);
-
+-- Create a table of parties from the utilitynetworks
 --
---
---
-drop table if exists relatedparty;
+drop table if exists relatedparty cascade;
 create table relatedparty
 as
     select 'party-' || gmlid as partyid,authority,authrole
     from utiliteitsnet
     ;
 
-alter table utiliteitsnet drop column if exists partyid;
-alter table utiliteitsnet add column partyid text;
-update utiliteitsnet
-set partyid = 'party-' || gmlid;
 
 --
 -- The following tables need to be forked. They are two objects in the targed
 -- schema.
 -- 
-drop table if exists utilitylink;
-create table utilitylink
+drop table if exists utilitylink cascade;
+
+create temporary table t_utilitylink
 as
-    select 'ulinkid-' || gmlid as gmlid,unetid,geom,status::text
+    select 'ulinkid-' || gid as gmlid,thema,netbeheer,geom,status::text
     from elektriciteitskabel
        union all
-    select 'ulinkid-' || gmlid as gmlid,unetid,geom,status::text
+    select 'ulinkid-' || gid as gmlid,thema,netbeheer,geom,status::text
     from rioolvv_kabelofleiding
        union all
-    select 'ulinkid-' || gmlid as gmlid,unetid,geom,status::text
+    select 'ulinkid-' || gid as gmlid,thema,netbeheer,geom,status::text
     from water_kabelofleiding
        union all
-    select 'ulinkid-' || gmlid as gmlid,unetid,geom,status::text
+    select 'ulinkid-' || gid as gmlid,thema,netbeheer,geom,status::text
     from oliegaschemicalien
        union all
-    select 'ulinkid-' || gmlid as gmlid,unetid,geom,status::text
+    select 'ulinkid-' || gid as gmlid,thema,netbeheer,geom,status::text
     from kabelb
 ;
+create table utilitylink
+as select l.*,n.gmlid as unetid,n.bhcode
+from t_utilitylink l,utiliteitsnet n where n.thema = l.thema and n.authority = l.netbeheer;
 
-alter table water_kabelofleiding drop column if exists ulinkid;
-alter table water_kabelofleiding add column ulinkid text;
-update water_kabelofleiding set ulinkid = 'ulinkid-' || gmlid;
-
-alter table rioolvv_kabelofleiding drop column if exists ulinkid;
-alter table rioolvv_kabelofleiding add column ulinkid text;
-update rioolvv_kabelofleiding set ulinkid = 'ulinkid-' || gmlid;
-
-alter table elektriciteitskabel drop column if exists ulinkid;
-alter table elektriciteitskabel add column ulinkid text;
-update elektriciteitskabel set ulinkid = 'ulinkid-' || gmlid;
-
-alter table oliegaschemicalien drop column if exists ulinkid;
-alter table oliegaschemicalien add column ulinkid text;
-update oliegaschemicalien set ulinkid = 'ulinkid-' || gmlid;
-
-
-alter table kabelb drop column if exists ulinkid;
-alter table kabelb add column ulinkid text;
-update kabelb set ulinkid = 'ulinkid-' || gmlid;
 
 
 update kabelb set ductwidth = '0.0' where ductwidth is null ;
@@ -425,3 +255,60 @@ update water_kabelofleiding set pressure = '0.0' where pressure is null ;
 update water_kabelofleiding set pipediam = '0.0' where pressure is null ;
 
 update diepte set nauwk = '0.0' where nauwk is null ;
+
+
+drop table v_vijfmeteraanduiding	   ;
+drop table v_aanduidingEisVoorzorgsmaatregel;
+drop table v_Annotatie_lijn;
+drop table v_Annotatie;
+drop table v_BGevaarlijkeInhoud;
+drop table v_Containerelement;
+drop table v_Diepte;
+drop table v_DT_KabelOfLeiding;
+drop table v_ExtraDetailInfo;
+drop table v_ExtraGeometrie;
+drop table v_ExtraTopo;
+drop table v_kabelbedAlgemeen;
+drop table v_KabelEnLeidingContainer;
+drop table v_Kunstwerk_Containerelement;
+drop table v_Leidingelement;
+drop table v_LS_Kabelbed;
+drop table v_maatvoering_label;
+drop table v_maatvoering_pijl;
+drop table v_maatvoering;
+drop table v_MS_Kabelbed;
+drop table v_RioolVV_KabelOfLeiding;
+drop table v_Utiliteitsnet;
+drop table v_Water_KabelOfLeiding;
+drop table v_elektriciteitskabel;
+drop table v_oliegaschemicalien;
+drop table v_kabelb;
+
+create table v_vijfmeteraanduiding						       as select 'z-' || l.gid as gmlid, l.*,u.gid as unetid,u.bhcode from vijfmeteraanduiding                              l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer; 
+create table v_aanduidingEisVoorzorgsmaatregel                                          as select 'a-' || l.gid as gmlid, l.*,u.gid as unetid,u.bhcode from aanduidingEisVoorzorgsmaatregel                  l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_Annotatie_lijn                                                           as select 'b-' || l.gid as gmlid, l.*,u.gid as unetid,u.bhcode from Annotatie_lijn                                   l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_Annotatie                                                                as select 'c-' || l.gid as gmlid, l.*,u.gid as unetid,u.bhcode from Annotatie                                        l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_BGevaarlijkeInhoud                                                       as select 'd-' || l.gid as gmlid, l.*,u.gid as unetid,u.bhcode from BGevaarlijkeInhoud                               l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_Containerelement                                                         as select 'e-' || l.gid as gmlid, l.*,u.gid as unetid,u.bhcode from Containerelement                                 l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_Diepte                                                                   as select 'f-' || l.gid as gmlid, l.*,u.gid as unetid,u.bhcode from Diepte                                           l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_DT_KabelOfLeiding                                                        as select 'g-' || l.gid as gmlid, l.*,u.gid as unetid,u.bhcode from DT_KabelOfLeiding                                l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_ExtraDetailInfo                                                          as select 'h-' || l.gid as gmlid, l.*,u.gid as unetid,u.bhcode from ExtraDetailInfo                                  l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_ExtraGeometrie                                                           as select 'i-' || l.gid as gmlid, l.*,u.gid as unetid,u.bhcode from ExtraGeometrie                                   l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_ExtraTopo                                                                as select 'j-' || l.gid as gmlid, l.*,u.gid as unetid,u.bhcode from ExtraTopo                                        l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_kabelbedAlgemeen                                                         as select 'k-' || l.gid as gmlid, l.*,u.gid as unetid,u.bhcode from kabelbedAlgemeen                                 l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_KabelEnLeidingContainer                                                  as select 'l-' || l.gid as gmlid, l.*,u.gid as unetid,u.bhcode from KabelEnLeidingContainer                          l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_Kunstwerk_Containerelement                                               as select 'm-' || l.gid as gmlid, l.*,u.gid as unetid,u.bhcode from Kunstwerk_Containerelement                       l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_Leidingelement                                                           as select 'n-' || l.gid as gmlid, l.*,u.gid as unetid,u.bhcode from Leidingelement                                   l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_LS_Kabelbed                                                              as select 'o-' || l.gid as gmlid, l.*,u.gid as unetid,u.bhcode from LS_Kabelbed                                      l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_maatvoering_label                                                        as select 'p-' || l.gid as gmlid, l.*,u.gid as unetid,u.bhcode from maatvoering_label                                l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_maatvoering_pijl                                                         as select 'q-' || l.gid as gmlid, l.*,u.gid as unetid,u.bhcode from maatvoering_pijl                                 l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_maatvoering                                                              as select 'r-' || l.gid as gmlid, l.*,u.gid as unetid,u.bhcode from maatvoering                                      l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_MS_Kabelbed                                                              as select 's-' || l.gid as gmlid, l.*,u.gid as unetid,u.bhcode from MS_Kabelbed                                      l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_RioolVV_KabelOfLeiding                                                   as select 't-' || l.gid as gmlid, l.*,u.gid as unetid,u.bhcode from RioolVV_KabelOfLeiding                           l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_Utiliteitsnet                                                            as select 'u-' || l.gid as gmlid, l.*,u.gid as unetid,u.bhcode from Utiliteitsnet                                    l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_Water_KabelOfLeiding                                                     as select 'v-' || l.gid as gmlid, l.*,u.gid as unetid,u.bhcode from Water_KabelOfLeiding                             l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_elektriciteitskabel                                                      as select 'w-' || l.gid as gmlid, l.*,u.gid as unetid,u.bhcode from elektriciteitskabel                              l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_oliegaschemicalien                                                       as select 'x-' || l.gid as gmlid, l.*,u.gid as unetid,u.bhcode from oliegaschemicalien                               l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_kabelb                                                                   as select 'y-' || l.gid as gmlid, l.*,u.gid as unetid,u.bhcode from kabelb                                           l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+
+

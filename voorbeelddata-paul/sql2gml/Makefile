@@ -8,6 +8,6 @@ Best.gml: sql2gml.php  postprocess.sql addgmlid.xsl
 	php ./sql2objects.php > Authorities.gml
 
 postprocess:
-	psql < postprocess.sql
+	psql -a < postprocess.sql 2>&1 | tee post.log
 clean:
 	rm -f Best.gml
