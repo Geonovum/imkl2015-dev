@@ -5,10 +5,10 @@
     <mapcanvas>
         <units>meters</units>
         <extent>
-            <xmin>154648.15648353786673397</xmin>
-            <ymin>389307.13356381672201678</ymin>
-            <xmax>155001.56764572265092283</xmax>
-            <ymax>389681.33361789473565295</ymax>
+            <xmin>154594.00684828194789588</xmin>
+            <ymin>389078.74324973567854613</ymin>
+            <xmax>155219.74096104362979531</xmax>
+            <ymax>389622.36745629785582423</ymax>
         </extent>
         <projections>1</projections>
         <destinationsrs>
@@ -79,7 +79,7 @@
             <layer_coordinate_transform destAuthId="EPSG:28992" srcAuthId="EPSG:28992" srcDatumTransform="-1" destDatumTransform="-1" layerid="AN_datatransport_KPN_0000546663_15O00932220150316175207169"/>
         </layer_coordinate_transform_info>
     </mapcanvas>
-    <legend updateDrawingOrder="true" activeLayer="KabelEnLeidingContainer20150322113137090">
+    <legend updateDrawingOrder="true" activeLayer="Containerelement20150322112812055">
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Utiliteitsnet" showFeatureCount="0">
             <filegroup open="true" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="Utiliteitsnet20150410143240849" visible="1"/>
@@ -95,19 +95,19 @@
                 <legendlayerfile isInOverview="0" layerid="Containerelement20150322112812055" visible="1"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="DiepteTovMaaiveld" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="DiepteTovMaaiveld" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="Diepte20150322112950382" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="Diepte20150322112950382" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="RioolVV_KabelOfLeiding" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="RioolVV_KabelOfLeiding" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="RioolVV_KabelOfLeiding20150326160435082" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="RioolVV_KabelOfLeiding20150326160435082" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="HS_KabelOfLeiding" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="HS_KabelOfLeiding" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="HS_KabelOfLeiding20150322113639509" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="HS_KabelOfLeiding20150322113639509" visible="0"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Water_KabelOfLeiding" showFeatureCount="0">

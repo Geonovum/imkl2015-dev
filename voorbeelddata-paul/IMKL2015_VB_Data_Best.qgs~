@@ -5,10 +5,10 @@
     <mapcanvas>
         <units>meters</units>
         <extent>
-            <xmin>154648.15648353786673397</xmin>
-            <ymin>389307.13356381672201678</ymin>
-            <xmax>155001.56764572265092283</xmax>
-            <ymax>389681.33361789473565295</ymax>
+            <xmin>154384.37940653623081744</xmin>
+            <ymin>389747.1394890850642696</ymin>
+            <xmax>154428.98598543816478923</xmax>
+            <ymax>389785.89271600439678878</ymax>
         </extent>
         <projections>1</projections>
         <destinationsrs>
@@ -95,19 +95,19 @@
                 <legendlayerfile isInOverview="0" layerid="Containerelement20150322112812055" visible="1"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="DiepteTovMaaiveld" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="DiepteTovMaaiveld" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="Diepte20150322112950382" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="Diepte20150322112950382" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="RioolVV_KabelOfLeiding" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="RioolVV_KabelOfLeiding" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="RioolVV_KabelOfLeiding20150326160435082" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="RioolVV_KabelOfLeiding20150326160435082" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="HS_KabelOfLeiding" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="HS_KabelOfLeiding" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="HS_KabelOfLeiding20150322113639509" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="HS_KabelOfLeiding20150322113639509" visible="0"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Water_KabelOfLeiding" showFeatureCount="0">
