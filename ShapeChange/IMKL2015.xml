@@ -53,7 +53,7 @@
 
 			<!--Added by Wilko Quak-->
 			<xmlNamespaces>
-				<XmlNamespace nsabr="us-net-common" ns="http://inspire.ec.europa.eu/schemas/us-net-common/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-common/3.0/UtilityNetworksCommon.xsd"/>
+				<XmlNamespace nsabr="us-net-common" ns="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" location="http://inspire.ec.europa.eu/schemas/us-net-common/4.0/UtilityNetworksCommon.xsd"/>
 				<XmlNamespace nsabr="us-net-el" ns="http://inspire.ec.europa.eu/schemas/us-net-el/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-el/3.0/ElectricityNetwork.xsd"/>
 				<XmlNamespace nsabr="us-net-ogc" ns="http://inspire.ec.europa.eu/schemas/us-net-ogc/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-ogc/3.0/OilGasChemicalsNetwork.xsd"/>
 				<XmlNamespace nsabr="us-net-sw" ns="http://inspire.ec.europa.eu/schemas/us-net-sw/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-sw/3.0/SewerNetwork.xsd"/>
@@ -92,7 +92,7 @@
 
 			<!--Added by Wilko Quak-->
 			<xmlNamespaces>
-				<XmlNamespace nsabr="us-net-common" ns="http://inspire.ec.europa.eu/schemas/us-net-common/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-common/3.0/UtilityNetworksCommon.xsd"/>
+				<XmlNamespace nsabr="us-net-common" ns="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" location="http://inspire.ec.europa.eu/schemas/us-net-common/4.0/UtilityNetworksCommon.xsd"/>
 				<XmlNamespace nsabr="us-net-el" ns="http://inspire.ec.europa.eu/schemas/us-net-el/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-el/3.0/ElectricityNetwork.xsd"/>
 				<XmlNamespace nsabr="us-net-ogc" ns="http://inspire.ec.europa.eu/schemas/us-net-ogc/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-ogc/3.0/OilGasChemicalsNetwork.xsd"/>
 				<XmlNamespace nsabr="us-net-sw" ns="http://inspire.ec.europa.eu/schemas/us-net-sw/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-sw/3.0/SewerNetwork.xsd"/>
