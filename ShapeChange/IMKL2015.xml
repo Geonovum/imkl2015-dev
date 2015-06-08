@@ -54,12 +54,12 @@
 			<!--Added by Wilko Quak-->
 			<xmlNamespaces>
 				<XmlNamespace nsabr="us-net-common" ns="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" location="http://inspire.ec.europa.eu/schemas/us-net-common/4.0/UtilityNetworksCommon.xsd"/>
-				<XmlNamespace nsabr="us-net-el" ns="http://inspire.ec.europa.eu/schemas/us-net-el/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-el/3.0/ElectricityNetwork.xsd"/>
-				<XmlNamespace nsabr="us-net-ogc" ns="http://inspire.ec.europa.eu/schemas/us-net-ogc/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-ogc/3.0/OilGasChemicalsNetwork.xsd"/>
-				<XmlNamespace nsabr="us-net-sw" ns="http://inspire.ec.europa.eu/schemas/us-net-sw/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-sw/3.0/SewerNetwork.xsd"/>
-				<XmlNamespace nsabr="us-net-tc" ns="http://inspire.ec.europa.eu/schemas/us-net-tc/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-tc/3.0/TelecommunicationsNetwork.xsd"/>
-				<XmlNamespace nsabr="us-net-th" ns="http://inspire.ec.europa.eu/schemas/us-net-th/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-th/3.0/ThermalNetwork.xsd"/>
-				<XmlNamespace nsabr="us-net-wa" ns="http://inspire.ec.europa.eu/schemas/us-net-wa/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-wa/3.0/WaterNetwork.xsd"/>
+				<XmlNamespace nsabr="us-net-el" ns="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" location="http://inspire.ec.europa.eu/schemas/us-net-el/4.0/ElectricityNetwork.xsd"/>
+				<XmlNamespace nsabr="us-net-ogc" ns="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" location="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0/OilGasChemicalsNetwork.xsd"/>
+				<XmlNamespace nsabr="us-net-sw" ns="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" location="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0/SewerNetwork.xsd"/>
+				<XmlNamespace nsabr="us-net-tc" ns="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" location="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0/TelecommunicationsNetwork.xsd"/>
+				<XmlNamespace nsabr="us-net-th" ns="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" location="http://inspire.ec.europa.eu/schemas/us-net-th/4.0/ThermalNetwork.xsd"/>
+				<XmlNamespace nsabr="us-net-wa" ns="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" location="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0/WaterNetwork.xsd"/>
 			</xmlNamespaces>
 
 			<xi:include href="http://shapechange.net/resources/config/StandardNamespaces.xml"/>
@@ -93,12 +93,12 @@
 			<!--Added by Wilko Quak-->
 			<xmlNamespaces>
 				<XmlNamespace nsabr="us-net-common" ns="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" location="http://inspire.ec.europa.eu/schemas/us-net-common/4.0/UtilityNetworksCommon.xsd"/>
-				<XmlNamespace nsabr="us-net-el" ns="http://inspire.ec.europa.eu/schemas/us-net-el/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-el/3.0/ElectricityNetwork.xsd"/>
-				<XmlNamespace nsabr="us-net-ogc" ns="http://inspire.ec.europa.eu/schemas/us-net-ogc/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-ogc/3.0/OilGasChemicalsNetwork.xsd"/>
-				<XmlNamespace nsabr="us-net-sw" ns="http://inspire.ec.europa.eu/schemas/us-net-sw/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-sw/3.0/SewerNetwork.xsd"/>
-				<XmlNamespace nsabr="us-net-tc" ns="http://inspire.ec.europa.eu/schemas/us-net-tc/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-tc/3.0/TelecommunicationsNetwork.xsd"/>
-				<XmlNamespace nsabr="us-net-th" ns="http://inspire.ec.europa.eu/schemas/us-net-th/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-th/3.0/ThermalNetwork.xsd"/>
-				<XmlNamespace nsabr="us-net-wa" ns="http://inspire.ec.europa.eu/schemas/us-net-wa/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-wa/3.0/WaterNetwork.xsd"/>
+				<XmlNamespace nsabr="us-net-el" ns="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" location="http://inspire.ec.europa.eu/schemas/us-net-el/4.0/ElectricityNetwork.xsd"/>
+				<XmlNamespace nsabr="us-net-ogc" ns="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" location="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0/OilGasChemicalsNetwork.xsd"/>
+				<XmlNamespace nsabr="us-net-sw" ns="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" location="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0/SewerNetwork.xsd"/>
+				<XmlNamespace nsabr="us-net-tc" ns="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" location="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0/TelecommunicationsNetwork.xsd"/>
+				<XmlNamespace nsabr="us-net-th" ns="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" location="http://inspire.ec.europa.eu/schemas/us-net-th/4.0/ThermalNetwork.xsd"/>
+				<XmlNamespace nsabr="us-net-wa" ns="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" location="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0/WaterNetwork.xsd"/>
 			</xmlNamespaces>
 
 			<xi:include href="http://shapechange.net/resources/config/StandardNamespaces.xml"/>
@@ -132,12 +132,12 @@
 			<!--Added by Wilko Quak-->
 			<xmlNamespaces>
 				<XmlNamespace nsabr="us-net-common" ns="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" location="http://inspire.ec.europa.eu/schemas/us-net-common/4.0/UtilityNetworksCommon.xsd"/>
-				<XmlNamespace nsabr="us-net-el" ns="http://inspire.ec.europa.eu/schemas/us-net-el/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-el/3.0/ElectricityNetwork.xsd"/>
-				<XmlNamespace nsabr="us-net-ogc" ns="http://inspire.ec.europa.eu/schemas/us-net-ogc/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-ogc/3.0/OilGasChemicalsNetwork.xsd"/>
-				<XmlNamespace nsabr="us-net-sw" ns="http://inspire.ec.europa.eu/schemas/us-net-sw/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-sw/3.0/SewerNetwork.xsd"/>
-				<XmlNamespace nsabr="us-net-tc" ns="http://inspire.ec.europa.eu/schemas/us-net-tc/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-tc/3.0/TelecommunicationsNetwork.xsd"/>
-				<XmlNamespace nsabr="us-net-th" ns="http://inspire.ec.europa.eu/schemas/us-net-th/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-th/3.0/ThermalNetwork.xsd"/>
-				<XmlNamespace nsabr="us-net-wa" ns="http://inspire.ec.europa.eu/schemas/us-net-wa/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-wa/3.0/WaterNetwork.xsd"/>
+				<XmlNamespace nsabr="us-net-el" ns="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" location="http://inspire.ec.europa.eu/schemas/us-net-el/4.0/ElectricityNetwork.xsd"/>
+				<XmlNamespace nsabr="us-net-ogc" ns="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" location="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0/OilGasChemicalsNetwork.xsd"/>
+				<XmlNamespace nsabr="us-net-sw" ns="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" location="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0/SewerNetwork.xsd"/>
+				<XmlNamespace nsabr="us-net-tc" ns="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" location="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0/TelecommunicationsNetwork.xsd"/>
+				<XmlNamespace nsabr="us-net-th" ns="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" location="http://inspire.ec.europa.eu/schemas/us-net-th/4.0/ThermalNetwork.xsd"/>
+				<XmlNamespace nsabr="us-net-wa" ns="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" location="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0/WaterNetwork.xsd"/>
 			</xmlNamespaces>
 
 			<xi:include href="http://shapechange.net/resources/config/StandardNamespaces.xml"/>
