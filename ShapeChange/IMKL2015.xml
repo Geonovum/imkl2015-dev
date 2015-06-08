@@ -2,7 +2,7 @@
 <ShapeChangeConfiguration xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://www.interactive-instruments.de/ShapeChange/Configuration/1.1" xmlns:sc="http://www.interactive-instruments.de/ShapeChange/Configuration/1.1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.interactive-instruments.de/ShapeChange/Configuration/1.1 http://shapechange.net/resources/schema/ShapeChangeConfiguration.xsd">
 	<input>
 		<parameter name="inputModelType" value="EA7"/>
-		<parameter name="inputFile" value="imkl2015_v08.eap"/>
+		<parameter name="inputFile" value="../uml/imkl2015_v08.eap"/>
 		<parameter name="appSchemaNamespaceRegex" value=".*.nl.*"/>
 		<parameter name="checkingConstraints" value="disabled"/>
 		<parameter name="representTaggedValues" value="vocabulary,obligation,extensibility,extendableByMS"/>
@@ -131,7 +131,7 @@
 
 			<!--Added by Wilko Quak-->
 			<xmlNamespaces>
-				<XmlNamespace nsabr="us-net-common" ns="http://inspire.ec.europa.eu/schemas/us-net-common/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-common/3.0/UtilityNetworksCommon.xsd"/>
+				<XmlNamespace nsabr="us-net-common" ns="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" location="http://inspire.ec.europa.eu/schemas/us-net-common/4.0/UtilityNetworksCommon.xsd"/>
 				<XmlNamespace nsabr="us-net-el" ns="http://inspire.ec.europa.eu/schemas/us-net-el/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-el/3.0/ElectricityNetwork.xsd"/>
 				<XmlNamespace nsabr="us-net-ogc" ns="http://inspire.ec.europa.eu/schemas/us-net-ogc/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-ogc/3.0/OilGasChemicalsNetwork.xsd"/>
 				<XmlNamespace nsabr="us-net-sw" ns="http://inspire.ec.europa.eu/schemas/us-net-sw/3.0" location="http://inspire.ec.europa.eu/schemas/us-net-sw/3.0/SewerNetwork.xsd"/>
