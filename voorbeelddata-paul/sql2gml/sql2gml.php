@@ -441,7 +441,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     openfeature("imkl:Annotatie",$line["bhcode"],$line["gmlid"]);
     printNEN3610ID($line["bhcode"],$line["gmlid"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
-    printNENcodelistvalue('imkl:annotatieType','AnnotatieTypeValue',"beschrijvi");
+    printNENcodelistvalue('imkl:annotatieType','AnnotatieTypeValue',$line["beschrijvi"]);
     printattribute("imkl:ligging",$line["geom"]);
     printclose("imkl:Annotatie");
     printclose("gml:featureMember");
@@ -460,7 +460,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     openfeature("imkl:Annotatie",$line["bhcode"],$line["gmlid"]);
     printNEN3610ID($line["bhcode"],$line["gmlid"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
-    printNENcodelistvalue('imkl:annotatieType','AnnotatieTypeValue',"type");
+    printNENcodelistvalue('imkl:annotatieType','AnnotatieTypeValue',$line["type"]);
     printattribute("imkl:ligging",$line["geom"]);
     printclose("imkl:Annotatie");
     printclose("gml:featureMember");
@@ -479,7 +479,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     openfeature("imkl:Maatvoering",$line["bhcode"],$line["gmlid"]);
     printNEN3610ID($line["bhcode"],$line["gmlid"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
-    printNENcodelistvalue('imkl:maatvoeringsType','MaatvoeringsTypeValue',"type");
+    printNENcodelistvalue('imkl:maatvoeringsType','MaatvoeringsTypeValue',$line["type"]);
     printattribute_tvale("imkl:rotatiehoek",$line["rotatie"],"uom=\"urn:ogc:def:uom:OGC::deg\"");
     printattribute("imkl:ligging",$line["geom"]);
     printclose("imkl:Maatvoering");
@@ -556,7 +556,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     openfeature("imkl:Maatvoering",$line["bhcode"],$line["gmlid"]);
     printNEN3610ID($line["bhcode"],$line["gmlid"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
-    printNENcodelistvalue('imkl:maatvoeringsType','MaatvoeringsTypeValue',"type");
+    printNENcodelistvalue('imkl:maatvoeringsType','MaatvoeringsTypeValue',$line["type"]);
     printattribute("imkl:ligging",$line["geom"]);
     printclose("imkl:Maatvoering");
     printclose("gml:featureMember");
