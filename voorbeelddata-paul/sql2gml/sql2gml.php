@@ -1,18 +1,18 @@
 #!/usr/bin/php
 <?xml version="1.0"?>
 <gml:FeatureCollection
-    xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/3.0" 
+    xmlns:imkl="http://www.geonovum.nl/wion/2015/1.0"
+    xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" 
+    xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0"
+    xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0"
+    xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0"
+    xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0"
+    xmlns:net="http://inspire.ec.europa.eu/schemas/net/4.0"
+    xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3"
+    xmlns:base2="http://inspire.ec.europa.eu/schemas/base2/1.0"
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:imkl="http://www.geonovum.nl/wion/2015/1.0"
-    xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/3.0"
-    xmlns:net="urn:x-inspire:specification:gmlas:Network:3.2"
-    xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/3.0"
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:base="urn:x-inspire:specification:gmlas:BaseTypes:3.2"
-    xmlns:base2="http://inspire.ec.europa.eu/schemas/base2/1.0"
-    xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/3.0"
-    xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/3.0"
     gml:id="ID_1c0c5554-5c4a-467a-a9ef-9f36b5af2bfq"
     xsi:schemaLocation="http://www.geonovum.nl/wion/2015/1.0 ../../xsd/IMKL2015-wion.xsd">
 
@@ -159,6 +159,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printhref("us-net-common:authorityRole",$line["bhcode"]);
     printNEN3610ID($line["bhcode"],$line["unetid"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
+    printNENcodelistvalue('imkl:thema','Thema',$line["thema"]);
     printopen("imkl:technischContactpersoon");
     printopen("imkl:TechnischContactpersoon");
     printattribute("imkl:naam",$line["tcontpers"]);
@@ -166,8 +167,6 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printattribute("imkl:email",$line["email"]);
     printclose("imkl:TechnischContactpersoon");
     printclose("imkl:technischContactpersoon");
-    printattribute("imkl:eisVoorzorgsmaatregelHoogstePrioriteit",$line["eisvoorhp"]);
-    printNENcodelistvalue('imkl:thema','Thema',$line["thema"]);
     printclose("imkl:Utiliteitsnet");
     printclose("gml:featureMember");
 }
