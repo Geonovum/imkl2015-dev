@@ -19,52 +19,94 @@
     gml:id="ID_1c0c5554-5c4a-467a-a9ef-9f36b5af2bfq"
     xsi:schemaLocation="http://www.geonovum.nl/wion/2015/1.0 ../../xsd/IMKL2015-wion.xsd">
 
-<!-- File created by Wilko Quak via the sql2gml.php script on 2015-05-23 -->
-    <base2:relatedParty gml:id="party-unet-1">
-        <base2:organisationName>Rioned</base2:organisationName>
-        <base2:role xlink:href="beheerder"/>
+<!-- File created by Wilko Quak via the sql2gml.php script on 2015-05-28 -->
+    <base2:relatedParty gml:id="party-gembest_ri">
+        <base2:organisationName>gem Best</base2:organisationName>
+        <base2:role xlink:href="operator"/>
         </imkl:Utiliteitsnet>
     </base2:relatedParty>
 
-    <base2:relatedParty gml:id="party-unet-2">
+    <base2:relatedParty gml:id="party-gasunie">
         <base2:organisationName>Gasunie</base2:organisationName>
-        <base2:role xlink:href="beheerder"/>
+        <base2:role xlink:href="operator"/>
         </imkl:Utiliteitsnet>
     </base2:relatedParty>
 
-    <base2:relatedParty gml:id="party-unet-3">
+    <base2:relatedParty gml:id="party-kpn">
         <base2:organisationName>KPN</base2:organisationName>
-        <base2:role xlink:href="beheerder"/>
+        <base2:role xlink:href="operator"/>
         </imkl:Utiliteitsnet>
     </base2:relatedParty>
 
-    <base2:relatedParty gml:id="party-unet-4">
-        <base2:organisationName>Brabant Water</base2:organisationName>
-        <base2:role xlink:href="beheerder"/>
+    <base2:relatedParty gml:id="party-bbwater">
+        <base2:organisationName>Brabant Wa</base2:organisationName>
+        <base2:role xlink:href="operator"/>
         </imkl:Utiliteitsnet>
     </base2:relatedParty>
 
-    <base2:relatedParty gml:id="party-unet-8">
+    <base2:relatedParty gml:id="party-liander_ls">
         <base2:organisationName>Liander</base2:organisationName>
-        <base2:role xlink:href=""/>
+        <base2:role xlink:href="operator"/>
         </imkl:Utiliteitsnet>
     </base2:relatedParty>
 
-    <base2:relatedParty gml:id="party-unet-5">
-        <base2:organisationName>Liander</base2:organisationName>
-        <base2:role xlink:href="beheerder"/>
-        </imkl:Utiliteitsnet>
-    </base2:relatedParty>
-
-    <base2:relatedParty gml:id="party-unet-6">
+    <base2:relatedParty gml:id="party-endinet_ld">
         <base2:organisationName>Endinet</base2:organisationName>
-        <base2:role xlink:href="beheerder"/>
+        <base2:role xlink:href="operator"/>
         </imkl:Utiliteitsnet>
     </base2:relatedParty>
 
-    <base2:relatedParty gml:id="party-unet-7">
+    <base2:relatedParty gml:id="party-liander_hs">
         <base2:organisationName>Liander</base2:organisationName>
-        <base2:role xlink:href="beheerder"/>
+        <base2:role xlink:href="operator"/>
+        </imkl:Utiliteitsnet>
+    </base2:relatedParty>
+
+    <base2:relatedParty gml:id="party-liander_ms">
+        <base2:organisationName>Liander</base2:organisationName>
+        <base2:role xlink:href="operator"/>
+        </imkl:Utiliteitsnet>
+    </base2:relatedParty>
+
+    <base2:relatedParty gml:id="party-gembest_rh">
+        <base2:organisationName>gem Best</base2:organisationName>
+        <base2:role xlink:href="operator"/>
+        </imkl:Utiliteitsnet>
+    </base2:relatedParty>
+
+    <base2:relatedParty gml:id="party-endinet_gh">
+        <base2:organisationName>Endinet</base2:organisationName>
+        <base2:role xlink:href="operator"/>
+        </imkl:Utiliteitsnet>
+    </base2:relatedParty>
+
+    <base2:relatedParty gml:id="party-endinet_ls">
+        <base2:organisationName>Endinet</base2:organisationName>
+        <base2:role xlink:href="operator"/>
+        </imkl:Utiliteitsnet>
+    </base2:relatedParty>
+
+    <base2:relatedParty gml:id="party-enexis_ls">
+        <base2:organisationName>Enexis</base2:organisationName>
+        <base2:role xlink:href="operator"/>
+        </imkl:Utiliteitsnet>
+    </base2:relatedParty>
+
+    <base2:relatedParty gml:id="party-enexis_ms">
+        <base2:organisationName>Enexis</base2:organisationName>
+        <base2:role xlink:href="operator"/>
+        </imkl:Utiliteitsnet>
+    </base2:relatedParty>
+
+    <base2:relatedParty gml:id="party-tennet">
+        <base2:organisationName>Tennet</base2:organisationName>
+        <base2:role xlink:href="operator"/>
+        </imkl:Utiliteitsnet>
+    </base2:relatedParty>
+
+    <base2:relatedParty gml:id="party-liander_ld">
+        <base2:organisationName>Liander</base2:organisationName>
+        <base2:role xlink:href="operator"/>
         </imkl:Utiliteitsnet>
     </base2:relatedParty>
 
