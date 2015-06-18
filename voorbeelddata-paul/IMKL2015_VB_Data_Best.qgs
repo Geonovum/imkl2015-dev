@@ -5,10 +5,10 @@
     <mapcanvas>
         <units>meters</units>
         <extent>
-            <xmin>154594.00684828194789588</xmin>
-            <ymin>389078.74324973567854613</ymin>
-            <xmax>155219.74096104362979531</xmax>
-            <ymax>389622.36745629785582423</ymax>
+            <xmin>154717.67208654648857191</xmin>
+            <ymin>389432.59335296205244958</ymin>
+            <xmax>154756.68703944433946162</xmax>
+            <ymax>389466.48869665607344359</ymax>
         </extent>
         <projections>1</projections>
         <destinationsrs>
@@ -79,7 +79,7 @@
             <layer_coordinate_transform destAuthId="EPSG:28992" srcAuthId="EPSG:28992" srcDatumTransform="-1" destDatumTransform="-1" layerid="AN_datatransport_KPN_0000546663_15O00932220150316175207169"/>
         </layer_coordinate_transform_info>
     </mapcanvas>
-    <legend updateDrawingOrder="true" activeLayer="Containerelement20150322112812055">
+    <legend updateDrawingOrder="true" activeLayer="Kunstwerk_Containerelement20150322112916553">
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Utiliteitsnet" showFeatureCount="0">
             <filegroup open="true" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="Utiliteitsnet20150410143240849" visible="1"/>
