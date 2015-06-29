@@ -187,7 +187,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printINSPIREcodelistvalue("us-net-common:currentStatus","ConditionOfFacilityValue",$line["status"]);
     printValidity("2001-12-17T09:30:47.0Z","2001-12-17T09:30:47.0Z");
     printattribute("us-net-common:verticalPosition",$line["vertpositi"]);
-    printINSPIREcodelistvalue("us-net-common:appurtenanceType","appurtenaceTypeValue",$line["type"]);
+    printINSPIREcodelistvalue("us-net-common:appurtenanceType","appurtenanceTypeValue",$line["type"]);
     printhrefopt("imkl:heeftExtraInformatie",$line["detailsch"]);
     printclose("imkl:Appurtenance");
     printclose("gml:featureMember");

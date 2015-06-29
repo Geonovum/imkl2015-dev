@@ -1,0 +1,40 @@
+appurtenanceType;Buis
+appurtenanceType;Bocht
+appurtenanceType;Tstuk
+appurtenanceType; Bodem
+appurtenanceType; Lasnok
+appurtenanceType; Expansiestuk
+appurtenanceType; IsolatieKoppeling
+appurtenanceType; Vloeistofvanger
+appurtenanceType; Raaginrichting
+appurtenanceType;Algemeen (gas) transport onderdeel
+oilGasChemicalsProductType;Mud
+oilGasChemicalsProductType;Methanol
+oilGasChemicalsProductType;Emulsie
+oilGasChemicalsProductType;Glycol
+appurtenanceType;hoogbouwkoppelpunt
+appurtenanceType;ontluchting
+appurtenanceType;aftakzadel
+appurtenanceType;overgangsstuk
+appurtenanceType;isolatiestuk
+appurtenanceType;ontspanningselement
+appurtenanceType;hoogteligging
+appurtenanceType;adrespunt
+appurtenanceType;eindkap
+appurtenanceType;verloopstuk
+appurtenanceType;afsluiter
+appurtenanceType;meetpunt
+appurtenanceType;sifon
+appurtenanceType;blaasgat
+appurtenanceType;kbMeetpunt
+appurtenanceType;gasstation
+appurtenanceType;knooppunt
+appurtenanceType;markering
+appurtenanceType;punt van levering
+appurtenanceType;terminal
+appurtenanceType;pomp
+appurtenanceType;pompstation
+appurtenanceType;productiegebied
+appurtenanceType;opslagvoorziening
+oilGasChemicalsProductType;naturalGas
+oilGasChemicalsProductType;bioGas
