@@ -305,7 +305,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printINSPIREID("net",$line["bhcode"],$line["gmlid"]);
     printhref("net:inNetwork",makegmlid($line["bhcode"],$line["unetid"]));
     printhref("net:link", "nl.imkl." . $line["bhcode"] .  ".ulinkid-" .  $line["gmlid"]);
-    printINSPIREcodelistvalue("us-net-common:currentStatus","ConditionOfFacilityValue",$line["status"]);
+    printINSPIREcodelistvalue("us-net-common:currentStatus","ConditionOfFacilityValue",$line["status_1"]);
     printValidity("2001-12-17T09:30:47.0Z","2001-12-17T09:30:47.0Z");
     printattribute("us-net-common:verticalPosition","underground");
     printINSPIREcodelistvalue("us-net-common:warningType","WarningTypeValue","net");
@@ -337,7 +337,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printINSPIREcodelistvalue("us-net-common:currentStatus","ConditionOfFacilityValue",$line["status"]);
     printValidity("2001-12-17T09:30:47.0Z","2001-12-17T09:30:47.0Z");
     printattribute("us-net-common:verticalPosition","underground");
-    printINSPIREcodelistvalue("us-net-common:warningType","WarningTypeExtendedValue","net");
+    printINSPIREcodelistvalue("us-net-common:warningType","WarningTypeValue","net");
     printattribute_tvale("us-net-common:pipeDiameter",$line["pipediam"],"uom=\"urn:ogc:def:uom:OGC::cm\"");
     printattribute_tvale("us-net-common:pressure",$line["pressure"],"uom=\"urn:ogc:def:uom:OGC::bar\"");
     printINSPIREcodelistvalue("us-net-sw:sewerWaterType","SewerWaterTypeValue",$line["swatertype"]);

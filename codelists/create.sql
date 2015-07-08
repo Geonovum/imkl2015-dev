@@ -1,7 +1,9 @@
 drop table if exists codelists;
-
 create table codelists
 (
-   codelist text,
-   value text
+   source text,
+   attribute text,
+   value text,
+   description text,
+   listname text
 );

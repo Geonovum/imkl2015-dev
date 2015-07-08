@@ -7,6 +7,8 @@ Best.gml: sql2gml.php  postprocess.sql addgmlid.xsl
 	php ./sql2gml.php | xsltproc addgmlid.xsl - | xmllint --format -  > Best.gml
 	php ./sql2objects.php > Authorities.gml
 
+validate: Best.gml
+	cat Best.gml | xsltproc validateCodelist.xsl - 
 check:
 	psql -a < qcheck.sql
 postprocess:

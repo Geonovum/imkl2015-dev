@@ -236,7 +236,7 @@ as
     select 'ulinkid-' || gmlid as gmlid,bhcode,thema,netbeheer,unetid,geom,status::text
     from v_rioolvv_kabelofleiding
        union all
-    select 'ulinkid-' || gmlid as gmlid,bhcode,thema,netbeheer,unetid,geom,status::text
+    select 'ulinkid-' || gmlid as gmlid,bhcode,thema,netbeheer,unetid,geom,status_1::text
     from v_water_kabelofleiding
        union all
     select 'ulinkid-' || gmlid as gmlid,bhcode,thema,netbeheer,unetid,geom,status::text

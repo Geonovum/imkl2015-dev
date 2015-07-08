@@ -26,18 +26,36 @@ $dbconn = pg_connect("");
 
 #
 #
-$query = "select codelist,value from codelists where codelist = 'appurtenanceType'";
+$query = "select source,attribute,value,description,listname,value from codelists where attribute is not null";
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
-    echo "<xsl:template match=\"us-net-common:" . $line["codelist"] .  "[@xlink:href = 'http://inspire.ec.europa.eu/codelist/" . $line["codelist"] . "Value/" .  $line["value"] . "']\" priority=\"10\">OK <xsl:value-of select='@*'/><xsl:text>&#xa;</xsl:text>\n";
-    echo "</xsl:template>";
+    if ($line["source"] == "inspire")
+    {
+       $basename = "http://inspire.ec.europa.eu/codelist/";
+    }
+    else
+    {
+       $basename = "http://www.geonovum.nl/imkl2015/1.0/def/";
+    }
+
+    echo "<xsl:template match=\"" . $line["attribute"] .  "[@xlink:href = '" . $basename . $line["listname"] . "/" . $line["value"] . "']\" priority=\"10\">OK <xsl:value-of select='@*'/><xsl:text>&#xa;</xsl:text>\n";
+    echo "</xsl:template>\n";
 }
 pg_free_result($result);
+
+
+$query = "select distinct attribute from codelists where attribute != ''";
+$result = pg_query($query) or die('Query failed: ' . pg_last_error());
+
+while ($line = pg_fetch_array($result, null, PGSQL_ASSOC))
+{
+    echo "<xsl:template match=\"" . $line["attribute"] .  "[@xlink:href]\" priority=\"5\">ERROR <xsl:value-of select='@*'/><xsl:text>&#xa;</xsl:text>\n";
+    echo "</xsl:template>\n";
+}
+pg_free_result($result);
+
 pg_close($dbconn);
 ?>
-
-    <xsl:template match="us-net-common:appurtenanceType[@xlink:href]" pririty="5">ERROR <xsl:value-of select='@*'/><xsl:text>&#xa;</xsl:text>
-    </xsl:template>
 
 </xsl:stylesheet>
