@@ -1,11 +1,18 @@
 #!/usr/local/bin/php
 <?xml version="1.0"?>
 <xsl:stylesheet version="1.0"
+    xmlns:base2="http://inspire.ec.europa.eu/schemas/base2/1.0"
+    xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3"
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:imkl="http://www.geonovum.nl/wion/2015/1.0"
     xmlns:net="http://inspire.ec.europa.eu/schemas/net/4.0"
     xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0"
+    xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0"
+    xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0"
+    xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0"
+    xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" 
     xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <!--Identity template, 

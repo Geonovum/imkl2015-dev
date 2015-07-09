@@ -214,7 +214,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printINSPIREcodelistvalue("us-net-common:warningType","WarningTypeValue","net");
     printattribute_tvale("us-net-common:pipeDiameter",$line["pipediam"],"uom=\"urn:ogc:def:uom:OGC::cm\"");
     printattribute_tvale("us-net-common:pressure",$line["pressure"],"uom=\"urn:ogc:def:uom:OGC::bar\"");
-    printINSPIREcodelistvalue("us-net-ogc:oilGasChemicalsProductType","ConditionOfFacilityValue",$line["producttyp"]);
+    printINSPIREcodelistvalue("us-net-ogc:oilGasChemicalsProductType","OilGasChemicalsProductTypeValue",$line["producttyp"]);
     printclose("imkl:OlieGasChemicalienPijpleiding");
     printclose("gml:featureMember");
 }
