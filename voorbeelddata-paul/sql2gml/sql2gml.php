@@ -76,7 +76,7 @@ function printINSPIREcodelistvalue($attribute,$codelist,$value)
 
 function printNENcodelistvalue($attribute,$codelist,$value)
 {
-    echo "        <" . $attribute . " xlink:href=\"http://www.geonovum.nl/imkl/2015/1.0/def/" . $codelist . "/" .  $value . "\"/>\n";
+    echo "        <" . $attribute . " xlink:href=\"http://www.geonovum.nl/imkl2015/1.0/def/" . $codelist . "/" .  $value . "\"/>\n";
 }
 
 function printtagattribute($tag,$attribute,$value)
