@@ -73,6 +73,11 @@ function printINSPIREcodelistvalue($attribute,$codelist,$value)
     echo "        <" . $attribute . " xlink:href=\"http://inspire.ec.europa.eu/codelist/" . $codelist . "/" .  $value . "\"/>\n";
 }
 
+function printMYcodelistvalue($attribute,$value)
+{
+    echo "        <" . $attribute . " xlink:href=\"" .  $value . "\"/>\n";
+}
+
 
 function printNENcodelistvalue($attribute,$codelist,$value)
 {
@@ -175,7 +180,7 @@ pg_free_result($result);
 //
 // Process leidingelement
 //
-$query = 'select gmlid,gid,id,netbeheer,type,status,vertpositi,bzichtbaar,dieptetovm,dieptenap,xinfo,hoogte,detailsch,ST_AsGML(3,geom,5,0,null) as geom,unetid,bhcode from v_leidingelement ;';
+$query = 'select gmlid,gid,id,netbeheer,typeurl,status,vertpositi,bzichtbaar,dieptetovm,dieptenap,xinfo,hoogte,detailsch,ST_AsGML(3,geom,5,0,null) as geom,unetid,bhcode from v_leidingelement ;';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
@@ -187,7 +192,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printINSPIREcodelistvalue("us-net-common:currentStatus","ConditionOfFacilityValue",$line["status"]);
     printValidity("2001-12-17T09:30:47.0Z","2001-12-17T09:30:47.0Z");
     printattribute("us-net-common:verticalPosition",$line["vertpositi"]);
-    printINSPIREcodelistvalue("us-net-common:appurtenanceType","appurtenanceTypeValue",$line["type"]);
+    printMycodelistvalue("us-net-common:appurtenanceType",$line["typeurl"]);
     printhrefopt("imkl:heeftExtraInformatie",$line["detailsch"]);
     printclose("imkl:Appurtenance");
     printclose("gml:featureMember");
