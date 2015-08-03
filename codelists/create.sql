@@ -6,5 +6,6 @@ create table codelists
    attribute text,
    value text,
    description text,
-   listname text
+   listname text,
+   url text
 );

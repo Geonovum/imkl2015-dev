@@ -70,18 +70,39 @@ function printattribute($tag,$value)
 
 function printINSPIREcodelistvalue($attribute,$codelist,$value)
 {
-    echo "        <" . $attribute . " xlink:href=\"http://inspire.ec.europa.eu/codelist/" . $codelist . "/" .  $value . "\"/>\n";
+    if ($value != "")
+    {
+        echo "        <" . $attribute . " xlink:href=\"http://inspire.ec.europa.eu/codelist/" . $codelist . "/" .  $value . "\"/>\n";
+    }
+    else
+    {
+        echo "            <" . $attribute . " xsi:nil=\"true\"/>\n";
+    }
 }
 
 function printMYcodelistvalue($attribute,$value)
 {
-    echo "        <" . $attribute . " xlink:href=\"" .  $value . "\"/>\n";
+    if ($value != "")
+    {
+	echo "        <" . $attribute . " xlink:href=\"" .  $value . "\"/>\n";
+    }
+    else
+    {
+        echo "            <" . $attribute . " xsi:nil=\"true\"/>\n";
+    }
 }
 
 
 function printNENcodelistvalue($attribute,$codelist,$value)
 {
-    echo "        <" . $attribute . " xlink:href=\"http://www.geonovum.nl/imkl2015/1.0/def/" . $codelist . "/" .  $value . "\"/>\n";
+    if ($value != "")
+    {
+	echo "        <" . $attribute . " xlink:href=\"http://www.geonovum.nl/imkl2015/1.0/def/" . $codelist . "/" .  $value . "\"/>\n";
+    }
+    else
+    {
+        echo "            <" . $attribute . " xsi:nil=\"true\"/>\n";
+    }
 }
 
 function printtagattribute($tag,$attribute,$value)
@@ -436,6 +457,8 @@ pg_free_result($result);
 #
 # Annotatie punt
 #
+# TODO: beschrijving moet nog ergens.
+#
 
 $query = 'select bhcode,gmlid,unetid,netbeheer,label,beschrijvi,ST_AsGML(3,geom,5,0,null) as geom from v_annotatie;';
 
@@ -446,7 +469,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     openfeature("imkl:Annotatie",$line["bhcode"],$line["gmlid"]);
     printNEN3610ID($line["bhcode"],$line["gmlid"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
-    printNENcodelistvalue('imkl:annotatieType','AnnotatieTypeValue',$line["beschrijvi"]);
+    printNENcodelistvalue('imkl:annotatieType','AnnotatieTypeValue','annotatieLabel');
     printattribute("imkl:ligging",$line["geom"]);
     printclose("imkl:Annotatie");
     printclose("gml:featureMember");
