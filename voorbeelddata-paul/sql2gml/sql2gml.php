@@ -396,7 +396,7 @@ pg_free_result($result);
 #
 # Process diepte
 #
-$query = 'select bhcode,gmlid,unetid,netbeheer,dtovmveld,dtovnap,nauwk from v_diepte;';
+$query = 'select bhcode,ST_AsGML(3,geom,5,0,null) as geom ,gmlid,unetid,netbeheer,dtovmveld,dtovnap,nauwk from v_diepte;';
 
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
@@ -407,6 +407,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
     printNENcodelistvalue("imkl:diepteNauwkeurigheid","NauwkeurigheidDiepteValue",$line["nauwk"]);
     printattribute_tvale("imkl:dieptePeil",$line["dtovmveld"],"uom=\"urn:ogc:def:uom:OGC::bar\"");
+    printattribute("imkl:ligging",$line["geom"]);
     printhref("imkl:inNetwork",makegmlid($line["bhcode"],$line["unetid"]));
     printclose("imkl:DiepteTovMaaiveld");
     printclose("gml:featureMember");
