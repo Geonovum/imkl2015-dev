@@ -1,3 +1,11 @@
+--
+-- First create a gml attribute for each utiliteitsnet.
+--
+alter table utiliteitsnet drop column if exists gmlid;
+alter table utiliteitsnet add column gmlid text;
+update utiliteitsnet
+set gmlid = 'nl.imkl.' || bhcode || '.' || unetid;
+
 -- First merge some tables
 --
 -- hs_kabelofleiding hs_kabelofleiding hs_kabelofleiding --> elektriciteitskabel
@@ -189,27 +197,27 @@ drop table v_elektriciteitskabel;
 drop table v_oliegaschemicalien;
 drop table v_kabelbed;
 
-create table v_aanduidingEisVoorzorgsmaatregel                                          as select 'a-' || l.gid as gmlid, l.*,u.unetid,u.bhcode from aanduidingEisVoorzorgsmaatregel                  l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
-create table v_Annotatie_lijn                                                           as select 'b-' || l.gid as gmlid, l.*,u.unetid,u.bhcode from Annotatie_lijn                                   l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
-create table v_Annotatie                                                                as select 'c-' || l.gid as gmlid, l.*,u.unetid,u.bhcode from Annotatie                                        l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
-create table v_BGevaarlijkeInhoud                                                       as select 'd-' || l.gid as gmlid, l.*,u.unetid,u.bhcode from BGevaarlijkeInhoud                               l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
-create table v_Containerelement                                                         as select 'e-' || l.gid as gmlid, l.*,u.unetid,u.bhcode from Containerelement                                 l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
-create table v_Diepte                                                                   as select 'f-' || l.gid as gmlid, l.*,u.unetid,u.bhcode from Diepte                                           l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
-create table v_DT_KabelOfLeiding                                                        as select 'g-' || l.gid as gmlid, l.*,u.unetid,u.bhcode from DT_KabelOfLeiding                                l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
-create table v_ExtraDetailInfo                                                          as select 'h-' || l.gid as gmlid, l.*,u.unetid,u.bhcode from ExtraDetailInfo                                  l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
-create table v_ExtraGeometrie                                                           as select 'i-' || l.gid as gmlid, l.*,u.unetid,u.bhcode from ExtraGeometrie                                   l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
-create table v_ExtraTopo                                                                as select 'j-' || l.gid as gmlid, l.*,u.unetid,u.bhcode from ExtraTopo                                        l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
-create table v_KabelEnLeidingContainer                                                  as select 'l-' || l.gid as gmlid, l.*,u.unetid,u.bhcode from KabelEnLeidingContainer                          l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
-create table v_Kunstwerk_Containerelement                                               as select 'm-' || l.gid as gmlid, l.*,u.unetid,u.bhcode from Kunstwerk_Containerelement                       l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
-create table v_Leidingelement                                                           as select 'n-' || l.gid as gmlid, l.*,u.unetid,u.bhcode from Leidingelement                                   l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
-create table v_maatvoering_label                                                        as select 'p-' || l.gid as gmlid, l.*,u.unetid,u.bhcode from maatvoering_label                                l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
-create table v_maatvoering_lijn								as select 'k-' || l.gid as gmlid, l.*,u.unetid,u.bhcode from maatvoering_lijn                                 l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
-create table v_maatvoering_pijl                                                         as select 'q-' || l.gid as gmlid, l.*,u.unetid,u.bhcode from maatvoering_pijl                                 l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
-create table v_RioolVV_KabelOfLeiding                                                   as select 't-' || l.gid as gmlid, l.*,u.unetid,u.bhcode from RioolVV_KabelOfLeiding                           l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
-create table v_Water_KabelOfLeiding                                                     as select 'v-' || l.gid as gmlid, l.*,u.unetid,u.bhcode from Water_KabelOfLeiding                             l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
-create table v_elektriciteitskabel                                                      as select 'w-' || l.gid as gmlid, l.*,u.unetid,u.bhcode from elektriciteitskabel                              l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
-create table v_oliegaschemicalien                                                       as select 'x-' || l.gid as gmlid, l.*,u.unetid,u.bhcode from oliegaschemicalien                               l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
-create table v_kabelbed                                                                 as select 'y-' || l.gid as gmlid, l.*,u.unetid,u.bhcode from kabelbed                                         l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_aanduidingEisVoorzorgsmaatregel                                          as select 'nl.imro.'  || u.unetid || '.' || 'a-' || l.gid as gmlid, l.*,u.unetid,u.gmlid as unetgmlid,u.bhcode from aanduidingEisVoorzorgsmaatregel                  l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_Annotatie_lijn                                                           as select 'nl.imro.'  || u.unetid || '.' || 'b-' || l.gid as gmlid, l.*,u.unetid,u.gmlid as unetgmlid,u.bhcode from Annotatie_lijn                                   l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_Annotatie                                                                as select 'nl.imro.'  || u.unetid || '.' || 'c-' || l.gid as gmlid, l.*,u.unetid,u.gmlid as unetgmlid,u.bhcode from Annotatie                                        l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_BGevaarlijkeInhoud                                                       as select 'nl.imro.'  || u.unetid || '.' || 'd-' || l.gid as gmlid, l.*,u.unetid,u.gmlid as unetgmlid,u.bhcode from BGevaarlijkeInhoud                               l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_Containerelement                                                         as select 'nl.imro.'  || u.unetid || '.' || 'e-' || l.gid as gmlid, l.*,u.unetid,u.gmlid as unetgmlid,u.bhcode from Containerelement                                 l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_Diepte                                                                   as select 'nl.imro.'  || u.unetid || '.' || 'f-' || l.gid as gmlid, l.*,u.unetid,u.gmlid as unetgmlid,u.bhcode from Diepte                                           l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_DT_KabelOfLeiding                                                        as select 'nl.imro.'  || u.unetid || '.' || 'g-' || l.gid as gmlid, l.*,u.unetid,u.gmlid as unetgmlid,u.bhcode from DT_KabelOfLeiding                                l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_ExtraDetailInfo                                                          as select 'nl.imro.'  || u.unetid || '.' || 'h-' || l.gid as gmlid, l.*,u.unetid,u.gmlid as unetgmlid,u.bhcode from ExtraDetailInfo                                  l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_ExtraGeometrie                                                           as select 'nl.imro.'  || u.unetid || '.' || 'i-' || l.gid as gmlid, l.*,u.unetid,u.gmlid as unetgmlid,u.bhcode from ExtraGeometrie                                   l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_ExtraTopo                                                                as select 'nl.imro.'  || u.unetid || '.' || 'j-' || l.gid as gmlid, l.*,u.unetid,u.gmlid as unetgmlid,u.bhcode from ExtraTopo                                        l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_KabelEnLeidingContainer                                                  as select 'nl.imro.'  || u.unetid || '.' || 'l-' || l.gid as gmlid, l.*,u.unetid,u.gmlid as unetgmlid,u.bhcode from KabelEnLeidingContainer                          l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_Kunstwerk_Containerelement                                               as select 'nl.imro.'  || u.unetid || '.' || 'm-' || l.gid as gmlid, l.*,u.unetid,u.gmlid as unetgmlid,u.bhcode from Kunstwerk_Containerelement                       l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_Leidingelement                                                           as select 'nl.imro.'  || u.unetid || '.' || 'n-' || l.gid as gmlid, l.*,u.unetid,u.gmlid as unetgmlid,u.bhcode from Leidingelement                                   l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_maatvoering_label                                                        as select 'nl.imro.'  || u.unetid || '.' || 'p-' || l.gid as gmlid, l.*,u.unetid,u.gmlid as unetgmlid,u.bhcode from maatvoering_label                                l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_maatvoering_lijn								as select 'nl.imro.'  || u.unetid || '.' || 'k-' || l.gid as gmlid, l.*,u.unetid,u.gmlid as unetgmlid,u.bhcode from maatvoering_lijn                                 l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_maatvoering_pijl                                                         as select 'nl.imro.'  || u.unetid || '.' || 'q-' || l.gid as gmlid, l.*,u.unetid,u.gmlid as unetgmlid,u.bhcode from maatvoering_pijl                                 l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_RioolVV_KabelOfLeiding                                                   as select 'nl.imro.'  || u.unetid || '.' || 't-' || l.gid as gmlid, l.*,u.unetid,u.gmlid as unetgmlid,u.bhcode from RioolVV_KabelOfLeiding                           l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_Water_KabelOfLeiding                                                     as select 'nl.imro.'  || u.unetid || '.' || 'v-' || l.gid as gmlid, l.*,u.unetid,u.gmlid as unetgmlid,u.bhcode from Water_KabelOfLeiding                             l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_elektriciteitskabel                                                      as select 'nl.imro.'  || u.unetid || '.' || 'w-' || l.gid as gmlid, l.*,u.unetid,u.gmlid as unetgmlid,u.bhcode from elektriciteitskabel                              l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_oliegaschemicalien                                                       as select 'nl.imro.'  || u.unetid || '.' || 'x-' || l.gid as gmlid, l.*,u.unetid,u.gmlid as unetgmlid,u.bhcode from oliegaschemicalien                               l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
+create table v_kabelbed                                                                 as select 'nl.imro.'  || u.unetid || '.' || 'y-' || l.gid as gmlid, l.*,u.unetid,u.gmlid as unetgmlid,u.bhcode from kabelbed                                         l,utiliteitsnet u where u.thema = l.thema and u.authority = l.netbeheer;
 
 --
 -- Create a table of parties from the utilitynetworks
@@ -230,25 +238,25 @@ drop table if exists utilitylink cascade;
 
 create table utilitylink
 as
-    select 'ulinkid-' || gmlid as gmlid,bhcode,thema,netbeheer,unetid,geom,status::text
+    select gmlid || '.ulink' as gmlid,bhcode,thema,netbeheer,unetgmlid,unetid,geom,status::text
     from v_elektriciteitskabel
        union all
-    select 'ulinkid-' || gmlid as gmlid,bhcode,thema,netbeheer,unetid,geom,status::text
+    select gmlid || '.ulink' as gmlid,bhcode,thema,netbeheer,unetgmlid,unetid,geom,status::text
     from v_rioolvv_kabelofleiding
        union all
-    select 'ulinkid-' || gmlid as gmlid,bhcode,thema,netbeheer,unetid,geom,status_1::text
+    select gmlid || '.ulink' as gmlid,bhcode,thema,netbeheer,unetgmlid,unetid,geom,status_1::text
     from v_water_kabelofleiding
        union all
-    select 'ulinkid-' || gmlid as gmlid,bhcode,thema,netbeheer,unetid,geom,status::text
+    select gmlid || '.ulink' as gmlid,bhcode,thema,netbeheer,unetgmlid,unetid,geom,status::text
     from v_oliegaschemicalien
        union all
-    select 'ulinkid-' || gmlid as gmlid,bhcode,thema,netbeheer,unetid,geom,status::text
+    select gmlid || '.ulink' as gmlid,bhcode,thema,netbeheer,unetgmlid,unetid,geom,status::text
     from v_kabelbed
        union all
-    select 'ulinkid-' || gmlid as gmlid,bhcode,thema,netbeheer,unetid,geom,status::text
+    select gmlid || '.ulink' as gmlid,bhcode,thema,netbeheer,unetgmlid,unetid,geom,status::text
     from v_kabelenleidingcontainer
        union all
-    select 'ulinkid-' || gmlid as gmlid,bhcode,thema,netbeheer,unetid,geom,status::text
+    select gmlid || '.ulink' as gmlid,bhcode,thema,netbeheer,unetgmlid,unetid,geom,status::text
     from v_Kunstwerk_Containerelement
 ;
 --create table utilitylink
@@ -264,6 +272,26 @@ drop table if exists geulmof;
 create table geulmof as select * from v_containerelement where type = 'geulmof';
 
 
-
-
-
+drop table if exists utilitynetwork_elements ;
+create table utilitynetwork_elements
+as
+select unetgmlid as utilitynetwork,gmlid as elementid from  v_aanduidingEisVoorzorgsmaatregel union all
+select unetgmlid as utilitynetwork,gmlid as elementid from  v_Annotatie_lijn union all
+select unetgmlid as utilitynetwork,gmlid as elementid from  v_Annotatie union all
+select unetgmlid as utilitynetwork,gmlid as elementid from  v_BGevaarlijkeInhoud union all
+select unetgmlid as utilitynetwork,gmlid as elementid from  v_Containerelement union all
+select unetgmlid as utilitynetwork,gmlid as elementid from  v_Diepte union all
+select unetgmlid as utilitynetwork,gmlid as elementid from  v_ExtraDetailInfo union all
+select unetgmlid as utilitynetwork,gmlid as elementid from  v_ExtraGeometrie union all
+select unetgmlid as utilitynetwork,gmlid as elementid from  v_ExtraTopo union all
+select unetgmlid as utilitynetwork,gmlid as elementid from  v_KabelEnLeidingContainer union all
+select unetgmlid as utilitynetwork,gmlid as elementid from  v_Kunstwerk_Containerelement union all
+select unetgmlid as utilitynetwork,gmlid as elementid from  v_Leidingelement union all
+select unetgmlid as utilitynetwork,gmlid as elementid from  v_maatvoering_label union all
+select unetgmlid as utilitynetwork,gmlid as elementid from  v_maatvoering_lijn union all
+select unetgmlid as utilitynetwork,gmlid as elementid from  v_maatvoering_pijl union all
+select unetgmlid as utilitynetwork,gmlid as elementid from  v_RioolVV_KabelOfLeiding union all
+select unetgmlid as utilitynetwork,gmlid as elementid from  v_Water_KabelOfLeiding union all
+select unetgmlid as utilitynetwork,gmlid as elementid from  v_elektriciteitskabel union all
+select unetgmlid as utilitynetwork,gmlid as elementid from  v_oliegaschemicalien union all
+select unetgmlid as utilitynetwork,gmlid as elementid from  v_kabelbed ;
