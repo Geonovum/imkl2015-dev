@@ -137,7 +137,7 @@ function printINSPIREID($namespace,$gmlid)
 {
     echo "            <" . $namespace . ":inspireId>\n";
     echo "                <base:Identifier>\n";
-    echo "                    <base:localId>"  . $gmlid. "</base:localId>\n";
+    echo "                    <base:localId>"  . preg_replace("/^nl.imkl./","",$gmlid) . "</base:localId>\n";
     echo "                    <base:namespace>nl.imkl</base:namespace>\n";
     echo "                </base:Identifier>\n";
     echo "            </" . $namespace . ":inspireId>\n";
@@ -236,7 +236,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printopen("gml:featureMember");
     openfeature("imkl:OlieGasChemicalienPijpleiding",$line["gmlid"]);
     printLifespan("net","2001-12-17T09:30:47.0Z","");
-    printINSPIREID("net",$line["bhcode"],$line["gmlid"]);
+    printINSPIREID("net",$line["gmlid"]);
     printhref("net:inNetwork",$line["unetgmlid"]);
     printhref("net:link",  $line["gmlid"] . ".ulink");
     printINSPIREcodelistvalue("us-net-common:currentStatus","ConditionOfFacilityValue",$line["status"]);
@@ -308,7 +308,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printopen("gml:featureMember");
     openfeature("us-net-common:UtilityLink",$line["gmlid"]);
     printLifespan("net","2001-12-17T09:30:47.0Z","");
-    printINSPIREID("net",$line["bhcode"],$line["gmlid"]);
+    printINSPIREID("net",$line["gmlid"]);
     printhref("net:inNetwork",$line["unetgmlid"]);
     printattribute("net:centrelineGeometry",$line["geom"]);
     printattribute("net:fictitious","false");
@@ -334,7 +334,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printopen("gml:featureMember");
     openfeature("imkl:Waterleiding",$line["gmlid"]);
     printLifespan("net","2001-12-17T09:30:47.0Z","");
-    printINSPIREID("net",$line["bhcode"],$line["gmlid"]);
+    printINSPIREID("net",$line["gmlid"]);
     printhref("net:inNetwork",$line["unetgmlid"]);
     printhref("net:link", $line["gmlid"] . ".ulink");
     printINSPIREcodelistvalue("us-net-common:currentStatus","ConditionOfFacilityValue",$line["status_1"]);
@@ -363,7 +363,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printopen("gml:featureMember");
     openfeature("imkl:Rioolleiding",$line["gmlid"]);
     printLifespan("net","2001-12-17T09:30:47.0Z","");
-    printINSPIREID("net",$line["bhcode"],$line["gmlid"]);
+    printINSPIREID("net",$line["gmlid"]);
     printhref("net:inNetwork",$line["unetgmlid"]);
     printhref("net:link", $line["gmlid"] . ".ulink");
     printINSPIREcodelistvalue("us-net-common:currentStatus","ConditionOfFacilityValue",$line["status"]);
@@ -555,7 +555,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printValidity("2001-12-17T09:30:47.0Z","2001-12-17T09:30:47.0Z");
     printattribute("us-net-common:verticalPosition","underground");
     printattribute("us-net-common:geometry",$line["geom"]);
-    printINSPIREID("us-net-common",$line["bhcode"],$line["gmlid"]);
+    printINSPIREID("us-net-common",$line["gmlid"]);
     printNENcodelistvalue('imkl:containerLeidingelementType','containerLeidingelementType',"type");
     printhref("imkl:inNetwork",$line["unetgmlid"]);
     printclose("imkl:Mangat");
