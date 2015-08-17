@@ -214,6 +214,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printopen("gml:featureMember");
     openfeature("imkl:Appurtenance",$line["gmlid"]);
     printLifespan("net","2001-12-17T09:30:47.0Z","");
+    printINSPIREID("net",$line["gmlid"]);
     printhref("net:inNetwork",$line["unetgmlid"]);
     printattribute("net:geometry",$line["geom"]);
     printINSPIREcodelistvalue("us-net-common:currentStatus","ConditionOfFacilityValue",$line["status"]);
@@ -262,6 +263,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printopen("gml:featureMember");
     openfeature("imkl:Kabelbed",$line["gmlid"]);
     printLifespan("net","2001-12-17T09:30:47.0Z","");
+    printINSPIREID("net",$line["gmlid"]);
     printhref("net:inNetwork",$line["unetgmlid"]);
     printhref("net:link",  $line["gmlid"] . ".ulink");
     printINSPIREcodelistvalue("us-net-common:currentStatus","ConditionOfFacilityValue",$line["status"]);
@@ -285,6 +287,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printopen("gml:featureMember");
     openfeature("imkl:Elektriciteitskabel",$line["gmlid"]);
     printLifespan("net","2001-12-17T09:30:47.0Z","");
+    printINSPIREID("net",$line["gmlid"]);
     printhref("net:inNetwork",$line["unetgmlid"]);
     printhref("net:link",  $line["gmlid"] . ".ulink");
     printINSPIREcodelistvalue("us-net-common:currentStatus","ConditionOfFacilityValue",$line["status"]);
@@ -617,6 +620,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printopen("gml:featureMember");
     openfeature("imkl:Mantelbuis",$line["gmlid"]);
     printLifespan("net","2001-12-17T09:30:47.0Z","");
+    printINSPIREID("net",$line["gmlid"]);
     printhref("net:inNetwork",$line["unetgmlid"]);
     printhref("net:link", $line["gmlid"] . ".ulink");
     printINSPIREcodelistvalue("us-net-common:currentStatus","ConditionOfFacilityValue",$line["status"]);
@@ -655,12 +659,9 @@ pg_free_result($result);
 #
 # Process Kunstwerk_Containerelement (== Duct)
 #
-$query = ' select gmlid, gid, id, netbeheer, thema, toelichtin, detailsche,
-status, vertpositi, disttype, warningt, ductwidth, bzichtbaar, aantalk,
-dieptetovm, dieptenap, xinfo, ST_AsGML(3,geom,5,0,null) as geom, unetgmlid,unetid, bhcode
-from v_Kunstwerk_Containerelement;';
+$query = ' select gmlid, gid, id, netbeheer, thema, toelichtin, detailsche, status, vertpositi, disttype, warningt, ductwidth, bzichtbaar, aantalk, dieptetovm, dieptenap, xinfo, ST_AsGML(3,geom,5,0,null) as geom, unetgmlid,unetid, bhcode from v_Kunstwerk_Containerelement;';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
-#gmlid, gid, id, netbeheer, thema, toelichtin, detailsche, status, vertpositi,
+# gid, id, netbeheer, thema, toelichtin, detailsche, status, vertpositi,
 #disttype, warningt, ductwidth, bzichtbaar, aantalk, dieptetovm, dieptenap,
 #xinfo, ST_AsGML(3,geom,5,0,null) as geom, unetid, bhcode 
 
@@ -668,6 +669,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printopen("gml:featureMember");
     openfeature("imkl:Duct",$line["gmlid"]);
     printLifespan("net","2001-12-17T09:30:47.0Z","");
+    printINSPIREID("net",$line["gmlid"]);
     printhref("net:inNetwork",$line["unetgmlid"]);
     printhref("net:link", $line["gmlid"] . ".ulink");
     printINSPIREcodelistvalue("us-net-common:currentStatus","ConditionOfFacilityValue",$line["status"]);
