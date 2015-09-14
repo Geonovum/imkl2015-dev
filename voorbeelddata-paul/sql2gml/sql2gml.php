@@ -415,7 +415,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printNEN3610ID($line["bhcode"],$line["gmlid"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
     printNENcodelistvalue("imkl:diepteNauwkeurigheid","NauwkeurigheidDiepteValue",$line["nauwk"]);
-    printattribute_tvale("imkl:dieptePeil",$line["dtovmveld"],"uom=\"urn:ogc:def:uom:OGC::bar\"");
+    printattribute_tvale("imkl:dieptePeil",$line["dtovmveld"],"uom=\"urn:ogc:def:uom:OGC::cm\"");
     printattribute("imkl:ligging",$line["geom"]);
     printhref("imkl:inNetwork",$line["unetgmlid"]);
     printclose("imkl:DiepteTovMaaiveld");
