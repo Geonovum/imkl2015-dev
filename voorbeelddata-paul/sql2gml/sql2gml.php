@@ -478,6 +478,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printopen("gml:featureMember");
     openfeature("imkl:Annotatie",$line["gmlid"]);
     printNEN3610ID($line["bhcode"],$line["gmlid"]);
+    printattribute("imkl:label",$line["label"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
     printNENcodelistvalue('imkl:annotatieType','AnnotatieTypeValue','annotatieLabel');
     printattribute("imkl:ligging",$line["geom"]);
