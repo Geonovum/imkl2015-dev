@@ -1,40 +1,299 @@
-appurtenanceType;Buis
-appurtenanceType;Bocht
-appurtenanceType;Tstuk
-appurtenanceType; Bodem
-appurtenanceType; Lasnok
-appurtenanceType; Expansiestuk
-appurtenanceType; IsolatieKoppeling
-appurtenanceType; Vloeistofvanger
-appurtenanceType; Raaginrichting
-appurtenanceType;Algemeen (gas) transport onderdeel
-oilGasChemicalsProductType;Mud
-oilGasChemicalsProductType;Methanol
-oilGasChemicalsProductType;Emulsie
-oilGasChemicalsProductType;Glycol
-appurtenanceType;hoogbouwkoppelpunt
-appurtenanceType;ontluchting
-appurtenanceType;aftakzadel
-appurtenanceType;overgangsstuk
-appurtenanceType;isolatiestuk
-appurtenanceType;ontspanningselement
-appurtenanceType;hoogteligging
-appurtenanceType;adrespunt
-appurtenanceType;eindkap
-appurtenanceType;verloopstuk
-appurtenanceType;afsluiter
-appurtenanceType;meetpunt
-appurtenanceType;sifon
-appurtenanceType;blaasgat
-appurtenanceType;kbMeetpunt
-appurtenanceType;gasstation
-appurtenanceType;knooppunt
-appurtenanceType;markering
-appurtenanceType;punt van levering
-appurtenanceType;terminal
-appurtenanceType;pomp
-appurtenanceType;pompstation
-appurtenanceType;productiegebied
-appurtenanceType;opslagvoorziening
-oilGasChemicalsProductType;naturalGas
-oilGasChemicalsProductType;bioGas
+thema;bron;Deelmodel;attribuut;waarde;label-nl;definitie;naam waardelijst;URL
+algemeen;imkl-be;wion;imkl:annotatieType;annotatiePijlpunt;annotatie pijl;definitie;AnnotatieTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/AnnotatieTypeValue/annotatiePijlpunt
+algemeen;imkl-be;wion;imkl:annotatieType;annotatieLijn;annotatie lijn;definitie;AnnotatieTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/AnnotatieTypeValue/annotatieLijn
+algemeen;imkl-be;wion;imkl:annotatieType;annotatieLabel;annotatie label;definitie;AnnotatieTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/AnnotatieTypeValue/annotatieLabel
+algemeen;imkl-be;wion;bestandMediaType;PNG;PNG;definitie;BestandMediaTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/BestandMediaTypeValue/PNG
+algemeen;imkl-be;wion;bestandMediaType;PDF;PDF;definitie;BestandMediaTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/BestandMediaTypeValue/PDF
+algemeen;imkl-be;wion;bestandMediaType;JPEG;JPEG;definitie;BestandMediaTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/BestandMediaTypeValue/JPEG
+algemeen;imkl-be;wion;bestandMediaType;TIFF;TIFF;definitie;BestandMediaTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/BestandMediaTypeValue/TIFF
+algemeen;imkl-nl;wion;bijlageType;algemeen;algemeen;definitie;BijlageTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/BijlageTypeValue/algemeen
+algemeen;imkl-nl;wion;bijlageType;eisVoorzorgsmaatregel;eis voorzorgsmaatregel;definitie;BijlageTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/BijlageTypeValue/eisVoorzorgsmaatregel
+algemeen;imkl-nl;wion;bijlageType;nietBetrokken;niet betrokken;definitie;BijlageTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/BijlageTypeValue/nietBetrokken
+algemeen;inspire;wion;us-net-common:currentStatus;disused;buiten gebruik;definitie;ConditionOfFacilityValue;http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/disused
+algemeen;inspire;wion;us-net-common:currentStatus;functional;functioneel;definitie;ConditionOfFacilityValue;http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional
+algemeen;inspire;wion;us-net-common:currentStatus;projected;geprojecteerd;definitie;ConditionOfFacilityValue;http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/projected
+algemeen;imkl-be;wion;imkl:diepteNauwkeurigheid;tot30cm;tot 30 cm;definitie;NauwkeurigheidDiepteValue;http://www.geonovum.nl/imkl2015/1.0/def/NauwkeurigheidDiepteValue/tot30cm
+algemeen;imkl-be;wion;imkl:diepteNauwkeurigheid;tot50cm;tot 50 cm;definitie;NauwkeurigheidDiepteValue;http://www.geonovum.nl/imkl2015/1.0/def/NauwkeurigheidDiepteValue/tot50cm
+algemeen;imkl-be;wion;imkl:diepteNauwkeurigheid;tot100cm;tot 100 cm;definitie;NauwkeurigheidDiepteValue;http://www.geonovum.nl/imkl2015/1.0/def/NauwkeurigheidDiepteValue/tot100cm
+algemeen;imkl-be;wion;imkl:diepteNauwkeurigheid;onbekend;onbekend;definitie;NauwkeurigheidDiepteValue;http://www.geonovum.nl/imkl2015/1.0/def/NauwkeurigheidDiepteValue/onbekend
+algemeen;imkl-nl;wion;imkl:diepteAangrijpingspunt;bovenkant;bovenkant;definitie;DiepteAangrijpingspuntValue;http://www.geonovum.nl/imkl2015/1.0/def/DiepteAangrijpingspuntValue/bovenkant
+algemeen;imkl-nl;wion;imkl:diepteAangrijpingspunt;binnenonderkantBuis;binnenonderkant buis;definitie;DiepteAangrijpingspuntValue;http://www.geonovum.nl/imkl2015/1.0/def/DiepteAangrijpingspuntValue/binnenonderkantBuis
+algemeen;imkl-nl;wion;imkl:extraInfoType;aansluiting;aansluiting;definitie;ExtraDetailInfoTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/ExtraDetailInfoTypeValue/aansluiting
+algemeen;imkl-nl;wion;imkl:extraInfoType;lengteprofiel;lengteprofiel;definitie;ExtraDetailInfoTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/ExtraDetailInfoTypeValue/lengteprofiel
+algemeen;imkl-nl;wion;imkl:extraInfoType;gestuurdeBoring;gestuurde boring;definitie;ExtraDetailInfoTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/ExtraDetailInfoTypeValue/gestuurdeBoring
+algemeen;imkl-nl;wion;imkl:extraInfoType;detail;detail;definitie;ExtraDetailInfoTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/ExtraDetailInfoTypeValue/detail
+algemeen;imkl-nl;wion;imkl:extraInfoType;dwarsprofiel;dwarsprofiel;definitie;ExtraDetailInfoTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/ExtraDetailInfoTypeValue/dwarsprofiel
+algemeen;imkl-be;wion;imkl:extraTopografieType;eigen;eigen;definitie;ExtraTopografieTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/ExtraTopografieTypeValue/eigen
+algemeen;imkl-be;wion;imkl:extraTopografieType;ontwerp;ontwerp;definitie;ExtraTopografieTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/ExtraTopografieTypeValue/ontwerp
+algemeen;imkl-nl;wion;;eigenaar;eigenaar;definitie;PartyRoleExtendedValue;http://www.geonovum.nl/imkl2015/1.0/def/PartyRoleExtendedValue/eigenaar
+algemeen;imkl-nl;wion;;exploitant;exploitant;definitie;PartyRoleExtendedValue;http://www.geonovum.nl/imkl2015/1.0/def/PartyRoleExtendedValue/exploitant
+algemeen;imkl-be;wion;geoNauwkeurigheidXY;tot30cm;tot 30 cm;definitie;NauwkeurigheidXYvalue;http://www.geonovum.nl/imkl2015/1.0/def/NauwkeurigheidXYvalue/tot30cm
+algemeen;imkl-be;wion;geoNauwkeurigheidXY;tot50cm;tot 50 cm;definitie;NauwkeurigheidXYvalue;http://www.geonovum.nl/imkl2015/1.0/def/NauwkeurigheidXYvalue/tot50cm
+algemeen;imkl-be;wion;geoNauwkeurigheidXY;tot100cm;tot 100 cm;definitie;NauwkeurigheidXYvalue;http://www.geonovum.nl/imkl2015/1.0/def/NauwkeurigheidXYvalue/tot100cm
+algemeen;imkl2015;wion;imkl:maatvoeringsType;maatvoeringshulplijn;maatvoeringshulplijn;definitie;MaatvoeringsTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/MaatvoeringsTypeValue/maatvoeringshulplijn
+algemeen;imkl2015;wion;imkl:maatvoeringsType;maatvoeringslijn;maatvoeringslijn;definitie;MaatvoeringsTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/MaatvoeringsTypeValue/maatvoeringslijn
+algemeen;imkl2015;wion;imkl:maatvoeringsType;maatvoeringspijlpunt;maatvoeringspijlpunt;definitie;MaatvoeringsTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/MaatvoeringsTypeValue/maatvoeringspijlpunt
+algemeen;imkl2015;wion;imkl:maatvoeringsType;maatvoeringslabel;maatvoeringslabel;definitie;MaatvoeringsTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/MaatvoeringsTypeValue/maatvoeringslabel
+algemeen;imkl-nl;wion;imkl:thema;buisleidingGevaarlijkeInhoud;buisleiding gevaarlijke inhoud;definitie;Thema;http://www.geonovum.nl/imkl2015/1.0/def/Thema/buisleidingGevaarlijkeInhoud
+algemeen;imkl-nl;wion;imkl:thema;datatransport;;definitie;Thema;http://www.geonovum.nl/imkl2015/1.0/def/Thema/datatransport
+algemeen;imkl-nl;wion;imkl:thema;gasLageDruk;gas lage druk;definitie;Thema;http://www.geonovum.nl/imkl2015/1.0/def/Thema/gasLageDruk
+algemeen;imkl-nl;wion;imkl:thema;gasHogeDruk;gas hoge druk;definitie;Thema;http://www.geonovum.nl/imkl2015/1.0/def/Thema/gasHogeDruk
+algemeen;imkl-nl;wion;imkl:thema;petrochemie;(petro)chemie;definitie;Thema;http://www.geonovum.nl/imkl2015/1.0/def/Thema/petrochemie
+algemeen;imkl-nl;wion;imkl:thema;landelijkHoogspanningsnet;landelijk hoogspanningsnet;definitie;Thema;http://www.geonovum.nl/imkl2015/1.0/def/Thema/landelijkHoogspanningsnet
+algemeen;imkl-nl;wion;imkl:thema;hoogspanning;hoogspanning;definitie;Thema;http://www.geonovum.nl/imkl2015/1.0/def/Thema/hoogspanning
+algemeen;imkl-nl;wion;imkl:thema;laagspanning;laagspanning;definitie;Thema;http://www.geonovum.nl/imkl2015/1.0/def/Thema/laagspanning
+algemeen;imkl-nl;wion;imkl:thema;middenspanning;middenspanning;definitie;Thema;http://www.geonovum.nl/imkl2015/1.0/def/Thema/middenspanning
+algemeen;imkl-nl;wion;imkl:thema;rioolVrijverval;riool vrijverval;definitie;Thema;http://www.geonovum.nl/imkl2015/1.0/def/Thema/rioolVrijverval
+algemeen;imkl-nl;wion;imkl:thema;rioolOnderDruk;riool onder druk;definitie;Thema;http://www.geonovum.nl/imkl2015/1.0/def/Thema/rioolOnderDruk
+algemeen;imkl-nl;wion;imkl:thema;warmte;warmte;definitie;Thema;http://www.geonovum.nl/imkl2015/1.0/def/Thema/warmte
+algemeen;imkl-nl;wion;imkl:thema;water;water;definitie;Thema;http://www.geonovum.nl/imkl2015/1.0/def/Thema/water
+algemeen;imkl-nl;wion;imkl:thema;wees;wees;definitie;Thema;http://www.geonovum.nl/imkl2015/1.0/def/Thema/wees
+algemeen;imkl-nl;wion;imkl:thema;overig;overig;definitie;Thema;http://www.geonovum.nl/imkl2015/1.0/def/Thema/overig
+algemeen;inspire;wion;utilityDeliveryType;collection;inzameling;definitie;UtilityDeliveryTypeValue;http://inspire.ec.europa.eu/codelist/UtilityDeliveryTypeValue/collection
+algemeen;inspire;wion;utilityDeliveryType;distribution;distributie;definitie;UtilityDeliveryTypeValue;http://inspire.ec.europa.eu/codelist/UtilityDeliveryTypeValue/distribution
+algemeen;inspire;wion;utilityDeliveryType;private;particulier;definitie;UtilityDeliveryTypeValue;http://inspire.ec.europa.eu/codelist/UtilityDeliveryTypeValue/private
+algemeen;inspire;wion;utilityDeliveryType;transport;vervoer;definitie;UtilityDeliveryTypeValue;http://inspire.ec.europa.eu/codelist/UtilityDeliveryTypeValue/transport
+algemeen;inspire;wion;us-net-common:utilityNetworkType;electricity;elektriciteit;definitie;UtilityNetworkTypeValue;http://inspire.ec.europa.eu/codelist/UtilityNetworkTypeValue/electricity
+algemeen;inspire;wion;us-net-common:utilityNetworkType;oilGasChemical;olie, gas of chemicalin;definitie;UtilityNetworkTypeValue;http://inspire.ec.europa.eu/codelist/UtilityNetworkTypeValue/oilGasChemical
+algemeen;inspire;wion;us-net-common:utilityNetworkType;sewer;riolering;definitie;UtilityNetworkTypeValue;http://inspire.ec.europa.eu/codelist/UtilityNetworkTypeValue/sewer
+algemeen;inspire;wion;us-net-common:utilityNetworkType;telecommunications;telecommunicatie;definitie;UtilityNetworkTypeValue;http://inspire.ec.europa.eu/codelist/UtilityNetworkTypeValue/telecommunications
+algemeen;inspire;wion;us-net-common:utilityNetworkType;thermal;thermisch;definitie;UtilityNetworkTypeValue;http://inspire.ec.europa.eu/codelist/UtilityNetworkTypeValue/thermal
+algemeen;inspire;wion;us-net-common:utilityNetworkType;water;water;definitie;UtilityNetworkTypeValue;http://inspire.ec.europa.eu/codelist/UtilityNetworkTypeValue/water
+algemeen;inspire;wion;us-net-common:utilityNetworkType;crossTheme;crossTheme;definitie;UtilityNetworkTypeValue;http://inspire.ec.europa.eu/codelist/UtilityNetworkTypeValue/crossTheme
+algemeen;inspire;wion;us-net-common:warningType;concretePaving;betonnen plaveisel;definitie;WarningTypeValue;http://inspire.ec.europa.eu/codelist/WarningTypeValue/concretePaving
+algemeen;inspire;wion;us-net-common:warningType;net;net;definitie;WarningTypeValue;http://inspire.ec.europa.eu/codelist/WarningTypeValue/net
+algemeen;inspire;wion;us-net-common:warningType;tape;lint;definitie;WarningTypeValue;http://inspire.ec.europa.eu/codelist/WarningTypeValue/tape
+;imkl-nl;rrb;;aardgasleidingNietNEN;aardgasleiding niet NEN;definitie;BuisleidingenType;http://www.geonovum.nl/imkl2015/1.0/def/BuisleidingenType/aardgasleidingNietNEN
+;imkl-nl;rrb;;K1-leiding;K1-leiding;definitie;BuisleidingenType;http://www.geonovum.nl/imkl2015/1.0/def/BuisleidingenType/K1-leiding
+;imkl-nl;rrb;;K2-leiding;K2-leiding;definitie;BuisleidingenType;http://www.geonovum.nl/imkl2015/1.0/def/BuisleidingenType/K2-leiding
+;imkl-nl;rrb;;K3-leiding;K3-leiding;definitie;BuisleidingenType;http://www.geonovum.nl/imkl2015/1.0/def/BuisleidingenType/K3-leiding
+;imkl-nl;rrb;;defensieleiding;defensieleiding;definitie;BuisleidingenType;http://www.geonovum.nl/imkl2015/1.0/def/BuisleidingenType/defensieleiding
+;;rrb;;brandbaar;brandbaar;definitie;EffectScenarionType;http://www.geonovum.nl/imkl2015/1.0/def/EffectScenarionType/brandbaar
+;;rrb;;explosief;explosief;definitie;EffectScenarionType;http://www.geonovum.nl/imkl2015/1.0/def/EffectScenarionType/explosief
+;;rrb;;toxisch;toxisch;definitie;EffectScenarionType;http://www.geonovum.nl/imkl2015/1.0/def/EffectScenarionType/toxisch
+;;rrb;;scherfwerking;scherfwerking;definitie;EffectScenarionType;http://www.geonovum.nl/imkl2015/1.0/def/EffectScenarionType/scherfwerking
+;imkl-nl;rrb;;aargasleidingNEN3650;aargasleiding NEN3650;definitie;BuisleidingenType;http://www.geonovum.nl/imkl2015/1.0/def/BuisleidingenType/aargasleidingNEN3650
+;imkl-nl;wion;;toren;toren;definitie;ContainerLeidingElementTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/ContainerLeidingElementTypeValue/toren
+;imkl-nl;wion;;mast;mast;definitie;ContainerLeidingElementTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/ContainerLeidingElementTypeValue/mast
+;imkl-nl;wion;;mangat;mangat;definitie;ContainerLeidingElementTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/ContainerLeidingElementTypeValue/mangat
+;imkl-nl;wion;;kast;kast;definitie;ContainerLeidingElementTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/ContainerLeidingElementTypeValue/kast
+;imkl-nl;wion;;technischGebouw;technisch gebouw;definitie;ContainerLeidingElementTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/ContainerLeidingElementTypeValue/technischGebouw
+;imkl-nl;wion;;overig;overig;definitie;BuisleidingenType;http://www.geonovum.nl/imkl2015/1.0/def/BuisleidingenType/overig
+elekt-enex-lian;imkl-be;wion;us-net-common:appurtenanceType;aarding;aarding;definitie;ElectricityAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/ElectricityAppurtenanceTypeIMKLValue/aarding
+elekt-enex-lian;imkl-be;wion;us-net-common:appurtenanceType;mof;mof;definitie;ElectricityAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/ElectricityAppurtenanceTypeIMKLValue/mof
+elekt-enex-lian;imkl2015;wion;us-net-common:appurtenanceType;hoogteligging;hoogteligging;definitie;ElectricityAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/ElectricityAppurtenanceTypeIMKLValue/hoogteligging
+elekt-enex-lian;imkl-nl?;wion;us-net-common:appurtenanceType;adrespunt;Adrespunt;definitie;ElectricityAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/ElectricityAppurtenanceTypeIMKLValue/adrespunt
+elekt-enex-lian;inspire;wion;us-net-common:appurtenanceType;connectionBox;aansluitkast;definitie;ElectricityAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/ElectricityAppurtenanceTypeValue/connectionBox
+elekt-enex-lian;inspire;wion;us-net-common:appurtenanceType;deliveryPoint;punt van levering;definitie;ElectricityAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/ElectricityAppurtenanceTypeValue/deliveryPoint
+elekt-enex-lian;inspire;wion;us-net-common:appurtenanceType;generator;generator;definitie;ElectricityAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/ElectricityAppurtenanceTypeValue/generator
+elekt-enex-lian;inspire;wion;us-net-common:appurtenanceType;mainStation;centrale;definitie;ElectricityAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/ElectricityAppurtenanceTypeValue/mainStation
+elekt-enex-lian;inspire;wion;us-net-common:appurtenanceType;netStation;netstation;definitie;ElectricityAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/ElectricityAppurtenanceTypeValue/netStation
+elekt-enex-lian;inspire;wion;us-net-common:appurtenanceType;streetLight;straatlantaren;definitie;ElectricityAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/ElectricityAppurtenanceTypeValue/streetLight
+elekt-enex-lian;inspire;wion;us-net-common:appurtenanceType;subStation;onderstation;definitie;ElectricityAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/ElectricityAppurtenanceTypeValue/subStation
+elekt-enex-lian;;wion;us-net-common:appurtenanceType;puntVanLevering;punt van levering;definitie;ElectricityAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/ElectricityAppurtenanceTypeIMKLValue/puntVanLevering
+elekt-enex-lian;;wion;us-net-common:appurtenanceType;geulmof;geulmof;definitie;ElectricityAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/ElectricityAppurtenanceTypeIMKLValue/geulmof
+elekt-enex-lian;imkl2015;wion;us-net-common:appurtenanceType;kbMeetpunt;kb meetpunt;definitie;ElectricityAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/ElectricityAppurtenanceTypeIMKLValue/kbMeetpunt
+elekt-enex-lian;imkl2015;wion;us-net-common:appurtenanceType;kbInstallatie;kb installatie;definitie;ElectricityAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/ElectricityAppurtenanceTypeIMKLValue/kbInstallatie
+elekt-enex-lian;imkl2015;wion;us-net-common:appurtenanceType;kbEindpunt;kb eindpunt;definitie;ElectricityAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/ElectricityAppurtenanceTypeIMKLValue/kbEindpunt
+elekt-enex-lian;imkl2015;wion;us-net-common:appurtenanceType;kbContact;kb contact;definitie;ElectricityAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/ElectricityAppurtenanceTypeIMKLValue/kbContact
+elekt-enex-lian;imkl2015;wion;us-net-common:appurtenanceType;hoogbouwkoppelpunt;hoogbouwkoppelpunt;definitie;ElectricityAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/ElectricityAppurtenanceTypeIMKLValue/hoogbouwkoppelpunt
+telecom;imkl2015;wion;us-net-common:appurtenanceType;antenna;antenna;definitie;TelecommunicationsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsAppurtenanceIMKLTypeValue/antenna
+telecom;imkl2015;wion;us-net-common:appurtenanceType;termination;termination;definitie;TelecommunicationsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsAppurtenanceIMKLTypeValue/termination
+telecom;imkl2015;wion;us-net-common:appurtenanceType;handhole;handhole;definitie;TelecommunicationsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsAppurtenanceIMKLTypeValue/handhole
+telecom;imkl2015;wion;us-net-common:appurtenanceType;mof;mof;definitie;TelecommunicationsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsAppurtenanceIMKLTypeValue/mof
+telecom;imkl2015;wion;us-net-common:appurtenanceType;verzameltermOndergrondseLeidingelementenOpnemen;verzameltermOndergrondseLeidingelementenOpnemen;definitie;TelecommunicationsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsAppurtenanceIMKLTypeValue/verzameltermOndergrondseLeidingelementenOpnemen
+telecom;imkl2015;wion;us-net-common:appurtenanceType;kabelverdeler;kabelverdeler;definitie;TelecommunicationsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsAppurtenanceIMKLTypeValue/kabelverdeler
+telecom;imkl2015;wion;us-net-common:appurtenanceType;Stijgleiding;Stijgleiding;definitie;TelecommunicationsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsAppurtenanceIMKLTypeValue/Stijgleiding
+telecom;imkl2015;wion;us-net-common:appurtenanceType;GTWPOpnemen;GTWPOpnemen;definitie;TelecommunicationsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsAppurtenanceIMKLTypeValue/GTWPOpnemen
+telecom;imkl2015;wion;us-net-common:appurtenanceType;afdekplaten;afdekplaten;definitie;TelecommunicationsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsAppurtenanceIMKLTypeValue/afdekplaten
+telecom;imkl2015;wion;us-net-common:appurtenanceType;doorvoerramen;doorvoerramen;definitie;TelecommunicationsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsAppurtenanceIMKLTypeValue/doorvoerramen
+telecom;imkl2015;wion;telecommunicationsCableMaterialType;coaxial;coaxial;definitie;TelecommunicationsCableMaterialTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsCableMaterialTypeValue/coaxial
+telecom;imkl2015;wion;telecommunicationsCableMaterialType;opticalFiber;opticalFiber;definitie;TelecommunicationsCableMaterialTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsCableMaterialTypeValue/opticalFiber
+telecom;imkl2015;wion;telecommunicationsCableMaterialType;twistedPair;twistedPair;definitie;TelecommunicationsCableMaterialTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsCableMaterialTypeValue/twistedPair
+telecom;;wion;us-net-common:appurtenanceType;puntVanLevering;punt van levering;definitie;TelecommunicationsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsAppurtenanceIMKLTypeValue/puntVanLevering
+olie-gas-chemicalien;imkl2015;wion;us-net-common:appurtenanceType;buis;buis;definitie;OilGasChemicalsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/buis
+olie-gas-chemicalien;imkl2015;wion;us-net-common:appurtenanceType;bocht;bocht;definitie;OilGasChemicalsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/bocht
+olie-gas-chemicalien;imkl2015;wion;us-net-common:appurtenanceType;tstuk;t stuk;definitie;OilGasChemicalsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/tstuk
+olie-gas-chemicalien;imkl2015;wion;us-net-common:appurtenanceType;bodem;bodem;definitie;OilGasChemicalsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/bodem
+olie-gas-chemicalien;imkl2015;wion;us-net-common:appurtenanceType;lasnok;lasnok;definitie;OilGasChemicalsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/lasnok
+olie-gas-chemicalien;imkl2015;wion;us-net-common:appurtenanceType;expansiestuk;expansiestuk;definitie;OilGasChemicalsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/expansiestuk
+olie-gas-chemicalien;imkl2015;wion;us-net-common:appurtenanceType;isolatieKoppeling;isolatie koppeling;definitie;OilGasChemicalsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/isolatieKoppeling
+olie-gas-chemicalien;imkl2015;wion;us-net-common:appurtenanceType;vloeistofvanger;vloeistofvanger;definitie;OilGasChemicalsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/vloeistofvanger
+olie-gas-chemicalien;imkl2015;wion;us-net-common:appurtenanceType;raaginrichting;raaginrichting;definitie;OilGasChemicalsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/raaginrichting
+olie-gas-chemicalien;imkl2015;wion;us-net-common:appurtenanceType;algemeenGasTransportOnderdeel;Algemeen (gas) transport onderdeel;definitie;OilGasChemicalsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/algemeenGasTransportOnderdeel
+olie-gas-chemicalien;imkl2015;wion;us-net-ogc:oilGasChemicalsProductType;mud;mud;definitie;OilGasChemicalsProductIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductIMKLTypeValue/mud
+olie-gas-chemicalien;imkl2015;wion;us-net-ogc:oilGasChemicalsProductType;methanol;methanol;definitie;OilGasChemicalsProductIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductIMKLTypeValue/methanol
+olie-gas-chemicalien;imkl2015;wion;us-net-ogc:oilGasChemicalsProductType;emulsie;emulsie;definitie;OilGasChemicalsProductIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductIMKLTypeValue/emulsie
+olie-gas-chemicalien;imkl2015;wion;us-net-ogc:oilGasChemicalsProductType;glycol;glycol;definitie;OilGasChemicalsProductIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductIMKLTypeValue/glycol
+olie-gas-chemicalien;imkl2015;wion;us-net-common:appurtenanceType;hoogbouwkoppelpunt;hoogbouwkoppelpunt;definitie;OilGasChemicalsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/hoogbouwkoppelpunt
+olie-gas-chemicalien;imkl2015;wion;us-net-common:appurtenanceType;ontluchting;ontluchting;definitie;OilGasChemicalsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/ontluchting
+olie-gas-chemicalien;imkl2015;wion;us-net-common:appurtenanceType;aftakzadel;aftakzadel;definitie;OilGasChemicalsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/aftakzadel
+olie-gas-chemicalien;imkl2015;wion;us-net-common:appurtenanceType;overgangsstuk;overgangsstuk;definitie;OilGasChemicalsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/overgangsstuk
+olie-gas-chemicalien;imkl2015;wion;us-net-common:appurtenanceType;isolatiestuk;isolatiestuk;definitie;OilGasChemicalsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/isolatiestuk
+olie-gas-chemicalien;imkl2015;wion;us-net-common:appurtenanceType;ontspanningselement;ontspanningselement;definitie;OilGasChemicalsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/ontspanningselement
+olie-gas-chemicalien;imkl2015;wion;us-net-common:appurtenanceType;hoogteligging;hoogteligging;definitie;OilGasChemicalsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/hoogteligging
+olie-gas-chemicalien;imkl2015;wion;us-net-common:appurtenanceType;adrespunt;adrespunt;definitie;OilGasChemicalsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/adrespunt
+olie-gas-chemicalien;imkl-be;wion;us-net-common:appurtenanceType;eindkap;eindkap;definitie;OilGasChemicalsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/eindkap
+olie-gas-chemicalien;imkl-be;wion;us-net-common:appurtenanceType;verloopstuk;verloopstuk;definitie;OilGasChemicalsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/verloopstuk
+olie-gas-chemicalien;imkl-be;wion;us-net-common:appurtenanceType;afsluiter;afsluiter;definitie;OilGasChemicalsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/afsluiter
+olie-gas-chemicalien;imkl-be;wion;us-net-common:appurtenanceType;meetpunt;meetpunt;definitie;OilGasChemicalsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/meetpunt
+olie-gas-chemicalien;imkl-be;wion;us-net-common:appurtenanceType;sifon;sifon;definitie;OilGasChemicalsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/sifon
+olie-gas-chemicalien;imkl-be;wion;us-net-common:appurtenanceType;blaasgat;blaasgat;definitie;OilGasChemicalsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/blaasgat
+olie-gas-chemicalien;imkl-be;wion;us-net-common:appurtenanceType;kbMeetpunt;kb meetpunt;definitie;OilGasChemicalsAppurtenanceIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/kbMeetpunt
+olie-gas-chemicalien;inspire;wion;us-net-common:appurtenanceType;gasStation;Gasstation;definitie;OilGasChemicalsAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/OilGasChemicalsAppurtenanceTypeValue/gasStation
+olie-gas-chemicalien;inspire;wion;us-net-common:appurtenanceType;marker;Markering;definitie;OilGasChemicalsAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/OilGasChemicalsAppurtenanceTypeValue/marker
+olie-gas-chemicalien;inspire;wion;us-net-common:appurtenanceType;oilGasChemicalsNode;Olie-, gas- en chemicalinnet-knooppunt;definitie;OilGasChemicalsAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/OilGasChemicalsAppurtenanceTypeValue/oilGasChemicalsNode
+olie-gas-chemicalien;inspire;wion;us-net-common:appurtenanceType;deliveryPoint;punt van levering;definitie;OilGasChemicalsAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/OilGasChemicalsAppurtenanceTypeValue/deliveryPoint
+olie-gas-chemicalien;inspire;wion;us-net-common:appurtenanceType;productionRegion;Productiegebied;definitie;OilGasChemicalsAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/OilGasChemicalsAppurtenanceTypeValue/productionRegion
+olie-gas-chemicalien;inspire;wion;us-net-common:appurtenanceType;pumpingStation;Pompstation;definitie;OilGasChemicalsAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/OilGasChemicalsAppurtenanceTypeValue/pumpingStation
+olie-gas-chemicalien;inspire;wion;us-net-common:appurtenanceType;pump;Pomp;definitie;OilGasChemicalsAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/OilGasChemicalsAppurtenanceTypeValue/pump
+olie-gas-chemicalien;inspire;wion;us-net-common:appurtenanceType;storage;Opslagvoorziening;definitie;OilGasChemicalsAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/OilGasChemicalsAppurtenanceTypeValue/storage
+olie-gas-chemicalien;inspire;wion;us-net-common:appurtenanceType;terminal;Terminal;definitie;OilGasChemicalsAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/OilGasChemicalsAppurtenanceTypeValue/terminal
+olie-gas-chemicalien;inspire;wion;us-net-ogc:oilGasChemicalsProductType;naturalGas;natural Gas;definitie;OilGasChemicalsProductTypeValue;http://inspire.ec.europa.eu/codelist/OilGasChemicalsProductTypeValue/naturalGas
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;bioGas;bioGas;definitie;OilGasChemicalsProductIMKLTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductIMKLTypeValue/bioGas
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;accetone;accetone;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/accetone
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;air;air;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/air
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;argon;argon;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/argon
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;butadiene1.2;butadiene1.2;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/butadiene1.2
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;butadiene1.3;butadiene1.3;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/butadiene1.3
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;butane;butane;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/butane
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;carbonMonoxide;carbonMonoxide;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/carbonMonoxide
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;chlorine;chlorine;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/chlorine
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;concrete;concrete;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/concrete
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;crude;crude;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/crude
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;dichloroethane;dichloroethane;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/dichloroethane
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;diesel;diesel;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/diesel
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;ethylene;ethylene;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/ethylene
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;gasFabricationOfCocs;gasFabricationOfCocs;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/gasFabricationOfCocs
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;gasHFx;gasHFx;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/gasHFx
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;gasoil;gasoil;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/gasoil
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;hydrogen;hydrogen;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/hydrogen
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;isobutane;isobutane;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/isobutane
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;JET-A1;JET-A1;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/JET-A1
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;kerosene;kerosene;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/kerosene
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;liquidAmmonia;liquidAmmonia;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/liquidAmmonia
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;liquidHydrocarbon;liquidHydrocarbon;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/liquidHydrocarbon
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;multiProduct;multiProduct;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/multiProduct
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;MVC;MVC;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/MVC
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;nitrogen;nitrogen;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/nitrogen
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;oxygen;oxygen;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/oxygen
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;phenol;phenol;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/phenol
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;propane;propane;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/propane
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;propylene;propylene;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/propylene
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;saltWater;saltWater;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/saltWater
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;saumur;saumur;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/saumur
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;sand;sand;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/sand
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;tetrachloroide;tetrachloroide;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/tetrachloroide
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;unknown;unknown;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/unknown
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;water;water;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/water
+olie-gas-chemicalien;imkl-be;wion;us-net-ogc:oilGasChemicalsProductType;empty;empty;definitie;OilGasChemicalsProductTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/empty
+water;imkl2015;wion;us-net-common:appurtenanceType;afsluiter;afsluiter;definitie;WaterAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/WaterAppurtenanceTypeIMKLValue/afsluiter
+water;imkl2015;wion;us-net-common:appurtenanceType;diameterovergang;diameterovergang;definitie;WaterAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/WaterAppurtenanceTypeIMKLValue/diameterovergang
+water;imkl2015;wion;us-net-common:appurtenanceType;materiaalovergang;materiaalovergang;definitie;WaterAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/WaterAppurtenanceTypeIMKLValue/materiaalovergang
+water;imkl2015;wion;us-net-common:appurtenanceType;eindpunt;eindpunt;definitie;WaterAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/WaterAppurtenanceTypeIMKLValue/eindpunt
+water;imkl2015;wion;us-net-common:appurtenanceType;blindflens;blindflens;definitie;WaterAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/WaterAppurtenanceTypeIMKLValue/blindflens
+water;inspire;wion;us-net-common:appurtenanceType;airRelieveValve;ontluchtingsventiel;definitie;WaterAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/airRelieveValve
+water;inspire;wion;us-net-common:appurtenanceType;anode;anode;definitie;WaterAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/anode
+water;inspire;wion;us-net-common:appurtenanceType;checkValve;afsluitklep;definitie;WaterAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/checkValve
+water;inspire;wion;us-net-common:appurtenanceType;controlValve;controleventiel;definitie;WaterAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/controlValve
+water;inspire;wion;us-net-common:appurtenanceType;fireHydrant;brandkraan;definitie;WaterAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/fireHydrant
+water;inspire;wion;us-net-common:appurtenanceType;junction;knooppunt;definitie;WaterAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/junction
+water;inspire;wion;us-net-common:appurtenanceType;lateralPoint;lateraal punt;definitie;WaterAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/lateralPoint
+water;inspire;wion;us-net-common:appurtenanceType;meter;meter;definitie;WaterAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/meter
+water;inspire;wion;us-net-common:appurtenanceType;pressureController;drukregelaar;definitie;WaterAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/pressureController
+water;inspire;wion;us-net-common:appurtenanceType;pumpStation;pompstation;definitie;WaterAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/pumpStation
+water;inspire;wion;us-net-common:appurtenanceType;samplingStation;meetstation;definitie;WaterAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/samplingStation
+water;inspire;wion;us-net-common:appurtenanceType;storageFacility;opslagfaciliteit;definitie;WaterAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/storageFacility
+water;inspire;wion;us-net-common:appurtenanceType;treatmentPlant;zuiveringsinstallatie;definitie;WaterAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/treatmentPlant
+water;inspire;wion;us-net-common:appurtenanceType;waterDischargePoint;afvoerpunt;definitie;WaterAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/waterDischargePoint
+water;inspire;wion;us-net-common:appurtenanceType;waterExhaustPoint;aftappunt;definitie;WaterAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/waterExhaustPoint
+water;inspire;wion;us-net-common:appurtenanceType;waterServicePoint;toevoerpunt;definitie;WaterAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/waterServicePoint
+water;inspire;wion;us-net-common:appurtenanceType;well;bron;definitie;WaterAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/well
+water;imkl2015;wion;us-net-wa:waterType;industrial;industrial;definitie;WaterTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/WaterTypeValue/industrial
+water;imkl2015;wion;us-net-wa:waterType;waste;waste;definitie;WaterTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/WaterTypeValue/waste
+water;inspire;wion;us-net-wa:waterType;potable;drinkbaar;definitie;WaterTypeValue;http://inspire.ec.europa.eu/codelist/WaterTypeValue/potable
+water;inspire;wion;us-net-wa:waterType;raw;onbehandeld;definitie;WaterTypeValue;http://inspire.ec.europa.eu/codelist/WaterTypeValue/raw
+water;inspire;wion;us-net-wa:waterType;salt;zout;definitie;WaterTypeValue;http://inspire.ec.europa.eu/codelist/WaterTypeValue/salt
+water;inspire;wion;us-net-wa:waterType;treated;behandeld;definitie;WaterTypeValue;http://inspire.ec.europa.eu/codelist/WaterTypeValue/treated
+water;;wion;;puntVanLevering;punt van levering;definitie;WaterAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/WaterAppurtenanceTypeIMKLValue/puntVanLevering
+riolering;imkl2015;wion;;aansluitleiding;aansluitleiding;definitie;RioolleidingTypeWaarde;http://www.geonovum.nl/imkl2015/1.0/def/RioolleidingTypeWaarde/aansluitleiding
+riolering;imkl2015;wion;;bergbezinkleiding;bergbezinkleiding;definitie;RioolleidingTypeWaarde;http://www.geonovum.nl/imkl2015/1.0/def/RioolleidingTypeWaarde/bergbezinkleiding
+riolering;imkl2015;wion;;bergingsleiding;bergingsleiding;definitie;RioolleidingTypeWaarde;http://www.geonovum.nl/imkl2015/1.0/def/RioolleidingTypeWaarde/bergingsleiding
+riolering;imkl2015;wion;;gemengdRiool;gemengd riool;definitie;RioolleidingTypeWaarde;http://www.geonovum.nl/imkl2015/1.0/def/RioolleidingTypeWaarde/gemengdRiool
+riolering;imkl2015;wion;;hemelwaterriool;hemelwaterriool;definitie;RioolleidingTypeWaarde;http://www.geonovum.nl/imkl2015/1.0/def/RioolleidingTypeWaarde/hemelwaterriool
+riolering;imkl2015;wion;;overstortleiding;overstortleiding;definitie;RioolleidingTypeWaarde;http://www.geonovum.nl/imkl2015/1.0/def/RioolleidingTypeWaarde/overstortleiding
+riolering;imkl2015;wion;;stuwrioolleiding;stuwrioolleiding;definitie;RioolleidingTypeWaarde;http://www.geonovum.nl/imkl2015/1.0/def/RioolleidingTypeWaarde/stuwrioolleiding
+riolering;imkl2015;wion;;doorlatendeleiding;doorlatendeleiding;definitie;RioolleidingTypeWaarde;http://www.geonovum.nl/imkl2015/1.0/def/RioolleidingTypeWaarde/doorlatendeleiding
+riolering;imkl2015;wion;;vuilwaterriool;vuilwaterriool;definitie;RioolleidingTypeWaarde;http://www.geonovum.nl/imkl2015/1.0/def/RioolleidingTypeWaarde/vuilwaterriool
+riolering;imkl2015;wion;;transportrioolleiding;transportrioolleiding;definitie;RioolleidingTypeWaarde;http://www.geonovum.nl/imkl2015/1.0/def/RioolleidingTypeWaarde/transportrioolleiding
+riolering;imkl2015;wion;;zinker;zinker;definitie;RioolleidingTypeWaarde;http://www.geonovum.nl/imkl2015/1.0/def/RioolleidingTypeWaarde/zinker
+riolering;imkl2015;wion;;openLeiding;openLeiding;definitie;RioolleidingTypeWaarde;http://www.geonovum.nl/imkl2015/1.0/def/RioolleidingTypeWaarde/openLeiding
+riolering;imkl2015;wion;us-net-common:appurtenanceType;gemaal;gemaal;definitie;SewerAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/gemaal
+riolering;imkl2015;wion;us-net-common:appurtenanceType;infiltratievoorziening;infiltratievoorziening;definitie;SewerAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/infiltratievoorziening
+riolering;imkl2015;wion;us-net-common:appurtenanceType;kolk;kolk;definitie;SewerAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/kolk
+riolering;imkl2015;wion;us-net-common:appurtenanceType;kunstwerk;kunstwerk;definitie;SewerAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/kunstwerk
+riolering;imkl2015;wion;us-net-common:appurtenanceType;reservoir;reservoir;definitie;SewerAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/reservoir
+riolering;imkl2015;wion;us-net-common:appurtenanceType;uitlaatconstructie;uitlaatconstructie;definitie;SewerAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/uitlaatconstructie
+riolering;imkl-be;wion;us-net-common:appurtenanceType;overstort;overstort;definitie;SewerAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/overstort
+riolering;inspire;wion;us-net-common:appurtenanceType;barrel;mangatbuis;definitie;SewerAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/SewerAppurtenanceTypeValue/barrel
+riolering;inspire;wion;us-net-common:appurtenanceType;catchBasin;opvangbekken;definitie;SewerAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/SewerAppurtenanceTypeValue/catchBasin
+riolering;inspire;wion;us-net-common:appurtenanceType;cleanOut;afsluiter;definitie;SewerAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/SewerAppurtenanceTypeValue/cleanOut
+riolering;inspire;wion;us-net-common:appurtenanceType;connection;aansluiting;definitie;SewerAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/SewerAppurtenanceTypeValue/connection
+riolering;inspire;wion;us-net-common:appurtenanceType;dischargeStructure;afvoerinrichting;definitie;SewerAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/SewerAppurtenanceTypeValue/dischargeStructure
+riolering;inspire;wion;us-net-common:appurtenanceType;specificStructure;specifieke structuur;definitie;SewerAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/SewerAppurtenanceTypeValue/specificStructure
+riolering;inspire;wion;us-net-common:appurtenanceType;thrustProtection;stootbeschermer;definitie;SewerAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/SewerAppurtenanceTypeValue/thrustProtection
+riolering;inspire;wion;us-net-common:appurtenanceType;tideGate;wachtdeur;definitie;SewerAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/SewerAppurtenanceTypeValue/tideGate
+riolering;inspire;wion;us-net-common:appurtenanceType;watertankOrChamber;watertank of -kelder;definitie;SewerAppurtenanceTypeValue;http://inspire.ec.europa.eu/codelist/SewerAppurtenanceTypeValue/watertankOrChamber
+riolering;inspire;wion;us-net-sw:sewerWaterType;combined;gecombineerd;definitie;SewerWaterTypeValue;http://inspire.ec.europa.eu/codelist/SewerWaterTypeValue/combined
+riolering;inspire;wion;us-net-sw:sewerWaterType;reclaimed;teruggewonnen;definitie;SewerWaterTypeValue;http://inspire.ec.europa.eu/codelist/SewerWaterTypeValue/reclaimed
+riolering;inspire;wion;us-net-sw:sewerWaterType;sanitary;huishoudelijk;definitie;SewerWaterTypeValue;http://inspire.ec.europa.eu/codelist/SewerWaterTypeValue/sanitary
+riolering;inspire;wion;us-net-sw:sewerWaterType;storm;storm;definitie;SewerWaterTypeValue;http://inspire.ec.europa.eu/codelist/SewerWaterTypeValue/storm
+riolering;;wion;us-net-common:appurtenanceType;puntVanLevering;punt van levering;definitie;SewerAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/puntVanLevering
+warmte;imkl2015;wion;us-net-common:appurtenanceType;compensator;compensator;definitie;SewerAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/compensator
+warmte;imkl2015;wion;us-net-common:appurtenanceType;lekdetectiemeetpunt;lekdetectiemeetpunt;definitie;SewerAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/lekdetectiemeetpunt
+warmte;imkl2015;wion;us-net-common:appurtenanceType;putten;put(ten);definitie;SewerAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/putten
+warmte;imkl2015;wion;us-net-common:appurtenanceType;pompstation;pompstation;definitie;SewerAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/pompstation
+warmte;imkl2015;wion;us-net-common:appurtenanceType;overdrachtsstation;overdrachtsstation;definitie;SewerAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/overdrachtsstation
+warmte;;wion;us-net-common:appurtenanceType;;;definitie;SewerAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/
+warmte;imkl2015;wion;us-net-common:appurtenanceType;mantelbuis;mantelbuis;definitie;SewerAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/mantelbuis
+warmte;imkl2015;wion;us-net-common:appurtenanceType;zinker;zinker;definitie;SewerAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/zinker
+warmte;imkl2015;wion;us-net-common:appurtenanceType;inEnUittredepuntBoringen;In/ en uittredepunt boringen;definitie;SewerAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/inEnUittredepuntBoringen
+warmte;imkl2015;wion;us-net-common:appurtenanceType;gestuurdeBoring;gestuurde boring;definitie;SewerAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/gestuurdeBoring
+warmte;;wion;us-net-common:appurtenanceType;;;definitie;SewerAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/
+warmte;;wion;us-net-common:appurtenanceType;puntVanLevering;punt van levering;definitie;SewerAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/puntVanLevering
+warmte;imkl2015;wion;;put;put;definitie;ThermalAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/ThermalAppurtenanceTypeIMKLValue/put
+warmte;imkl2015;wion;;pompstation;pompstation;definitie;ThermalAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/ThermalAppurtenanceTypeIMKLValue/pompstation
+warmte;imkl2015;wion;;overdrachtsstation;overdrachtsstation;definitie;ThermalAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/ThermalAppurtenanceTypeIMKLValue/overdrachtsstation
+warmte;imkl2015;wion;;lekdetectiemeetpunt;lekdetectiemeetpunt;definitie;ThermalAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/ThermalAppurtenanceTypeIMKLValue/lekdetectiemeetpunt
+warmte;imkl2015;wion;;compensator;compensator;definitie;ThermalAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/ThermalAppurtenanceTypeIMKLValue/compensator
+warmte;imkl2015;wion;;puntVanLevering;punt van levering;definitie;ThermalAppurtenanceTypeIMKLValue;http://www.geonovum.nl/imkl2015/1.0/def/ThermalAppurtenanceTypeIMKLValue/puntVanLevering
+;imkl2015;wion;;waterloop;waterloop;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/waterloop
+;imkl2015;wion;;rijbaanLokaleWeg;rijbaan lokale weg;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/rijbaanLokaleWeg
+;imkl2015;wion;;fietspad;fietspad;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/fietspad
+;imkl2015;wion;;sloot;sloot;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/sloot
+;imkl2015;wion;;erf;erf;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/erf
+;imkl2015;wion;;talud;talud;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/talud
+;imkl2015;wion;;pandgeometrie;pandgeometrie;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/pandgeometrie
+;imkl2015;wion;;overkapping;overkapping;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/overkapping
+;imkl2015;wion;;loods;loods;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/loods
+;imkl2015;wion;;hek;hek;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/hek
+;imkl2015;wion;;draadraster;draadraster;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/draadraster
+;imkl2015;wion;;faunaraster;faunaraster;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/faunaraster
+;imkl2015;wion;;muur;muur;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/muur
+;imkl2015;wion;;hoogspanningsmast;hoogspanningsmast;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/hoogspanningsmast
+;imkl2015;wion;;steiger;steiger;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/steiger
+;imkl2015;wion;;stuw;stuw;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/stuw
+;imkl2015;wion;;gemaal;gemaal;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/gemaal
+;imkl2015;wion;;brug;brug;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/brug
+;imkl2015;wion;;viaduct;viaduct;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/viaduct
+;imkl2015;wion;;Caikast;CAI-kast;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/Caikast
+;imkl2015;wion;;elektrakast;elektrakast;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/elektrakast
+;imkl2015;wion;;gaskast;gaskast;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/gaskast
+;imkl2015;wion;;telecomkast;telecomkast;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/telecomkast
+;imkl2015;wion;;rioolkast;rioolkast;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/rioolkast
+;imkl2015;wion;;openbareVerlichtingkast;openbare verlichtingkast;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/openbareVerlichtingkast
+;imkl2015;wion;;portaal;portaal;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/portaal
+;imkl2015;wion;;lichtmast;lichtmast;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/lichtmast
+;imkl2015;wion;;hectometerpaal;hectometerpaal;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/hectometerpaal
+;imkl2015;wion;;inspectieputRioolput;inspectie- / rioolput;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/inspectieputRioolput
+;imkl2015;wion;;kolk;kolk;definitie;TopografischObjectTypeValue;http://www.geonovum.nl/imkl2015/1.0/def/TopografischObjectTypeValue/kolk
