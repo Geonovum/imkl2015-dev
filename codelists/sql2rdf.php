@@ -12,7 +12,7 @@ echo "<!-- File created by Wilko Quak via the sql2rdf.php script on " .  date('Y
 $dbconn = pg_connect("");
 
 $prevscheme = "";
-$query = "select herkomst,source,attribute,value,description,listname,url from codelists where attribute is not null order by listname";
+$query = "select herkomst,source,attribute,value,labelnl,description,listname,url from codelists where attribute is not null order by listname";
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 
@@ -29,6 +29,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
 
     echo "<Concept rdf:about=\"" . $line["url"] .  "\">\n";
     echo "    <type rdf:resource=\"http://www.w3.org/2002/07/owl#Thing\"/>\n";
+    echo "    <prefLabel rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\" xml:lang=\"nl\">" .  $line["labelnl"] . "</prefLabel>\n";
     echo "    <definition rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\" xml:lang=\"nl\">" .  $line["description"] . "</definition>\n";
     echo "</Concept>\n";
 }

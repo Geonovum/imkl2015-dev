@@ -14,10 +14,17 @@ imkl2015.rdf: sql2rdf.php
 checkinspireurls:
 	sh checkinspireurls.sh
 
-load: waardelijsten.csv
+#
+# To get a waardelijsten.csv:
+# 1: save waardelijsten as utf.
+#
+waardelijsten-utf8.csv: waardelijsten.csv
+	iconv -f utf16 -t utf8 waardelijsten.csv > waardelijsten-utf8.csv
+
+load: waardelijsten-utf8.csv
 	psql < create.sql
 	psql -c "delete from codelists;"
-	psql -c "copy codelists from STDIN (header true,format csv,delimiter ';')" < waardelijsten.csv
+	psql -c "copy codelists from STDIN (header true,format csv,delimiter '	')" < waardelijsten-utf8.csv
 
 clean:
 	rm -f validateCodelist.xsl imkl2015.rdf
