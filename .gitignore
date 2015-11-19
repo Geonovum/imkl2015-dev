@@ -25,3 +25,5 @@ codelists/validateCodelist.xsl
 voorbeelddata-paul/sql2gml/Authorities.gml
 
 xsd/Makefile~
+ShapeChange/log-imk2015.xml
+ShapeChange/log-imk2015.html
