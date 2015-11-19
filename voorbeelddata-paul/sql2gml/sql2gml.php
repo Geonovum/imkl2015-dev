@@ -376,6 +376,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printattribute_tvale("us-net-common:pipeDiameter",$line["pipediam"],"uom=\"urn:ogc:def:uom:OGC::cm\"");
     printattribute_tvale("us-net-common:pressure",$line["pressure"],"uom=\"urn:ogc:def:uom:OGC::bar\"");
     printINSPIREcodelistvalue("us-net-sw:sewerWaterType","SewerWaterTypeValue",$line["swatertype"]);
+    printNENcodelistvalue('imkl:typeRioolleiding','TypeRioolleiding','todo');
     printclose("imkl:Rioolleiding");
     printclose("gml:featureMember");
 }
@@ -416,6 +417,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
     printNENcodelistvalue("imkl:diepteNauwkeurigheid","NauwkeurigheidDiepteValue",$line["nauwk"]);
     printattribute_tvale("imkl:dieptePeil",$line["dtovmveld"],"uom=\"urn:ogc:def:uom:OGC::cm\"");
+    printNENcodelistvalue("imkl:diepteAangrijpingspunt","TODO",'todo');
     printattribute("imkl:ligging",$line["geom"]);
     printhref("imkl:inNetwork",$line["unetgmlid"]);
     printclose("imkl:DiepteTovMaaiveld");

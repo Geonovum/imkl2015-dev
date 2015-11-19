@@ -1,0 +1,408 @@
+thema	bron	Deelmodel	attribuut	waarde	label-nl	definitie	naam waardelijst	URL
+algemeen	imkl-be	wion	imkl:annotatieType	annotatiePijlpunt	annotatie pijl	annotatie pijlpunt	AnnotatieTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/AnnotatieTypeValue/annotatiePijlpunt
+algemeen	imkl-be	wion	imkl:annotatieType	annotatieLijn	annotatie lijn	annotatie lijn	AnnotatieTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/AnnotatieTypeValue/annotatieLijn
+algemeen	imkl-be	wion	imkl:annotatieType	annotatieLabel	annotatie label	annotatie label	AnnotatieTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/AnnotatieTypeValue/annotatieLabel
+algemeen	imkl-be	wion	imkl:bestandMediaType	PNG	PNG	bestandstype heeft als MIME type image/PNG	BestandMediaTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/BestandMediaTypeValue/PNG
+algemeen	imkl-be	wion	imkl:bestandMediaType	PDF	PDF	bestandstype heeft als MIME type application/PDF	BestandMediaTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/BestandMediaTypeValue/PDF
+algemeen	imkl-be	wion	imkl:bestandMediaType	JPEG	JPEG	bestandstype heeft als MIME type image/JPEG	BestandMediaTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/BestandMediaTypeValue/JPEG
+algemeen	imkl-be	wion	imkl:bestandMediaType	TIFF	TIFF	bestandstype heeft als MIME type image/TIFF	BestandMediaTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/BestandMediaTypeValue/TIFF
+algemeen	imkl2015	wion	imkl:bijlageType	algemeen	algemeen	Algemene tekst die als bijlage wordt meegeleverd.	BijlageTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/BijlageTypeValue/algemeen
+algemeen	imkl2015	wion	imkl:bijlageType	eisVoorzorgsmaatregel	eis voorzorgsmaatregel	De bijlage geeft de eis voorzorgsmaatregel weer.	BijlageTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/BijlageTypeValue/eisVoorzorgsmaatregel
+algemeen	imkl2015	wion	imkl:bijlageType	nietBetrokken	niet betrokken	Netbeheerder heeft geen utiliteitsnet in dit gebied maar heeft wel een belang bij deze melding. De bijlage geeft het belang weer.	BijlageTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/BijlageTypeValue/nietBetrokken
+algemeen	imkl2015	wion	imkl:bijlageType	verzoekTotContact	verzoek tot contact	Netbeheerder verzoekt tot opnemen contact.	BijlageTypeValue	
+algemeen	inspire	wion	us-net-common:currentStatus	disused	buiten gebruik	De faciliteit wordt niet meer gebruikt, maar wordt niet of is niet ontmanteld.	ConditionOfFacilityValue	http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/disused
+algemeen	inspire	wion	us-net-common:currentStatus	functional	functioneel	De faciliteit is functioneel.	ConditionOfFacilityValue	http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/functional
+algemeen	inspire	wion	us-net-common:currentStatus	projected	geprojecteerd	De faciliteit wordt ontworpen. De bouwwerkzaamheden zijn nog niet begonnen.	ConditionOfFacilityValue	http://inspire.ec.europa.eu/codelist/ConditionOfFacilityValue/projected
+algemeen	imkl-be	wion	imkl:diepteNauwkeurigheid	tot30cm	tot 30 cm	Nauwkeurigheidsgraad tot op 30 cm.	NauwkeurigheidDiepteValue	http://www.geonovum.nl/imkl2015/1.0/def/NauwkeurigheidDiepteValue/tot30cm
+algemeen	imkl-be	wion	imkl:diepteNauwkeurigheid	tot50cm	tot 50 cm	"Nauwkeurigheidsgraad tot op 50 cm.
+Nauwkeurigheidsgraad tot op 100 cm."	NauwkeurigheidDiepteValue	http://www.geonovum.nl/imkl2015/1.0/def/NauwkeurigheidDiepteValue/tot50cm
+algemeen	imkl-be	wion	imkl:diepteNauwkeurigheid	tot100cm	tot 100 cm	Nauwkeurigheidsgraad tot op 100 cm.	NauwkeurigheidDiepteValue	http://www.geonovum.nl/imkl2015/1.0/def/NauwkeurigheidDiepteValue/tot100cm
+algemeen	imkl-be	wion	imkl:diepteNauwkeurigheid	onbekend	onbekend	Nauwkeurigheidsgraad is onbekend.	NauwkeurigheidDiepteValue	http://www.geonovum.nl/imkl2015/1.0/def/NauwkeurigheidDiepteValue/onbekend
+algemeen	imkl2015	wion	imkl:diepteAangrijpingspunt	bovenkant	bovenkant	Bovenste punt van het object op de plaats van meting.	DiepteAangrijpingspuntValue	http://www.geonovum.nl/imkl2015/1.0/def/DiepteAangrijpingspuntValue/bovenkant
+algemeen	imkl2015	wion	imkl:diepteAangrijpingspunt	binnenonderkantBuis	binnenonderkant buis	Binnenonderkant buis van de leiding ter plaatse van het beginpunt. Alleen optioneel toegestaan voor het thema riool vrijverval.	DiepteAangrijpingspuntValue	http://www.geonovum.nl/imkl2015/1.0/def/DiepteAangrijpingspuntValue/binnenonderkantBuis
+algemeen	imkl2015	wion	imkl:extraInfoType	aansluiting	aansluiting	De kabel of leiding die een kabel of leiding verbindt met een aansluitpunt anders dan een huisaansluiting.	ExtraDetailInfoTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/ExtraDetailInfoTypeValue/aansluiting
+algemeen	imkl2015	wion	imkl:extraInfoType	huisaansluiting	huisaansluiting	De kabel of leiding die een kabel of leiding verbindt met een huisaansluitpunt.		
+algemeen	imkl2015	wion	imkl:extraInfoType	profielschets	profielschets	Dwars- en of lengteprofiel.	ExtraDetailInfoTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/ExtraDetailInfoTypeValue/profielschets
+algemeen	imkl2015	wion	imkl:extraInfoType	overig	overig	Een type detail dat niet met de andere waarden is benoemd.	ExtraDetailInfoTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/ExtraDetailInfoTypeValue/overig
+algemeen	imkl-be	wion	imkl:extraTopografieType	eigen	eigen	Topografie die door de netbeheerder specifiek geregistreerd is ter bepaling van de locatie van een leiding.	ExtraTopografieTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/ExtraTopografieTypeValue/eigen
+algemeen	imkl-be	wion	imkl:extraTopografieType	ontwerp	ontwerp	Topografie van nog niet gerealiseerde maar wel geplande topografie-objecten.	ExtraTopografieTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/ExtraTopografieTypeValue/ontwerp
+algemeen	imkl2015	wion		eigenaar	eigenaar		PartyRoleExtendedValue	http://www.geonovum.nl/imkl2015/1.0/def/PartyRoleExtendedValue/eigenaar
+algemeen	imkl2015	wion		exploitant	exploitant		PartyRoleExtendedValue	http://www.geonovum.nl/imkl2015/1.0/def/PartyRoleExtendedValue/exploitant
+algemeen	imkl-be	wion	imkl:geoNauwkeurigheidXY	tot30cm	tot30cm	Nauwkeurigheidsgraad tot op 30 cm.	NauwkeurigheidXYvalue	http://www.geonovum.nl/imkl2015/1.0/def/NauwkeurigheidXYvalue/tot30cm
+algemeen	imkl-be	wion	imkl:geoNauwkeurigheidXY	tot50cm	tot50cm	Nauwkeurigheidsgraad tot op 50 cm.	NauwkeurigheidXYvalue	http://www.geonovum.nl/imkl2015/1.0/def/NauwkeurigheidXYvalue/tot50cm
+algemeen	imkl-be	wion	imkl:geoNauwkeurigheidXY	tot100cm	tot100cm	Nauwkeurigheidsgraad tot op 100 cm.	NauwkeurigheidXYvalue	http://www.geonovum.nl/imkl2015/1.0/def/NauwkeurigheidXYvalue/tot100cm
+algemeen	imkl2015	wion	imkl:maatvoeringsType	maatvoeringshulplijn	maatvoeringshulplijn		MaatvoeringsTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/MaatvoeringsTypeValue/maatvoeringshulplijn
+algemeen	imkl2015	wion	imkl:maatvoeringsType	maatvoeringslijn	maatvoeringslijn		MaatvoeringsTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/MaatvoeringsTypeValue/maatvoeringslijn
+algemeen	imkl2015	wion	imkl:maatvoeringsType	maatvoeringspijlpunt	maatvoeringspijlpunt		MaatvoeringsTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/MaatvoeringsTypeValue/maatvoeringspijlpunt
+algemeen	imkl2015	wion	imkl:maatvoeringsType	maatvoeringslabel	maatvoeringslabel		MaatvoeringsTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/MaatvoeringsTypeValue/maatvoeringslabel
+algemeen	imkl2015	wion	imkl:maatvoeringsType	maatvoeringslabel	maatvoeringslabel		MaatvoeringsTypeValue	
+algemeen	imkl2015	wion	imkl:thema	buisleidingGevaarlijkeInhoud	buisleiding gevaarlijke inhoud	"a. aardgasleidingen met een uitwendige diameter van meer dan 50 mm en een druk van meer dan 1600 kPa;
+b. buisleidingen voor het vervoer van brandbare vloeistoffen van de categorien K1, K2 of K3, met een uitwendige diameter van meer dan 100 mm;
+c. buisleidingen voor andere gevaarlijke stoffen dan bedoeld onder a en b, waarvoor het plaatsgebonden risico op een afstand van 5 m gemeten vanaf het hart van de buisleiding hoger is dan 10-6 per jaar.
+Artikel 1 (lid g,h,i en j)
+g. plaatsgebonden risico: risico op een plaats buiten een inrichting, een transportroute of een buisleiding, uitgedrukt als de kans per jaar dat een persoon die onafgebroken en onbeschermd op die plaats zou verblijven, overlijdt als rechtstreeks gevolg van een ongewoon voorval binnen die inrichting, op die transportroute of met die buisleiding, waarbij een gevaarlijke stof betrokken is;
+h. categorie K1: een product niet zijnde een brandbaar gas met een vlampunt dat, bepaald met het toestel van Abel-Pensky, bij een druk van 100 kPa lager is dan 21C;
+i. categorie K2: een product met een vlampunt dat, bepaald met het toestel van Abel-Pensky, bij een druk van 100 kPa ligt tussen de 21C en 55C;
+j. categorie K3: een product met een vlampunt dat, bepaald met het toestel van Pensky-Martens, bij een druk van 100 kPa hoger is dan 55C en lager is dan 100C;"	Thema	http://www.geonovum.nl/imkl2015/1.0/def/Thema/buisleidingGevaarlijkeInhoud
+algemeen	imkl2015	wion	imkl:thema	datatransport		"De elektronische overdracht van signaalinformatie tussen punten via kabels die deel uitmaken van een net.
+NB: De aansluitleiding kan ook alleen op (huis)aansluitschetsen voorkomen."	Thema	http://www.geonovum.nl/imkl2015/1.0/def/Thema/datatransport
+algemeen	imkl2015	wion	imkl:thema	gasLageDruk	gas lage druk	"Een gasleiding lagedruk (LD) heeft een drukniveau lager dan 200 mBar en bestaat uit een hoofdleiding en een aansluitleiding. LD druksoorten: 100, 30 mBar.
+NB: De aansluitleiding kan ook alleen op (huis)aansluitschetsen voorkomen.
+Opmerking: In de praktijk kunnen netten tot en met 500 mBar op de LD themakaart voorkomen."	Thema	http://www.geonovum.nl/imkl2015/1.0/def/Thema/gasLageDruk
+algemeen	imkl2015	wion	imkl:thema	gasHogeDruk	gas hoge druk	"Een gasleiding hogedruk (HD) heeft een drukniveau hoger dan 200  mBar en bestaat uit een hoofdleiding en een aansluitleiding. HD druksoorten: 8, 4, 1 Bar.
+NB: De aansluitleiding kan ook alleen op (huis)aansluitschetsen voorkomen.
+Opmerking: In de praktijk kunnen netten vanaf 200 mBar op de HD themakaart voorkomen."	Thema	http://www.geonovum.nl/imkl2015/1.0/def/Thema/gasHogeDruk
+algemeen	imkl2015	wion	imkl:thema	petrochemie	(petro)chemie	"Leiding voor transport van olie of chemicalin, niet vallend onder het thema ‘Buisleiding gevaarlijke inhoud’.
+"	Thema	http://www.geonovum.nl/imkl2015/1.0/def/Thema/petrochemie
+algemeen	imkl2015	wion	imkl:thema	landelijkHoogspanningsnet	landelijk hoogspanningsnet	"Toestand waarin het mogelijk is een elektrische stroom te creren;ZHS = zeer hoge spanning (110 kV tot en met 380 kV). "	Thema	http://www.geonovum.nl/imkl2015/1.0/def/Thema/landelijkHoogspanningsnet
+algemeen	imkl2015	wion	imkl:thema	hoogspanning	hoogspanning	"Toestand waarin het mogelijk is een elektrische stroom te creren; HS = hoogspanning (36 tot en met 220 kV).
+Opmerking: In de praktijk kunnen netten vanaf 20 kV t/m 220 kV op de HS themakaart voorkomen."	Thema	http://www.geonovum.nl/imkl2015/1.0/def/Thema/hoogspanning
+algemeen	imkl2015	wion	imkl:thema	laagspanning	laagspanning	"LS kabel bestaat uit hoofdnet en aansluitnet. LS = laagspanning (230 V en 400 V)
+NB: De aansluitleiding kan ook alleen op (huis)aansluitschetsen voorkomen.
+Opmerking: In de praktijk kunnen netten tot en met 1000 Volt op de LS themakaart voorkomen"	Thema	http://www.geonovum.nl/imkl2015/1.0/def/Thema/laagspanning
+algemeen	imkl2015	wion	imkl:thema	middenspanning	middenspanning	"MS kabel bestaat uit hoofdnet en aansluitnet. MS = middenspanning (0,4 kV tot 30 kV)
+NB: De aansluitleiding kan ook alleen op (huis)aansluitschetsen voorkomen.
+Opmerking: In de praktijk kunnen netten van 400 Volt op de MS themakaart voorkomen."	Thema	http://www.geonovum.nl/imkl2015/1.0/def/Thema/middenspanning
+algemeen	imkl2015	wion	imkl:thema	rioolVrijverval	riool vrijverval	Riool waardoor afvalwater door de zwaartekracht wordt getransporteerd (uit NEN 3300, Buitenriolering).	Thema	http://www.geonovum.nl/imkl2015/1.0/def/Thema/rioolVrijverval
+algemeen	imkl2015	wion	imkl:thema	rioolOnderDruk	riool onder druk	Riolering waarbij het transport plaatsvindt door overdruk (uit NEN 3300, Buitenriolering) dan wel onderdruk.	Thema	http://www.geonovum.nl/imkl2015/1.0/def/Thema/rioolOnderDruk
+algemeen	imkl2015	wion	imkl:thema	warmte	warmte	"Een warmtenet kan bestaan uit stadswarmte, centraal tapwater en een koude net.
+Een stadswarmtenet bestaat uit aanvoer- en retourleidingen.
+Onderverdeeld in: 
+Transport-, en/of Wijknet en Aansluitleidingen.
+Leidingdiameters 40–1100 mm.
+Temp. 40-120°
+Druk 4-25 bar
+NB: De aansluitleiding kan ook alleen op (huis)aansluitschetsen voorkomen.
+
+Een centraal tapwaternet bestaat uit aanvoer- en recirculatieleidingen,
+Onderverdeeld in:
+Wijknet en Aansluitleidingen.
+Waarbij het mogelijk is dat aanvoer- en recirculatieleiding gecombineerd zijn in én mantel, of een gescheiden trac hebben.
+Temp. 66°
+Druk 2-4 bar
+NB: De aansluitleiding kan ook alleen op (huis)aansluitschetsen voorkomen.
+
+Een koudenet bestaat uit aanvoer- en retourleidingen.
+Onderverdeeld in: 
+Transportnet, en Aansluitleidingen.
+Leidingdiameters 150–800 mm.
+Temp. 5-16°
+Druk 2-16 bar
+NB: De aansluitleiding kan ook alleen op (huis)aansluitschetsen voorkomen."	Thema	http://www.geonovum.nl/imkl2015/1.0/def/Thema/warmte
+algemeen	imkl2015	wion	imkl:thema	water	water	"Een waterleiding bestaat uit transport-, distributie- en aansluitleidingen ten behoeve van (drink)water.
+NB: De aansluitleiding kan ook alleen op (huis)aansluitschetsen voorkomen."	Thema	http://www.geonovum.nl/imkl2015/1.0/def/Thema/water
+algemeen	imkl2015	wion	imkl:thema	wees	wees	Alle onbekende leidingen welke bij een eerdere grondroering zijn geconstateerd, die ook na onderzoek niet aan een beheerder waren toe te wijzen en waarvoor de gemeente ingevolge de WION de beheerdersverplichtingen vervult.	Thema	http://www.geonovum.nl/imkl2015/1.0/def/Thema/wees
+algemeen	imkl2015	wion	imkl:thema	overig	overig	Alle, niet bij de andere thema’s omschreven vormen van transport door middel van kabels en leidingen.	Thema	http://www.geonovum.nl/imkl2015/1.0/def/Thema/overig
+algemeen	inspire	wion	utilityDeliveryType	collection	inzameling	Beschrijving van een nutsvoorzieningennet waarbij het nutsproduct wordt aangeleverd door middel van inzameling (bv. het opvangen van afvalwater van klanten in het geval van een rioleringsnet).	UtilityDeliveryTypeValue	http://inspire.ec.europa.eu/codelist/UtilityDeliveryTypeValue/collection
+algemeen	inspire	wion	utilityDeliveryType	distribution	distributie	Beschrijving van een nutsvoorzieningennet waarbij het nutsproduct wordt aangeleverd door middel van lokal distributie (bv. de lokale distributie van elektriciteit) via een rechstreekse verbinding met de klanten.	UtilityDeliveryTypeValue	http://inspire.ec.europa.eu/codelist/UtilityDeliveryTypeValue/distribution
+algemeen	inspire	wion	utilityDeliveryType	private	particulier	Beschrijving van een nutsvoorzieningennet waarbij het nutsproduct wordt aangeleverd via een klein particulier net (dat bv. eigendom is van een particulier bedrijf).	UtilityDeliveryTypeValue	http://inspire.ec.europa.eu/codelist/UtilityDeliveryTypeValue/private
+algemeen	inspire	wion	utilityDeliveryType	transport	vervoer	Beschrijving van een nutsvoorzieningennet waarbij het nutsproduct wordt aangeleverd via een groot vervoernet (bv. voor het overbrengen van olie-, gas- of chemische producten over grotere afstanden).	UtilityDeliveryTypeValue	http://inspire.ec.europa.eu/codelist/UtilityDeliveryTypeValue/transport
+algemeen	inspire	wion	us-net-common:utilityNetworkType	electricity	elektriciteit	Elektriciteitsnet.	UtilityNetworkTypeValue	http://inspire.ec.europa.eu/codelist/UtilityNetworkTypeValue/electricity
+algemeen	inspire	wion	us-net-common:utilityNetworkType	oilGasChemical	olie, gas of chemicaliën	Olie-, gas- of chemicaliënnet.	UtilityNetworkTypeValue	http://inspire.ec.europa.eu/codelist/UtilityNetworkTypeValue/oilGasChemical
+algemeen	inspire	wion	us-net-common:utilityNetworkType	sewer	riolering	Rioleringsnet.	UtilityNetworkTypeValue	http://inspire.ec.europa.eu/codelist/UtilityNetworkTypeValue/sewer
+algemeen	inspire	wion	us-net-common:utilityNetworkType	telecommunications	telecommunicatie	Telecommunicatienet.	UtilityNetworkTypeValue	http://inspire.ec.europa.eu/codelist/UtilityNetworkTypeValue/telecommunications
+algemeen	inspire	wion	us-net-common:utilityNetworkType	thermal	thermisch	Thermisch net.	UtilityNetworkTypeValue	http://inspire.ec.europa.eu/codelist/UtilityNetworkTypeValue/thermal
+algemeen	inspire	wion	us-net-common:utilityNetworkType	water	water	Watervoorzieningsnet.	UtilityNetworkTypeValue	http://inspire.ec.europa.eu/codelist/UtilityNetworkTypeValue/water
+algemeen	inspire	wion	us-net-common:warningType	concretePaving	betonnen plaveisel	Een reeks betonnen stenen of tegels ter afdekking van kabels of pijpleidingen.	WarningTypeValue	http://inspire.ec.europa.eu/codelist/WarningTypeValue/concretePaving
+algemeen	inspire	wion	us-net-common:warningType	net	net	Waarschuwingsnet ter bescherming van kabels en pijpleidingen.	WarningTypeValue	http://inspire.ec.europa.eu/codelist/WarningTypeValue/net
+algemeen	inspire	wion	us-net-common:warningType	tape	lint	Waarschuwingslint (ook markeringslint genoemd) is een sterk kunststofband in een signaalkleur of met een fel contrasterende kleurencombinatie (zoals geel-zwart of rood-wit).	WarningTypeValue	http://inspire.ec.europa.eu/codelist/WarningTypeValue/tape
+	rrgs	rrb	imkl:maatgevendScenarioDodelijk	brandbaar	brandbaar		EffectScenarionType	http://www.geonovum.nl/imkl2015/1.0/def/EffectScenarionType/brandbaar
+	rrgs	rrb	imkl:maatgevendScenarioDodelijk	explosief	explosief		EffectScenarionType	http://www.geonovum.nl/imkl2015/1.0/def/EffectScenarionType/explosief
+	rrgs	rrb	imkl:maatgevendScenarioDodelijk	toxisch	toxisch		EffectScenarionType	http://www.geonovum.nl/imkl2015/1.0/def/EffectScenarionType/toxisch
+	rrgs	rrb	imkl:maatgevendScenarioDodelijk	scherfwerking	scherfwerking		EffectScenarionType	http://www.geonovum.nl/imkl2015/1.0/def/EffectScenarionType/scherfwerking
+algemeen	imkl2015	wion	imkl:containerLeidingelementType	toren	toren	"Eenvoudig toren-object dat dienst kan doen als drager van nutsvoorzieningenobjecten van een of meer nutsvoorzieningnetten.
+"	ContainerLeidingElementTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/ContainerLeidingElementTypeValue/toren
+algemeen	imkl2015	wion	imkl:containerLeidingelementType	mast	mast	Eenvoudig mast-object dat dienst kan doen als drager van nutsvoorzieningenobjecten van een of meer nutsvoorzieningnetten	ContainerLeidingElementTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/ContainerLeidingElementTypeValue/mast
+algemeen	imkl2015	wion	imkl:containerLeidingelementType	mangat	mangat	"Eenvoudig omhullingsobject dat een of meer nutsvoorzieningennetobjecten kan bevatten.
+"	ContainerLeidingElementTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/ContainerLeidingElementTypeValue/mangat
+algemeen	imkl2015	wion	imkl:containerLeidingelementType	kast	kast	Eenvoudig kast-object dat nutsvoorzieningenobjecten kan bevatten die tot een of meer nutsvoorzieningennetwerken behoren.	ContainerLeidingElementTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/ContainerLeidingElementTypeValue/kast
+algemeen	imkl2015	wion	imkl:containerLeidingelementType	technischGebouw	technisch gebouw	Heeft iemand een definitie?	ContainerLeidingElementTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/ContainerLeidingElementTypeValue/technischGebouw
+algemeen	imkl2015	wion	imkl:containerLeidingelementType	overig	overig		BuisleidingenType	http://www.geonovum.nl/imkl2015/1.0/def/BuisleidingenType/overig
+algemeen	imkl2015	wion	imkl:status	bestaand	bestaand	Bestaande topografie die door de netbeheerder specifiek geregistreerd is ter bepaling van de locatie van een leiding.	EigenTopografieStatusValue	
+algemeen	imkl2015	wion	imkl:status	plan	plan	Topografie van nog niet gerealiseerde maar wel geplande topografie-objecten.	EigenTopografieStatusValue	
+elektriciteit	imkl-be	wion	us-net-common:appurtenanceType	aarding	aarding	aarding	ElectricityAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/ElectricityAppurtenanceTypeIMKLValue/aarding
+elektriciteit	imkl-be	wion	us-net-common:appurtenanceType	mof	mof	mof	ElectricityAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/ElectricityAppurtenanceTypeIMKLValue/mof
+elektriciteit	imkl2015	wion	us-net-common:appurtenanceType	hoogteligging	hoogteligging	hoogteligging	ElectricityAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/ElectricityAppurtenanceTypeIMKLValue/hoogteligging
+elektriciteit	imkl-nl?	wion	us-net-common:appurtenanceType	adrespunt	adrespunt	Adrespunt	ElectricityAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/ElectricityAppurtenanceTypeIMKLValue/adrespunt
+elektriciteit	inspire	wion	us-net-common:appurtenanceType	connectionBox	aansluitkast	Aansluitkast.	ElectricityAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/ElectricityAppurtenanceTypeValue/connectionBox
+elektriciteit	inspire	wion	us-net-common:appurtenanceType	deliveryPoint	punt van levering	Punt van levering.	ElectricityAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/ElectricityAppurtenanceTypeValue/deliveryPoint
+elektriciteit	inspire	wion	us-net-common:appurtenanceType	generator	generator	Generator.	ElectricityAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/ElectricityAppurtenanceTypeValue/generator
+elektriciteit	inspire	wion	us-net-common:appurtenanceType	mainStation	centrale	Centrale.	ElectricityAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/ElectricityAppurtenanceTypeValue/mainStation
+elektriciteit	inspire	wion	us-net-common:appurtenanceType	netStation	netstation	Netstation.	ElectricityAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/ElectricityAppurtenanceTypeValue/netStation
+elektriciteit	inspire	wion	us-net-common:appurtenanceType	streetLight	straatlantaren	Straatlantaren.	ElectricityAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/ElectricityAppurtenanceTypeValue/streetLight
+elektriciteit	inspire	wion	us-net-common:appurtenanceType	subStation	onderstation	Onderstation.	ElectricityAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/ElectricityAppurtenanceTypeValue/subStation
+elektriciteit	imkl2015	wion	us-net-common:appurtenanceType	geulmof	geulmof	geulmof	ElectricityAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/ElectricityAppurtenanceTypeIMKLValue/geulmof
+elektriciteit	imkl2015	wion	us-net-common:appurtenanceType	kbMeetpunt	kb meetpunt	"meetpunt, meetpaal, meetelectrode, punt van meting op KB
+"	ElectricityAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/ElectricityAppurtenanceTypeIMKLValue/kbMeetpunt
+elektriciteit	imkl2015	wion	us-net-common:appurtenanceType	kbInstallatie	kb installatie	anode, anodebed, galvanisch anode, gelijkrichter, bron of richter van KB	ElectricityAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/ElectricityAppurtenanceTypeIMKLValue/kbInstallatie
+elektriciteit	imkl2015	wion	us-net-common:appurtenanceType	kbEindpunt	kb eindpunt	isolatiestuk, eindpunt, algemeen niet verbindende KB node	ElectricityAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/ElectricityAppurtenanceTypeIMKLValue/kbEindpunt
+elektriciteit	imkl2015	wion	us-net-common:appurtenanceType	kbContact	kb contact	als algemeen verbindende KB node	ElectricityAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/ElectricityAppurtenanceTypeIMKLValue/kbContact
+elektriciteit	imkl2015	wion	us-net-common:appurtenanceType	hoogbouwkoppelpunt	hoogbouwkoppelpunt	hoogbouwkoppelpunt	ElectricityAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/ElectricityAppurtenanceTypeIMKLValue/hoogbouwkoppelpunt
+telecom	imkl2015	wion	us-net-common:appurtenanceType	antenna	antenna	antenna	TelecommunicationsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsAppurtenanceIMKLTypeValue/antenna
+telecom	imkl2015	wion	us-net-common:appurtenanceType	termination	termination	termination	TelecommunicationsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsAppurtenanceIMKLTypeValue/termination
+telecom	imkl2015	wion	us-net-common:appurtenanceType	handhole	handhole	handhole	TelecommunicationsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsAppurtenanceIMKLTypeValue/handhole
+telecom	imkl2015	wion	us-net-common:appurtenanceType	mof	mof	mof	TelecommunicationsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsAppurtenanceIMKLTypeValue/mof
+telecom	imkl2015	wion	us-net-common:appurtenanceType	nietBenoemd	niet benoemd	verzamelterm ondergrondse leidingelementen	TelecommunicationsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsAppurtenanceIMKLTypeValue/nietBenoemd
+telecom	imkl2015	wion	us-net-common:appurtenanceType	kabelverdeler	kabelverdeler	kabelverdeler	TelecommunicationsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsAppurtenanceIMKLTypeValue/kabelverdeler
+telecom	imkl2015	wion	us-net-common:appurtenanceType	Stijgleiding	Stijgleiding	Stijgleiding	TelecommunicationsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsAppurtenanceIMKLTypeValue/Stijgleiding
+telecom	imkl2015	wion	us-net-common:appurtenanceType	GTWP	GTWP	geultraject wijzigingspunt	TelecommunicationsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsAppurtenanceIMKLTypeValue/GTWP
+telecom	imkl2015	wion	us-net-common:appurtenanceType	afdekplaten	afdekplaten	afdekplaten	TelecommunicationsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsAppurtenanceIMKLTypeValue/afdekplaten
+telecom	imkl2015	wion	us-net-common:appurtenanceType	doorvoerramen	doorvoerramen	doorvoerramen	TelecommunicationsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsAppurtenanceIMKLTypeValue/doorvoerramen
+telecom		wion	us-net-common:appurtenanceType	puntVanLevering	punt van levering	punt van levering	TelecommunicationsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsAppurtenanceIMKLTypeValue/puntVanLevering
+telecom	imkl2015	wion	telecommunicationsCableMaterialType	coaxial	coaxial	coaxial	TelecommunicationsCableMaterialTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsCableMaterialTypeValue/coaxial
+telecom	imkl2015	wion	telecommunicationsCableMaterialType	opticalFiber	opticalFiber	opticalFiber	TelecommunicationsCableMaterialTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsCableMaterialTypeValue/opticalFiber
+telecom	imkl2015	wion	telecommunicationsCableMaterialType	twistedPair	twistedPair	twistedPair	TelecommunicationsCableMaterialTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/TelecommunicationsCableMaterialTypeValue/twistedPair
+olie-gas-chemicalien	imkl2015	wion	us-net-common:appurtenanceType	buis	buis	Buis	OilGasChemicalsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/buis
+olie-gas-chemicalien	imkl2015	wion	us-net-common:appurtenanceType	bocht	bocht	Bocht	OilGasChemicalsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/bocht
+olie-gas-chemicalien	imkl2015	wion	us-net-common:appurtenanceType	tstuk	t stuk	Tstuk	OilGasChemicalsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/tstuk
+olie-gas-chemicalien	imkl2015	wion	us-net-common:appurtenanceType	bodem	bodem	 Bodem	OilGasChemicalsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/bodem
+olie-gas-chemicalien	imkl2015	wion	us-net-common:appurtenanceType	lasnok	lasnok	 Lasnok	OilGasChemicalsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/lasnok
+olie-gas-chemicalien	imkl2015	wion	us-net-common:appurtenanceType	expansiestuk	expansiestuk	 Expansiestuk	OilGasChemicalsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/expansiestuk
+olie-gas-chemicalien	imkl2015	wion	us-net-common:appurtenanceType	isolatieKoppeling	isolatie koppeling	 IsolatieKoppeling	OilGasChemicalsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/isolatieKoppeling
+olie-gas-chemicalien	imkl2015	wion	us-net-common:appurtenanceType	vloeistofvanger	vloeistofvanger	 Vloeistofvanger	OilGasChemicalsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/vloeistofvanger
+olie-gas-chemicalien	imkl2015	wion	us-net-common:appurtenanceType	raaginrichting	raaginrichting	 Raaginrichting	OilGasChemicalsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/raaginrichting
+olie-gas-chemicalien	imkl2015	wion	us-net-common:appurtenanceType	algemeenGasTransportOnderdeel	Algemeen (gas) transport onderdeel	Algemeen (gas) transport onderdeel	OilGasChemicalsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/algemeenGasTransportOnderdeel
+olie-gas-chemicalien	imkl2015	wion	us-net-ogc:oilGasChemicalsProductType	mud	mud	Mud	OilGasChemicalsProductIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductIMKLTypeValue/mud
+olie-gas-chemicalien	imkl2015	wion	us-net-ogc:oilGasChemicalsProductType	methanol	methanol	Methanol	OilGasChemicalsProductIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductIMKLTypeValue/methanol
+olie-gas-chemicalien	imkl2015	wion	us-net-ogc:oilGasChemicalsProductType	emulsie	emulsie	Emulsie	OilGasChemicalsProductIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductIMKLTypeValue/emulsie
+olie-gas-chemicalien	imkl2015	wion	us-net-ogc:oilGasChemicalsProductType	glycol	glycol	Glycol	OilGasChemicalsProductIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductIMKLTypeValue/glycol
+olie-gas-chemicalien	imkl2015	wion	us-net-common:appurtenanceType	hoogbouwkoppelpunt	hoogbouwkoppelpunt	hoogbouwkoppelpunt	OilGasChemicalsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/hoogbouwkoppelpunt
+olie-gas-chemicalien	imkl2015	wion	us-net-common:appurtenanceType	ontluchting	ontluchting	ontluchting	OilGasChemicalsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/ontluchting
+olie-gas-chemicalien	imkl2015	wion	us-net-common:appurtenanceType	aftakzadel	aftakzadel	aftakzadel	OilGasChemicalsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/aftakzadel
+olie-gas-chemicalien	imkl2015	wion	us-net-common:appurtenanceType	overgangsstuk	overgangsstuk	overgangsstuk	OilGasChemicalsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/overgangsstuk
+olie-gas-chemicalien	imkl2015	wion	us-net-common:appurtenanceType	isolatiestuk	isolatiestuk	isolatiestuk	OilGasChemicalsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/isolatiestuk
+olie-gas-chemicalien	imkl2015	wion	us-net-common:appurtenanceType	ontspanningselement	ontspanningselement	ontspanningselement	OilGasChemicalsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/ontspanningselement
+olie-gas-chemicalien	imkl2015	wion	us-net-common:appurtenanceType	hoogteligging	hoogteligging	hoogteligging	OilGasChemicalsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/hoogteligging
+olie-gas-chemicalien	imkl2015	wion	us-net-common:appurtenanceType	adrespunt	adrespunt	adrespunt	OilGasChemicalsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/adrespunt
+olie-gas-chemicalien	imkl-be	wion	us-net-common:appurtenanceType	eindkap	eindkap	eindkap	OilGasChemicalsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/eindkap
+olie-gas-chemicalien	imkl-be	wion	us-net-common:appurtenanceType	verloopstuk	verloopstuk	verloopstuk	OilGasChemicalsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/verloopstuk
+olie-gas-chemicalien	imkl-be	wion	us-net-common:appurtenanceType	afsluiter	afsluiter	afsluiter	OilGasChemicalsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/afsluiter
+olie-gas-chemicalien	imkl-be	wion	us-net-common:appurtenanceType	meetpunt	meetpunt	meetpunt	OilGasChemicalsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/meetpunt
+olie-gas-chemicalien	imkl-be	wion	us-net-common:appurtenanceType	sifon	sifon	sifon	OilGasChemicalsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/sifon
+olie-gas-chemicalien	imkl-be	wion	us-net-common:appurtenanceType	blaasgat	blaasgat	blaasgat	OilGasChemicalsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/blaasgat
+olie-gas-chemicalien	imkl-be	wion	us-net-common:appurtenanceType	kbMeetpunt	kb meetpunt	kbMeetpunt	OilGasChemicalsAppurtenanceIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsAppurtenanceIMKLTypeValue/kbMeetpunt
+olie-gas-chemicalien	inspire	wion	us-net-common:appurtenanceType	gasStation	gasstation	Gasstation	OilGasChemicalsAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/OilGasChemicalsAppurtenanceTypeValue/gasStation
+olie-gas-chemicalien	inspire	wion	us-net-common:appurtenanceType	marker	markering	Markering	OilGasChemicalsAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/OilGasChemicalsAppurtenanceTypeValue/marker
+olie-gas-chemicalien	inspire	wion	us-net-common:appurtenanceType	oilGasChemicalsNode	Olie-, gas- en chemicaliënnet-knooppunt	Knooppunt in een olie-, gas- en chemicaliënnet.	OilGasChemicalsAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/OilGasChemicalsAppurtenanceTypeValue/oilGasChemicalsNode
+olie-gas-chemicalien	inspire	wion	us-net-common:appurtenanceType	deliveryPoint	punt van levering	Punt van levering	OilGasChemicalsAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/OilGasChemicalsAppurtenanceTypeValue/deliveryPoint
+olie-gas-chemicalien	inspire	wion	us-net-common:appurtenanceType	productionRegion	Productiegebied	Productiegebied	OilGasChemicalsAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/OilGasChemicalsAppurtenanceTypeValue/productionRegion
+olie-gas-chemicalien	inspire	wion	us-net-common:appurtenanceType	pumpingStation	Pompstation	Pompstation	OilGasChemicalsAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/OilGasChemicalsAppurtenanceTypeValue/pumpingStation
+olie-gas-chemicalien	inspire	wion	us-net-common:appurtenanceType	pump	Pomp	Pomp	OilGasChemicalsAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/OilGasChemicalsAppurtenanceTypeValue/pump
+olie-gas-chemicalien	inspire	wion	us-net-common:appurtenanceType	storage	Opslagvoorziening	Opslagvoorziening	OilGasChemicalsAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/OilGasChemicalsAppurtenanceTypeValue/storage
+olie-gas-chemicalien	inspire	wion	us-net-common:appurtenanceType	terminal	Terminal	Terminal	OilGasChemicalsAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/OilGasChemicalsAppurtenanceTypeValue/terminal
+olie-gas-chemicalien	inspire	wion	us-net-ogc:oilGasChemicalsProductType	naturalGas	natural Gas	natural Gas	OilGasChemicalsProductTypeValue	http://inspire.ec.europa.eu/codelist/OilGasChemicalsProductTypeValue/naturalGas
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	bioGas	bioGas	bioGas	OilGasChemicalsProductIMKLTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductIMKLTypeValue/bioGas
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	accetone	accetone	accetone	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/accetone
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	air	air	air	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/air
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	argon	argon	argon	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/argon
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	butadiene1.2	butadiene1.2	butadiene1.2	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/butadiene1.2
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	butadiene1.3	butadiene1.3	butadiene1.3	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/butadiene1.3
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	butane	butane	butane	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/butane
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	carbonMonoxide	carbonMonoxide	carbonMonoxide	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/carbonMonoxide
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	chlorine	chlorine	chlorine	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/chlorine
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	concrete	concrete	concrete	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/concrete
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	crude	crude	crude	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/crude
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	dichloroethane	dichloroethane	dichloroethane	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/dichloroethane
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	diesel	diesel	diesel	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/diesel
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	ethylene	ethylene	ethylene	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/ethylene
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	gasFabricationOfCocs	gasFabricationOfCocs	gasFabricationOfCocs	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/gasFabricationOfCocs
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	gasHFx	gasHFx	gasHFx	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/gasHFx
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	gasoil	gasoil	gasoil	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/gasoil
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	hydrogen	hydrogen	hydrogen	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/hydrogen
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	isobutane	isobutane	isobutane	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/isobutane
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	JET-A1	JET-A1	JET-A1	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/JET-A1
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	kerosene	kerosene	kerosene	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/kerosene
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	liquidAmmonia	liquidAmmonia	liquidAmmonia	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/liquidAmmonia
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	liquidHydrocarbon	liquidHydrocarbon	liquidHydrocarbon	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/liquidHydrocarbon
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	multiProduct	multiProduct	multiProduct	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/multiProduct
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	MVC	MVC	MVC	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/MVC
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	nitrogen	nitrogen	nitrogen	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/nitrogen
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	oxygen	oxygen	oxygen	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/oxygen
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	phenol	phenol	phenol	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/phenol
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	propane	propane	propane	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/propane
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	propylene	propylene	propylene	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/propylene
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	saltWater	saltWater	saltWater	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/saltWater
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	saumur	saumur	saumur	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/saumur
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	sand	sand	sand	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/sand
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	tetrachloroide	tetrachloroide	tetrachloroide	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/tetrachloroide
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	unknown	unknown	unknown	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/unknown
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	water	water	water	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/water
+olie-gas-chemicalien	imkl-be	wion	us-net-ogc:oilGasChemicalsProductType	empty	empty	empty	OilGasChemicalsProductTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/OilGasChemicalsProductTypeValue/empty
+water	imkl2015	wion	us-net-common:appurtenanceType	afsluiter	afsluiter	afsluiter	WaterAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/WaterAppurtenanceTypeIMKLValue/afsluiter
+water	imkl2015	wion	us-net-common:appurtenanceType	diameterovergang	diameterovergang	diameterovergang	WaterAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/WaterAppurtenanceTypeIMKLValue/diameterovergang
+water	imkl2015	wion	us-net-common:appurtenanceType	materiaalovergang	materiaalovergang	materiaalovergang	WaterAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/WaterAppurtenanceTypeIMKLValue/materiaalovergang
+water	imkl2015	wion	us-net-common:appurtenanceType	eindpunt	eindpunt	eindpunt	WaterAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/WaterAppurtenanceTypeIMKLValue/eindpunt
+water	imkl2015	wion	us-net-common:appurtenanceType	blindflens	blindflens	blindflens	WaterAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/WaterAppurtenanceTypeIMKLValue/blindflens
+water	inspire	wion	us-net-common:appurtenanceType	airRelieveValve	ontluchtingsventiel	Ontluchtingsventiel.	WaterAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/airRelieveValve
+water	inspire	wion	us-net-common:appurtenanceType	anode	anode	Anode.	WaterAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/anode
+water	inspire	wion	us-net-common:appurtenanceType	checkValve	afsluitklep	Afsluitklep.	WaterAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/checkValve
+water	inspire	wion	us-net-common:appurtenanceType	controlValve	controleventiel	Controleventiel.	WaterAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/controlValve
+water	inspire	wion	us-net-common:appurtenanceType	fireHydrant	brandkraan	Brandkraan.	WaterAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/fireHydrant
+water	inspire	wion	us-net-common:appurtenanceType	junction	knooppunt	Knooppunt.	WaterAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/junction
+water	inspire	wion	us-net-common:appurtenanceType	lateralPoint	lateraal punt	Lateraal punt.	WaterAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/lateralPoint
+water	inspire	wion	us-net-common:appurtenanceType	meter	meter	Meter.	WaterAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/meter
+water	inspire	wion	us-net-common:appurtenanceType	pressureController	drukregelaar	Drukregelaar.	WaterAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/pressureController
+water	inspire	wion	us-net-common:appurtenanceType	pumpStation	pompstation	Pompstation.	WaterAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/pumpStation
+water	inspire	wion	us-net-common:appurtenanceType	samplingStation	meetstation	Meetstation.	WaterAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/samplingStation
+water	inspire	wion	us-net-common:appurtenanceType	storageFacility	opslagfaciliteit	Afgesloten opslagfaciliteit.	WaterAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/storageFacility
+water	inspire	wion	us-net-common:appurtenanceType	treatmentPlant	zuiveringsinstallatie	Zuiveringsinstallatie.	WaterAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/treatmentPlant
+water	inspire	wion	us-net-common:appurtenanceType	waterDischargePoint	afvoerpunt	Afvoerpunt.	WaterAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/waterDischargePoint
+water	inspire	wion	us-net-common:appurtenanceType	waterExhaustPoint	aftappunt	Aftappunt.	WaterAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/waterExhaustPoint
+water	inspire	wion	us-net-common:appurtenanceType	waterServicePoint	toevoerpunt	Toevoerpunt.	WaterAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/waterServicePoint
+water	inspire	wion	us-net-common:appurtenanceType	well	bron	Winningsbron.	WaterAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/WaterAppurtenanceTypeValue/well
+water	imkl2015	wion	us-net-wa:waterType	industrial	industrial	industrial	WaterTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/WaterTypeValue/industrial
+water	imkl2015	wion	us-net-wa:waterType	waste	waste	waste	WaterTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/WaterTypeValue/waste
+water	inspire	wion	us-net-wa:waterType	potable	drinkbaar	Drinkwater.	WaterTypeValue	http://inspire.ec.europa.eu/codelist/WaterTypeValue/potable
+water	inspire	wion	us-net-wa:waterType	raw	onbehandeld	Onbehandeld water.	WaterTypeValue	http://inspire.ec.europa.eu/codelist/WaterTypeValue/raw
+water	inspire	wion	us-net-wa:waterType	salt	zout	Zout water.	WaterTypeValue	http://inspire.ec.europa.eu/codelist/WaterTypeValue/salt
+water	inspire	wion	us-net-wa:waterType	treated	behandeld	Behandeld water.	WaterTypeValue	http://inspire.ec.europa.eu/codelist/WaterTypeValue/treated
+water		wion	us-net-common:appurtenanceType	puntVanLevering	punt van levering	punt van levering	WaterAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/WaterAppurtenanceTypeIMKLValue/puntVanLevering
+riolering	imkl2015	sw	imkl:typeRioolleiding	aansluitleiding	aansluitleiding	aansluitleiding	RioolleidingTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/RioolleidingTypeValue/aansluitleiding
+riolering	imkl2015	sw	imkl:typeRioolleiding	bergbezinkleiding	bergbezinkleiding	bergbezinkleiding	RioolleidingTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/RioolleidingTypeValue/bergbezinkleiding
+riolering	imkl2015	sw	imkl:typeRioolleiding	bergingsleiding	bergingsleiding	bergingsleiding	RioolleidingTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/RioolleidingTypeValue/bergingsleiding
+riolering	imkl2015	sw	imkl:typeRioolleiding	gemengdRiool	gemengd riool	gemengd riool	RioolleidingTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/RioolleidingTypeValue/gemengdRiool
+riolering	imkl2015	sw	imkl:typeRioolleiding	hemelwaterriool	hemelwaterriool	hemelwaterriool	RioolleidingTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/RioolleidingTypeValue/hemelwaterriool
+riolering	imkl2015	sw	imkl:typeRioolleiding	overstortleiding	overstortleiding	overstortleiding	RioolleidingTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/RioolleidingTypeValue/overstortleiding
+riolering	imkl2015	sw	imkl:typeRioolleiding	stuwrioolleiding	stuwrioolleiding	stuwrioolleiding	RioolleidingTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/RioolleidingTypeValue/stuwrioolleiding
+riolering	imkl2015	sw	imkl:typeRioolleiding	doorlatendeleiding	doorlatendeleiding	doorlatendeleiding	RioolleidingTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/RioolleidingTypeValue/doorlatendeleiding
+riolering	imkl2015	sw	imkl:typeRioolleiding	vuilwaterriool	vuilwaterriool	vuilwaterriool	RioolleidingTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/RioolleidingTypeValue/vuilwaterriool
+riolering	imkl2015	sw	imkl:typeRioolleiding	transportrioolleiding	transportrioolleiding	transportrioolleiding	RioolleidingTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/RioolleidingTypeValue/transportrioolleiding
+riolering	imkl2015	sw	imkl:typeRioolleiding	zinker	zinker	zinker	RioolleidingTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/RioolleidingTypeValue/zinker
+riolering	imkl2015	sw	imkl:typeRioolleiding	openLeiding	openLeiding	openLeiding	RioolleidingTypeValue	http://www.geonovum.nl/imkl2015/1.0/def/RioolleidingTypeValue/openLeiding
+riolering	imkl2015	wion	us-net-common:appurtenanceType	gemaal	gemaal	gemaal	SewerAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/gemaal
+riolering	imkl2015	wion	us-net-common:appurtenanceType	infiltratievoorziening	infiltratievoorziening	infiltratievoorziening	SewerAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/infiltratievoorziening
+riolering	imkl2015	wion	us-net-common:appurtenanceType	kolk	kolk	kolk	SewerAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/kolk
+riolering	imkl2015	wion	us-net-common:appurtenanceType	kunstwerk	kunstwerk	kunstwerk	SewerAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/kunstwerk
+riolering	imkl2015	wion	us-net-common:appurtenanceType	reservoir	reservoir	reservoir	SewerAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/reservoir
+riolering	imkl2015	wion	us-net-common:appurtenanceType	uitlaatconstructie	uitlaatconstructie	uitlaatconstructie	SewerAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/uitlaatconstructie
+riolering	imkl-be	wion	us-net-common:appurtenanceType	overstort	overstort	overstort	SewerAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/overstort
+riolering	inspire	wion	us-net-common:appurtenanceType	barrel	mangatbuis	Mangatbuis.	SewerAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/SewerAppurtenanceTypeValue/barrel
+riolering	inspire	wion	us-net-common:appurtenanceType	catchBasin	opvangbekken	Opvangbekken.	SewerAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/SewerAppurtenanceTypeValue/catchBasin
+riolering	inspire	wion	us-net-common:appurtenanceType	cleanOut	afsluiter	Afsluiter.	SewerAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/SewerAppurtenanceTypeValue/cleanOut
+riolering	inspire	wion	us-net-common:appurtenanceType	connection	aansluiting	Aansluiting.	SewerAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/SewerAppurtenanceTypeValue/connection
+riolering	inspire	wion	us-net-common:appurtenanceType	dischargeStructure	afvoerinrichting	Afvoerinrichting.	SewerAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/SewerAppurtenanceTypeValue/dischargeStructure
+riolering	inspire	wion	us-net-common:appurtenanceType	specificStructure	specifieke structuur	Specifieke structuur.	SewerAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/SewerAppurtenanceTypeValue/specificStructure
+riolering	inspire	wion	us-net-common:appurtenanceType	thrustProtection	stootbeschermer	Stootbeschermer.	SewerAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/SewerAppurtenanceTypeValue/thrustProtection
+riolering	inspire	wion	us-net-common:appurtenanceType	tideGate	wachtdeur	Wachtdeur.	SewerAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/SewerAppurtenanceTypeValue/tideGate
+riolering	inspire	wion	us-net-common:appurtenanceType	watertankOrChamber	watertank of -kelder	Watertank of -kelder.	SewerAppurtenanceTypeValue	http://inspire.ec.europa.eu/codelist/SewerAppurtenanceTypeValue/watertankOrChamber
+riolering	inspire	wion	us-net-sw:sewerWaterType	combined	gecombineerd	Gecombineerd afvalwater.	SewerWaterTypeValue	http://inspire.ec.europa.eu/codelist/SewerWaterTypeValue/combined
+riolering	inspire	wion	us-net-sw:sewerWaterType	reclaimed	teruggewonnen	Teruggewonnen water.	SewerWaterTypeValue	http://inspire.ec.europa.eu/codelist/SewerWaterTypeValue/reclaimed
+riolering	inspire	wion	us-net-sw:sewerWaterType	sanitary	huishoudelijk	Huishoudelijk afvalwater.	SewerWaterTypeValue	http://inspire.ec.europa.eu/codelist/SewerWaterTypeValue/sanitary
+riolering	inspire	wion	us-net-sw:sewerWaterType	storm	storm	Regenwater.	SewerWaterTypeValue	http://inspire.ec.europa.eu/codelist/SewerWaterTypeValue/storm
+riolering		wion	us-net-common:appurtenanceType	puntVanLevering	punt van levering	punt van levering	SewerAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/SewerAppurtenanceTypeIMKLValue/puntVanLevering
+warmte	imkl2015	wion	us-net-common:appurtenanceType	compensator	compensator	Compensator	ThermalAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/ThermalAppurtenanceTypeIMKLValue/compensator
+warmte	imkl2015	wion	us-net-common:appurtenanceType	lekdetectiemeetpunt	lekdetectiemeetpunt	Lekdetectiemeetpunt	ThermalAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/ThermalAppurtenanceTypeIMKLValue/lekdetectiemeetpunt
+warmte	imkl2015	wion	us-net-common:appurtenanceType	put	put	put	ThermalAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/ThermalAppurtenanceTypeIMKLValue/put
+warmte	imkl2015	wion	us-net-common:appurtenanceType	pompstation	pompstation	pompstation	ThermalAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/ThermalAppurtenanceTypeIMKLValue/pompstation
+warmte	imkl2015	wion	us-net-common:appurtenanceType	overdrachtsstation	overdrachtsstation	overdrachtsstation	ThermalAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/ThermalAppurtenanceTypeIMKLValue/overdrachtsstation
+warmte	imkl2015	wion	us-net-common:appurtenanceType	mantelbuis	mantelbuis	Mantelbuis	ThermalAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/ThermalAppurtenanceTypeIMKLValue/mantelbuis
+warmte	imkl2015	wion	us-net-common:appurtenanceType	zinker	zinker	Zinker (indien diepte t.o.v. NAP ook wordt aangegeven kan dit vervallen)	ThermalAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/ThermalAppurtenanceTypeIMKLValue/zinker
+warmte	imkl2015	wion	us-net-common:appurtenanceType	inEnUittredepuntBoringen	In/ en uittredepunt boringen	In/ en uittredepunt boringen	ThermalAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/ThermalAppurtenanceTypeIMKLValue/inEnUittredepuntBoringen
+warmte	imkl2015	wion	us-net-common:appurtenanceType	gestuurdeBoring	gestuurde boring	gestuurde boring	ThermalAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/ThermalAppurtenanceTypeIMKLValue/gestuurdeBoring
+warmte	imkl2015	wion	us-net-common:appurtenanceType	puntVanLevering	punt van levering	punt van levering	ThermalAppurtenanceTypeIMKLValue	http://www.geonovum.nl/imkl2015/1.0/def/ThermalAppurtenanceTypeIMKLValue/puntVanLevering
+algemeen	inspire ext	wion, rrb	imkl:buismateriaalType	ABS		Acrylonitrile butadiene styrene (ABS). 	PipeMaterialTypeValue	
+algemeen	inspire ext	wion, rrb	imkl:buismateriaalType	asbestos		Asbestos. 	PipeMaterialTypeValue	
+algemeen	inspire ext	wion, rrb	imkl:buismateriaalType	blackIron		Iron without any finish on it, gray-black in color. 	PipeMaterialTypeValue	
+algemeen	inspire ext	wion, rrb	imkl:buismateriaalType	blackSteel		Steel with a surface layer of dark coloured iron oxides. 	PipeMaterialTypeValue	
+algemeen	inspire ext	wion, rrb	imkl:buismateriaalType	castIron		Iron with a high Carbon content (above 2%). 	PipeMaterialTypeValue	
+algemeen	inspire ext	wion, rrb	imkl:buismateriaalType	clay		Clay. 	PipeMaterialTypeValue	
+algemeen	inspire ext	wion, rrb	imkl:buismateriaalType	compositeConcrete		Composite concrete. 	PipeMaterialTypeValue	
+algemeen	inspire ext	wion, rrb	imkl:buismateriaalType	concrete		Concrete. 	PipeMaterialTypeValue	
+algemeen	inspire ext	wion, rrb	imkl:buismateriaalType	CPVC		Chlorinated polyvinyl chloride (CPVC). 	PipeMaterialTypeValue	
+algemeen	inspire ext	wion, rrb	imkl:buismateriaalType	 FRP		Fibre reinforced plastic (FRP). 	PipeMaterialTypeValue	
+algemeen	inspire ext	wion, rrb	imkl:buismateriaalType	galvanizedSteel		Galvanized steel. 	PipeMaterialTypeValue	
+algemeen	inspire ext	wion, rrb	imkl:buismateriaalType	masonry		Masonry. 	PipeMaterialTypeValue	
+algemeen	inspire ext	wion, rrb	imkl:buismateriaalType	other		Other. 	PipeMaterialTypeValue	
+algemeen	inspire ext	wion, rrb	imkl:buismateriaalType	PB		Polybutylene (PB). 	PipeMaterialTypeValue	
+algemeen	inspire ext	wion, rrb	imkl:buismateriaalType	PE		Polyethylene (PE). 	PipeMaterialTypeValue	
+algemeen	inspire ext	wion, rrb	imkl:buismateriaalType	PEX		Cross-linked high-density polyethylene (PEX). 	PipeMaterialTypeValue	
+algemeen	inspire ext	wion, rrb	imkl:buismateriaalType	PP		Polypropylene (PP). 	PipeMaterialTypeValue	
+algemeen	inspire ext	wion, rrb	imkl:buismateriaalType	prestressedReinforcedConcrete		Prestressed reinforced concrete. 	PipeMaterialTypeValue	
+algemeen	inspire ext	wion, rrb	imkl:buismateriaalType	PVC		Polyvinyl chloride (PVC). 	PipeMaterialTypeValue	
+algemeen	inspire ext	wion, rrb	imkl:buismateriaalType	reinforcedConcrete		Reinforced concrete. 	PipeMaterialTypeValue	
+algemeen	inspire ext	wion, rrb	imkl:buismateriaalType	RPMP		Reinforced polymer mortar (RPMP). 	PipeMaterialTypeValue	
+algemeen	inspire ext	wion, rrb	imkl:buismateriaalType	steel		Steel. 	PipeMaterialTypeValue	
+algemeen	inspire ext	wion, rrb	imkl:buismateriaalType	terracota		Terracota. 	PipeMaterialTypeValue	
+algemeen	inspire ext	wion, rrb	imkl:buismateriaalType	wood		Wood. 	PipeMaterialTypeValue	
+algemeen	Brabant Water	wion, rrb	imkl:buismateriaalType	AC		astbestcement	PipeMaterialTypeValue	
+algemeen	Brabant Water	wion, rrb	imkl:buismateriaalType	BT 		beton	PipeMaterialTypeValue	
+algemeen	Brabant Water	wion, rrb	imkl:buismateriaalType	CU		koper	PipeMaterialTypeValue	
+algemeen	Brabant Water	wion, rrb	imkl:buismateriaalType	GIJ		grijsgietijzer	PipeMaterialTypeValue	
+algemeen	Brabant Water	wion, rrb	imkl:buismateriaalType	GVB		glasvezel versterkte beton	PipeMaterialTypeValue	
+algemeen	Brabant Water	wion, rrb	imkl:buismateriaalType	GVK		glasvezel versterkte kunststof	PipeMaterialTypeValue	
+algemeen	Brabant Water	wion, rrb	imkl:buismateriaalType	HZ		hostaliet	PipeMaterialTypeValue	
+algemeen	Brabant Water	wion, rrb	imkl:buismateriaalType	KP		 koper	PipeMaterialTypeValue	
+algemeen	Brabant Water	wion, rrb	imkl:buismateriaalType	NGIJ		nodulair gietijzer	PipeMaterialTypeValue	
+algemeen	Brabant Water	wion, rrb	imkl:buismateriaalType	PB		 lood	PipeMaterialTypeValue	
+algemeen	Brabant Water	wion, rrb	imkl:buismateriaalType	PE 		polyetheen	PipeMaterialTypeValue	
+algemeen	Brabant Water	wion, rrb	imkl:buismateriaalType	PoB		polybutyleen	PipeMaterialTypeValue	
+algemeen	Brabant Water	wion, rrb	imkl:buismateriaalType	PVC		polyvinylchloride	PipeMaterialTypeValue	
+algemeen	Brabant Water	wion, rrb	imkl:buismateriaalType	PVCBV		polyvinylchloride biaxiaal verstrekt	PipeMaterialTypeValue	
+algemeen	Brabant Water	wion, rrb	imkl:buismateriaalType	RVS		roestvaststaal	PipeMaterialTypeValue	
+algemeen	Brabant Water	wion, rrb	imkl:buismateriaalType	SLA		safe line aluminium	PipeMaterialTypeValue	
+algemeen	Brabant Water	wion, rrb	imkl:buismateriaalType	ST 		staal	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	AY		Unidentified type of plastics	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	AZ		Unidentified material	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	Z		Other (details in remarks section)	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	AB		Bitumen	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	AC		Pitch fibre	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	AD		Metselwerk	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	AE		Clay	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	AA		Asbestcement	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	AJ		Betonnen segmenten	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	AK		Fibre cement	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	AL		GVK	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	AN		Grijs gietijzer	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	AO		Ductile cast iron	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	AP		Staal	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	AQ		Unidentified type of Iron or steel	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	AR		Metselwerk (bepleisterd)	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	AS		Metselwerk (onbepleisterd)	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	AT		Epoxy	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	AU		Polyester	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	AV		PE	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	AW		Polypropyleen	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	AF		Cement mortar	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	AG		Beton	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	AH		Gewapend beton	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	AI		Sprayed concrete	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	AX		PVC-U	PipeMaterialTypeValue	
+algemeen	Rioned (EN)	wion, rrb	imkl:buismateriaalType	AM		Gietijzer	PipeMaterialTypeValue	
+algemeen	Telecom	wion, rrb	imkl:buismateriaalType	HDPE		High-density polyethylene	PipeMaterialTypeValue	
+olie-gas-chemicalien	rrgs	rrb	imkl:buisleidingtype	31	aardgasleiding (niet NEN)	aardgasleiding (niet NEN)	BuisleidingtypeTypeValue	
+olie-gas-chemicalien	rrgs	rrb	imkl:buisleidingtype	32	K1-leiding	K1-leiding	BuisleidingtypeTypeValue	
+olie-gas-chemicalien	rrgs	rrb	imkl:buisleidingtype	33	K2-leiding	K2-leiding	BuisleidingtypeTypeValue	
+olie-gas-chemicalien	rrgs	rrb	imkl:buisleidingtype	34	K3-leiding	K3-leiding	BuisleidingtypeTypeValue	
+olie-gas-chemicalien	rrgs	rrb	imkl:buisleidingtype	35	defensieleiding	defensieleiding	BuisleidingtypeTypeValue	
+olie-gas-chemicalien	rrgs	rrb	imkl:buisleidingtype	36	overig	overig	BuisleidingtypeTypeValue	
+olie-gas-chemicalien	rrgs	rrb	imkl:buisleidingtype	37	aardgasleiding NEN-3650	aardgasleiding NEN-3650	BuisleidingtypeTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	waterloop	waterloop	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/waterloop	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	rijbaan lokale weg	rijbaan lokale weg	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/rijbaan_lokale_weg	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	fietspad	fietspad	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/fietspad	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	sloot	sloot	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/sloot	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	erf	erf	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/erf	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	talud	talud (? niet gevonden in imgeo)	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/talud	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	BuildingPart	pand	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/BuildingPart	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	overkapping	overkapping	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/overkapping	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	loods	loods	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/loods	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	hek	hek	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/hek	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	draadraster	draadraster	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/draadraster	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	faunaraster	faunaraster	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/faunaraster	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	muur	muur	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/muur	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	hoogspanningsmast	hoogspanningsmast	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/hoogspanningsmast	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	steiger	steiger	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/steiger	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	stuw	stuw	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/stuw	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	gemaal	gemaal	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/gemaal	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	brug	brug	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/brug	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	viaduct	viaduct	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/viaduct	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	CAI-kast	CAI-kast	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/CAI-kast	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	elektrakast	elektrakast	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/elektrakast	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	gaskast	gaskast	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/gaskast	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	telecom kast	telecom kast	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/telecom_kast	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	rioolkast	rioolkast	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/rioolkast	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	openbare_verlichtingkast	openbare verlichtingkast	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/openbare_verlichtingkast	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	portaal	portaal	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/portaal	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	lichtmast	lichtmast	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/lichtmast	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	hectometerpaal	hectometerpaal	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/hectometerpaal	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	inspectieputRioolput	inspectie- / rioolput	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/inspectie-_/_rioolput	TopografischObjectTypeValue	
+algemeen	IMGeo	wion	imkl:typeTopografischObject	kolk	kolk	http://definities.geostandaarden.nl/concepten/imgeo/doc/begrip/kolk	TopografischObjectTypeValue	
