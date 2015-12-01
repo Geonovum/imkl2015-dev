@@ -3,8 +3,8 @@ create table codelists
 (
    herkomst text,
    source text,
-   attribute text,
    submodel text,
+   attribute text,
    value text,
    labelnl text,
    description text,

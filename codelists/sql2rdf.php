@@ -1,6 +1,6 @@
 #!/usr/local/bin/php
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.w3.org/2004/02/skos/core#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns="http://www.w3.org/2004/02/skos/core#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <?php
 date_default_timezone_set("Europe/Amsterdam");
 
@@ -19,24 +19,35 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     if ($line["listname"] != $prevscheme)
     {
+	if ($prevscheme != "")
+	{
+	    echo "    </members>\n";
+            echo "</Collection>\n";
+	}
         $listname = substr($line["url"],0,strrpos($line["url"],"/"));
-        echo "<ConceptScheme rdf:about=\"" . $listname .  "\">\n";
-	echo "    <type rdf:resource=\"http://www.w3.org/2002/07/owl#Thing\"/>\n";
-        echo "</ConceptScheme>\n";
+        $listlabel = substr($listname,1+ strrpos($listname,"/"));
+        echo "<Collection rdf:about=\"" . $listname .  "\">\n";
+	//
+	// For now we do not know a label for the Collection so we reuse tne
+	// collectioname.
+	//
+	echo "    <rdfs:label>" . $listlabel . "</rdfs:label>\n";
+	echo "<members rdf:parseType=\"Collection\">\n";
 
 	$prevscheme = $line["listname"];
     }
 
-    echo "<Concept rdf:about=\"" . $line["url"] .  "\">\n";
-    echo "    <type rdf:resource=\"http://www.w3.org/2002/07/owl#Thing\"/>\n";
-    echo "    <prefLabel rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\" xml:lang=\"nl\">" .  $line["labelnl"] . "</prefLabel>\n";
-    echo "    <definition rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\" xml:lang=\"nl\">" .  $line["description"] . "</definition>\n";
-    echo "</Concept>\n";
+    echo "    <Concept rdf:about=\"" . $line["url"] .  "\">\n";
+    echo "        <prefLabel rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\" xml:lang=\"nl\">" .  $line["labelnl"] . "</prefLabel>\n";
+    echo "        <definition rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\" xml:lang=\"nl\">" .  $line["description"] . "</definition>\n";
+    echo "    </Concept>\n";
 }
+
+echo "    </members>\n";
+echo "</Collection>\n";
+
 pg_free_result($result);
-
-
 pg_close($dbconn);
+
 ?>
 </rdf:RDF>
-

@@ -24,7 +24,7 @@
 <?php
 date_default_timezone_set("Europe/Amsterdam");
 
-echo "<!-- File created by Wilko Quak via the sql2gml.php script on " .  date('Y-m-d') . " -->\n";
+echo "<!-- File created by Wilko Quak via the sql2validator.php script on " .  date('Y-m-d') . " -->\n";
 
 //
 // Connect to DBMS.
@@ -33,20 +33,11 @@ $dbconn = pg_connect("");
 
 #
 #
-$query = "select source,attribute,value,description,listname,value from codelists where attribute is not null";
+$query = "select source,attribute,value,description,listname,value,url from codelists where attribute is not null";
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
-    if ($line["source"] == "inspire")
-    {
-       $basename = "http://inspire.ec.europa.eu/codelist/";
-    }
-    else
-    {
-       $basename = "http://www.geonovum.nl/imkl2015/1.0/def/";
-    }
-
-    echo "<xsl:template match=\"" . $line["attribute"] .  "[@xlink:href = '" . $basename . $line["listname"] . "/" . $line["value"] . "']\" priority=\"10\">OK <xsl:value-of select='@*'/><xsl:text>&#xa;</xsl:text>\n";
+    echo "<xsl:template match=\"" . $line["attribute"] .  "[@xlink:href = '" .  $line["url"] . "']\" priority=\"10\">OK <xsl:value-of select='@*'/><xsl:text>&#xa;</xsl:text>\n";
     echo "</xsl:template>\n";
 }
 pg_free_result($result);
