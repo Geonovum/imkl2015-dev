@@ -12,21 +12,23 @@ echo "<!-- File created by Wilko Quak via the sql2rdf.php script on " .  date('Y
 $dbconn = pg_connect("");
 
 $prevscheme = "";
-$query = "select herkomst,source,attribute,value,labelnl,description,listname,url from codelists where attribute is not null order by listname";
+$query = "
+select herkomst,source,attribute,value,labelnl,description,reallistname,url
+from codelists where attribute is not null order by reallistname";
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
-    if ($line["listname"] != $prevscheme)
+    if ($line["reallistname"] != $prevscheme)
     {
 	if ($prevscheme != "")
 	{
 	    echo "    </members>\n";
             echo "</Collection>\n";
 	}
-        $listname = substr($line["url"],0,strrpos($line["url"],"/"));
-        $listlabel = substr($listname,1+ strrpos($listname,"/"));
-        echo "<Collection rdf:about=\"" . $listname .  "\">\n";
+        $reallistname = substr($line["url"],0,strrpos($line["url"],"/"));
+        $listlabel = substr($reallistname,1+ strrpos($reallistname,"/"));
+        echo "<Collection rdf:about=\"" . $reallistname .  "\">\n";
 	//
 	// For now we do not know a label for the Collection so we reuse tne
 	// collectioname.
@@ -34,7 +36,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
 	echo "    <rdfs:label>" . $listlabel . "</rdfs:label>\n";
 	echo "<members rdf:parseType=\"Collection\">\n";
 
-	$prevscheme = $line["listname"];
+	$prevscheme = $line["reallistname"];
     }
 
     echo "    <Concept rdf:about=\"" . $line["url"] .  "\">\n";

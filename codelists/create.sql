@@ -9,5 +9,6 @@ create table codelists
    labelnl text,
    description text,
    listname text,
+   reallistname text,
    url text
 );
