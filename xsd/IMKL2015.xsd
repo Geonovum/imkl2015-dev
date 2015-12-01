@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:imkl2015="http://www.geonovum.nl/imkl/2015/1.0" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" elementFormDefault="qualified" targetNamespace="http://www.geonovum.nl/imkl/2015/1.0" version="2015-01">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:imkl2015="http://www.geonovum.nl/imkl/2015/1.0" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" elementFormDefault="qualified" targetNamespace="http://www.geonovum.nl/imkl/2015/1.0" version="1.0RC1">
   <import namespace="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" schemaLocation="http://inspire.ec.europa.eu/schemas/us-net-common/4.0/UtilityNetworksCommon.xsd"/>
   <import namespace="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" schemaLocation="http://inspire.ec.europa.eu/schemas/us-net-el/4.0/ElectricityNetwork.xsd"/>
   <import namespace="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" schemaLocation="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0/OilGasChemicalsNetwork.xsd"/>
@@ -126,14 +126,14 @@
           <element minOccurs="0" name="aangrijpingHorizontaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
           <element minOccurs="0" name="aangrijpingVerticaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
@@ -214,14 +214,14 @@
           <element minOccurs="0" name="aangrijpingHorizontaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
           <element minOccurs="0" name="aangrijpingVerticaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
@@ -331,14 +331,14 @@
           <element minOccurs="0" name="aangrijpingHorizontaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
           <element minOccurs="0" name="aangrijpingVerticaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
@@ -384,14 +384,14 @@
           <element minOccurs="0" name="aangrijpingHorizontaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
           <element minOccurs="0" name="aangrijpingVerticaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
@@ -483,14 +483,14 @@
           <element minOccurs="0" name="aangrijpingHorizontaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
           <element minOccurs="0" name="aangrijpingVerticaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
@@ -574,14 +574,14 @@
           <element minOccurs="0" name="aangrijpingHorizontaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
           <element minOccurs="0" name="aangrijpingVerticaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
@@ -709,14 +709,14 @@
           <element minOccurs="0" name="aangrijpingHorizontaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
           <element minOccurs="0" name="aangrijpingVerticaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
@@ -833,14 +833,14 @@
           <element minOccurs="0" name="aangrijpingHorizontaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
           <element minOccurs="0" name="aangrijpingVerticaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
@@ -897,14 +897,14 @@
           <element minOccurs="0" name="aangrijpingHorizontaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
           <element minOccurs="0" name="aangrijpingVerticaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
@@ -968,14 +968,14 @@
           <element minOccurs="0" name="aangrijpingHorizontaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
           <element minOccurs="0" name="aangrijpingVerticaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
@@ -1008,13 +1008,6 @@
     <complexContent>
       <extension base="us-net-ogc:OilGasChemicalsPipeType">
         <sequence>
-          <element minOccurs="0" name="buismateriaalType" type="gml:ReferenceType">
-            <annotation>
-              <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">PipeMaterialTypeValue</targetCodeList>
-              </appinfo>
-            </annotation>
-          </element>
           <element minOccurs="0" name="geoNauwkeurigheidXY" type="gml:ReferenceType">
             <annotation>
               <appinfo>
@@ -1043,14 +1036,21 @@
           <element minOccurs="0" name="aangrijpingHorizontaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
           <element minOccurs="0" name="aangrijpingVerticaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="buismateriaalType" type="gml:ReferenceType">
+            <annotation>
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">PipeMaterialTypeValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
@@ -1118,14 +1118,14 @@
           <element minOccurs="0" name="aangrijpingHorizontaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
           <element minOccurs="0" name="aangrijpingVerticaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
@@ -1200,14 +1200,14 @@
           <element minOccurs="0" name="aangrijpingHorizontaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
           <element minOccurs="0" name="aangrijpingVerticaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
@@ -1262,14 +1262,14 @@
           <element minOccurs="0" name="aangrijpingHorizontaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
           <element minOccurs="0" name="aangrijpingVerticaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
@@ -1333,14 +1333,14 @@
           <element minOccurs="0" name="aangrijpingHorizontaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
           <element minOccurs="0" name="aangrijpingVerticaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
@@ -1426,14 +1426,14 @@
           <element minOccurs="0" name="aangrijpingHorizontaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
           <element minOccurs="0" name="aangrijpingVerticaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
@@ -1502,14 +1502,14 @@
           <element minOccurs="0" name="aangrijpingHorizontaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
           <element minOccurs="0" name="aangrijpingVerticaal" type="gml:ReferenceType">
             <annotation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Labelpositie</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
