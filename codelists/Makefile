@@ -30,3 +30,6 @@ load: waardelijsten-utf8.csv
 clean:
 	rm -f validateCodelist.xsl imkl2015.rdf
 
+deploy:
+	cp imkl2015.rdf ../../imkl2015-review/3.\ waardelijsten
+	cp imkl2015.rdf ../../imkl/waardelijst/1.0.0RC1
