@@ -56,7 +56,7 @@
 	<targets>
 		<Target class="de.interactive_instruments.ShapeChange.Target.Ontology.RDF" mode="enabled">
 		  <targetParameter name="outputDirectory" value="codelists"/>
-		  <targetParameter name="language" value="en"/>
+		  <targetParameter name="language" value="nl"/>
 		  <targetParameter name="codeListOnly" value="true"/>
 		</Target>
 		<TargetXmlSchema class="de.interactive_instruments.ShapeChange.Target.XmlSchema.XmlSchema" mode="enabled">
@@ -230,5 +230,19 @@
 		  <targetParameter name="createDocumentation" value="false"/>
 		  <xi:include href="http://shapechange.net/resources/config/StandardSqlMapEntries-PostgreSQL.xml"/>
 		</Target>
+	<!-- 2015-06-25 Wilko Quak: Currently this one crashes !-->
+	<TargetOwl class="de.interactive_instruments.ShapeChange.Target.Ontology.OWLISO19150" inputs="WION" mode="disabled">
+	  <targetParameter name="outputDirectory" value="./owl"/>
+	  <targetParameter name="defaultEncodingRule" value="iso19150_2014"/>
+	  <targetParameter name="URIbase" value="http://wilkoquak.nl/vocab"/>
+	  <targetParameter name="source" value="INSPIRE application schemas, Revision 4618, derived according to ISO/DIS 19150-2 with several modification using ShapeChange."/>
+	  <targetParameter name="globalProperties" value="*"/>
+	  <xi:include href="config/StandardStereotypeMappings-owl.xml"/>
+	  <xi:include href="config/StandardNamespaces-owl.xml"/>
+	  <xi:include href="config/StandardMapEntries-owl.xml"/>
+	  <namespaces>
+	    <Namespace location="http://example.com/ont/inspire/common" ns="http://example.com/ont/inspire/common#" nsabr="common"/>
+	  </namespaces>
+	</TargetOwl>
 	</targets>
 </ShapeChangeConfiguration>
