@@ -97,7 +97,7 @@ function printNENcodelistvalue($attribute,$codelist,$value)
 {
     if ($value != "")
     {
-	echo "        <" . $attribute . " xlink:href=\"http://www.geonovum.nl/imkl2015/1.0/def/" . $codelist . "/" .  $value . "\"/>\n";
+	echo "        <" . $attribute . " xlink:href=\"http://www.geonovum.nl/imkl2015/1.0/id/" . $codelist . "/" .  $value . "\"/>\n";
     }
     else
     {
@@ -376,7 +376,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printattribute_tvale("us-net-common:pipeDiameter",$line["pipediam"],"uom=\"urn:ogc:def:uom:OGC::cm\"");
     printattribute_tvale("us-net-common:pressure",$line["pressure"],"uom=\"urn:ogc:def:uom:OGC::bar\"");
     printINSPIREcodelistvalue("us-net-sw:sewerWaterType","SewerWaterTypeValue",$line["swatertype"]);
-    printNENcodelistvalue('imkl:typeRioolleiding','TypeRioolleiding','todo');
+    printNENcodelistvalue('imkl:typeRioolleiding','RioolleidingTypeValue',$line["disttype"]);
     printclose("imkl:Rioolleiding");
     printclose("gml:featureMember");
 }
@@ -417,7 +417,10 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
     printNENcodelistvalue("imkl:diepteNauwkeurigheid","NauwkeurigheidDiepteValue",$line["nauwk"]);
     printattribute_tvale("imkl:dieptePeil",$line["dtovmveld"],"uom=\"urn:ogc:def:uom:OGC::cm\"");
-    printNENcodelistvalue("imkl:diepteAangrijpingspunt","TODO",'todo');
+    #
+    # TODO: value is hardcoded, but should come from DBMS.
+    #
+    printNENcodelistvalue("imkl:diepteAangrijpingspunt","DiepteAangrijpingspuntValue",'bovenkant');
     printattribute("imkl:ligging",$line["geom"]);
     printhref("imkl:inNetwork",$line["unetgmlid"]);
     printclose("imkl:DiepteTovMaaiveld");
@@ -439,13 +442,14 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printNEN3610ID($line["bhcode"],$line["gmlid"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
     printattribute("imkl:vlakgeometrie2.5D",$line["geom"]);
+    printhref("imkl:inNetwork",$line["unetgmlid"]);
     printclose("imkl:ExtraGeometrie");
     printclose("gml:featureMember");
 }
 pg_free_result($result);
 
 #
-# Extra Topografie
+# Eigen Topografie
 #
 $query = 'select
 bhcode,gmlid,unetgmlid,unetid,netbeheer,type,typeobject,ST_AsGML(3,geom,5,0,null) as geom from v_extratopo;';
@@ -454,14 +458,18 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printopen("gml:featureMember");
-    openfeature("imkl:ExtraTopografie",$line["gmlid"]);
+    openfeature("imkl:EigenTopografie",$line["gmlid"]);
     printNEN3610ID($line["bhcode"],$line["gmlid"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
-    printNENcodelistvalue('imkl:extraTopografieType','ExtraTopografieTypeValue',$line["type"]);
+    #printNENcodelistvalue('imkl:extraTopografieType','EigenTopografieTypeValue',$line["type"]);
+    #
+    # Todo value should come from database is now harcoded to 'bestaand'.
+    #
+    printNENcodelistvalue('imkl:status','EigenTopografieStatusValue',"bestaand"); 
     printNENcodelistvalue('imkl:typeTopografischObject','TopografischObjectTypeValue',$line["typeobject"]);
     printattribute("imkl:ligging",$line["geom"]);
     printhref("imkl:inNetwork",$line["unetgmlid"]);
-    printclose("imkl:ExtraTopografie");
+    printclose("imkl:EigenTopografie");
     printclose("gml:featureMember");
 }
 pg_free_result($result);
@@ -480,9 +488,10 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printopen("gml:featureMember");
     openfeature("imkl:Annotatie",$line["gmlid"]);
     printNEN3610ID($line["bhcode"],$line["gmlid"]);
-    printattribute("imkl:label",$line["label"]);
+    #TODO printattribute("imkl:label",$line["label"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
-    printNENcodelistvalue('imkl:annotatieType','AnnotatieTypeValue','annotatieLabel');
+    printhref("imkl:inNetwork",$line["unetgmlid"]);
+    printNENcodelistvalue('imkl:annotatieType','AnnotatieTypeValue','annotatielabel');
     printattribute("imkl:ligging",$line["geom"]);
     printclose("imkl:Annotatie");
     printclose("gml:featureMember");
@@ -501,6 +510,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     openfeature("imkl:Annotatie",$line["gmlid"]);
     printNEN3610ID($line["bhcode"],$line["gmlid"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
+    printhref("imkl:inNetwork",$line["unetgmlid"]);
     printNENcodelistvalue('imkl:annotatieType','AnnotatieTypeValue',$line["type"]);
     printattribute("imkl:ligging",$line["geom"]);
     printclose("imkl:Annotatie");
@@ -520,6 +530,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     openfeature("imkl:Maatvoering",$line["gmlid"]);
     printNEN3610ID($line["bhcode"],$line["gmlid"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
+    printhref("imkl:inNetwork",$line["unetgmlid"]);
     printNENcodelistvalue('imkl:maatvoeringsType','MaatvoeringsTypeValue',$line["type"]);
     printattribute_tvale("imkl:rotatiehoek",$line["rotatie"],"uom=\"urn:ogc:def:uom:OGC::deg\"");
     printattribute("imkl:ligging",$line["geom"]);
@@ -541,6 +552,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printattribute("imkl:omschrijving",$line["toelichtin"]);
     printNEN3610ID($line["bhcode"],$line["gmlid"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
+    printhref("imkl:inNetwork",$line["unetgmlid"]);
     printNENcodelistvalue('imkl:maatvoeringsType','MaatvoeringsTypeValue',"maatvoeringslabel");
     printattribute("imkl:ligging",$line["geom"]);
     printclose("imkl:Maatvoering");
@@ -562,7 +574,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printattribute("us-net-common:verticalPosition","underground");
     printattribute("us-net-common:geometry",$line["geom"]);
     printINSPIREID("us-net-common",$line["gmlid"]);
-    printNENcodelistvalue('imkl:containerLeidingelementType','containerLeidingelementType',"type");
+    printNENcodelistvalue('imkl:containerLeidingelementType','ContainerLeidingelementTypeValue',"kast");
     printhref("imkl:inNetwork",$line["unetgmlid"]);
     printclose("imkl:Mangat");
     printclose("gml:featureMember");
@@ -585,7 +597,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printattribute("us-net-common:geometry",$line["geom"]);
     printINSPIREID("us-net-common",$line["gmlid"]);
     printattribute_tvale("us-net-common:poleHeight","100.0","uom=\"urn:ogc:def:uom:OGC::bar\"");
-    printNENcodelistvalue('imkl:containerLeidingelementType','containerLeidingelementType',"type");
+    printNENcodelistvalue('imkl:containerLeidingelementType','ContainerLeidingelementTypeValue',"kast");
     printhref("imkl:inNetwork",$line["unetgmlid"]);
     printclose("imkl:Mast");
     printclose("gml:featureMember");
@@ -603,6 +615,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     openfeature("imkl:Maatvoering",$line["gmlid"]);
     printNEN3610ID($line["bhcode"],$line["gmlid"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
+    printhref("imkl:inNetwork",$line["unetgmlid"]);
     printNENcodelistvalue('imkl:maatvoeringsType','MaatvoeringsTypeValue',$line["type"]);
     printattribute("imkl:ligging",$line["geom"]);
     printclose("imkl:Maatvoering");
@@ -632,7 +645,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printINSPIREcodelistvalue("us-net-common:warningType","WarningTypeValue","net");
     printattribute_tvale("us-net-common:pipeDiameter",$line["pipediam"],"uom=\"urn:ogc:def:uom:OGC::cm\"");
     printattribute_tvale("us-net-common:pressure",$line["pressure"],"uom=\"urn:ogc:def:uom:OGC::bar\"");
-    printNENcodelistvalue('imkl:buismateriaalType','MateriaalTypeValue',"buismat");
+    printNENcodelistvalue('imkl:buismateriaalType','MateriaalTypeValue',$line["buismat"]);
     printclose("imkl:Mantelbuis");
     printclose("gml:featureMember");
 }
@@ -650,9 +663,11 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     openfeature("imkl:ExtraDetailinfo",$line["gmlid"]);
     printNEN3610ID($line["bhcode"],$line["unetid"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
+    printhref("imkl:inNetwork",$line["unetgmlid"]);
     printNENcodelistvalue("imkl:extraInfoType","ExtraDetailInfoTypeValue",$line["type"]);
     printattribute("imkl:bestandLocatie",$line["bestand"]);
     printhref("imkl:bestandMediaType",$line["type"]);
+    printattribute("imkl:bestandIdentificator", $line["bestand"]);
     printattribute("imkl:ligging",$line["geom"]);
     printclose("imkl:ExtraDetailinfo");
     printclose("gml:featureMember");
