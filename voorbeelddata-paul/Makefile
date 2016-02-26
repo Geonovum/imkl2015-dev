@@ -1,6 +1,6 @@
-PGHOST=cerise.tudelft.nl
+#PGHOST=cerise.tudelft.nl
 PGDATABASE=imkl
-PGUSER=imkl
+#PGUSER=imkl
 
 load:
 	shp2pgsql -d -S -I -W LATIN1  -s 28992  aanduidingEisVoorzorgsmaatregel.shp| psql

@@ -39,3 +39,7 @@ codelists/waardelijsten-utf16.txt
 codelists/waardelijsten-utf8.csv
 
 codelists/waardelijsten-utf8.csv
+
+voorbeelddata-topology/Topology.gml
+
+*.xml~
