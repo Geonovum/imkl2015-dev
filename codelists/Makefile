@@ -16,11 +16,11 @@ checkinspireurls:
 	sh checkinspireurls.sh
 
 #
-# To get a waardelijsten.csv:
+# To get a waardelijsten-utf16.txt:
 # 1: save waardelijsten as utf.
 #
-waardelijsten-utf8.csv: waardelijsten.csv
-	iconv -f utf16 -t utf8 waardelijsten.csv > waardelijsten-utf8.csv
+waardelijsten-utf8.csv: waardelijsten-utf16.txt
+	iconv -f utf-16 -t utf8 waardelijsten-utf16.txt > waardelijsten-utf8.csv
 
 load: waardelijsten-utf8.csv
 	psql < create.sql
