@@ -1,4 +1,4 @@
-#PGHOST=cerise.tudelft.nl
+PGHOST=pakhuis.tudelft.nl
 PGDATABASE=imkl
 #PGUSER=imkl
 
