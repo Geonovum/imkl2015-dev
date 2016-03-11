@@ -16,6 +16,14 @@
     gml:id="ID_1c0c5554-5c4a-467a-a9ef-9f36b5af2bfq"
     xsi:schemaLocation="http://www.geostandaarden.nl/imkl/2015/wion/1.0 ../xsd/IMKL2015-wion.xsd">
 
+
+<!-- Dit is voorbeeldstand van imkl2015 bestand met topologie. Het zijn
+gasleidinging uit het open data bestand van Enexis. De gasleidingen zijn
+gecodeerd as links en als er twee gasleidingen op hetzelfde punt eindigen is
+op die plek een Appurtenance van het type connectionBox neergezet. Dit klopt
+waarschijnlijk niet. En alle andere attributen klopt ook niet veel van, maar als
+topologisch voorbeeldbestand is het voldoende -->
+
 <?php
 date_default_timezone_set("Europe/Amsterdam");
 
@@ -171,7 +179,7 @@ $dbconn = pg_connect("");
 // Create one utiliteitsnet.
 //
 printopen("gml:featureMember");
-openfeature("imkl:Utiliteitsnet","nl.imkl.enexis.enexis-gas");
+openfeature("imkl:Utiliteitsnet","nl.imkl.topodemo.topodemo-gas");
 
 //$query2 = 'select elementid from utilitynetwork_elements ue where ue.utilitynetwork = \'' . $line["gmlid"] . '\' ;';
 //$result2 = pg_query($query2) or die('Query failed: ' . pg_last_error());
@@ -181,8 +189,8 @@ openfeature("imkl:Utiliteitsnet","nl.imkl.enexis.enexis-gas");
 //pg_free_result($result2);
 
 printINSPIREcodelistvalue("us-net-common:utilityNetworkType","UtilityNetworkTypeValue","oilGasChemical");
-printhref("us-net-common:authorityRole","enexis");
-printNEN3610ID("enexis","enexis-gas");
+printhref("us-net-common:authorityRole","topodemo");
+printNEN3610ID("topodemo","topodemo-gas");
 printLifespan("imkl","2001-12-17T09:30:47.0Z","");
 printNENcodelistvalue('imkl:thema','Thema',"gasLageDruk");
 printopen("imkl:technischContactpersoon");
@@ -205,10 +213,10 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printopen("gml:featureMember");
-    openfeature("us-net-common:Appurtenance","nl.imkl.enexis.node." . $line["id"]);
+    openfeature("us-net-common:Appurtenance","nl.imkl.topodemo.node." . $line["id"]);
     printLifespan("net","2001-12-17T09:30:47.0Z","");
-    printINSPIREID("net","enexis.node." . $line["id"]);
-    printhref("net:inNetwork","nl.imkl.enexis.enexis-gas");
+    printINSPIREID("net","topodemo.node." . $line["id"]);
+    printhref("net:inNetwork","nl.imkl.topodemo.topodemo-gas");
     printattribute("net:geometry",$line["geom"]);
     printINSPIREcodelistvalue("us-net-common:currentStatus","ConditionOfFacilityValue","inUse");
     printValidity("2001-12-17T09:30:47.0Z","2001-12-17T09:30:47.0Z");
@@ -231,19 +239,19 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printopen("gml:featureMember");
-    openfeature("us-net-common:UtilityLink","nl.imkl.enexis.link." . $line["gid"]);
+    openfeature("us-net-common:UtilityLink","nl.imkl.topodemo.link." . $line["gid"]);
     printLifespan("net","2001-12-17T09:30:47.0Z","");
-    printINSPIREID("net","enexis.link." . $line["gid"]);
-    printhref("net:inNetwork","nl.imkl.enexis.enexis-gas");
+    printINSPIREID("net","topodemo.link." . $line["gid"]);
+    printhref("net:inNetwork","nl.imkl.topodemo.topodemo-gas");
     printattribute("net:centrelineGeometry",$line["geom"]);
     printattribute("net:fictitious","false");
     if ($line["endnode"] != "")
     {
-        printhrefopt("net:endNode","nl.imkl.enexis.node." . $line["endnode"]);
+        printhrefopt("net:endNode","nl.imkl.topodemo.node." . $line["endnode"]);
     }
     if ($line["startnode"] != "")
     {
-	printhrefopt("net:startNode","nl.imkl.enexis.node." . $line["startnode"]);
+	printhrefopt("net:startNode","nl.imkl.topodemo.node." . $line["startnode"]);
     }
     printINSPIREcodelistvalue("us-net-common:currentStatus","ConditionOfFacilityValue",$line["status"]);
     printValidity("2001-12-17T09:30:47.0Z","2001-12-17T09:30:47.0Z");
@@ -252,11 +260,11 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printclose("gml:featureMember");
 
     printopen("gml:featureMember");
-    openfeature("imkl:OlieGasChemicalienPijpleiding","nl.imkl.enexis.leiding." . $line["gid"]);
+    openfeature("imkl:OlieGasChemicalienPijpleiding","nl.imkl.topodemo.leiding." . $line["gid"]);
     printLifespan("net","2001-12-17T09:30:47.0Z","");
-    printINSPIREID("net","nl.imkl.enexis.leiding." . $line["gid"]);
-    printhref("net:inNetwork","nl.imkl.enexis.enexis-gas");
-    printhref("net:link",  "enexis.link." . $line["gid"]);
+    printINSPIREID("net","nl.imkl.topodemo.leiding." . $line["gid"]);
+    printhref("net:inNetwork","nl.imkl.topodemo.topodemo-gas");
+    printhref("net:link",  "topodemo.link." . $line["gid"]);
     printINSPIREcodelistvalue("us-net-common:currentStatus","ConditionOfFacilityValue",$line["status"]);
     printValidity("2001-12-17T09:30:47.0Z","2001-12-17T09:30:47.0Z");
     printattribute("us-net-common:verticalPosition","underground");

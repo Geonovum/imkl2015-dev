@@ -376,7 +376,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printattribute_tvale("us-net-common:pipeDiameter",$line["pipediam"],"uom=\"urn:ogc:def:uom:OGC::cm\"");
     printattribute_tvale("us-net-common:pressure",$line["pressure"],"uom=\"urn:ogc:def:uom:OGC::bar\"");
     printINSPIREcodelistvalue("us-net-sw:sewerWaterType","SewerWaterTypeValue",$line["swatertype"]);
-    printNENcodelistvalue('imkl:typeRioolleiding','RioolleidingTypeValue',$line["disttype"]);
+#    printNENcodelistvalue('imkl:typeRioolleiding','RioolleidingTypeValue',$line["disttype"]);
     printclose("imkl:Rioolleiding");
     printclose("gml:featureMember");
 }

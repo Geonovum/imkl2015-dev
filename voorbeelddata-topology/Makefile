@@ -2,8 +2,8 @@
 PGDATABASE=imkl
 #PGUSER=imkl
 
-Topology.gml: sql2topology.php
-	php ./sql2topology.php | xmllint --format -  > Topology.gml
+TopologyExample.gml: sql2topology.php
+	php ./sql2topology.php | xmllint --format -  > TopologyExample.gml
 clean:
 	rm -f Topology.gml
 
