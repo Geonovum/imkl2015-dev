@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?xml version="1.0"?>
 <gml:FeatureCollection
-    xmlns:imkl="http://www.geostandaarden.nl/imkl/2015/wion/1.0"
+    xmlns:imkl="http://www.geostandaarden.nl/imkl/2015/wion/1.1"
     xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" 
     xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0"
     xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0"
@@ -14,7 +14,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     gml:id="ID_1c0c5554-5c4a-467a-a9ef-9f36b5af2bfq"
-    xsi:schemaLocation="http://www.geostandaarden.nl/imkl/2015/wion/1.0 ../../xsd/IMKL2015-wion.xsd">
+    xsi:schemaLocation="http://www.geostandaarden.nl/imkl/2015/wion/1.1 ../../xsd/IMKL2015-wion.xsd">
 
 <?php
 date_default_timezone_set("Europe/Amsterdam");
@@ -376,6 +376,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printattribute_tvale("us-net-common:pipeDiameter",$line["pipediam"],"uom=\"urn:ogc:def:uom:OGC::cm\"");
     printattribute_tvale("us-net-common:pressure",$line["pressure"],"uom=\"urn:ogc:def:uom:OGC::bar\"");
     printINSPIREcodelistvalue("us-net-sw:sewerWaterType","SewerWaterTypeValue",$line["swatertype"]);
+    printNENcodelistvalue('imkl:buismateriaalType','BuismateriaaltypeTypeValue','TODO');
 #    printNENcodelistvalue('imkl:typeRioolleiding','RioolleidingTypeValue',$line["disttype"]);
     printclose("imkl:Rioolleiding");
     printclose("gml:featureMember");
@@ -396,6 +397,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
     printhref("imkl:inNetwork",$line["unetgmlid"]);
     printattribute("imkl:eisVoorzorgsmaatregel",$line["eisvoorzm"]);
+    printattribute("imkl:netRisicoKlasse",'TODO');
     printattribute("imkl:geometriebegrenzingFictief",$line["geofict"]);
     printattribute("imkl:geometrie",$line["geom"]);
     printclose("imkl:AanduidingEisVoorzorgsmaatregel");
@@ -548,9 +550,9 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printopen("gml:featureMember");
     openfeature("imkl:Maatvoering",$line["gmlid"]);
-    printattribute("imkl:label",$line["label"]);
-    printattribute("imkl:omschrijving",$line["toelichtin"]);
     printNEN3610ID($line["bhcode"],$line["gmlid"]);
+    #printattribute("imkl:label",$line["label"]);
+    #printattribute("imkl:omschrijving",$line["toelichtin"]);
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
     printhref("imkl:inNetwork",$line["unetgmlid"]);
     printNENcodelistvalue('imkl:maatvoeringsType','MaatvoeringsTypeValue',"maatvoeringslabel");
@@ -574,7 +576,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printattribute("us-net-common:verticalPosition","underground");
     printattribute("us-net-common:geometry",$line["geom"]);
     printINSPIREID("us-net-common",$line["gmlid"]);
-    printNENcodelistvalue('imkl:containerLeidingelementType','ContainerLeidingelementTypeValue',"kast");
+    #printNENcodelistvalue('imkl:containerLeidingelementType','ContainerLeidingelementTypeValue',"kast");
     printhref("imkl:inNetwork",$line["unetgmlid"]);
     printclose("imkl:Mangat");
     printclose("gml:featureMember");
@@ -597,7 +599,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printattribute("us-net-common:geometry",$line["geom"]);
     printINSPIREID("us-net-common",$line["gmlid"]);
     printattribute_tvale("us-net-common:poleHeight","100.0","uom=\"urn:ogc:def:uom:OGC::bar\"");
-    printNENcodelistvalue('imkl:containerLeidingelementType','ContainerLeidingelementTypeValue',"kast");
+    #printNENcodelistvalue('imkl:containerLeidingelementType','ContainerLeidingelementTypeValue',"kast");
     printhref("imkl:inNetwork",$line["unetgmlid"]);
     printclose("imkl:Mast");
     printclose("gml:featureMember");
