@@ -1,6 +1,4 @@
-#PGHOST=cerise.tudelft.nl
 PGDATABASE=imkl
-#PGUSER=imkl
 
 TopologyExample.gml: sql2topology.php
 	php ./sql2topology.php | xmllint --format -  > TopologyExample.gml

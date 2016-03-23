@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?xml version="1.0"?>
 <gml:FeatureCollection
-    xmlns:imkl="http://www.geostandaarden.nl/imkl/2015/wion/1.0"
+    xmlns:imkl="http://www.geostandaarden.nl/imkl/2015/wion/1.1"
     xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" 
     xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0"
     xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0"
@@ -14,7 +14,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     gml:id="ID_1c0c5554-5c4a-467a-a9ef-9f36b5af2bfq"
-    xsi:schemaLocation="http://www.geostandaarden.nl/imkl/2015/wion/1.0 ../xsd/IMKL2015-wion.xsd">
+    xsi:schemaLocation="http://www.geostandaarden.nl/imkl/2015/wion/1.1 ../xsd/IMKL2015-wion.xsd">
 
 
 <!-- Dit is voorbeeldstand van imkl2015 bestand met topologie. Het zijn
