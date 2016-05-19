@@ -23,4 +23,4 @@ deploy:
 	cp imkl2015-rrb.xsd imkl2015-wion.xsd imkl2015-sw.xsd ../../imkl2015-review/4.\ XML\ schema/
 
 clean:
-	rm imkl2015-rrb.xsd imkl2015-wion.xsd imkl2015-sw.xsd imkl2015.xsd
+	rm -f imkl2015-rrb.xsd imkl2015-wion.xsd imkl2015-sw.xsd imkl2015.xsd
