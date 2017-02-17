@@ -1,45 +1,186 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:sw="http://www.geostandaarden.nl/imkl/2015/sw/1.1" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" targetNamespace="http://www.geostandaarden.nl/imkl/2015/sw/1.1" elementFormDefault="qualified" version="1.1">
-	<annotation>
-		<documentation>-- Name --
-		IMKL2015-Stedelijk Water schema
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:sw="http://www.geostandaarden.nl/imkl/2015/sw/1.1" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" elementFormDefault="qualified" targetNamespace="http://www.geostandaarden.nl/imkl/2015/sw/1.1" version="1.1">
+  <annotation>
+    <documentation>-- Name --
 -- Definition --
 -- Description --
-Zie https://register.geostandaarden.nl/informatiemodel/imkl2015/
+4 profielen:
+wion: IMKL2015-wion.xsd
+wionBR: IMKL2015-wionbr.xsd
+sw: IMKL2015-sw.xsd
+rrb: IMKL2015-rrb.xsd
+
 -- Source --</documentation>
-	</annotation>
-	<import namespace="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" schemaLocation="http://inspire.ec.europa.eu/schemas/us-net-common/4.0/UtilityNetworksCommon.xsd"/>
-	<import namespace="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" schemaLocation="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0/SewerNetwork.xsd"/>
-	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
-	<import namespace="http://www.opengis.net/gml/3.3/exr" schemaLocation="http://schemas.opengis.net/gml/3.3/extdEncRule.xsd"/>
-	<!--XML Schema document created by ShapeChange - http://shapechange.net/-->
-	<element name="Adres" type="sw:AdresType" substitutionGroup="gml:AbstractObject">
-		<annotation>
-			<documentation>-- Name --
+  </annotation>
+  <import namespace="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" schemaLocation="http://inspire.ec.europa.eu/schemas/us-net-common/4.0/UtilityNetworksCommon.xsd"/>
+  <import namespace="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" schemaLocation="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0/SewerNetwork.xsd"/>
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <import namespace="http://www.opengis.net/gml/3.3/exr" schemaLocation="http://schemas.opengis.net/gml/3.3/extdEncRule.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <element name="Aanvrager" substitutionGroup="gml:AbstractObject" type="sw:AanvragerType">
+    <annotation>
+      <documentation>-- Name --
+-- Definition --
+Gegevens van de aanvrager van gebiedsinformatie.
+-- Description --
+-- Source --</documentation>
+    </annotation>
+  </element>
+  <complexType name="AanvragerType">
+    <sequence>
+      <element name="bedrijfsnaam" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+De naam van het bedrijf van de aanvrager van gebiedsinformatie.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element name="naam" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+De naam van de aanvrager van gebiedsinformatie.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="kvkNummer" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+KvK nummer van de aanvrager van gebiedsinformatie.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="bezoekAdres" type="sw:AdresPropertyType">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Het bezoekadres van de aanvrager van gebiedsinformatie.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="postbusAdres" type="sw:PostbusAdresPropertyType">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Het postbusadres van de aanvrager van gebiedsinformatie.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="telefoon" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Het vaste telefoonnummer van de aanvrager van gebiedsinformatie.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="mobiel" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Het mobiele telefoonnummer van de aanvrager van gebiedsinformatie.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="fax" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Het faxnummer van de aanvrager van gebiedsinformatie.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element maxOccurs="2" name="email" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Het e-mail adres van de aanvrager van gebiedsinformatie.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="AanvragerPropertyType">
+    <sequence>
+      <element ref="sw:Aanvrager"/>
+    </sequence>
+  </complexType>
+  <element name="Achtergrondkaart" substitutionGroup="gml:AbstractObject" type="sw:AchtergrondkaartType">
+    <annotation>
+      <documentation>-- Name --
+-- Definition --
+Referentie naar achtergrondkaart met grootschalige topografie (bestaand of gepland) behorend bij het aangevraagde gebied.
+-- Description --
+-- Source --</documentation>
+    </annotation>
+  </element>
+  <complexType name="AchtergrondkaartType">
+    <sequence>
+      <element name="achtergrondkaartSoort" type="gml:ReferenceType">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Soort achtergrondkaart (Kadaster: bgtBestaand/bgtPlan; netbeheerder: eigenTopoBestaand/eigenTopoPlan).
+-- Description --
+-- Source --</documentation>
+          <appinfo>
+            <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">AchtergrondkaartSoortValue</targetCodeList>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="kaartreferentie" type="anyURI">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Referentie naar een achtergrondkaart.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="AchtergrondkaartPropertyType">
+    <sequence>
+      <element ref="sw:Achtergrondkaart"/>
+    </sequence>
+  </complexType>
+  <element name="Adres" substitutionGroup="gml:AbstractObject" type="sw:AdresType">
+    <annotation>
+      <documentation>-- Name --
 BAG-Adres
 -- Definition --
 Beschrijving van een locatie van door middel van een adres.
 -- Description --
 Adresgegevens van Panden, Ligplaatsen en Staanplaatsen zijn beschreven in de BAG. Voor de attributen van net adres zijn de BAG definities gebruikt.
 -- Source --</documentation>
-		</annotation>
-	</element>
-	<complexType name="AdresType">
-		<sequence>
-			<element name="openbareRuimteNaam" type="string">
-				<annotation>
-					<documentation>-- Name --
+    </annotation>
+  </element>
+  <complexType name="AdresType">
+    <sequence>
+      <element name="openbareRuimteNaam" type="string">
+        <annotation>
+          <documentation>-- Name --
 openbare ruimte naam
 -- Definition --
 -- Definition --
 Een naam die aan een OPENBARE RUIMTE is toegekend in een daartoe strekkend formeel gemeentelijk besluit.
 -- Source --
 BAG</documentation>
-				</annotation>
-			</element>
-			<element name="huisnummer" type="string">
-				<annotation>
-					<documentation>-- Name --
+        </annotation>
+      </element>
+      <element name="huisnummer" type="string">
+        <annotation>
+          <documentation>-- Name --
 huisnummer
 -- Definition --
 -- Definition --
@@ -47,11 +188,11 @@ Een door of namens het gemeentebestuur ten aanzien
 van een adresseerbaar object toegekende nummering.
 -- Source --
 BAG</documentation>
-				</annotation>
-			</element>
-			<element name="huisletter" type="string" minOccurs="0">
-				<annotation>
-					<documentation>-- Name --
+        </annotation>
+      </element>
+      <element minOccurs="0" name="huisletter" type="string">
+        <annotation>
+          <documentation>-- Name --
 -- Definition --
 Een door of namens het gemeentebestuur ten aanzien
 van een adresseerbaar object toegekende toevoeging
@@ -60,11 +201,11 @@ teken.
 -- Description --
 -- Source --
 BAG</documentation>
-				</annotation>
-			</element>
-			<element name="huisnummertoevoeging" type="integer" minOccurs="0">
-				<annotation>
-					<documentation>-- Name --
+        </annotation>
+      </element>
+      <element minOccurs="0" name="huisnummertoevoeging" type="string">
+        <annotation>
+          <documentation>-- Name --
 -- Definition --
 Een door of namens het gemeentebestuur ten aanzien
 van een adresseerbaar object toegekende nadere
@@ -73,21 +214,21 @@ huisnummer en huisletter.
 -- Description --
 -- Source --
 BAG</documentation>
-				</annotation>
-			</element>
-			<element name="woonplaatsNaam" type="string">
-				<annotation>
-					<documentation>-- Name --
+        </annotation>
+      </element>
+      <element name="woonplaatsNaam" type="string">
+        <annotation>
+          <documentation>-- Name --
 -- Definition --
 De benaming van een door het gemeentebestuur
 aangewezen WOONPLAATS.
 -- Source --
 BAG</documentation>
-				</annotation>
-			</element>
-			<element name="postcode" type="string">
-				<annotation>
-					<documentation>-- Name --
+        </annotation>
+      </element>
+      <element name="postcode" type="string">
+        <annotation>
+          <documentation>-- Name --
 -- Definition --
 De door TNT Post vastgestelde code behorende bij een
 bepaalde combinatie van een straatnaam en een
@@ -96,86 +237,86 @@ huisnummer.
 De volgende regulier expressie beschrijft het format van een valide volledige postcode: [1-9]{1}[0-9]{3}[A-Z]{2}.
 -- Source --
 BAG. http://www.digitaleoverheid.nl/onderwerpen/stelselinformatiepunt/stelsel-van-basisregistraties/stelselvoorzieningen/stelselcatalogus/begrippen/Adres/BAG/Nummeraanduiding/Postcode-Nummeraanduiding</documentation>
-				</annotation>
-			</element>
-			<element name="landcode" type="string">
-				<annotation>
-					<documentation>-- Name --
+        </annotation>
+      </element>
+      <element minOccurs="0" name="landcode" type="string">
+        <annotation>
+          <documentation>-- Name --
 -- Definition --
 Tweeletterige afkorting van de landsnaam conform ISO 3166 - Country codes
 -- Source --</documentation>
-				</annotation>
-			</element>
-			<element name="identificatieBAG" type="string" minOccurs="0">
-				<annotation>
-					<documentation>-- Name --
+        </annotation>
+      </element>
+      <element minOccurs="0" name="identificatieBAG" type="string">
+        <annotation>
+          <documentation>-- Name --
 identificatie BAG
 -- Definition --
 BAG identifier van de nummeraanduiding van het adres zoals geregistreerd bij de BAG.
 -- Description --
-Adresgegevens van Verblijfsobjecten, Ligplaatsen en Staanplaatsen zijn als nummeraanduiding beschreven in de BAG. En complete nummeraanduiding bestaat uit de volgende 3 componenten:
+Adresgegevens van Verblijfsobjecten, Ligplaatsen en Staanplaatsen zijn als nummeraanduiding beschreven in de BAG. Een complete nummeraanduiding bestaat uit de volgende 3 componenten:
 • Nummeraanduiding
 • Naam van een openbare ruimte
 • Naam van een woonplaats
 Alleen de identificatie van de nummeraanduiding hoeft te worden opgenomen omdat de andere twee daaruit af te leiden zijn
 -- Source --</documentation>
-				</annotation>
-			</element>
-		</sequence>
-	</complexType>
-	<complexType name="AdresPropertyType">
-		<sequence>
-			<element ref="sw:Adres"/>
-		</sequence>
-	</complexType>
-	<element name="Appurtenance" type="sw:AppurtenanceType" substitutionGroup="us-net-common:Appurtenance">
-		<annotation>
-			<documentation>-- Name --
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="AdresPropertyType">
+    <sequence>
+      <element ref="sw:Adres"/>
+    </sequence>
+  </complexType>
+  <element name="Appurtenance" substitutionGroup="us-net-common:Appurtenance" type="sw:AppurtenanceType">
+    <annotation>
+      <documentation>-- Name --
 -- Definition --
 Een leidingelement dat door zijn type wordt beschreven (via het attribuut appurtenanceType).
 -- Description --
 Bijvoorbeeld objecten zoals een schakelkast, verdeelkast, kranen, afsluiters, versterkers, kabelmof, rioolput, (druk)rioolgemaal, kathodische bescherming, boorput, etc. 
 -- Source --
 Inspire</documentation>
-		</annotation>
-	</element>
-	<complexType name="AppurtenanceType">
-		<complexContent>
-			<extension base="us-net-common:AppurtenanceType">
-				<sequence>
-					<element name="bovengrondsZichtbaar" type="boolean" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+    </annotation>
+  </element>
+  <complexType name="AppurtenanceType">
+    <complexContent>
+      <extension base="us-net-common:AppurtenanceType">
+        <sequence>
+          <element minOccurs="0" name="bovengrondsZichtbaar" type="boolean">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Aangegeven wordt of het leidingelement bovengronds vanaf het maaiveld zichtbaar is.</documentation>
-						</annotation>
-					</element>
-					<element name="geoNauwkeurigheidXY" type="gml:ReferenceType" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+            </annotation>
+          </element>
+          <element minOccurs="0" name="geoNauwkeurigheidXY" type="gml:ReferenceType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Indicatie van de nauwkeurigheid in horizontaal vlak (x,y) waarmee de geometrie van de ligging van de leiding is aangegeven.
 -- Description --
 De WION nauwkeurigheid is minimaal +/- 1 meter.
 -- Source --</documentation>
-							<appinfo>
-								<targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">NauwkeurigheidXYvalue</targetCodeList>
-							</appinfo>
-						</annotation>
-					</element>
-					<element name="eanCode" type="string" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">NauwkeurigheidXYvalue</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="eanCode" type="string">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Aansluiting identificatie code voor aansluiting op het elektriciteitsnet en gasnet van Nederland.
 -- Description --
 Aansluiting identificatie code zoals die geregistreerd worden in het EAN codeboek.
 -- Source --</documentation>
-						</annotation>
-					</element>
-					<element name="rotatiehoekSymbool" type="gml:MeasureType" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+            </annotation>
+          </element>
+          <element minOccurs="0" name="rotatiehoekSymbool" type="gml:MeasureType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Hoek waaronder een puntsymbool wordt weergegeven.
 -- Description --
@@ -188,155 +329,332 @@ Bereik (minimale/maximale waarden): [-180, +180].].
 
 Dit attribuut heeft een Measure als data type. De UOM wordt uitgedrukt via de volgende OGC URN code: urn:ogc:def:uom:OGC::deg
 -- Source --</documentation>
-						</annotation>
-					</element>
-					<element name="dieptelegging" type="gml:ReferenceType" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+            </annotation>
+          </element>
+          <element minOccurs="0" name="dieptelegging" type="gml:ReferenceType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Diepte waarop het object is gelegd.
 -- Description --
 Wordt alleen opgenomen indien er sprake is van een legging die afwijkt van de gangbare (standaard) dieptelegging.
 -- Source --</documentation>
-							<appinfo>
-								<targetElement xmlns="http://www.opengis.net/gml/3.2">sw:Diepte</targetElement>
-							</appinfo>
-						</annotation>
-					</element>
-					<element name="extraGeometrie" type="gml:ReferenceType" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+              <appinfo>
+                <targetElement xmlns="http://www.opengis.net/gml/3.2">sw:Diepte</targetElement>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="extraGeometrie" type="gml:ReferenceType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Extra geometrie naast de verplichte arc/node.
 -- Description --
 -- Source --</documentation>
-							<appinfo>
-								<targetElement xmlns="http://www.opengis.net/gml/3.2">sw:ExtraGeometrie</targetElement>
-							</appinfo>
-						</annotation>
-					</element>
-					<element name="hoogte" type="gml:LengthType" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+              <appinfo>
+                <targetElement xmlns="http://www.opengis.net/gml/3.2">sw:ExtraGeometrie</targetElement>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="hoogte" type="gml:LengthType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 De hoogte of lengte van het object.
 -- Description --
 De hoogte betreft de lengte van het hele leidingelement in verticale richting ongeacht of er een deel onder of boven het maaiveld bevindt. Het datatype is ‘Length’ waarbij de meeteenheid apart wordt gespecificeerd. Voor WION wordt er altijd meters gebruikt met maximaal 2 decimalen. De UOM wordt uitgedrukt via 1 van de volgende OGC URN codes: • urn:ogc:def:uom:OGC::m •	urn:ogc:def:uom:OGC::cm •	urn:ogc:def:uom:OGC::mm
 -- Source --</documentation>
-						</annotation>
-					</element>
-				</sequence>
-			</extension>
-		</complexContent>
-	</complexType>
-	<complexType name="AppurtenancePropertyType">
-		<sequence minOccurs="0">
-			<element ref="sw:Appurtenance"/>
-		</sequence>
-		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
-	</complexType>
-	<complexType name="BuisSpecifiekPropertyType">
-		<choice minOccurs="0">
-			<element ref="sw:Mantelbuis"/>
-			<element ref="sw:Rioolleiding"/>
-		</choice>
-		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
-	</complexType>
-	<element name="Diepte" type="sw:DiepteType" abstract="true" substitutionGroup="gml:AbstractFeature">
-		<annotation>
-			<documentation>-- Name --
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="AppurtenancePropertyType">
+    <sequence minOccurs="0">
+      <element ref="sw:Appurtenance"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Beheerder" substitutionGroup="gml:AbstractObject" type="sw:BeheerderType">
+    <annotation>
+      <documentation>-- Name --
+-- Definition --
+-- Description --
+-- Source --</documentation>
+    </annotation>
+  </element>
+  <complexType name="BeheerderType">
+    <sequence>
+      <element name="bedrijfsnaam" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+De naam van het bedrijf van de netbeheerder.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="bronhoudercode" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Voorstel
+Code van de netbheerder.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element name="naam" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+De achternaam van de netbeheerder.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="kvkNummer" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+KvK nummer van de netbeheerder.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="bezoekAdres" type="sw:BezoekAdresPropertyType">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Het bezoekadres van de netbeheerder.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="postbusAdres" type="sw:PostbusAdresPropertyType">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Het postbusadres van de netbeheerder.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="telefoon" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Het vaste telefoonnummer van de netbeheerder.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="mobiel" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Het mobiele telefoonnummer van de netbeheerder.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="fax" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Het faxnummer van de netbeheerder.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="email" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Het e-mail adres van de netbeheerde.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="website" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Website van de netbheerder.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="BeheerderPropertyType">
+    <sequence>
+      <element ref="sw:Beheerder"/>
+    </sequence>
+  </complexType>
+  <element name="BezoekAdres" substitutionGroup="gml:AbstractObject" type="sw:BezoekAdresType">
+    <annotation>
+      <documentation>-- Name --
+-- Definition --
+De aanduiding van een locatie door een of meer adresgegevens.
+Bij Nederlandse adressen kunnen de attributen uit BAG worden gebruikt.
+-- Description --
+-- Source --</documentation>
+    </annotation>
+  </element>
+  <complexType name="BezoekAdresType">
+    <sequence>
+      <element name="openbareRuimteNaam" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+De naam die aan een openbare ruimte (straat, plein, e.d.) is toegekend door de gemeente.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element name="huisnummer" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Een aan het adres toegekend nummer.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="huisletter" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+De huisletter van het adres in de vorm van een alfanumeriek teken.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="huisnummertoevoeging" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter van het adres.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element name="postcode" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+De vastgestelde code behorend bij een bepaalde combinatie van een straatnaam en een huisnummer.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element name="woonplaatsNaam" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+De plaatsnaam van het adres.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="landcode" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Landcode van het adres (zie codelijst).
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="identificatieBAG" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Een unieke aanduiding van een adres (de nummeraanduiding uit BAG).
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="BezoekAdresPropertyType">
+    <sequence>
+      <element ref="sw:BezoekAdres"/>
+    </sequence>
+  </complexType>
+  <complexType name="BuisSpecifiekPropertyType">
+    <choice minOccurs="0">
+      <element ref="sw:Mantelbuis"/>
+      <element ref="sw:Overig"/>
+      <element ref="sw:Rioolleiding"/>
+    </choice>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element abstract="true" name="Diepte" substitutionGroup="gml:AbstractFeature" type="sw:DiepteType">
+    <annotation>
+      <documentation>-- Name --
 -- Definition --
 Abstract data object dat de gemeenschappelijke attributen en associaties bevat voor de diepte objecten.
 -- Description --
 -- Source --</documentation>
-		</annotation>
-	</element>
-	<complexType name="DiepteType" abstract="true">
-		<complexContent>
-			<extension base="gml:AbstractFeatureType">
-				<sequence>
-					<element name="identificatie" type="sw:NEN3610IDPropertyType">
-						<annotation>
-							<documentation>identificatie: -- Name --
-identificatie
--- Definition --
-Unieke identificatie van het object binnen het domein van NEN 3610.
--- Source --
-NEN 3610:2011</documentation>
-						</annotation>
-					</element>
-					<element name="beginLifespanVersion" type="dateTime">
-						<annotation>
-							<documentation>-- Name --
--- Definition --
-De begindatum waarop een data object in de registratie werd aangemaakt, het begin van de levenscyclus van een data object.
--- Description --
-Dit attribuut is afkomstig van INSPIRE maar wordt ook gebruikt in de IMKL-specieke objecten. Voor niet INSPIRE plichtige datasets kan hier een dummy waarde worden ingevuld.
-Dit attribuut heeft DateTime als data type.
--- Source --</documentation>
-						</annotation>
-					</element>
-					<element name="endLifespanVersion" type="dateTime" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
--- Definition --
-De datum die het einde van een levenscyclus van een data object aangeeft. 
--- Description --
-Het moment vanaf wanneer het geen onderdeel meer is van de actuele registratie. Dit attribuut is afkomstig van INSPIRE maar wordt ook gebruikt in de IMKL-specieke objecten.
-Dit attribuut heeft DateTime als data type.
--- Source --</documentation>
-						</annotation>
-					</element>
-					<element name="diepteNauwkeurigheid" type="gml:ReferenceType">
-						<annotation>
-							<documentation>-- Name --
+    </annotation>
+  </element>
+  <complexType abstract="true" name="DiepteType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="diepteNauwkeurigheid" type="gml:ReferenceType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 De nauwkeurigheid van de dekking van een KabelOfLeiding of KabelEnLeidingContainer object of diepte van een Leidingelement of ContainerLeidingelement object.
 -- Description --
 Dit attribuut gebruikt een codelijst – zie NauwkeurigheidDiepteValue.
 -- Source --</documentation>
-							<appinfo>
-								<targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">NauwkeurigheidDiepteValue</targetCodeList>
-							</appinfo>
-						</annotation>
-					</element>
-					<element name="dieptePeil" type="gml:MeasureType">
-						<annotation>
-							<documentation>-- Name --
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">NauwkeurigheidDiepteValue</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="dieptePeil" type="gml:MeasureType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Geeft de afstand weer vanaf de referentie – NAP of maaiveld – tot bovenkant van een KabelOfLeiding, KabelEnLeidingcontainer, Leidingelement of ContainerLeidingelement. Dit attribuut heeft een Measure als data type. De UOM wordt uitgedrukt via 1 van de volgende OGC URN codes: • urn:ogc:def:uom:OGC::m •	urn:ogc:def:uom:OGC::cm •	urn:ogc:def:uom:OGC::mm.
 Voor WION is de eenheid altijd meter en een getal met ten hoogste 2 decimalen.
 -- Description --
 -- Source --</documentation>
-						</annotation>
-					</element>
-					<element name="datumOpmetingDieptePeil" type="dateTime" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+            </annotation>
+          </element>
+          <element minOccurs="0" name="datumOpmetingDieptePeil" type="dateTime">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 De datum waarop het dieptepeil werd opgemeten.
 -- Description --
 -- Source --</documentation>
-						</annotation>
-					</element>
-					<element name="diepteAangrijpingspunt" type="gml:ReferenceType">
-						<annotation>
-							<documentation>-- Name --
+            </annotation>
+          </element>
+          <element name="diepteAangrijpingspunt" type="gml:ReferenceType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Benoeming van welk aangrijpingspunt van het object de diepte is bepaald.
 -- Description --
 Bijvoorbeeld bovenkant of binnen onderkant buis.
 -- Source --</documentation>
-							<appinfo>
-								<targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">DiepteAangrijpingspuntValue</targetCodeList>
-							</appinfo>
-						</annotation>
-					</element>
-					<element name="rotatiehoekSymbool" type="gml:MeasureType" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">DiepteAangrijpingspuntValue</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="rotatiehoekSymbool" type="gml:MeasureType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Hoek waaronder een puntsymbool wordt weergegeven.
 -- Description --
@@ -349,89 +667,89 @@ Bereik (minimale/maximale waarden): [-180, +180].].
 
 Dit attribuut heeft een Measure als data type. De UOM wordt uitgedrukt via de volgende OGC URN code: urn:ogc:def:uom:OGC::deg
 -- Source --</documentation>
-						</annotation>
-					</element>
-					<element name="ligging" type="gml:PointPropertyType" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+            </annotation>
+          </element>
+          <element minOccurs="0" name="ligging" type="gml:PointPropertyType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Locatie van het dieptegegeven.
 -- Description --
 Locatie waar de diepte-informatie van toepassing is. Eén leiding kan meerdere dieptegegevens langs het traject van de leiding hebben. 
 -- Source --</documentation>
-						</annotation>
-					</element>
-					<element name="inNetwork" type="gml:ReferenceType">
-						<annotation>
-							<documentation>-- Name --
+            </annotation>
+          </element>
+          <element name="inNetwork" type="gml:ReferenceType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Verwijzing naar het utiliteitsnet.
 -- Description --
 -- Source --</documentation>
-							<appinfo>
-								<targetElement xmlns="http://www.opengis.net/gml/3.2">sw:Utiliteitsnet</targetElement>
-							</appinfo>
-						</annotation>
-					</element>
-				</sequence>
-			</extension>
-		</complexContent>
-	</complexType>
-	<complexType name="DieptePropertyType">
-		<sequence minOccurs="0">
-			<element ref="sw:Diepte"/>
-		</sequence>
-		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
-	</complexType>
-	<element name="DiepteNAP" type="sw:DiepteNAPType" substitutionGroup="sw:Diepte">
-		<annotation>
-			<documentation>-- Name --
+              <appinfo>
+                <targetElement xmlns="http://www.opengis.net/gml/3.2">sw:Utiliteitsnet</targetElement>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DieptePropertyType">
+    <sequence minOccurs="0">
+      <element ref="sw:Diepte"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="DiepteNAP" substitutionGroup="sw:Diepte" type="sw:DiepteNAPType">
+    <annotation>
+      <documentation>-- Name --
 -- Definition --
 Object dat dient om de afstand weer te geven van het NAP-nulpunt tot de bovenkant van kabel of leiding, leidingcontainer, leidingelement of containerleidingelement.
 -- Description --
 Voor een buis kan additioneel de binnenonderkant buis als meetpunt worden genomen.
 -- Source --</documentation>
-		</annotation>
-	</element>
-	<complexType name="DiepteNAPType">
-		<complexContent>
-			<extension base="sw:DiepteType">
-				<sequence>
-					<element name="maaiveldPeil" type="gml:MeasureType" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+    </annotation>
+  </element>
+  <complexType name="DiepteNAPType">
+    <complexContent>
+      <extension base="sw:DiepteType">
+        <sequence>
+          <element minOccurs="0" name="maaiveldPeil" type="gml:MeasureType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Hoogte van het maaiveld t.o.v. NAP.
 -- Description --
 Kan gebruikt worden om de diepte van een kabel, leiding, element of container t.o.v. het maaiveld te berekenen. Dit attribuut heeft een Measure als data type. De UOM wordt uitgedrukt via 1 van de volgende OGC URN codes: urn:ogc:def:uom:OGC::m urn:ogc:def:uom:OGC::cm urn:ogc:def:uom:OGC::mm.
 Voor WION is de eenheid altijd meter en een getal met ten hoogste 2 decimalen.
 -- Source --</documentation>
-						</annotation>
-					</element>
-					<element name="datumOpmetingMaaiveldPeil" type="dateTime" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+            </annotation>
+          </element>
+          <element minOccurs="0" name="datumOpmetingMaaiveldPeil" type="dateTime">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 De datum waarop het maaiveldpeil werd opgemeten.
 -- Description --
 -- Source --</documentation>
-						</annotation>
-					</element>
-				</sequence>
-			</extension>
-		</complexContent>
-	</complexType>
-	<complexType name="DiepteNAPPropertyType">
-		<sequence minOccurs="0">
-			<element ref="sw:DiepteNAP"/>
-		</sequence>
-		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
-	</complexType>
-	<element name="Duct" type="sw:DuctType" substitutionGroup="us-net-common:Duct">
-		<annotation>
-			<documentation>-- Name --
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DiepteNAPPropertyType">
+    <sequence minOccurs="0">
+      <element ref="sw:DiepteNAP"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Duct" substitutionGroup="us-net-common:Duct" type="sw:DuctType">
+    <annotation>
+      <documentation>-- Name --
 -- Definition --
 Een behuizing die ertoe dient om door middel van een omhullende constructie kabels en leidingen te beschermen en geleiden. 
 -- Description --
@@ -439,89 +757,89 @@ Een duct is een constructie anders dan een buis. Een kabelbed of geul valt onder
 Optioneel kan er als extrageometrie een vlak worden toegevoegd maar alleen als er grote diameters zijn. De netbeheerder bepaalt zelf wanneer dat functioneel is.
 -- Source --
 Inspire</documentation>
-		</annotation>
-	</element>
-	<complexType name="DuctType">
-		<complexContent>
-			<extension base="us-net-common:DuctType">
-				<sequence>
-					<element name="bovengrondsZichtbaar" type="boolean" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+    </annotation>
+  </element>
+  <complexType name="DuctType">
+    <complexContent>
+      <extension base="us-net-common:DuctType">
+        <sequence>
+          <element minOccurs="0" name="bovengrondsZichtbaar" type="boolean">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Aangegeven wordt of het leidingelement bovengronds vanaf het maaiveld zichtbaar is.
 -- Description --
 -- Source --</documentation>
-						</annotation>
-					</element>
-					<element name="geoNauwkeurigheidXY" type="gml:ReferenceType" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+            </annotation>
+          </element>
+          <element minOccurs="0" name="geoNauwkeurigheidXY" type="gml:ReferenceType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Indicatie van de nauwkeurigheid in horizontaal vlak (x,y) waarmee de geometrie van de ligging van de leiding is aangegeven.
 -- Description --
 De WION nauwkeurigheid is minimaal +/- 1 meter.
 -- Source --</documentation>
-							<appinfo>
-								<targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">NauwkeurigheidXYvalue</targetCodeList>
-							</appinfo>
-						</annotation>
-					</element>
-					<element name="toelichting" type="string" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">NauwkeurigheidXYvalue</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="toelichting" type="string">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Extra informatie in de vorm van een toelichting.</documentation>
-						</annotation>
-					</element>
-					<element name="aantalKabelsLeidingen" type="integer" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+            </annotation>
+          </element>
+          <element minOccurs="0" name="aantalKabelsLeidingen" type="integer">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Aantal kabels leidingen of buizen dat zich in het containerelement bevindt. 
 -- Description --
 Wordt opgenomen indien het aantal meer dan één is.</documentation>
-						</annotation>
-					</element>
-					<element name="dieptelegging" type="gml:ReferenceType" minOccurs="0" maxOccurs="unbounded">
-						<annotation>
-							<documentation>-- Name --
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="dieptelegging" type="gml:ReferenceType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Diepte waarop het object is gelegd.
 -- Description --
 Wordt alleen opgenomen indien er sprake is van een legging die afwijkt van de gangbare (standaard) dieptelegging.
 -- Source --</documentation>
-							<appinfo>
-								<targetElement xmlns="http://www.opengis.net/gml/3.2">sw:Diepte</targetElement>
-							</appinfo>
-						</annotation>
-					</element>
-					<element name="extraGeometrie" type="gml:ReferenceType" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+              <appinfo>
+                <targetElement xmlns="http://www.opengis.net/gml/3.2">sw:Diepte</targetElement>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="extraGeometrie" type="gml:ReferenceType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Extra geometrie naast de verplichte arc/node.
 -- Description --
 -- Source --</documentation>
-							<appinfo>
-								<targetElement xmlns="http://www.opengis.net/gml/3.2">sw:ExtraGeometrie</targetElement>
-							</appinfo>
-						</annotation>
-					</element>
-				</sequence>
-			</extension>
-		</complexContent>
-	</complexType>
-	<complexType name="DuctPropertyType">
-		<sequence minOccurs="0">
-			<element ref="sw:Duct"/>
-		</sequence>
-		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
-	</complexType>
-	<element name="ExtraGeometrie" type="sw:ExtraGeometrieType" substitutionGroup="gml:AbstractFeature">
-		<annotation>
-			<documentation>-- Name --
+              <appinfo>
+                <targetElement xmlns="http://www.opengis.net/gml/3.2">sw:ExtraGeometrie</targetElement>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DuctPropertyType">
+    <sequence minOccurs="0">
+      <element ref="sw:Duct"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ExtraGeometrie" substitutionGroup="gml:AbstractFeature" type="sw:ExtraGeometrieType">
+    <annotation>
+      <documentation>-- Name --
 -- Definition --
 Verzamelobject voor extra geometrie van netwerkelementen. 
 -- Description --
@@ -530,215 +848,327 @@ vlakgeometrie2D biedt de mogelijkheid om een vlakrepresentatie van een netwerkel
 Het is toegestaan om meerdere geometrieën op te nemen in dit object, ze sluiten elkaar niet uit.
 -- Source --
 IMKL</documentation>
-		</annotation>
-	</element>
-	<complexType name="ExtraGeometrieType">
-		<complexContent>
-			<extension base="gml:AbstractFeatureType">
-				<sequence>
-					<element name="identificatie" type="sw:NEN3610IDPropertyType">
-						<annotation>
-							<documentation>identificatie: -- Name --
-identificatie
--- Definition --
-Unieke identificatie van het object binnen het domein van NEN 3610.
--- Source --
-NEN 3610:2011</documentation>
-						</annotation>
-					</element>
-					<element name="beginLifespanVersion" type="dateTime">
-						<annotation>
-							<documentation>-- Name --
--- Definition --
-De begindatum waarop een data object in de registratie werd aangemaakt, het begin van de levenscyclus van een data object.
--- Description --
-Dit attribuut is afkomstig van INSPIRE maar wordt ook gebruikt in de IMKL-specieke objecten. Voor niet INSPIRE plichtige datasets kan hier een dummy waarde worden ingevuld.
-Dit attribuut heeft DateTime als data type.
--- Source --</documentation>
-						</annotation>
-					</element>
-					<element name="endLifespanVersion" type="dateTime" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
--- Definition --
-De datum die het einde van een levenscyclus van een data object aangeeft. 
--- Description --
-Het moment vanaf wanneer het geen onderdeel meer is van de actuele registratie. Dit attribuut is afkomstig van INSPIRE maar wordt ook gebruikt in de IMKL-specieke objecten.
-Dit attribuut heeft DateTime als data type.
--- Source --</documentation>
-						</annotation>
-					</element>
-					<element name="vlakgeometrie2D" type="gml:SurfacePropertyType" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+    </annotation>
+  </element>
+  <complexType name="ExtraGeometrieType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element minOccurs="0" name="vlakgeometrie2D" type="gml:SurfacePropertyType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Tweedimensionale vlakrepresentatie van het netwerkelement.
 -- Description --
 Wordt gebruikt indien een netwerkelement ook additioneel als gebied wordt gerepresenteerd.
 -- Source --</documentation>
-						</annotation>
-					</element>
-					<element name="puntgeometrie2.5D" type="gml:PointPropertyType" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+            </annotation>
+          </element>
+          <element minOccurs="0" name="puntgeometrie2.5D" type="gml:PointPropertyType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 2.5D representatie van een leidingelement, dus inclusief z waarde.
 -- Description --
 -- Source --</documentation>
-						</annotation>
-					</element>
-					<element name="lijngeometrie2.5D" type="gml:CurvePropertyType" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+            </annotation>
+          </element>
+          <element minOccurs="0" name="lijngeometrie2.5D" type="gml:CurvePropertyType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 2.5D representatie van een lijnvormig netwerkelement.
 -- Description --
 Ten opzichte van de 2D representatie wordt de z coordinaat toegevoegd, maar ook waar nodig extra coordinatenparen om de lijn correct in 3D te representeren.
 -- Source --</documentation>
-						</annotation>
-					</element>
-					<element name="vlakgeometrie2.5D" type="gml:SurfacePropertyType" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+            </annotation>
+          </element>
+          <element minOccurs="0" name="vlakgeometrie2.5D" type="gml:SurfacePropertyType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 2.5D vlakrepresentatie van het netwerkelement.
 -- Description --
 -- Source --</documentation>
-						</annotation>
-					</element>
-					<element name="geometrie3D" type="gml:SolidPropertyType" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+            </annotation>
+          </element>
+          <element minOccurs="0" name="geometrie3D" type="gml:SolidPropertyType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Representatie van het netwerkelement als 3D volume.
 -- Description --
 -- Source --</documentation>
-						</annotation>
-					</element>
-					<element name="inNetwork" type="gml:ReferenceType">
-						<annotation>
-							<documentation>-- Name --
+            </annotation>
+          </element>
+          <element name="inNetwork" type="gml:ReferenceType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Verwijzing naar het utiliteitsnet.
 -- Description --
 -- Source --</documentation>
-							<appinfo>
-								<targetElement xmlns="http://www.opengis.net/gml/3.2">sw:Utiliteitsnet</targetElement>
-							</appinfo>
-						</annotation>
-					</element>
-				</sequence>
-			</extension>
-		</complexContent>
-	</complexType>
-	<complexType name="ExtraGeometriePropertyType">
-		<sequence minOccurs="0">
-			<element ref="sw:ExtraGeometrie"/>
-		</sequence>
-		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
-	</complexType>
-	<complexType name="IMKLBasisPropertyType">
-		<choice minOccurs="0">
-			<element ref="sw:Diepte"/>
-			<element ref="sw:ExtraGeometrie"/>
-			<element ref="sw:Utiliteitsnet"/>
-		</choice>
-		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
-	</complexType>
-	<complexType name="KabelEnLeidingContainerPropertyType">
-		<choice minOccurs="0">
-			<element ref="sw:Duct"/>
-			<element ref="sw:Mantelbuis"/>
-		</choice>
-		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
-	</complexType>
-	<complexType name="KabelOfLeidingPropertyType">
-		<choice minOccurs="0">
-			<element ref="sw:Rioolleiding"/>
-		</choice>
-		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
-	</complexType>
-	<element name="Kast" type="sw:KastType" substitutionGroup="us-net-common:Cabinet">
-		<annotation>
-			<documentation>Cabinet: -- Name --
+              <appinfo>
+                <targetElement xmlns="http://www.opengis.net/gml/3.2">sw:Utiliteitsnet</targetElement>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ExtraGeometriePropertyType">
+    <sequence minOccurs="0">
+      <element ref="sw:ExtraGeometrie"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="GebiedsInformatieAanvraag" substitutionGroup="gml:AbstractObject" type="sw:GebiedsInformatieAanvraagType">
+    <annotation>
+      <documentation>-- Name --
+-- Definition --
+Aanvraag van gebiedsinformatie.
+-- Description --
+Een gebiedsinformatie-aanvraag is een aanvraag om informatie over een bepaald gebied in het kader van een graafmelding, oriëntatieverzoek, calamiteitenmelding of de agrariërsregeling te ontvangen.
+-- Source --</documentation>
+    </annotation>
+  </element>
+  <complexType name="GebiedsInformatieAanvraagType">
+    <sequence>
+      <element name="ordernummer" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Het nummer van de verkooporder van de aanvraag zoals deze bij KLIC bekend is.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element name="positienummer" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Het regelnummer (positienummer) van de verkooporder waarbij de aanvraag van het Klic-product is vastgelegd.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element name="klicMeldnummer" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Een unieke identificatie die al sinds jaar en dag aan een gebiedsinformatie-aanvraag (Klic-melding) wordt toegekend en nog steeds veel in de graafsector wordt gebruikt.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element name="aanvrager" type="sw:AanvragerPropertyType">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+De gegevens van de aanvrager van gebiedsinformatie.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="referentie" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+De eigen referentie die de aanvrager aan de gebiedsinformatie-aanvraag heeft gegeven.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="opdrachtgever" type="sw:OpdrachtgeverPropertyType">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Gegevens van de opdrachtgever voor de aanvraag van gebiedsinformatie.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element name="aanvraagSoort" type="gml:ReferenceType">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Soort gebiedsinformatie-aanvraag.
+-- Description --
+-- Source --</documentation>
+          <appinfo>
+            <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">AanvraagSoortValue</targetCodeList>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="aanvraagDatum" type="dateTime">
+        <annotation>
+          <documentation>-- Name --
+-- Definition -
+De datumtijd waarop de gebiedsinformatie-aanvraag is aangevraagd.-
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element maxOccurs="unbounded" minOccurs="0" name="soortWerkzaamheden" type="gml:ReferenceType">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Soort graafwerkzaamheden (zie codelijst).
+-- Description --
+-- Source --</documentation>
+          <appinfo>
+            <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">SoortWerkzaamheden</targetCodeList>
+          </appinfo>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="omschrijvingWerkzaamheden" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Een toelichtende omschrijving van de werkzaamheden.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element name="locatieWerkzaamheden" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+De locatie van de werkzaamheden waar de gebiedsinformatie-aanvraag voor is ingediend.
+Dit kan bijvoorbeeld het dichtstbijzijnd adres zijn. 
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="startDatum" type="dateTime">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+De geplande startdatum van de werkzaamheden waarvoor de gebiedsinformatie-aanvraag is ingediend.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="eindDatum" type="dateTime">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+De geplande einddatum van de werkzaamheden waarvoor de gebiedsinformatie-aanvraag is ingediend.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element maxOccurs="unbounded" minOccurs="0" name="huisaansluitingAdressen" type="sw:AdresPropertyType">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Lijst van adressen waarvoor huisaansluitschetsen (extra detailinformatie, type huisaansluiting) gevraagd wordt.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="GebiedsInformatieAanvraagPropertyType">
+    <sequence>
+      <element ref="sw:GebiedsInformatieAanvraag"/>
+    </sequence>
+  </complexType>
+  <complexType name="KabelEnLeidingContainerPropertyType">
+    <choice minOccurs="0">
+      <element ref="sw:Duct"/>
+      <element ref="sw:Mantelbuis"/>
+    </choice>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <complexType name="KabelOfLeidingPropertyType">
+    <choice minOccurs="0">
+      <element ref="sw:Overig"/>
+      <element ref="sw:Rioolleiding"/>
+    </choice>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Kast" substitutionGroup="us-net-common:Cabinet" type="sw:KastType">
+    <annotation>
+      <documentation>Cabinet: -- Name --
 Kast
 -- Definition --
 Eenvoudig kast-object dat nutsvoorzieningenobjecten kan bevatten die tot een of meer nutsvoorzieningennetwerken behoren.
 -- Description --
 -- Source --
 Inspire</documentation>
-		</annotation>
-	</element>
-	<complexType name="KastType">
-		<complexContent>
-			<extension base="us-net-common:CabinetType">
-				<sequence/>
-			</extension>
-		</complexContent>
-	</complexType>
-	<complexType name="KastPropertyType">
-		<sequence minOccurs="0">
-			<element ref="sw:Kast"/>
-		</sequence>
-		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
-	</complexType>
-	<element name="Labelpositie" type="sw:LabelpositieType" substitutionGroup="gml:AbstractObject">
-		<annotation>
-			<documentation>-- Name --
+    </annotation>
+  </element>
+  <complexType name="KastType">
+    <complexContent>
+      <extension base="us-net-common:CabinetType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="KastPropertyType">
+    <sequence minOccurs="0">
+      <element ref="sw:Kast"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Labelpositie" substitutionGroup="gml:AbstractObject" type="sw:LabelpositieType">
+    <annotation>
+      <documentation>-- Name --
 -- Definition --
 Punt op de horiziontale - en verticale as in labeltekst dat geldt als referentie voor plaatsingspunt.
 -- Description --
 -- Source --</documentation>
-		</annotation>
-	</element>
-	<complexType name="LabelpositieType">
-		<sequence>
-			<element name="aangrijpingHorizontaal" type="gml:ReferenceType">
-				<annotation>
-					<documentation>-- Name --
+    </annotation>
+  </element>
+  <complexType name="LabelpositieType">
+    <sequence>
+      <element name="aangrijpingHorizontaal" type="gml:ReferenceType">
+        <annotation>
+          <documentation>-- Name --
 -- Definition --
 Punt op de horiziontale as in labeltekst dat geldt als referentie voor plaatsingspunt.
 -- Description --
 -- Source --</documentation>
-					<appinfo>
-						<targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
-					</appinfo>
-				</annotation>
-			</element>
-			<element name="aangrijpingVerticaal" type="gml:ReferenceType">
-				<annotation>
-					<documentation>-- Name --
+          <appinfo>
+            <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="aangrijpingVerticaal" type="gml:ReferenceType">
+        <annotation>
+          <documentation>-- Name --
 -- Definition --
 Punt op de verticale as in labeltekst dat geldt als referentie voor plaatsingspunt.
 -- Description --
 -- Source --</documentation>
-					<appinfo>
-						<targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
-					</appinfo>
-				</annotation>
-			</element>
-		</sequence>
-	</complexType>
-	<complexType name="LabelpositiePropertyType">
-		<sequence>
-			<element ref="sw:Labelpositie"/>
-		</sequence>
-	</complexType>
-	<complexType name="LeidingelementPropertyType">
-		<choice minOccurs="0">
-			<element ref="sw:Appurtenance"/>
-		</choice>
-		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
-	</complexType>
-	<element name="Mangat" type="sw:MangatType" substitutionGroup="us-net-common:Manhole">
-		<annotation>
-			<documentation>Manhole: -- Name --
+          <appinfo>
+            <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LabelpositieValue</targetCodeList>
+          </appinfo>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="LabelpositiePropertyType">
+    <sequence>
+      <element ref="sw:Labelpositie"/>
+    </sequence>
+  </complexType>
+  <complexType name="LeidingelementPropertyType">
+    <choice minOccurs="0">
+      <element ref="sw:Appurtenance"/>
+    </choice>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Mangat" substitutionGroup="us-net-common:Manhole" type="sw:MangatType">
+    <annotation>
+      <documentation>Manhole: -- Name --
 Mangat
 -- Definition --
 Eenvoudig omhullingsobject dat een of meer nutsvoorzieningennetobjecten kan bevatten.
@@ -746,25 +1176,25 @@ Eenvoudig omhullingsobject dat een of meer nutsvoorzieningennetobjecten kan beva
 Graag voorbeelden......
 -- Source --
 Inspire</documentation>
-		</annotation>
-	</element>
-	<complexType name="MangatType">
-		<complexContent>
-			<extension base="us-net-common:ManholeType">
-				<sequence/>
-			</extension>
-		</complexContent>
-	</complexType>
-	<complexType name="MangatPropertyType">
-		<sequence minOccurs="0">
-			<element ref="sw:Mangat"/>
-		</sequence>
-		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
-	</complexType>
-	<element name="Mantelbuis" type="sw:MantelbuisType" substitutionGroup="us-net-common:Pipe">
-		<annotation>
-			<documentation>-- Name --
+    </annotation>
+  </element>
+  <complexType name="MangatType">
+    <complexContent>
+      <extension base="us-net-common:ManholeType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="MangatPropertyType">
+    <sequence minOccurs="0">
+      <element ref="sw:Mangat"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Mantelbuis" substitutionGroup="us-net-common:Pipe" type="sw:MantelbuisType">
+    <annotation>
+      <documentation>-- Name --
 -- Definition --
 Beschermingsbuis.
 -- Description --
@@ -773,101 +1203,101 @@ Mantelbuizen kunnen bij meerdere thema’s geregistreerd staan. Ze moeten bij mi
 Indien een mantelbuis leeg is kan dit bij de toelichting vermeld worden.
 Optioneel kan er als extrageometrie een vlak worden toegevoegd maar alleen als er grote diameters zijn. De netbeheerder bepaalt zelf wanneer dat functioneel is.
 -- Source --</documentation>
-		</annotation>
-	</element>
-	<complexType name="MantelbuisType">
-		<complexContent>
-			<extension base="us-net-common:PipeType">
-				<sequence>
-					<element name="bovengrondsZichtbaar" type="boolean" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+    </annotation>
+  </element>
+  <complexType name="MantelbuisType">
+    <complexContent>
+      <extension base="us-net-common:PipeType">
+        <sequence>
+          <element minOccurs="0" name="bovengrondsZichtbaar" type="boolean">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Aangegeven wordt of het leidingelement bovengronds vanaf het maaiveld zichtbaar is.
 -- Description --
 -- Source --</documentation>
-						</annotation>
-					</element>
-					<element name="geoNauwkeurigheidXY" type="gml:ReferenceType" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+            </annotation>
+          </element>
+          <element minOccurs="0" name="geoNauwkeurigheidXY" type="gml:ReferenceType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Indicatie van de nauwkeurigheid in horizontaal vlak (x,y) waarmee de geometrie van de ligging van de leiding is aangegeven.
 -- Description --
 De WION nauwkeurigheid is minimaal +/- 1 meter.
 -- Source --</documentation>
-							<appinfo>
-								<targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">NauwkeurigheidXYvalue</targetCodeList>
-							</appinfo>
-						</annotation>
-					</element>
-					<element name="toelichting" type="string" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">NauwkeurigheidXYvalue</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="toelichting" type="string">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Extra informatie in de vorm van een toelichting.</documentation>
-						</annotation>
-					</element>
-					<element name="aantalKabelsLeidingen" type="integer" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+            </annotation>
+          </element>
+          <element minOccurs="0" name="aantalKabelsLeidingen" type="integer">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Aantal kabels leidingen of buizen dat zich in het containerelement bevindt. 
 -- Description --
 Wordt opgenomen indien het aantal meer dan één is.</documentation>
-						</annotation>
-					</element>
-					<element name="dieptelegging" type="gml:ReferenceType" minOccurs="0" maxOccurs="unbounded">
-						<annotation>
-							<documentation>-- Name --
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="dieptelegging" type="gml:ReferenceType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Diepte waarop het object is gelegd.
 -- Description --
 Wordt alleen opgenomen indien er sprake is van een legging die afwijkt van de gangbare (standaard) dieptelegging.
 -- Source --</documentation>
-							<appinfo>
-								<targetElement xmlns="http://www.opengis.net/gml/3.2">sw:Diepte</targetElement>
-							</appinfo>
-						</annotation>
-					</element>
-					<element name="extraGeometrie" type="gml:ReferenceType" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+              <appinfo>
+                <targetElement xmlns="http://www.opengis.net/gml/3.2">sw:Diepte</targetElement>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="extraGeometrie" type="gml:ReferenceType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Extra geometrie naast de verplichte arc/node.
 -- Description --
 -- Source --</documentation>
-							<appinfo>
-								<targetElement xmlns="http://www.opengis.net/gml/3.2">sw:ExtraGeometrie</targetElement>
-							</appinfo>
-						</annotation>
-					</element>
-					<element name="buismateriaalType" type="gml:ReferenceType" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+              <appinfo>
+                <targetElement xmlns="http://www.opengis.net/gml/3.2">sw:ExtraGeometrie</targetElement>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="buismateriaalType" type="gml:ReferenceType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Materiaal waaruit de buis bestaat.
 -- Description --
 -- Source --</documentation>
-							<appinfo>
-								<targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">PipeMaterialTypeIMKLValue</targetCodeList>
-							</appinfo>
-						</annotation>
-					</element>
-				</sequence>
-			</extension>
-		</complexContent>
-	</complexType>
-	<complexType name="MantelbuisPropertyType">
-		<sequence minOccurs="0">
-			<element ref="sw:Mantelbuis"/>
-		</sequence>
-		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
-	</complexType>
-	<element name="NEN3610ID" type="sw:NEN3610IDType" substitutionGroup="gml:AbstractObject">
-		<annotation>
-			<documentation>-- Name --
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">PipeMaterialTypeIMKLValue</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="MantelbuisPropertyType">
+    <sequence minOccurs="0">
+      <element ref="sw:Mantelbuis"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NEN3610ID" substitutionGroup="gml:AbstractObject" type="sw:NEN3610IDType">
+    <annotation>
+      <documentation>-- Name --
 NEN3610 ID
 -- Definition --
 identificatiegegevens voor de universeel unieke identificatie van een object
@@ -875,13 +1305,13 @@ identificatiegegevens voor de universeel unieke identificatie van een object
 De combinatie van ‘namespace’ van een registratie, lokale identificatie en versie informatie maken een object uniek identificeerbaar. Met de informatie van deze klasse kan daardoor met zekerheid worden verwezen naar het geïdentificeerde object.
 -- Source --
 NEN 3610:2011</documentation>
-		</annotation>
-	</element>
-	<complexType name="NEN3610IDType">
-		<sequence>
-			<element name="namespace" type="string">
-				<annotation>
-					<documentation>-- Name --
+    </annotation>
+  </element>
+  <complexType name="NEN3610IDType">
+    <sequence>
+      <element name="namespace" type="string">
+        <annotation>
+          <documentation>-- Name --
 -- Definition --
 unieke verwijzing naar een registratie van objecten
 -- Description --
@@ -889,11 +1319,11 @@ Het attribuut ‘namespace’ is een unieke verwijzing naar de registratie die d
 De volgende karakters mogen in een namespace aanduiding voorkomen: {”A”…”Z”, “a”…”z”,    ”0”…”9”, “_”,    “- “,    “,”,    ”.”}
 -- Source --
 NEN 3610:2011</documentation>
-				</annotation>
-			</element>
-			<element name="lokaalID" type="string">
-				<annotation>
-					<documentation>-- Name --
+        </annotation>
+      </element>
+      <element name="lokaalID" type="string">
+        <annotation>
+          <documentation>-- Name --
 -- Definition --
 unieke identificatiecode binnen een registratie
 -- Description --
@@ -901,351 +1331,537 @@ unieke identificatiecode binnen een registratie
 De volgende karakters mogen in een lokaalID voorkomen: {”A”…”Z”,   “a”…”z”, ”0”…”9”,    “_”,    “-“, “,”,    ”.”}.
 -- Source --
 NEN 3610:2011</documentation>
-				</annotation>
-			</element>
-			<element name="versie" type="string" minOccurs="0">
-				<annotation>
-					<documentation>-- Name --
+        </annotation>
+      </element>
+      <element minOccurs="0" name="versie" type="string">
+        <annotation>
+          <documentation>-- Name --
 -- Definition --
 versie-aanduiding van een object
 -- Description --
 Het attribuut ‘versie’ maakt geen deel uit van de identificatie van het object maar kan worden gebruikt om verschillende versies van hetzelfde object te identificeren.
 -- Source --
 NEN 3610:2011</documentation>
-				</annotation>
-			</element>
-		</sequence>
-	</complexType>
-	<complexType name="NEN3610IDPropertyType">
-		<sequence>
-			<element ref="sw:NEN3610ID"/>
-		</sequence>
-	</complexType>
-	<element name="PuntLijnVlak" type="sw:PuntLijnVlakType" substitutionGroup="gml:AbstractObject">
-		<annotation>
-			<documentation>-- Name --
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="NEN3610IDPropertyType">
+    <sequence>
+      <element ref="sw:NEN3610ID"/>
+    </sequence>
+  </complexType>
+  <element name="Opdrachtgever" substitutionGroup="gml:AbstractObject" type="sw:OpdrachtgeverType">
+    <annotation>
+      <documentation>-- Name --
+-- Definition --
+Degene die opdracht geeft tot het uitvoeren van een werk waarbij graafwerkzaamheden worden verricht.
+-- Description --
+Gegevens van de opdrachtgever voor de aanvraag van gebiedsinformatie.
+-- Source --
+artikel 7 - WION</documentation>
+    </annotation>
+  </element>
+  <complexType name="OpdrachtgeverType">
+    <sequence>
+      <element name="bedrijfsnaam" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+De naam van het bedrijf van de opdrachtgever.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element name="naam" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+De achternaam van de opdrachtgever.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="kvkNummer" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+KvK nummer van de opdrachtgever voor de aanvraag.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="bezoekAdres" type="sw:BezoekAdresPropertyType">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Het bezoekadres van de opdrachtgever.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="postbusAdres" type="sw:PostbusAdresPropertyType">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Het postbusadres van de opdrachtgever.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="telefoon" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Het vaste telefoonnummer van de opdrachtgever.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="mobiel" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Het mobiele telefoonnummer van de opdrachtgever.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="fax" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Het faxnummer van de opdrachtgever.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element name="email" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Het e-mail adres van de opdrachtgever.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="OpdrachtgeverPropertyType">
+    <sequence>
+      <element ref="sw:Opdrachtgever"/>
+    </sequence>
+  </complexType>
+  <element name="Overig" substitutionGroup="us-net-common:UtilityLinkSet" type="sw:OverigType">
+    <annotation>
+      <documentation>-- Name --
+-- Definition --
+Een type kabel of leiding die niet onder de andere benoemde typen valt.
+-- Description --
+Bijvoorbeeld een weesleiding maar ook leidingen voor voedingsmiddelen, landbouwproducten vallen hieronder.
+-- Source --
+IMKL</documentation>
+    </annotation>
+  </element>
+  <complexType name="OverigType">
+    <complexContent>
+      <extension base="us-net-common:UtilityLinkSetType">
+        <sequence>
+          <element minOccurs="0" name="geoNauwkeurigheidXY" type="gml:ReferenceType">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+Indicatie van de nauwkeurigheid in horizontaal vlak (x,y) waarmee de geometrie van de ligging van de leiding is aangegeven.
+-- Description --
+De WION nauwkeurigheid is minimaal +/- 1 meter.
+-- Source --</documentation>
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">NauwkeurigheidXYvalue</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="toelichting" type="string">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+Extra informatie in de vorm van een toelichting.</documentation>
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="dieptelegging" type="gml:ReferenceType">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+Diepte waarop het object is gelegd.
+-- Description --
+Wordt alleen opgenomen indien er sprake is van een legging die afwijkt van de gangbare (standaard) dieptelegging.
+-- Source --</documentation>
+              <appinfo>
+                <targetElement xmlns="http://www.opengis.net/gml/3.2">sw:Diepte</targetElement>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="extraGeometrie" type="gml:ReferenceType">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+Extra geometrie naast de verplichte arc/node.
+-- Description --
+-- Source --</documentation>
+              <appinfo>
+                <targetElement xmlns="http://www.opengis.net/gml/3.2">sw:ExtraGeometrie</targetElement>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="buismateriaalType" type="gml:ReferenceType">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+Materiaal waaruit de buis bestaat.
+-- Description --
+-- Source --</documentation>
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">PipeMaterialTypeIMKLValue</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="pipeDiameter" type="gml:MeasureType">
+            <annotation>
+              <documentation>-- Name --
+pipe diameter
+
+-- Definition --
+Pipe outer diameter.
+
+-- Description --
+For convex shaped objects (e.g. a circle) the diameter is defined to be the largest distance that can be formed between two opposite parallel lines tangent to its boundery.</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="pressure" type="gml:MeasureType">
+            <annotation>
+              <documentation>-- Name --
+pressure
+
+-- Definition --
+The maximum allowable operating pressure at which a product is conveyed through a pipe.
+
+-- Description --
+The unit of measure for pressure is commonly expressed in "bar".</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="producttype" type="string">
+            <annotation>
+              <documentation>-- Name --
+producttype
+-- Definition --</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="OverigPropertyType">
+    <sequence minOccurs="0">
+      <element ref="sw:Overig"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <complexType name="OverigSpecifiekPropertyType">
+    <choice minOccurs="0">
+      <element ref="sw:Overig"/>
+    </choice>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="PostbusAdres" substitutionGroup="gml:AbstractObject" type="sw:PostbusAdresType">
+    <annotation>
+      <documentation>-- Name --
+-- Definition --
+De gegevens van een adres voor een bus of vak in een postkantoor.
+-- Description --
+-- Source --</documentation>
+    </annotation>
+  </element>
+  <complexType name="PostbusAdresType">
+    <sequence>
+      <element name="postbusnummer" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Het postbusnummer van het postbusadres.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element name="postcode" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+De postcode van het postbusadres.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="landcode" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Landcode van het postbusadres (zie codelijst).
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="PostbusAdresPropertyType">
+    <sequence>
+      <element ref="sw:PostbusAdres"/>
+    </sequence>
+  </complexType>
+  <element name="PuntLijnVlak" substitutionGroup="gml:AbstractObject" type="sw:PuntLijnVlakType">
+    <annotation>
+      <documentation>-- Name --
 -- Definition --
 -- Description --
 -- Source --</documentation>
-		</annotation>
-	</element>
-	<complexType name="PuntLijnVlakType">
-		<choice>
-			<element name="punt" type="gml:PointPropertyType">
-				<annotation>
-					<documentation>-- Name --
+    </annotation>
+  </element>
+  <complexType name="PuntLijnVlakType">
+    <choice>
+      <element name="punt" type="gml:PointPropertyType">
+        <annotation>
+          <documentation>-- Name --
 -- Definition --
 -- Description --
 -- Source --</documentation>
-				</annotation>
-			</element>
-			<element name="lijn" type="gml:CurvePropertyType">
-				<annotation>
-					<documentation>-- Name --
+        </annotation>
+      </element>
+      <element name="lijn" type="gml:CurvePropertyType">
+        <annotation>
+          <documentation>-- Name --
 -- Definition --
 -- Description --
 -- Source --</documentation>
-				</annotation>
-			</element>
-			<element name="vlak" type="gml:SurfacePropertyType">
-				<annotation>
-					<documentation>-- Name --
+        </annotation>
+      </element>
+      <element name="vlak" type="gml:SurfacePropertyType">
+        <annotation>
+          <documentation>-- Name --
 -- Definition --
 -- Description --
 -- Source --</documentation>
-				</annotation>
-			</element>
-		</choice>
-	</complexType>
-	<complexType name="PuntLijnVlakPropertyType">
-		<sequence>
-			<element ref="sw:PuntLijnVlak"/>
-		</sequence>
-	</complexType>
-	<element name="Rioolleiding" type="sw:RioolleidingType" substitutionGroup="us-net-sw:SewerPipe">
-		<annotation>
-			<documentation>SewerPipe: -- Name --
+        </annotation>
+      </element>
+    </choice>
+  </complexType>
+  <complexType name="PuntLijnVlakPropertyType">
+    <sequence>
+      <element ref="sw:PuntLijnVlak"/>
+    </sequence>
+  </complexType>
+  <element name="Rioolleiding" substitutionGroup="us-net-sw:SewerPipe" type="sw:RioolleidingType">
+    <annotation>
+      <documentation>SewerPipe: -- Name --
 Rioolleiding
 -- Definition --
 Een rioleringsleiding voor het overbrengen van afvalwater (rioolwater en hemelwater) van de ene locatie naar een andere.
 -- Description --
 -- Source --
 Inspire (aangepast)</documentation>
-		</annotation>
-	</element>
-	<complexType name="RioolleidingType">
-		<complexContent>
-			<extension base="us-net-sw:SewerPipeType">
-				<sequence>
-					<element name="geoNauwkeurigheidXY" type="gml:ReferenceType" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+    </annotation>
+  </element>
+  <complexType name="RioolleidingType">
+    <complexContent>
+      <extension base="us-net-sw:SewerPipeType">
+        <sequence>
+          <element minOccurs="0" name="geoNauwkeurigheidXY" type="gml:ReferenceType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Indicatie van de nauwkeurigheid in horizontaal vlak (x,y) waarmee de geometrie van de ligging van de leiding is aangegeven.
 -- Description --
 De WION nauwkeurigheid is minimaal +/- 1 meter.
 -- Source --</documentation>
-							<appinfo>
-								<targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">NauwkeurigheidXYvalue</targetCodeList>
-							</appinfo>
-						</annotation>
-					</element>
-					<element name="toelichting" type="string" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">NauwkeurigheidXYvalue</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="toelichting" type="string">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Extra informatie in de vorm van een toelichting.</documentation>
-						</annotation>
-					</element>
-					<element name="dieptelegging" type="gml:ReferenceType" minOccurs="0" maxOccurs="unbounded">
-						<annotation>
-							<documentation>-- Name --
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="dieptelegging" type="gml:ReferenceType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Diepte waarop het object is gelegd.
 -- Description --
 Wordt alleen opgenomen indien er sprake is van een legging die afwijkt van de gangbare (standaard) dieptelegging.
 -- Source --</documentation>
-							<appinfo>
-								<targetElement xmlns="http://www.opengis.net/gml/3.2">sw:Diepte</targetElement>
-							</appinfo>
-						</annotation>
-					</element>
-					<element name="extraGeometrie" type="gml:ReferenceType" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+              <appinfo>
+                <targetElement xmlns="http://www.opengis.net/gml/3.2">sw:Diepte</targetElement>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="extraGeometrie" type="gml:ReferenceType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Extra geometrie naast de verplichte arc/node.
 -- Description --
 -- Source --</documentation>
-							<appinfo>
-								<targetElement xmlns="http://www.opengis.net/gml/3.2">sw:ExtraGeometrie</targetElement>
-							</appinfo>
-						</annotation>
-					</element>
-					<element name="typeRioolleiding" type="gml:ReferenceType">
-						<annotation>
-							<documentation>-- Name --
+              <appinfo>
+                <targetElement xmlns="http://www.opengis.net/gml/3.2">sw:ExtraGeometrie</targetElement>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="typeRioolleiding" type="gml:ReferenceType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Typering van soort  rioolleiding.
 -- Description --
 -- Source --</documentation>
-							<appinfo>
-								<targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">RioolleidingTypeValue</targetCodeList>
-							</appinfo>
-						</annotation>
-					</element>
-					<element name="buismateriaalType" type="gml:ReferenceType" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">RioolleidingTypeValue</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="buismateriaalType" type="gml:ReferenceType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Materiaal waaruit de buis bestaat.
 -- Description --
 -- Source --</documentation>
-							<appinfo>
-								<targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">PipeMaterialTypeIMKLValue</targetCodeList>
-							</appinfo>
-						</annotation>
-					</element>
-				</sequence>
-			</extension>
-		</complexContent>
-	</complexType>
-	<complexType name="RioolleidingPropertyType">
-		<sequence minOccurs="0">
-			<element ref="sw:Rioolleiding"/>
-		</sequence>
-		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
-	</complexType>
-	<complexType name="StedelijkWaterSpecifiekPropertyType">
-		<choice minOccurs="0">
-			<element ref="sw:Rioolleiding"/>
-		</choice>
-		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
-	</complexType>
-	<element name="TechnischContactpersoon" type="sw:TechnischContactpersoonType" substitutionGroup="gml:AbstractObject">
-		<annotation>
-			<documentation>-- Name --
--- Definition --
-Persoon die gecontacteerd kan worden voor technisch-inhoudelijke informatie over deze dataset.
--- Description --
--- Source --</documentation>
-		</annotation>
-	</element>
-	<complexType name="TechnischContactpersoonType">
-		<sequence>
-			<element name="naam" type="string">
-				<annotation>
-					<documentation>-- Name --
--- Definition --
--- Description --
--- Source --</documentation>
-				</annotation>
-			</element>
-			<element name="telefoon" type="string">
-				<annotation>
-					<documentation>-- Name --
--- Definition --
--- Description --
--- Source --</documentation>
-				</annotation>
-			</element>
-			<element name="email" type="string">
-				<annotation>
-					<documentation>-- Name --
--- Definition --
--- Description --
--- Source --</documentation>
-				</annotation>
-			</element>
-		</sequence>
-	</complexType>
-	<complexType name="TechnischContactpersoonPropertyType">
-		<sequence>
-			<element ref="sw:TechnischContactpersoon"/>
-		</sequence>
-	</complexType>
-	<element name="TechnischGebouw" type="sw:TechnischGebouwType" substitutionGroup="us-net-common:Cabinet">
-		<annotation>
-			<documentation>-- Name --
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">PipeMaterialTypeIMKLValue</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="RioolleidingPropertyType">
+    <sequence minOccurs="0">
+      <element ref="sw:Rioolleiding"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <complexType name="StedelijkWaterSpecifiekPropertyType">
+    <choice minOccurs="0">
+      <element ref="sw:Rioolleiding"/>
+    </choice>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TechnischGebouw" substitutionGroup="us-net-common:Cabinet" type="sw:TechnischGebouwType">
+    <annotation>
+      <documentation>-- Name --
 -- Definition --
 Heeft iemand een definitie?
 -- Description --
 -- Source --</documentation>
-		</annotation>
-	</element>
-	<complexType name="TechnischGebouwType">
-		<complexContent>
-			<extension base="us-net-common:CabinetType">
-				<sequence/>
-			</extension>
-		</complexContent>
-	</complexType>
-	<complexType name="TechnischGebouwPropertyType">
-		<sequence minOccurs="0">
-			<element ref="sw:TechnischGebouw"/>
-		</sequence>
-		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
-	</complexType>
-	<simpleType name="ThermalProductTypeIMKLValueType">
-		<annotation>
-			<documentation>-- Name --
-Thermal Product Type IMKL
--- Definition --
-IMKL waardelijst voor toepassing INSPIRE Thermal Product Type.
--- Description --
-Kan zowel uitbreiding als beperking op INSPIRE waardelijst betreffen.
--- Source --</documentation>
-		</annotation>
-		<union memberTypes="sw:ThermalProductTypeIMKLValueEnumerationType sw:ThermalProductTypeIMKLValueOtherType"/>
-	</simpleType>
-	<simpleType name="ThermalProductTypeIMKLValueEnumerationType">
-		<annotation>
-			<documentation>-- Name --
-Thermal Product Type IMKL
--- Definition --
-IMKL waardelijst voor toepassing INSPIRE Thermal Product Type.
--- Description --
-Kan zowel uitbreiding als beperking op INSPIRE waardelijst betreffen.
--- Source --</documentation>
-		</annotation>
-		<restriction base="string"/>
-	</simpleType>
-	<simpleType name="ThermalProductTypeIMKLValueOtherType">
-		<restriction base="string">
-			<pattern value="other: \w{2,}"/>
-		</restriction>
-	</simpleType>
-	<element name="Utiliteitsnet" type="sw:UtiliteitsnetType" substitutionGroup="us-net-common:UtilityNetwork">
-		<annotation>
-			<documentation>-- Name --
+    </annotation>
+  </element>
+  <complexType name="TechnischGebouwType">
+    <complexContent>
+      <extension base="us-net-common:CabinetType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TechnischGebouwPropertyType">
+    <sequence minOccurs="0">
+      <element ref="sw:TechnischGebouw"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Utiliteitsnet" substitutionGroup="us-net-common:UtilityNetwork" type="sw:UtiliteitsnetType">
+    <annotation>
+      <documentation>-- Name --
 -- Definition --
 Een verzameling netwerkelementen die tot één type nutsvoorzieningennet behoren.
 -- Description --
 Alle netwerkelementen van een utiliteitsnet vallen onder het thema dat bij het utiliteitsnet hoort en worden daar ook door getypeerd. Dat wil zeggen dat bijvoorbeeld een kathodische bescherming voor een waterleiding valt onder een utiliteitsnet met het thema laagspanning. 
 -- Source --
 Inspire</documentation>
-		</annotation>
-	</element>
-	<complexType name="UtiliteitsnetType">
-		<complexContent>
-			<extension base="us-net-common:UtilityNetworkType">
-				<sequence>
-					<element name="identificatie" type="sw:NEN3610IDPropertyType">
-						<annotation>
-							<documentation>identificatie: -- Name --
-identificatie
--- Definition --
-Unieke identificatie van het object binnen het domein van NEN 3610.
--- Source --
-NEN 3610:2011</documentation>
-						</annotation>
-					</element>
-					<element name="beginLifespanVersion" type="dateTime">
-						<annotation>
-							<documentation>-- Name --
--- Definition --
-De begindatum waarop een data object in de registratie werd aangemaakt, het begin van de levenscyclus van een data object.
--- Description --
-Dit attribuut is afkomstig van INSPIRE maar wordt ook gebruikt in de IMKL-specieke objecten. Voor niet INSPIRE plichtige datasets kan hier een dummy waarde worden ingevuld.
-Dit attribuut heeft DateTime als data type.
--- Source --</documentation>
-						</annotation>
-					</element>
-					<element name="endLifespanVersion" type="dateTime" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
--- Definition --
-De datum die het einde van een levenscyclus van een data object aangeeft. 
--- Description --
-Het moment vanaf wanneer het geen onderdeel meer is van de actuele registratie. Dit attribuut is afkomstig van INSPIRE maar wordt ook gebruikt in de IMKL-specieke objecten.
-Dit attribuut heeft DateTime als data type.
--- Source --</documentation>
-						</annotation>
-					</element>
-					<element name="thema" type="gml:ReferenceType">
-						<annotation>
-							<documentation>-- Name --
+    </annotation>
+  </element>
+  <complexType name="UtiliteitsnetType">
+    <complexContent>
+      <extension base="us-net-common:UtilityNetworkType">
+        <sequence>
+          <element name="thema" type="gml:ReferenceType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Het thema geeft aan welk type leiding het betreft en welke functie de leidingen hebben. Bijvoorbeeld datatransport, gas lage druk, laagspanning, riool etc. Gekozen kan worden uit een lijst van thema’s
 -- Description --
 Opmerking: Signaleringskabels die data vervoeren vallen onder datatransport.
 -- Source --</documentation>
-							<appinfo>
-								<targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Thema</targetCodeList>
-							</appinfo>
-						</annotation>
-					</element>
-					<element name="technischContactpersoon" type="sw:TechnischContactpersoonPropertyType">
-						<annotation>
-							<documentation>-- Name --
--- Definition --
-Persoon die gecontacteerd kan worden voor technisch-inhoudelijke informatie over deze dataset.
--- Description --
--- Source --</documentation>
-						</annotation>
-					</element>
-					<element name="standaardDieptelegging" type="gml:MeasureType" minOccurs="0">
-						<annotation>
-							<documentation>-- Name --
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Thema</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="standaardDieptelegging" type="gml:MeasureType">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
 Gangbare dieptelegging behorend bij dit utiliteitsnet. Diepte is ten opzichte van maaiveld. Dit attribuut heeft een Measure als data type. De UOM wordt uitgedrukt via 1 van de volgende OGC URN codes: • urn:ogc:def:uom:OGC::m •	urn:ogc:def:uom:OGC::cm •	urn:ogc:def:uom:OGC::mm.
 Voor WION is de eenheid altijd meter en een getal met ten hoogste 2 decimalen.
 -- Description --
 -- Source --</documentation>
-						</annotation>
-					</element>
-				</sequence>
-			</extension>
-		</complexContent>
-	</complexType>
-	<complexType name="UtiliteitsnetPropertyType">
-		<sequence minOccurs="0">
-			<element ref="sw:Utiliteitsnet"/>
-		</sequence>
-		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
-	</complexType>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="UtiliteitsnetPropertyType">
+    <sequence minOccurs="0">
+      <element ref="sw:Utiliteitsnet"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Veiligheidsgebied" substitutionGroup="gml:AbstractFeature" type="sw:VeiligheidsgebiedType">
+    <annotation>
+      <documentation>-- Name --
+-- Definition --
+Een veiligheidsgebied is een door de Minister aangewezen gebied waarvan om veiligheidsredenen kan worden afgeweken van de voorschriften zoals gesteld bij of krachtens hoofstuk 4 WION: Informatie-uitwisseling ten behoeve van graafwerkzaamheden.
+-- Description --
+-- Source --</documentation>
+    </annotation>
+  </element>
+  <complexType name="VeiligheidsgebiedType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="beheerderVeiligheidsgebied" type="sw:BeheerderPropertyType">
+            <annotation>
+              <documentation>-- Name --
+beheerderVeiligheidsgebied
+-- Definition --</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="VeiligheidsgebiedPropertyType">
+    <sequence minOccurs="0">
+      <element ref="sw:Veiligheidsgebied"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
 </schema>

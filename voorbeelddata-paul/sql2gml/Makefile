@@ -1,7 +1,6 @@
 PGHOST=pakhuis.tudelft.nl
 PGDATABASE=imkl
 #PGUSER=imkl
-
 Best.gml: sql2gml.php  postprocess.sql addgmlid.xsl
 	psql -a < postprocess.sql 2>&1 | tee post.log
 	php ./sql2gml.php | xsltproc addgmlid.xsl - | xmllint --format -  > Best.gml
