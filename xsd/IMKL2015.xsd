@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:imkl2015="http://www.geonovum.nl/imkl/2015/1.1" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" elementFormDefault="qualified" targetNamespace="http://www.geonovum.nl/imkl/2015/1.1" version="1.1">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:imkl2015="http://www.geonovum.nl/imkl/2015/1.1" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" elementFormDefault="qualified" targetNamespace="http://www.geonovum.nl/imkl/2015/1.1" version="1.2RCtest">
   <annotation>
     <documentation>-- Name --
 -- Definition --
@@ -2468,7 +2468,7 @@ Soort gebiedsinformatie-aanvraag.
       <element name="aanvraagDatum" type="dateTime">
         <annotation>
           <documentation>-- Name --
--- Definition -
+-- Definition --
 De datumtijd waarop de gebiedsinformatie-aanvraag is aangevraagd.-
 -- Description --
 -- Source --</documentation>
@@ -2659,7 +2659,10 @@ Verwijzing naar graafpolygoon.
           <element minOccurs="0" name="orientatiepolygoon" type="imkl2015:OrientatiepolygoonPropertyType">
             <annotation>
               <documentation>-- Name --
-orientatiepolygoon</documentation>
+-- Definition --
+Verwijzing naar orientatiepolygoon
+-- Description --
+-- Source --</documentation>
             </annotation>
           </element>
         </sequence>

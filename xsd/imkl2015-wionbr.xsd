@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:wionbr="http://www.geostandaarden.nl/imkl/2015/wionbr/1.1" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" elementFormDefault="qualified" targetNamespace="http://www.geostandaarden.nl/imkl/2015/wionbr/1.1" version="1.1">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:wionbr="http://www.geostandaarden.nl/imkl/2015/wionbr/1.1" elementFormDefault="qualified" targetNamespace="http://www.geostandaarden.nl/imkl/2015/wionbr/1.1" version="1.2RCtest">
   <annotation>
     <documentation>-- Name --
 -- Definition --
@@ -11,7 +11,6 @@ rrb: IMKL2015-rrb.xsd
 
 -- Source --</documentation>
   </annotation>
-  <import namespace="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" schemaLocation="http://inspire.ec.europa.eu/schemas/us-net-common/4.0/UtilityNetworksCommon.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.3/exr" schemaLocation="http://schemas.opengis.net/gml/3.3/extdEncRule.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
@@ -834,7 +833,7 @@ Soort gebiedsinformatie-aanvraag.
       <element name="aanvraagDatum" type="dateTime">
         <annotation>
           <documentation>-- Name --
--- Definition -
+-- Definition --
 De datumtijd waarop de gebiedsinformatie-aanvraag is aangevraagd.-
 -- Description --
 -- Source --</documentation>
@@ -1112,70 +1111,6 @@ Het e-mail adres van de opdrachtgever.
       <element ref="wionbr:Opdrachtgever"/>
     </sequence>
   </complexType>
-  <element name="Overig" substitutionGroup="us-net-common:UtilityLinkSet" type="wionbr:OverigType">
-    <annotation>
-      <documentation>-- Name --
--- Definition --
-Een type kabel of leiding die niet onder de andere benoemde typen valt.
--- Description --
-Bijvoorbeeld een weesleiding maar ook leidingen voor voedingsmiddelen, landbouwproducten vallen hieronder.
--- Source --
-IMKL</documentation>
-    </annotation>
-  </element>
-  <complexType name="OverigType">
-    <complexContent>
-      <extension base="us-net-common:UtilityLinkSetType">
-        <sequence>
-          <element minOccurs="0" name="pipeDiameter" type="gml:MeasureType">
-            <annotation>
-              <documentation>-- Name --
-pipe diameter
-
--- Definition --
-Pipe outer diameter.
-
--- Description --
-For convex shaped objects (e.g. a circle) the diameter is defined to be the largest distance that can be formed between two opposite parallel lines tangent to its boundery.</documentation>
-            </annotation>
-          </element>
-          <element minOccurs="0" name="pressure" type="gml:MeasureType">
-            <annotation>
-              <documentation>-- Name --
-pressure
-
--- Definition --
-The maximum allowable operating pressure at which a product is conveyed through a pipe.
-
--- Description --
-The unit of measure for pressure is commonly expressed in "bar".</documentation>
-            </annotation>
-          </element>
-          <element minOccurs="0" name="producttype" type="string">
-            <annotation>
-              <documentation>-- Name --
-producttype
--- Definition --</documentation>
-            </annotation>
-          </element>
-        </sequence>
-      </extension>
-    </complexContent>
-  </complexType>
-  <complexType name="OverigPropertyType">
-    <sequence minOccurs="0">
-      <element ref="wionbr:Overig"/>
-    </sequence>
-    <attributeGroup ref="gml:AssociationAttributeGroup"/>
-    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
-  </complexType>
-  <complexType name="OverigSpecifiekPropertyType">
-    <choice minOccurs="0">
-      <element ref="wionbr:Overig"/>
-    </choice>
-    <attributeGroup ref="gml:AssociationAttributeGroup"/>
-    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
-  </complexType>
   <element name="PostbusAdres" substitutionGroup="gml:AbstractObject" type="wionbr:PostbusAdresType">
     <annotation>
       <documentation>-- Name --
@@ -1261,29 +1196,6 @@ Landcode van het postbusadres (zie codelijst).
     <sequence>
       <element ref="wionbr:PuntLijnVlak"/>
     </sequence>
-  </complexType>
-  <element name="TechnischGebouw" substitutionGroup="us-net-common:Cabinet" type="wionbr:TechnischGebouwType">
-    <annotation>
-      <documentation>-- Name --
--- Definition --
-Heeft iemand een definitie?
--- Description --
--- Source --</documentation>
-    </annotation>
-  </element>
-  <complexType name="TechnischGebouwType">
-    <complexContent>
-      <extension base="us-net-common:CabinetType">
-        <sequence/>
-      </extension>
-    </complexContent>
-  </complexType>
-  <complexType name="TechnischGebouwPropertyType">
-    <sequence minOccurs="0">
-      <element ref="wionbr:TechnischGebouw"/>
-    </sequence>
-    <attributeGroup ref="gml:AssociationAttributeGroup"/>
-    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
   </complexType>
   <element name="Veiligheidsgebied" substitutionGroup="wionbr:BelangGeneriek" type="wionbr:VeiligheidsgebiedType">
     <annotation>

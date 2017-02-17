@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:rrb="http://www.geostandaarden.nl/imkl/2015/rrb/1.1" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" elementFormDefault="qualified" targetNamespace="http://www.geostandaarden.nl/imkl/2015/rrb/1.1" version="1.1">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:rrb="http://www.geostandaarden.nl/imkl/2015/rrb/1.1" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" elementFormDefault="qualified" targetNamespace="http://www.geostandaarden.nl/imkl/2015/rrb/1.1" version="1.2RCtest">
   <annotation>
     <documentation>-- Name --
 -- Definition --
@@ -498,6 +498,38 @@ Abstract data object dat de gemeenschappelijke attributen en associaties bevat v
     <complexContent>
       <extension base="gml:AbstractFeatureType">
         <sequence>
+          <element name="identificatie" type="rrb:NEN3610IDPropertyType">
+            <annotation>
+              <documentation>identificatie: -- Name --
+identificatie
+-- Definition --
+Unieke identificatie van het object binnen het domein van NEN 3610.
+-- Source --
+NEN 3610:2011</documentation>
+            </annotation>
+          </element>
+          <element name="beginLifespanVersion" type="dateTime">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+De begindatum waarop een data object in de registratie werd aangemaakt, het begin van de levenscyclus van een data object.
+-- Description --
+Dit attribuut is afkomstig van INSPIRE maar wordt ook gebruikt in de IMKL-specieke objecten. Voor niet INSPIRE plichtige datasets kan hier een dummy waarde worden ingevuld.
+Dit attribuut heeft DateTime als data type.
+-- Source --</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="endLifespanVersion" type="dateTime">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+De datum die het einde van een levenscyclus van een data object aangeeft. 
+-- Description --
+Het moment vanaf wanneer het geen onderdeel meer is van de actuele registratie. Dit attribuut is afkomstig van INSPIRE maar wordt ook gebruikt in de IMKL-specieke objecten.
+Dit attribuut heeft DateTime als data type.
+-- Source --</documentation>
+            </annotation>
+          </element>
           <element name="diepteNauwkeurigheid" type="gml:ReferenceType">
             <annotation>
               <documentation>-- Name --
@@ -676,6 +708,38 @@ RRGS</documentation>
     <complexContent>
       <extension base="gml:AbstractFeatureType">
         <sequence>
+          <element name="identificatie" type="rrb:NEN3610IDPropertyType">
+            <annotation>
+              <documentation>identificatie: -- Name --
+identificatie
+-- Definition --
+Unieke identificatie van het object binnen het domein van NEN 3610.
+-- Source --
+NEN 3610:2011</documentation>
+            </annotation>
+          </element>
+          <element name="beginLifespanVersion" type="dateTime">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+De begindatum waarop een data object in de registratie werd aangemaakt, het begin van de levenscyclus van een data object.
+-- Description --
+Dit attribuut is afkomstig van INSPIRE maar wordt ook gebruikt in de IMKL-specieke objecten. Voor niet INSPIRE plichtige datasets kan hier een dummy waarde worden ingevuld.
+Dit attribuut heeft DateTime als data type.
+-- Source --</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="endLifespanVersion" type="dateTime">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+De datum die het einde van een levenscyclus van een data object aangeeft. 
+-- Description --
+Het moment vanaf wanneer het geen onderdeel meer is van de actuele registratie. Dit attribuut is afkomstig van INSPIRE maar wordt ook gebruikt in de IMKL-specieke objecten.
+Dit attribuut heeft DateTime als data type.
+-- Source --</documentation>
+            </annotation>
+          </element>
           <element name="effectcontourDodelijk" type="gml:MultiSurfacePropertyType">
             <annotation>
               <documentation>-- Name --
@@ -729,6 +793,38 @@ IMKL</documentation>
     <complexContent>
       <extension base="gml:AbstractFeatureType">
         <sequence>
+          <element name="identificatie" type="rrb:NEN3610IDPropertyType">
+            <annotation>
+              <documentation>identificatie: -- Name --
+identificatie
+-- Definition --
+Unieke identificatie van het object binnen het domein van NEN 3610.
+-- Source --
+NEN 3610:2011</documentation>
+            </annotation>
+          </element>
+          <element name="beginLifespanVersion" type="dateTime">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+De begindatum waarop een data object in de registratie werd aangemaakt, het begin van de levenscyclus van een data object.
+-- Description --
+Dit attribuut is afkomstig van INSPIRE maar wordt ook gebruikt in de IMKL-specieke objecten. Voor niet INSPIRE plichtige datasets kan hier een dummy waarde worden ingevuld.
+Dit attribuut heeft DateTime als data type.
+-- Source --</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="endLifespanVersion" type="dateTime">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+De datum die het einde van een levenscyclus van een data object aangeeft. 
+-- Description --
+Het moment vanaf wanneer het geen onderdeel meer is van de actuele registratie. Dit attribuut is afkomstig van INSPIRE maar wordt ook gebruikt in de IMKL-specieke objecten.
+Dit attribuut heeft DateTime als data type.
+-- Source --</documentation>
+            </annotation>
+          </element>
           <element minOccurs="0" name="vlakgeometrie2D" type="gml:SurfacePropertyType">
             <annotation>
               <documentation>-- Name --
@@ -880,7 +976,7 @@ Soort gebiedsinformatie-aanvraag.
       <element name="aanvraagDatum" type="dateTime">
         <annotation>
           <documentation>-- Name --
--- Definition -
+-- Definition --
 De datumtijd waarop de gebiedsinformatie-aanvraag is aangevraagd.-
 -- Description --
 -- Source --</documentation>
@@ -950,6 +1046,18 @@ Lijst van adressen waarvoor huisaansluitschetsen (extra detailinformatie, type h
     <sequence>
       <element ref="rrb:GebiedsInformatieAanvraag"/>
     </sequence>
+  </complexType>
+  <complexType name="IMKLBasisPropertyType">
+    <choice minOccurs="0">
+      <element ref="rrb:Diepte"/>
+      <element ref="rrb:EffectcontourDodelijk"/>
+      <element ref="rrb:ExtraGeometrie"/>
+      <element ref="rrb:Transportroute"/>
+      <element ref="rrb:TransportrouteRisico"/>
+      <element ref="rrb:Utiliteitsnet"/>
+    </choice>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
   </complexType>
   <complexType name="KabelOfLeidingPropertyType">
     <choice minOccurs="0">
@@ -1448,29 +1556,6 @@ Landcode van het postbusadres (zie codelijst).
       <element ref="rrb:PuntLijnVlak"/>
     </sequence>
   </complexType>
-  <element name="TechnischGebouw" substitutionGroup="us-net-common:Cabinet" type="rrb:TechnischGebouwType">
-    <annotation>
-      <documentation>-- Name --
--- Definition --
-Heeft iemand een definitie?
--- Description --
--- Source --</documentation>
-    </annotation>
-  </element>
-  <complexType name="TechnischGebouwType">
-    <complexContent>
-      <extension base="us-net-common:CabinetType">
-        <sequence/>
-      </extension>
-    </complexContent>
-  </complexType>
-  <complexType name="TechnischGebouwPropertyType">
-    <sequence minOccurs="0">
-      <element ref="rrb:TechnischGebouw"/>
-    </sequence>
-    <attributeGroup ref="gml:AssociationAttributeGroup"/>
-    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
-  </complexType>
   <element name="Transportroute" substitutionGroup="gml:AbstractFeature" type="rrb:TransportrouteType">
     <annotation>
       <documentation>-- Name --
@@ -1485,6 +1570,38 @@ RRGS</documentation>
     <complexContent>
       <extension base="gml:AbstractFeatureType">
         <sequence>
+          <element name="identificatie" type="rrb:NEN3610IDPropertyType">
+            <annotation>
+              <documentation>identificatie: -- Name --
+identificatie
+-- Definition --
+Unieke identificatie van het object binnen het domein van NEN 3610.
+-- Source --
+NEN 3610:2011</documentation>
+            </annotation>
+          </element>
+          <element name="beginLifespanVersion" type="dateTime">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+De begindatum waarop een data object in de registratie werd aangemaakt, het begin van de levenscyclus van een data object.
+-- Description --
+Dit attribuut is afkomstig van INSPIRE maar wordt ook gebruikt in de IMKL-specieke objecten. Voor niet INSPIRE plichtige datasets kan hier een dummy waarde worden ingevuld.
+Dit attribuut heeft DateTime als data type.
+-- Source --</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="endLifespanVersion" type="dateTime">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+De datum die het einde van een levenscyclus van een data object aangeeft. 
+-- Description --
+Het moment vanaf wanneer het geen onderdeel meer is van de actuele registratie. Dit attribuut is afkomstig van INSPIRE maar wordt ook gebruikt in de IMKL-specieke objecten.
+Dit attribuut heeft DateTime als data type.
+-- Source --</documentation>
+            </annotation>
+          </element>
           <element name="buisleidingtype" type="gml:ReferenceType">
             <annotation>
               <documentation>-- Name --
@@ -1564,6 +1681,38 @@ RRGS</documentation>
     <complexContent>
       <extension base="gml:AbstractFeatureType">
         <sequence>
+          <element name="identificatie" type="rrb:NEN3610IDPropertyType">
+            <annotation>
+              <documentation>identificatie: -- Name --
+identificatie
+-- Definition --
+Unieke identificatie van het object binnen het domein van NEN 3610.
+-- Source --
+NEN 3610:2011</documentation>
+            </annotation>
+          </element>
+          <element name="beginLifespanVersion" type="dateTime">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+De begindatum waarop een data object in de registratie werd aangemaakt, het begin van de levenscyclus van een data object.
+-- Description --
+Dit attribuut is afkomstig van INSPIRE maar wordt ook gebruikt in de IMKL-specieke objecten. Voor niet INSPIRE plichtige datasets kan hier een dummy waarde worden ingevuld.
+Dit attribuut heeft DateTime als data type.
+-- Source --</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="endLifespanVersion" type="dateTime">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+De datum die het einde van een levenscyclus van een data object aangeeft. 
+-- Description --
+Het moment vanaf wanneer het geen onderdeel meer is van de actuele registratie. Dit attribuut is afkomstig van INSPIRE maar wordt ook gebruikt in de IMKL-specieke objecten.
+Dit attribuut heeft DateTime als data type.
+-- Source --</documentation>
+            </annotation>
+          </element>
           <element name="risicocontour10_6" type="gml:MultiSurfacePropertyType">
             <annotation>
               <documentation>-- Name --
@@ -1615,6 +1764,38 @@ Inspire</documentation>
     <complexContent>
       <extension base="us-net-common:UtilityNetworkType">
         <sequence>
+          <element name="identificatie" type="rrb:NEN3610IDPropertyType">
+            <annotation>
+              <documentation>identificatie: -- Name --
+identificatie
+-- Definition --
+Unieke identificatie van het object binnen het domein van NEN 3610.
+-- Source --
+NEN 3610:2011</documentation>
+            </annotation>
+          </element>
+          <element name="beginLifespanVersion" type="dateTime">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+De begindatum waarop een data object in de registratie werd aangemaakt, het begin van de levenscyclus van een data object.
+-- Description --
+Dit attribuut is afkomstig van INSPIRE maar wordt ook gebruikt in de IMKL-specieke objecten. Voor niet INSPIRE plichtige datasets kan hier een dummy waarde worden ingevuld.
+Dit attribuut heeft DateTime als data type.
+-- Source --</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="endLifespanVersion" type="dateTime">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+De datum die het einde van een levenscyclus van een data object aangeeft. 
+-- Description --
+Het moment vanaf wanneer het geen onderdeel meer is van de actuele registratie. Dit attribuut is afkomstig van INSPIRE maar wordt ook gebruikt in de IMKL-specieke objecten.
+Dit attribuut heeft DateTime als data type.
+-- Source --</documentation>
+            </annotation>
+          </element>
           <element name="thema" type="gml:ReferenceType">
             <annotation>
               <documentation>-- Name --
@@ -1645,37 +1826,6 @@ Voor WION is de eenheid altijd meter en een getal met ten hoogste 2 decimalen.
   <complexType name="UtiliteitsnetPropertyType">
     <sequence minOccurs="0">
       <element ref="rrb:Utiliteitsnet"/>
-    </sequence>
-    <attributeGroup ref="gml:AssociationAttributeGroup"/>
-    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
-  </complexType>
-  <element name="Veiligheidsgebied" substitutionGroup="gml:AbstractFeature" type="rrb:VeiligheidsgebiedType">
-    <annotation>
-      <documentation>-- Name --
--- Definition --
-Een veiligheidsgebied is een door de Minister aangewezen gebied waarvan om veiligheidsredenen kan worden afgeweken van de voorschriften zoals gesteld bij of krachtens hoofstuk 4 WION: Informatie-uitwisseling ten behoeve van graafwerkzaamheden.
--- Description --
--- Source --</documentation>
-    </annotation>
-  </element>
-  <complexType name="VeiligheidsgebiedType">
-    <complexContent>
-      <extension base="gml:AbstractFeatureType">
-        <sequence>
-          <element name="beheerderVeiligheidsgebied" type="rrb:BeheerderPropertyType">
-            <annotation>
-              <documentation>-- Name --
-beheerderVeiligheidsgebied
--- Definition --</documentation>
-            </annotation>
-          </element>
-        </sequence>
-      </extension>
-    </complexContent>
-  </complexType>
-  <complexType name="VeiligheidsgebiedPropertyType">
-    <sequence minOccurs="0">
-      <element ref="rrb:Veiligheidsgebied"/>
     </sequence>
     <attributeGroup ref="gml:AssociationAttributeGroup"/>
     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
