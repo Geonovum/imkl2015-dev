@@ -14,7 +14,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     gml:id="ID_1c0c5554-5c4a-467a-a9ef-9f36b5af2bfq"
-    xsi:schemaLocation="http://www.geostandaarden.nl/imkl/2015/wion/1.1 ../../xsd/IMKL2015-wion.xsd">
+    xsi:schemaLocation="http://www.geostandaarden.nl/imkl/2015/wion/1.1 https://register.geostandaarden.nl/gmlapplicatieschema/imkl2015/1.1/IMKL2015-wion.xsd">
 
 <?php
 date_default_timezone_set("Europe/Amsterdam");
@@ -397,8 +397,7 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     printLifespan("imkl","2001-12-17T09:30:47.0Z","");
     printhref("imkl:inNetwork",$line["unetgmlid"]);
     printattribute("imkl:eisVoorzorgsmaatregel",$line["eisvoorzm"]);
-    printattribute("imkl:netRisicoKlasse",'TODO');
-    printattribute("imkl:geometriebegrenzingFictief",$line["geofict"]);
+    printattribute("imkl:netbeheerderNetAanduiding",'TODO');
     printattribute("imkl:geometrie",$line["geom"]);
     printclose("imkl:AanduidingEisVoorzorgsmaatregel");
     printclose("gml:featureMember");

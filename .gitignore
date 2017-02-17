@@ -43,3 +43,5 @@ codelists/waardelijsten-utf8.csv
 voorbeelddata-topology/Topology.gml
 
 *.xml~
+
+*.DS_Store
