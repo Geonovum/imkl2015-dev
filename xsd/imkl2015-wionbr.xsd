@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:wionbr="http://www.geostandaarden.nl/imkl/2015/wionbr/1.1" elementFormDefault="qualified" targetNamespace="http://www.geostandaarden.nl/imkl/2015/wionbr/1.1" version="1.2RCtest">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:gsml="http://xmlns.geosciml.org/GeoSciML-Core/3.0" xmlns:wionbr="http://www.geostandaarden.nl/imkl/2015/wionbr/1.1" elementFormDefault="qualified" targetNamespace="http://www.geostandaarden.nl/imkl/2015/wionbr/1.1" version="1.2RCtest2">
   <annotation>
     <documentation>-- Name --
 -- Definition --
@@ -13,6 +13,7 @@ rrb: IMKL2015-rrb.xsd
   </annotation>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.3/exr" schemaLocation="http://schemas.opengis.net/gml/3.3/extdEncRule.xsd"/>
+  <import namespace="http://xmlns.geosciml.org/GeoSciML-Core/3.0" schemaLocation="http://schemas.geosciml.org/geosciml-core/3.0/geosciml-core.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="AanvraagSoortContact" substitutionGroup="wionbr:Contact" type="wionbr:AanvraagSoortContactType">
     <annotation>
@@ -46,100 +47,54 @@ Typering van contact in relatie tot de melding of verzoek.
     </complexContent>
   </complexType>
   <complexType name="AanvraagSoortContactPropertyType">
-    <sequence minOccurs="0">
+    <sequence>
       <element ref="wionbr:AanvraagSoortContact"/>
     </sequence>
-    <attributeGroup ref="gml:AssociationAttributeGroup"/>
-    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
   </complexType>
   <element name="Aanvrager" substitutionGroup="gml:AbstractObject" type="wionbr:AanvragerType">
     <annotation>
       <documentation>-- Name --
 -- Definition --
-Gegevens van de aanvrager van gebiedsinformatie.
+Een aanvrager van gebiedsinformatie is een persoon die of bedrijf dat wil weten welke kabels en leidingen er in een bepaald gebied onder de grond liggen.
 -- Description --
 -- Source --</documentation>
     </annotation>
   </element>
   <complexType name="AanvragerType">
     <sequence>
-      <element name="bedrijfsnaam" type="string">
+      <element minOccurs="0" name="contactpersoon" type="wionbr:ContactPropertyType">
         <annotation>
           <documentation>-- Name --
 -- Definition --
-De naam van het bedrijf van de aanvrager van gebiedsinformatie.
+Persoon als aanspreekpunt namens aanvrager.
 -- Description --
 -- Source --</documentation>
         </annotation>
       </element>
-      <element name="naam" type="string">
+      <element minOccurs="0" name="organisatie">
         <annotation>
           <documentation>-- Name --
 -- Definition --
-De naam van de aanvrager van gebiedsinformatie.
+Organisatie die aanvraag doet.
 -- Description --
 -- Source --</documentation>
         </annotation>
+        <complexType>
+          <complexContent>
+            <extension base="gml:AbstractFeatureMemberType">
+              <sequence minOccurs="0">
+                <element ref="wionbr:Organisatie"/>
+              </sequence>
+              <attributeGroup ref="gml:AssociationAttributeGroup"/>
+            </extension>
+          </complexContent>
+        </complexType>
       </element>
-      <element minOccurs="0" name="kvkNummer" type="string">
+      <element minOccurs="0" name="extraEmail" type="string">
         <annotation>
           <documentation>-- Name --
 -- Definition --
-KvK nummer van de aanvrager van gebiedsinformatie.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="bezoekAdres" type="wionbr:AdresPropertyType">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Het bezoekadres van de aanvrager van gebiedsinformatie.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="postbusAdres" type="wionbr:PostbusAdresPropertyType">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Het postbusadres van de aanvrager van gebiedsinformatie.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="telefoon" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Het vaste telefoonnummer van de aanvrager van gebiedsinformatie.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="mobiel" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Het mobiele telefoonnummer van de aanvrager van gebiedsinformatie.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="fax" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Het faxnummer van de aanvrager van gebiedsinformatie.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element maxOccurs="2" name="email" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Het e-mail adres van de aanvrager van gebiedsinformatie.
+Extra email naast het emailadres van de contactpersoon.
 -- Description --
 -- Source --</documentation>
         </annotation>
@@ -244,18 +199,14 @@ Tweeletterige afkorting van de landsnaam conform ISO 3166 - Country codes
 -- Source --</documentation>
         </annotation>
       </element>
-      <element minOccurs="0" name="identificatieBAG" type="string">
+      <element minOccurs="0" name="BAGidAdresseerbaarObject" type="string">
         <annotation>
           <documentation>-- Name --
-identificatie BAG
+BAGidAdresseerbaarObject
 -- Definition --
-BAG identifier van de nummeraanduiding van het adres zoals geregistreerd bij de BAG.
+BAG identifier van het adresseerbaar object waar een adres aan is toegekend zoals geregistreerd bij de BAG.
 -- Description --
-Adresgegevens van Verblijfsobjecten, Ligplaatsen en Staanplaatsen zijn als nummeraanduiding beschreven in de BAG. Een complete nummeraanduiding bestaat uit de volgende 3 componenten:
-• Nummeraanduiding
-• Naam van een openbare ruimte
-• Naam van een woonplaats
-Alleen de identificatie van de nummeraanduiding hoeft te worden opgenomen omdat de andere twee daaruit af te leiden zijn
+De adresseerbare objecten  Verblijfsobjecten, Ligplaatsen en Staanplaatsen zijn via de nummeraanduiding gekoppeld aan een adres. De identificatie van het adresseerbare object wordt genomen omdat dit het meest aansluit bij de registratie van de netbeheerders.
 -- Source --</documentation>
         </annotation>
       </element>
@@ -266,122 +217,48 @@ Alleen de identificatie van de nummeraanduiding hoeft te worden opgenomen omdat 
       <element ref="wionbr:Adres"/>
     </sequence>
   </complexType>
-  <element name="Beheerder" substitutionGroup="gml:AbstractObject" type="wionbr:BeheerderType">
+  <element name="Beheerder" substitutionGroup="wionbr:Organisatie" type="wionbr:BeheerderType">
     <annotation>
       <documentation>-- Name --
 -- Definition --
+Een persoon of een organisatie die een net of een veiligheidsgebied beheert.
 -- Description --
 -- Source --</documentation>
     </annotation>
   </element>
   <complexType name="BeheerderType">
-    <sequence>
-      <element name="bedrijfsnaam" type="string">
-        <annotation>
-          <documentation>-- Name --
+    <complexContent>
+      <extension base="wionbr:OrganisatieType">
+        <sequence>
+          <element minOccurs="0" name="bronhoudercode" type="string">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
-De naam van het bedrijf van de netbeheerder.
+Code van de beheerder.
 -- Description --
 -- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="bronhoudercode" type="string">
-        <annotation>
-          <documentation>-- Name --
+            </annotation>
+          </element>
+          <element minOccurs="0" name="websiteKlic" type="string">
+            <annotation>
+              <documentation>-- Name --
 -- Definition --
-Voorstel
-Code van de netbheerder.
+Voorstel:
+Website van de beheerder voor klic gerelateerde informatie.
 -- Description --
 -- Source --</documentation>
-        </annotation>
-      </element>
-      <element name="naam" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-De achternaam van de netbeheerder.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="kvkNummer" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-KvK nummer van de netbeheerder.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="bezoekAdres" type="wionbr:BezoekAdresPropertyType">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Het bezoekadres van de netbeheerder.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="postbusAdres" type="wionbr:PostbusAdresPropertyType">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Het postbusadres van de netbeheerder.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="telefoon" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Het vaste telefoonnummer van de netbeheerder.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="mobiel" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Het mobiele telefoonnummer van de netbeheerder.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="fax" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Het faxnummer van de netbeheerder.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="email" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Het e-mail adres van de netbeheerde.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="website" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Website van de netbheerder.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-    </sequence>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
   </complexType>
   <complexType name="BeheerderPropertyType">
-    <sequence>
+    <sequence minOccurs="0">
       <element ref="wionbr:Beheerder"/>
     </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
   </complexType>
   <element name="Belang" substitutionGroup="wionbr:BelangGeneriek" type="wionbr:BelangType">
     <annotation>
@@ -397,21 +274,59 @@ Bron: belangenregistratie.</documentation>
     <complexContent>
       <extension base="wionbr:BelangGeneriekType">
         <sequence>
-          <element minOccurs="0" name="netbeheerder" type="wionbr:BeheerderPropertyType">
+          <element maxOccurs="3" minOccurs="0" name="contactNetInformatie" type="wionbr:AanvraagSoortContactPropertyType">
             <annotation>
               <documentation>-- Name --
 -- Definition --
-voostel:
-Naam van de belanghebbende beheerder.
+Contactgegevens voor netinformatie.
+-- Description --
+Netinformatie is informatie over een utiliteitsnet
+-- Source --</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="contactStoring">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+Contactinformatie bij optreden storing.
 -- Description --
 -- Source --</documentation>
             </annotation>
+            <complexType>
+              <complexContent>
+                <extension base="gml:AbstractFeatureMemberType">
+                  <sequence minOccurs="0">
+                    <element ref="gsml:Contact"/>
+                  </sequence>
+                  <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                </extension>
+              </complexContent>
+            </complexType>
+          </element>
+          <element minOccurs="0" name="contactBeschadiging">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+Contactinformatie bij opgetreden beschadiging.
+-- Description --
+-- Source --</documentation>
+            </annotation>
+            <complexType>
+              <complexContent>
+                <extension base="gml:AbstractFeatureMemberType">
+                  <sequence minOccurs="0">
+                    <element ref="gsml:Contact"/>
+                  </sequence>
+                  <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                </extension>
+              </complexContent>
+            </complexType>
           </element>
           <element maxOccurs="unbounded" name="thema" type="gml:ReferenceType">
             <annotation>
               <documentation>-- Name --
 -- Definition --
-Het thema geeft aan welk type leiding het betreft en welke functie de leidingen hebben. Bijvoorbeeld datatransport, gas lage druk, laagspanning, riool etc. Gekozen kan worden uit een lijst van thema’s
+Het thema geeft aan welk type leiding het betreft en welke functie de leidingen hebben. Bijvoorbeeld datatransport, gas lage druk, laagspanning, riool etc. Gekozen kan worden uit een lijst van thema’s.
 -- Description --
 Opmerking: Signaleringskabels die data vervoeren vallen onder datatransport.
 -- Source --</documentation>
@@ -420,31 +335,12 @@ Opmerking: Signaleringskabels die data vervoeren vallen onder datatransport.
               </appinfo>
             </annotation>
           </element>
-          <element minOccurs="0" name="heeftContactStoring" type="wionbr:ContactPropertyType">
+          <element minOccurs="0" name="netbeheerder" type="wionbr:BeheerderPropertyType">
             <annotation>
               <documentation>-- Name --
 -- Definition --
-Voorstel: Contactinformatie in geval opgetreden storing.
+Gegevens van de belanghebbende beheerder.
 -- Description --
--- Source --</documentation>
-            </annotation>
-          </element>
-          <element minOccurs="0" name="heeftContactBeschadiging" type="wionbr:ContactPropertyType">
-            <annotation>
-              <documentation>-- Name --
--- Definition --
-Voorstel: Contactinformatie in geval van opgetreden beschadiging.
--- Description --
--- Source --</documentation>
-            </annotation>
-          </element>
-          <element maxOccurs="3" minOccurs="0" name="heeftContactNetinformatie" type="wionbr:AanvraagSoortContactPropertyType">
-            <annotation>
-              <documentation>-- Name --
--- Definition --
-Contactgegevens voor netinformatie.
--- Description --
-Netinformatie is informatie over een utiliteitsnet
 -- Source --</documentation>
             </annotation>
           </element>
@@ -510,7 +406,6 @@ Dit attribuut heeft DateTime als data type.
             <annotation>
               <documentation>-- Name --
 -- Definition --
-Voorstel:
 In tekst omschreven belang dat een netbeheerder in dit gebied heeft.
 -- Description --
 -- Source --
@@ -521,17 +416,24 @@ IMKL2015</documentation>
             <annotation>
               <documentation>-- Name --
 -- Definition --
-Voorstel:
 Gewenste datum vanaf wanneer een belang van toepassing is.
 -- Description --
 -- Source --</documentation>
+            </annotation>
+          </element>
+          <element name="ingangsdatum" type="dateTime">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+Datum vanaf wanneer een belang van toepassing is.
+-- Description --
+-- Source -</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="gewensteEinddatum" type="dateTime">
             <annotation>
               <documentation>-- Name --
 -- Definition --
-Voorstel:
 Gewenste datum tot wanneer het belang van toepassing is.
 -- Description --
 -- Source --</documentation>
@@ -546,21 +448,21 @@ Datum tot wanneer het belang van toepassing is.
 -- Source --</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="beheerpolygoon" type="gml:SurfacePropertyType">
+          <element minOccurs="0" name="beheerpolygoon" type="gml:MultiSurfacePropertyType">
             <annotation>
               <documentation>-- Name --
 -- Definition --
-Voorstel:
 Locatie waar een netbeheerder een belang heeft gerelateerd aan de uitvoering van de wet WION.
 -- Description --
 -- Source --
 IMKL2015</documentation>
             </annotation>
           </element>
-          <element maxOccurs="3" minOccurs="0" name="heeftContactAanvraag" type="wionbr:AanvraagSoortContactPropertyType">
+          <element maxOccurs="3" minOccurs="0" name="contactAanvraag" type="wionbr:AanvraagSoortContactPropertyType">
             <annotation>
               <documentation>-- Name --
 -- Definition --
+voorstel:
 nog invullen
 -- Description --
 -- Source --</documentation>
@@ -577,98 +479,7 @@ nog invullen
     <attributeGroup ref="gml:AssociationAttributeGroup"/>
     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
   </complexType>
-  <element name="BezoekAdres" substitutionGroup="gml:AbstractObject" type="wionbr:BezoekAdresType">
-    <annotation>
-      <documentation>-- Name --
--- Definition --
-De aanduiding van een locatie door een of meer adresgegevens.
-Bij Nederlandse adressen kunnen de attributen uit BAG worden gebruikt.
--- Description --
--- Source --</documentation>
-    </annotation>
-  </element>
-  <complexType name="BezoekAdresType">
-    <sequence>
-      <element name="openbareRuimteNaam" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-De naam die aan een openbare ruimte (straat, plein, e.d.) is toegekend door de gemeente.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element name="huisnummer" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Een aan het adres toegekend nummer.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="huisletter" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-De huisletter van het adres in de vorm van een alfanumeriek teken.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="huisnummertoevoeging" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter van het adres.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element name="postcode" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-De vastgestelde code behorend bij een bepaalde combinatie van een straatnaam en een huisnummer.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element name="woonplaatsNaam" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-De plaatsnaam van het adres.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="landcode" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Landcode van het adres (zie codelijst).
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="identificatieBAG" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Een unieke aanduiding van een adres (de nummeraanduiding uit BAG).
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-    </sequence>
-  </complexType>
-  <complexType name="BezoekAdresPropertyType">
-    <sequence>
-      <element ref="wionbr:BezoekAdres"/>
-    </sequence>
-  </complexType>
-  <element name="Contact" substitutionGroup="gml:AbstractFeature" type="wionbr:ContactType">
+  <element name="Contact" substitutionGroup="gml:AbstractObject" type="wionbr:ContactType">
     <annotation>
       <documentation>-- Name --
 -- Definition --
@@ -679,235 +490,45 @@ Bron: belangenregistratie.</documentation>
     </annotation>
   </element>
   <complexType name="ContactType">
-    <complexContent>
-      <extension base="gml:AbstractFeatureType">
-        <sequence>
-          <element name="identificatie" type="wionbr:NEN3610IDPropertyType">
-            <annotation>
-              <documentation>identificatie: -- Name --
-identificatie
--- Definition --
-Unieke identificatie van het object binnen het domein van NEN 3610.
--- Source --
-NEN 3610:2011</documentation>
-            </annotation>
-          </element>
-          <element name="beginLifespanVersion" type="dateTime">
-            <annotation>
-              <documentation>-- Name --
--- Definition --
-De begindatum waarop een data object in de registratie werd aangemaakt, het begin van de levenscyclus van een data object.
--- Description --
-Dit attribuut is afkomstig van INSPIRE maar wordt ook gebruikt in de IMKL-specieke objecten. Voor niet INSPIRE plichtige datasets kan hier een dummy waarde worden ingevuld.
-Dit attribuut heeft DateTime als data type.
--- Source --</documentation>
-            </annotation>
-          </element>
-          <element minOccurs="0" name="endLifespanVersion" type="dateTime">
-            <annotation>
-              <documentation>-- Name --
--- Definition --
-De datum die het einde van een levenscyclus van een data object aangeeft. 
--- Description --
-Het moment vanaf wanneer het geen onderdeel meer is van de actuele registratie. Dit attribuut is afkomstig van INSPIRE maar wordt ook gebruikt in de IMKL-specieke objecten.
-Dit attribuut heeft DateTime als data type.
--- Source --</documentation>
-            </annotation>
-          </element>
-          <element minOccurs="0" name="naam" type="string">
-            <annotation>
-              <documentation>-- Name --
+    <sequence>
+      <element minOccurs="0" name="naam" type="string">
+        <annotation>
+          <documentation>-- Name --
 -- Definition --
 Naam van het contact.
 -- Description --
 -- Source --</documentation>
-            </annotation>
-          </element>
-          <element minOccurs="0" name="telefoon" type="string">
-            <annotation>
-              <documentation>-- Name --
+        </annotation>
+      </element>
+      <element minOccurs="0" name="telefoon" type="string">
+        <annotation>
+          <documentation>-- Name --
 -- Definition --
 Telefoon van het contact.
 -- Description --
 -- Source --</documentation>
-            </annotation>
-          </element>
-          <element minOccurs="0" name="email" type="string">
-            <annotation>
-              <documentation>-- Name --
+        </annotation>
+      </element>
+      <element minOccurs="0" name="email" type="string">
+        <annotation>
+          <documentation>-- Name --
 -- Definition --
 E-mail adres van het contact.
 -- Description --
 -- Source --</documentation>
-            </annotation>
-          </element>
-        </sequence>
-      </extension>
-    </complexContent>
+        </annotation>
+      </element>
+    </sequence>
   </complexType>
   <complexType name="ContactPropertyType">
-    <sequence minOccurs="0">
+    <sequence>
       <element ref="wionbr:Contact"/>
-    </sequence>
-    <attributeGroup ref="gml:AssociationAttributeGroup"/>
-    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
-  </complexType>
-  <element name="GebiedsInformatieAanvraag" substitutionGroup="gml:AbstractObject" type="wionbr:GebiedsInformatieAanvraagType">
-    <annotation>
-      <documentation>-- Name --
--- Definition --
-Aanvraag van gebiedsinformatie.
--- Description --
-Een gebiedsinformatie-aanvraag is een aanvraag om informatie over een bepaald gebied in het kader van een graafmelding, oriëntatieverzoek, calamiteitenmelding of de agrariërsregeling te ontvangen.
--- Source --</documentation>
-    </annotation>
-  </element>
-  <complexType name="GebiedsInformatieAanvraagType">
-    <sequence>
-      <element name="ordernummer" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Het nummer van de verkooporder van de aanvraag zoals deze bij KLIC bekend is.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element name="positienummer" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Het regelnummer (positienummer) van de verkooporder waarbij de aanvraag van het Klic-product is vastgelegd.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element name="klicMeldnummer" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Een unieke identificatie die al sinds jaar en dag aan een gebiedsinformatie-aanvraag (Klic-melding) wordt toegekend en nog steeds veel in de graafsector wordt gebruikt.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element name="aanvrager" type="wionbr:AanvragerPropertyType">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-De gegevens van de aanvrager van gebiedsinformatie.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="referentie" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-De eigen referentie die de aanvrager aan de gebiedsinformatie-aanvraag heeft gegeven.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="opdrachtgever" type="wionbr:OpdrachtgeverPropertyType">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Gegevens van de opdrachtgever voor de aanvraag van gebiedsinformatie.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element name="aanvraagSoort" type="gml:ReferenceType">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Soort gebiedsinformatie-aanvraag.
--- Description --
--- Source --</documentation>
-          <appinfo>
-            <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">AanvraagSoortValue</targetCodeList>
-          </appinfo>
-        </annotation>
-      </element>
-      <element name="aanvraagDatum" type="dateTime">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-De datumtijd waarop de gebiedsinformatie-aanvraag is aangevraagd.-
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element maxOccurs="unbounded" minOccurs="0" name="soortWerkzaamheden" type="gml:ReferenceType">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Soort graafwerkzaamheden (zie codelijst).
--- Description --
--- Source --</documentation>
-          <appinfo>
-            <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">SoortWerkzaamheden</targetCodeList>
-          </appinfo>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="omschrijvingWerkzaamheden" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Een toelichtende omschrijving van de werkzaamheden.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element name="locatieWerkzaamheden" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-De locatie van de werkzaamheden waar de gebiedsinformatie-aanvraag voor is ingediend.
-Dit kan bijvoorbeeld het dichtstbijzijnd adres zijn. 
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="startDatum" type="dateTime">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-De geplande startdatum van de werkzaamheden waarvoor de gebiedsinformatie-aanvraag is ingediend.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="eindDatum" type="dateTime">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-De geplande einddatum van de werkzaamheden waarvoor de gebiedsinformatie-aanvraag is ingediend.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element maxOccurs="unbounded" minOccurs="0" name="huisaansluitingAdressen" type="wionbr:AdresPropertyType">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Lijst van adressen waarvoor huisaansluitschetsen (extra detailinformatie, type huisaansluiting) gevraagd wordt.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-    </sequence>
-  </complexType>
-  <complexType name="GebiedsInformatieAanvraagPropertyType">
-    <sequence>
-      <element ref="wionbr:GebiedsInformatieAanvraag"/>
     </sequence>
   </complexType>
   <complexType name="IMKLBasisPropertyType">
     <choice minOccurs="0">
       <element ref="wionbr:BelangGeneriek"/>
-      <element ref="wionbr:Contact"/>
+      <element ref="wionbr:Organisatie"/>
     </choice>
     <attributeGroup ref="gml:AssociationAttributeGroup"/>
     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
@@ -1014,95 +635,40 @@ NEN 3610:2011</documentation>
     <annotation>
       <documentation>-- Name --
 -- Definition --
-Degene die opdracht geeft tot het uitvoeren van een werk waarbij graafwerkzaamheden worden verricht.
+Een opdrachtgever is een persoon die opdracht geeft om te graven in een bepaald gebied.
 -- Description --
-Gegevens van de opdrachtgever voor de aanvraag van gebiedsinformatie.
--- Source --
-artikel 7 - WION</documentation>
+-- Source --</documentation>
     </annotation>
   </element>
   <complexType name="OpdrachtgeverType">
     <sequence>
-      <element name="bedrijfsnaam" type="string">
+      <element minOccurs="0" name="contactpersoon" type="wionbr:ContactPropertyType">
         <annotation>
           <documentation>-- Name --
 -- Definition --
-De naam van het bedrijf van de opdrachtgever.
+Persoon als aanspreekpunt namens opdrachtgever.
 -- Description --
 -- Source --</documentation>
         </annotation>
       </element>
-      <element name="naam" type="string">
+      <element minOccurs="0" name="organisatie">
         <annotation>
           <documentation>-- Name --
 -- Definition --
-De achternaam van de opdrachtgever.
+Organisatie die als opdrachtgever optreedt.
 -- Description --
 -- Source --</documentation>
         </annotation>
-      </element>
-      <element minOccurs="0" name="kvkNummer" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-KvK nummer van de opdrachtgever voor de aanvraag.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="bezoekAdres" type="wionbr:BezoekAdresPropertyType">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Het bezoekadres van de opdrachtgever.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="postbusAdres" type="wionbr:PostbusAdresPropertyType">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Het postbusadres van de opdrachtgever.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="telefoon" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Het vaste telefoonnummer van de opdrachtgever.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="mobiel" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Het mobiele telefoonnummer van de opdrachtgever.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element minOccurs="0" name="fax" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Het faxnummer van de opdrachtgever.
--- Description --
--- Source --</documentation>
-        </annotation>
-      </element>
-      <element name="email" type="string">
-        <annotation>
-          <documentation>-- Name --
--- Definition --
-Het e-mail adres van de opdrachtgever.
--- Description --
--- Source --</documentation>
-        </annotation>
+        <complexType>
+          <complexContent>
+            <extension base="gml:AbstractFeatureMemberType">
+              <sequence minOccurs="0">
+                <element ref="wionbr:Organisatie"/>
+              </sequence>
+              <attributeGroup ref="gml:AssociationAttributeGroup"/>
+            </extension>
+          </complexContent>
+        </complexType>
       </element>
     </sequence>
   </complexType>
@@ -1110,6 +676,143 @@ Het e-mail adres van de opdrachtgever.
     <sequence>
       <element ref="wionbr:Opdrachtgever"/>
     </sequence>
+  </complexType>
+  <element name="Organisatie" substitutionGroup="gml:AbstractFeature" type="wionbr:OrganisatieType">
+    <annotation>
+      <documentation>-- Name --
+-- Definition --
+Gegevens van de aanvrager van gebiedsinformatie.
+-- Description --
+-- Source --</documentation>
+    </annotation>
+  </element>
+  <complexType name="OrganisatieType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="identificatie" type="wionbr:NEN3610IDPropertyType">
+            <annotation>
+              <documentation>identificatie: -- Name --
+identificatie
+-- Definition --
+Unieke identificatie van het object binnen het domein van NEN 3610.
+-- Source --
+NEN 3610:2011</documentation>
+            </annotation>
+          </element>
+          <element name="beginLifespanVersion" type="dateTime">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+De begindatum waarop een data object in de registratie werd aangemaakt, het begin van de levenscyclus van een data object.
+-- Description --
+Dit attribuut is afkomstig van INSPIRE maar wordt ook gebruikt in de IMKL-specieke objecten. Voor niet INSPIRE plichtige datasets kan hier een dummy waarde worden ingevuld.
+Dit attribuut heeft DateTime als data type.
+-- Source --</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="endLifespanVersion" type="dateTime">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+De datum die het einde van een levenscyclus van een data object aangeeft. 
+-- Description --
+Het moment vanaf wanneer het geen onderdeel meer is van de actuele registratie. Dit attribuut is afkomstig van INSPIRE maar wordt ook gebruikt in de IMKL-specieke objecten.
+Dit attribuut heeft DateTime als data type.
+-- Source --</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="kvkNummer" type="string">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+KvK nummer van de aanvrager van gebiedsinformatie.
+-- Description --
+-- Source --</documentation>
+            </annotation>
+          </element>
+          <element maxOccurs="2" name="naam" type="string">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+De naam van de organisatie.
+-- Description --
+-- Source --</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="bezoekAdres" type="wionbr:AdresPropertyType">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+Het bezoekadres van de organisatie.
+-- Description --
+-- Source --</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="postbusAdres" type="wionbr:PostbusAdresPropertyType">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+Het postbusadres van de organisatie.
+-- Description --
+-- Source --</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="telefoon" type="string">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+Het vaste telefoonnummer van de organiatie.
+-- Description --
+-- Source --</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="mobiel" type="string">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+Het mobiele telefoonnummer van de organisatie.
+-- Description --
+-- Source --</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="fax" type="string">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+Het faxnummer van de organisatie.
+-- Description --
+-- Source --</documentation>
+            </annotation>
+          </element>
+          <element maxOccurs="2" name="email" type="string">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+Het e-mail adres van de organisatie.
+-- Description --
+-- Source --</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="website" type="string">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+Website van de organisatie.
+-- Description --
+-- Source --</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="OrganisatiePropertyType">
+    <sequence minOccurs="0">
+      <element ref="wionbr:Organisatie"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
   </complexType>
   <element name="PostbusAdres" substitutionGroup="gml:AbstractObject" type="wionbr:PostbusAdresType">
     <annotation>
@@ -1138,6 +841,16 @@ Het postbusnummer van het postbusadres.
 De postcode van het postbusadres.
 -- Description --
 -- Source --</documentation>
+        </annotation>
+      </element>
+      <element name="woonplaatsNaam" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+De benaming van een door het gemeentebestuur
+aangewezen WOONPLAATS.
+-- Source --
+BAG</documentation>
         </annotation>
       </element>
       <element minOccurs="0" name="landcode" type="string">
@@ -1213,8 +926,10 @@ Een veiligheidsgebied is een door de Minister aangewezen gebied waarvan om veili
           <element name="beheerderVeiligheidsgebied" type="wionbr:BeheerderPropertyType">
             <annotation>
               <documentation>-- Name --
-beheerderVeiligheidsgebied
--- Definition --</documentation>
+-- Definition --
+Gegevens van de  beheerder van het veiligheidsgebied.
+-- Description --
+-- Source --</documentation>
             </annotation>
           </element>
         </sequence>
