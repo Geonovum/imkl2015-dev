@@ -20,7 +20,6 @@ rrb: IMKL2015-rrb.xsd
     <annotation>
       <documentation>-- Name --
 -- Definition --
-Voorstel:
 Het contactadres (meldadres) bij de netbeheerder waar de grondroerder contact mee kan opnemen voor informatie over (het) geraakte belang(en).
 -- Description --
 -- Source --</documentation>
@@ -34,8 +33,7 @@ Het contactadres (meldadres) bij de netbeheerder waar de grondroerder contact me
             <annotation>
               <documentation>-- Name --
 -- Definition --
-Voorstel:
-Typering van contact in relatie tot de melding of verzoek.
+Typering van contact in relatie tot het type melding of verzoek.
 -- Description --
 -- Source --</documentation>
               <appinfo>
@@ -145,7 +143,6 @@ Adresgegevens van Panden, Ligplaatsen en Staanplaatsen zijn beschreven in de BAG
           <documentation>-- Name --
 openbare ruimte naam
 -- Definition --
--- Definition --
 Een naam die aan een OPENBARE RUIMTE is toegekend in een daartoe strekkend formeel gemeentelijk besluit.
 -- Source --
 BAG</documentation>
@@ -155,7 +152,6 @@ BAG</documentation>
         <annotation>
           <documentation>-- Name --
 huisnummer
--- Definition --
 -- Definition --
 Een door of namens het gemeentebestuur ten aanzien
 van een adresseerbaar object toegekende nummering.
@@ -1083,7 +1079,6 @@ Mangat
 -- Definition --
 Eenvoudig omhullingsobject dat een of meer nutsvoorzieningennetobjecten kan bevatten.
 -- Description --
-Graag voorbeelden......
 -- Source --
 Inspire</documentation>
     </annotation>

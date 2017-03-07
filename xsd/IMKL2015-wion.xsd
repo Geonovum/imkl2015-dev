@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:gsml="http://xmlns.geosciml.org/GeoSciML-Core/3.0" xmlns:wion="http://www.geostandaarden.nl/imkl/2015/wion/1.1" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" elementFormDefault="qualified" targetNamespace="http://www.geostandaarden.nl/imkl/2015/wion/1.1" version="1.2RCtest2">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:wion="http://www.geostandaarden.nl/imkl/2015/wion/1.1" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" elementFormDefault="qualified" targetNamespace="http://www.geostandaarden.nl/imkl/2015/wion/1.1" version="1.2RCtest2">
   <annotation>
     <documentation>-- Name --
 -- Definition --
@@ -20,7 +20,6 @@ rrb: IMKL2015-rrb.xsd
   <import namespace="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" schemaLocation="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0/WaterNetwork.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.3/exr" schemaLocation="http://schemas.opengis.net/gml/3.3/extdEncRule.xsd"/>
-  <import namespace="http://xmlns.geosciml.org/GeoSciML-Core/3.0" schemaLocation="http://schemas.geosciml.org/geosciml-core/3.0/geosciml-core.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="AanduidingEisVoorzorgsmaatregel" substitutionGroup="wion:ExtraInformatie" type="wion:AanduidingEisVoorzorgsmaatregelType">
     <annotation>
@@ -99,7 +98,6 @@ Als de geometrie alleen dient om het leidingelement aan te duiden is er een stan
     <annotation>
       <documentation>-- Name --
 -- Definition --
-Voorstel:
 Het contactadres (meldadres) bij de netbeheerder waar de grondroerder contact mee kan opnemen voor informatie over (het) geraakte belang(en).
 -- Description --
 -- Source --</documentation>
@@ -113,8 +111,7 @@ Het contactadres (meldadres) bij de netbeheerder waar de grondroerder contact me
             <annotation>
               <documentation>-- Name --
 -- Definition --
-Voorstel:
-Typering van contact in relatie tot de melding of verzoek.
+Typering van contact in relatie tot het type melding of verzoek.
 -- Description --
 -- Source --</documentation>
               <appinfo>
@@ -130,44 +127,6 @@ Typering van contact in relatie tot de melding of verzoek.
     <sequence>
       <element ref="wion:AanvraagSoortContact"/>
     </sequence>
-  </complexType>
-  <element name="AanvraagsoortContact" substitutionGroup="gml:AbstractFeature" type="wion:AanvraagsoortContactType">
-    <annotation>
-      <documentation>-- Name --
--- Definition --
-Voorstel:
-Het contactadres (meldadres) bij de netbeheerder waar de grondroerder contact mee kan opnemen voor informatie over (het) geraakte belang(en).
--- Description --
--- Source --</documentation>
-    </annotation>
-  </element>
-  <complexType name="AanvraagsoortContactType">
-    <complexContent>
-      <extension base="gml:AbstractFeatureType">
-        <sequence>
-          <element name="aanvraagsoort" type="gml:ReferenceType">
-            <annotation>
-              <documentation>-- Name --
--- Definition --
-Voorstel:
-Typering van contact in relatie tot de melding of verzoek.
--- Description --
--- Source --</documentation>
-              <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">AanvraagSoortValue</targetCodeList>
-              </appinfo>
-            </annotation>
-          </element>
-        </sequence>
-      </extension>
-    </complexContent>
-  </complexType>
-  <complexType name="AanvraagsoortContactPropertyType">
-    <sequence minOccurs="0">
-      <element ref="wion:AanvraagsoortContact"/>
-    </sequence>
-    <attributeGroup ref="gml:AssociationAttributeGroup"/>
-    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
   </complexType>
   <element name="Aanvrager" substitutionGroup="gml:AbstractObject" type="wion:AanvragerType">
     <annotation>
@@ -281,7 +240,6 @@ Adresgegevens van Panden, Ligplaatsen en Staanplaatsen zijn beschreven in de BAG
           <documentation>-- Name --
 openbare ruimte naam
 -- Definition --
--- Definition --
 Een naam die aan een OPENBARE RUIMTE is toegekend in een daartoe strekkend formeel gemeentelijk besluit.
 -- Source --
 BAG</documentation>
@@ -291,7 +249,6 @@ BAG</documentation>
         <annotation>
           <documentation>-- Name --
 huisnummer
--- Definition --
 -- Definition --
 Een door of namens het gemeentebestuur ten aanzien
 van een adresseerbaar object toegekende nummering.
@@ -613,8 +570,7 @@ Code van de beheerder.
             <annotation>
               <documentation>-- Name --
 -- Definition --
-Voorstel:
-Website van de beheerder voor klic gerelateerde informatie.
+Startpagina van de website van de (net)beheerder met specifieke informatie voor de Klic-sector (graafsector).
 -- Description --
 -- Source --</documentation>
             </annotation>
@@ -654,7 +610,7 @@ Netinformatie is informatie over een utiliteitsnet
 -- Source --</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="contactStoring">
+          <element minOccurs="0" name="contactStoring" type="wion:ContactPropertyType">
             <annotation>
               <documentation>-- Name --
 -- Definition --
@@ -662,18 +618,8 @@ Contactinformatie bij optreden storing.
 -- Description --
 -- Source --</documentation>
             </annotation>
-            <complexType>
-              <complexContent>
-                <extension base="gml:AbstractFeatureMemberType">
-                  <sequence minOccurs="0">
-                    <element ref="gsml:Contact"/>
-                  </sequence>
-                  <attributeGroup ref="gml:AssociationAttributeGroup"/>
-                </extension>
-              </complexContent>
-            </complexType>
           </element>
-          <element minOccurs="0" name="contactBeschadiging">
+          <element minOccurs="0" name="contactBeschadiging" type="wion:ContactPropertyType">
             <annotation>
               <documentation>-- Name --
 -- Definition --
@@ -681,16 +627,6 @@ Contactinformatie bij opgetreden beschadiging.
 -- Description --
 -- Source --</documentation>
             </annotation>
-            <complexType>
-              <complexContent>
-                <extension base="gml:AbstractFeatureMemberType">
-                  <sequence minOccurs="0">
-                    <element ref="gsml:Contact"/>
-                  </sequence>
-                  <attributeGroup ref="gml:AssociationAttributeGroup"/>
-                </extension>
-              </complexContent>
-            </complexType>
           </element>
           <element maxOccurs="unbounded" name="thema" type="gml:ReferenceType">
             <annotation>
@@ -729,8 +665,7 @@ Gegevens van de belanghebbende beheerder.
     <annotation>
       <documentation>-- Name --
 -- Definition --
-Voorstel:
-Een generiek belang is een gebied waarin een netbeheerder een of meerdere netten heeft. Of het is een veiligheidsgebied.
+Een gebied waarin een netbeheerder een of meerdere netten heeft. Of het is een veiligheidsgebied.
 -- Description --
 -- Source --
 Bron: belangenregistratie.</documentation>
@@ -797,7 +732,7 @@ Gewenste datum vanaf wanneer een belang van toepassing is.
 -- Definition --
 Datum vanaf wanneer een belang van toepassing is.
 -- Description --
--- Source -</documentation>
+-- Source --</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="gewensteEinddatum" type="dateTime">
@@ -832,8 +767,7 @@ IMKL2015</documentation>
             <annotation>
               <documentation>-- Name --
 -- Definition --
-voorstel:
-nog invullen
+Het contactadres bij de netbeheerder waar de grondroerder contact mee kan opnemen voor informatie over (het) geraakte belang(en) bij een aangegeven aanvraagsoort.
 -- Description --
 -- Source --</documentation>
             </annotation>
@@ -914,16 +848,6 @@ Indien binnen de gevraagde polygoon géén kabels/leidingen liggen, en er daarom
 -- Source --</documentation>
             </annotation>
           </element>
-          <element name="bronhoudercode" type="string">
-            <annotation>
-              <documentation>-- Name --
--- Definition --
-Voorstel
-Code van de belanghebbende beheerder.
--- Description --
--- Source --</documentation>
-            </annotation>
-          </element>
           <element minOccurs="0" name="eisVoorzorgsmaatregel" type="boolean">
             <annotation>
               <documentation>-- Name --
@@ -937,7 +861,7 @@ Is er bij deze belanghebbende sprake van een eisVoorzorgmaatregel bij één van 
             <annotation>
               <documentation>-- Name --
 -- Definition --
-nog invullen
+Informatie over ligging van utiliteitsnet en de onderdelen daarvan.
 -- Description --
 -- Source --</documentation>
             </annotation>
@@ -946,7 +870,7 @@ nog invullen
             <annotation>
               <documentation>-- Name --
 -- Definition --
-nog invullen
+Topografie die door netbeheerder wordt toegevoegd voor relatieve plaatsbepaling van objecten.
 -- Description --
 -- Source --</documentation>
             </annotation>
@@ -955,6 +879,7 @@ nog invullen
             <annotation>
               <documentation>-- Name --
 -- Definition --
+Documentbijlage bij gebiedsinformatie.
 -- Description --
 -- Source --</documentation>
             </annotation>
@@ -2224,7 +2149,7 @@ Soort graafwerkzaamheden (zie codelijst).
 -- Description --
 -- Source --</documentation>
               <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">SoortWerkzaamheden</targetCodeList>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">SoortWerkzaamhedenValue</targetCodeList>
               </appinfo>
             </annotation>
           </element>
@@ -2938,7 +2863,6 @@ Mangat
 -- Definition --
 Eenvoudig omhullingsobject dat een of meer nutsvoorzieningennetobjecten kan bevatten.
 -- Description --
-Graag voorbeelden......
 -- Source --
 Inspire</documentation>
     </annotation>
@@ -3620,7 +3544,7 @@ KvK nummer van de aanvrager van gebiedsinformatie.
 -- Source --</documentation>
             </annotation>
           </element>
-          <element maxOccurs="2" name="naam" type="string">
+          <element maxOccurs="2" minOccurs="0" name="naam" type="string">
             <annotation>
               <documentation>-- Name --
 -- Definition --
@@ -3674,7 +3598,7 @@ Het faxnummer van de organisatie.
 -- Source --</documentation>
             </annotation>
           </element>
-          <element maxOccurs="2" name="email" type="string">
+          <element maxOccurs="2" minOccurs="0" name="email" type="string">
             <annotation>
               <documentation>-- Name --
 -- Definition --
@@ -3707,6 +3631,7 @@ Website van de organisatie.
     <annotation>
       <documentation>-- Name --
 -- Definition --
+Gebied dat een persoon of organisatie tekent om daar informatie over kabels en leidingen van te ontvangen.
 -- Description --
 -- Source --</documentation>
     </annotation>
@@ -3751,6 +3676,7 @@ Dit attribuut heeft DateTime als data type.
             <annotation>
               <documentation>-- Name --
 -- Definition --
+De geometrie van het gebied (een polygoon) dat een persoon of organisatie tekent om daar informatie over kabels en leidingen van te ontvangen.
 -- Description --
 -- Source --</documentation>
             </annotation>
@@ -4142,7 +4068,7 @@ Materiaal waaruit de buis bestaat.
     <annotation>
       <documentation>-- Name --
 -- Definition --
-Heeft iemand een definitie?
+Besloten onderkomen voor het huisvesten van nutsvoorzieningenobjecten die tot een of meer nutsvoorzieningennetwerken behoren.
 -- Description --
 -- Source --</documentation>
     </annotation>

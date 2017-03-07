@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:gsml="http://xmlns.geosciml.org/GeoSciML-Core/3.0" xmlns:wionbr="http://www.geostandaarden.nl/imkl/2015/wionbr/1.1" elementFormDefault="qualified" targetNamespace="http://www.geostandaarden.nl/imkl/2015/wionbr/1.1" version="1.2RCtest2">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:wionbr="http://www.geostandaarden.nl/imkl/2015/wionbr/1.1" elementFormDefault="qualified" targetNamespace="http://www.geostandaarden.nl/imkl/2015/wionbr/1.1" version="1.2RCtest2">
   <annotation>
     <documentation>-- Name --
 -- Definition --
@@ -13,13 +13,11 @@ rrb: IMKL2015-rrb.xsd
   </annotation>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.3/exr" schemaLocation="http://schemas.opengis.net/gml/3.3/extdEncRule.xsd"/>
-  <import namespace="http://xmlns.geosciml.org/GeoSciML-Core/3.0" schemaLocation="http://schemas.geosciml.org/geosciml-core/3.0/geosciml-core.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <element name="AanvraagSoortContact" substitutionGroup="wionbr:Contact" type="wionbr:AanvraagSoortContactType">
     <annotation>
       <documentation>-- Name --
 -- Definition --
-Voorstel:
 Het contactadres (meldadres) bij de netbeheerder waar de grondroerder contact mee kan opnemen voor informatie over (het) geraakte belang(en).
 -- Description --
 -- Source --</documentation>
@@ -33,8 +31,7 @@ Het contactadres (meldadres) bij de netbeheerder waar de grondroerder contact me
             <annotation>
               <documentation>-- Name --
 -- Definition --
-Voorstel:
-Typering van contact in relatie tot de melding of verzoek.
+Typering van contact in relatie tot het type melding of verzoek.
 -- Description --
 -- Source --</documentation>
               <appinfo>
@@ -124,7 +121,6 @@ Adresgegevens van Panden, Ligplaatsen en Staanplaatsen zijn beschreven in de BAG
           <documentation>-- Name --
 openbare ruimte naam
 -- Definition --
--- Definition --
 Een naam die aan een OPENBARE RUIMTE is toegekend in een daartoe strekkend formeel gemeentelijk besluit.
 -- Source --
 BAG</documentation>
@@ -134,7 +130,6 @@ BAG</documentation>
         <annotation>
           <documentation>-- Name --
 huisnummer
--- Definition --
 -- Definition --
 Een door of namens het gemeentebestuur ten aanzien
 van een adresseerbaar object toegekende nummering.
@@ -243,8 +238,7 @@ Code van de beheerder.
             <annotation>
               <documentation>-- Name --
 -- Definition --
-Voorstel:
-Website van de beheerder voor klic gerelateerde informatie.
+Startpagina van de website van de (net)beheerder met specifieke informatie voor de Klic-sector (graafsector).
 -- Description --
 -- Source --</documentation>
             </annotation>
@@ -284,7 +278,7 @@ Netinformatie is informatie over een utiliteitsnet
 -- Source --</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="contactStoring">
+          <element minOccurs="0" name="contactStoring" type="wionbr:ContactPropertyType">
             <annotation>
               <documentation>-- Name --
 -- Definition --
@@ -292,18 +286,8 @@ Contactinformatie bij optreden storing.
 -- Description --
 -- Source --</documentation>
             </annotation>
-            <complexType>
-              <complexContent>
-                <extension base="gml:AbstractFeatureMemberType">
-                  <sequence minOccurs="0">
-                    <element ref="gsml:Contact"/>
-                  </sequence>
-                  <attributeGroup ref="gml:AssociationAttributeGroup"/>
-                </extension>
-              </complexContent>
-            </complexType>
           </element>
-          <element minOccurs="0" name="contactBeschadiging">
+          <element minOccurs="0" name="contactBeschadiging" type="wionbr:ContactPropertyType">
             <annotation>
               <documentation>-- Name --
 -- Definition --
@@ -311,16 +295,6 @@ Contactinformatie bij opgetreden beschadiging.
 -- Description --
 -- Source --</documentation>
             </annotation>
-            <complexType>
-              <complexContent>
-                <extension base="gml:AbstractFeatureMemberType">
-                  <sequence minOccurs="0">
-                    <element ref="gsml:Contact"/>
-                  </sequence>
-                  <attributeGroup ref="gml:AssociationAttributeGroup"/>
-                </extension>
-              </complexContent>
-            </complexType>
           </element>
           <element maxOccurs="unbounded" name="thema" type="gml:ReferenceType">
             <annotation>
@@ -359,8 +333,7 @@ Gegevens van de belanghebbende beheerder.
     <annotation>
       <documentation>-- Name --
 -- Definition --
-Voorstel:
-Een generiek belang is een gebied waarin een netbeheerder een of meerdere netten heeft. Of het is een veiligheidsgebied.
+Een gebied waarin een netbeheerder een of meerdere netten heeft. Of het is een veiligheidsgebied.
 -- Description --
 -- Source --
 Bron: belangenregistratie.</documentation>
@@ -427,7 +400,7 @@ Gewenste datum vanaf wanneer een belang van toepassing is.
 -- Definition --
 Datum vanaf wanneer een belang van toepassing is.
 -- Description --
--- Source -</documentation>
+-- Source --</documentation>
             </annotation>
           </element>
           <element minOccurs="0" name="gewensteEinddatum" type="dateTime">
@@ -462,8 +435,7 @@ IMKL2015</documentation>
             <annotation>
               <documentation>-- Name --
 -- Definition --
-voorstel:
-nog invullen
+Het contactadres bij de netbeheerder waar de grondroerder contact mee kan opnemen voor informatie over (het) geraakte belang(en) bij een aangegeven aanvraagsoort.
 -- Description --
 -- Source --</documentation>
             </annotation>
@@ -731,7 +703,7 @@ KvK nummer van de aanvrager van gebiedsinformatie.
 -- Source --</documentation>
             </annotation>
           </element>
-          <element maxOccurs="2" name="naam" type="string">
+          <element maxOccurs="2" minOccurs="0" name="naam" type="string">
             <annotation>
               <documentation>-- Name --
 -- Definition --
@@ -785,7 +757,7 @@ Het faxnummer van de organisatie.
 -- Source --</documentation>
             </annotation>
           </element>
-          <element maxOccurs="2" name="email" type="string">
+          <element maxOccurs="2" minOccurs="0" name="email" type="string">
             <annotation>
               <documentation>-- Name --
 -- Definition --
