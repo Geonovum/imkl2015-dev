@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:wion="http://www.geostandaarden.nl/imkl/2015/wion/1.1" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" elementFormDefault="qualified" targetNamespace="http://www.geostandaarden.nl/imkl/2015/wion/1.1" version="1.2RCtest2">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:wion="http://www.geostandaarden.nl/imkl/2015/wion/1.2RC1" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" elementFormDefault="qualified" targetNamespace="http://www.geostandaarden.nl/imkl/2015/wion/1.2RC1" version="1.2RC1">
   <annotation>
     <documentation>-- Name --
 -- Definition --
@@ -94,7 +94,7 @@ Als de geometrie alleen dient om het leidingelement aan te duiden is er een stan
     <attributeGroup ref="gml:AssociationAttributeGroup"/>
     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
   </complexType>
-  <element name="AanvraagSoortContact" substitutionGroup="wion:Contact" type="wion:AanvraagSoortContactType">
+  <element name="AanvraagSoortContact" substitutionGroup="gml:AbstractObject" type="wion:AanvraagSoortContactType">
     <annotation>
       <documentation>-- Name --
 -- Definition --
@@ -104,24 +104,47 @@ Het contactadres (meldadres) bij de netbeheerder waar de grondroerder contact me
     </annotation>
   </element>
   <complexType name="AanvraagSoortContactType">
-    <complexContent>
-      <extension base="wion:ContactType">
-        <sequence>
-          <element name="aanvraagSoort" type="gml:ReferenceType">
-            <annotation>
-              <documentation>-- Name --
+    <sequence>
+      <element name="aanvraagSoort" type="gml:ReferenceType">
+        <annotation>
+          <documentation>-- Name --
 -- Definition --
 Typering van contact in relatie tot het type melding of verzoek.
 -- Description --
 -- Source --</documentation>
-              <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">AanvraagSoortValue</targetCodeList>
-              </appinfo>
-            </annotation>
-          </element>
-        </sequence>
-      </extension>
-    </complexContent>
+          <appinfo>
+            <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">AanvraagSoortValue</targetCodeList>
+          </appinfo>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="naam" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Naam van het contact.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="telefoon" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Telefoon van het contact.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="email" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+E-mail adres van het contact.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+    </sequence>
   </complexType>
   <complexType name="AanvraagSoortContactPropertyType">
     <sequence>

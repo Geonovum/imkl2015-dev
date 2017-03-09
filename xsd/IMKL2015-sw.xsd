@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:sw="http://www.geostandaarden.nl/imkl/2015/sw/1.1" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" elementFormDefault="qualified" targetNamespace="http://www.geostandaarden.nl/imkl/2015/sw/1.1" version="1.2RCtest2">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:sw="http://www.geostandaarden.nl/imkl/2015/sw/1.2RC1" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" elementFormDefault="qualified" targetNamespace="http://www.geostandaarden.nl/imkl/2015/sw/1.2RC1" version="1.2RC1">
   <annotation>
     <documentation>-- Name --
 -- Definition --
@@ -16,7 +16,7 @@ rrb: IMKL2015-rrb.xsd
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.3/exr" schemaLocation="http://schemas.opengis.net/gml/3.3/extdEncRule.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
-  <element name="AanvraagSoortContact" substitutionGroup="sw:Contact" type="sw:AanvraagSoortContactType">
+  <element name="AanvraagSoortContact" substitutionGroup="gml:AbstractObject" type="sw:AanvraagSoortContactType">
     <annotation>
       <documentation>-- Name --
 -- Definition --
@@ -26,24 +26,47 @@ Het contactadres (meldadres) bij de netbeheerder waar de grondroerder contact me
     </annotation>
   </element>
   <complexType name="AanvraagSoortContactType">
-    <complexContent>
-      <extension base="sw:ContactType">
-        <sequence>
-          <element name="aanvraagSoort" type="gml:ReferenceType">
-            <annotation>
-              <documentation>-- Name --
+    <sequence>
+      <element name="aanvraagSoort" type="gml:ReferenceType">
+        <annotation>
+          <documentation>-- Name --
 -- Definition --
 Typering van contact in relatie tot het type melding of verzoek.
 -- Description --
 -- Source --</documentation>
-              <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">AanvraagSoortValue</targetCodeList>
-              </appinfo>
-            </annotation>
-          </element>
-        </sequence>
-      </extension>
-    </complexContent>
+          <appinfo>
+            <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">AanvraagSoortValue</targetCodeList>
+          </appinfo>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="naam" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Naam van het contact.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="telefoon" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+Telefoon van het contact.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="email" type="string">
+        <annotation>
+          <documentation>-- Name --
+-- Definition --
+E-mail adres van het contact.
+-- Description --
+-- Source --</documentation>
+        </annotation>
+      </element>
+    </sequence>
   </complexType>
   <complexType name="AanvraagSoortContactPropertyType">
     <sequence>
