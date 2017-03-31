@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:wionbr="http://www.geostandaarden.nl/imkl/2015/wionbr/1.2RC1" elementFormDefault="qualified" targetNamespace="http://www.geostandaarden.nl/imkl/2015/wionbr/1.2RC1" version="1.2RC1">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:wionbr="http://www.geostandaarden.nl/imkl/2015/wionbr/1.2RC2" elementFormDefault="qualified" targetNamespace="http://www.geostandaarden.nl/imkl/2015/wionbr/1.2RC2" version="1.2">
   <annotation>
     <documentation>-- Name --
+IMKL2015 versie 1.2
 -- Definition --
 -- Description --
 4 profielen:
@@ -8,7 +9,6 @@ wion: IMKL2015-wion.xsd
 wionBR: IMKL2015-wionbr.xsd
 sw: IMKL2015-sw.xsd
 rrb: IMKL2015-rrb.xsd
-
 -- Source --</documentation>
   </annotation>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
@@ -254,6 +254,7 @@ Een persoon of een organisatie die een net of een veiligheidsgebied beheert.
 -- Definition --
 Code van de beheerder.
 -- Description --
+De code bestaat uit zes alfanumerieke posities. Dit is afgestemd met het format van  CBS codes voor gemeenten en provincies.
 -- Source --</documentation>
             </annotation>
           </element>
@@ -291,7 +292,20 @@ Bron: belangenregistratie.</documentation>
     <complexContent>
       <extension base="wionbr:BelangGeneriekType">
         <sequence>
-          <element maxOccurs="3" minOccurs="0" name="contactNetInformatie" type="wionbr:AanvraagSoortContactPropertyType">
+          <element maxOccurs="unbounded" name="thema" type="gml:ReferenceType">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+Het thema geeft aan welk type leiding het betreft en welke functie de leidingen hebben. Bijvoorbeeld datatransport, gas lage druk, laagspanning, riool etc. Gekozen kan worden uit een lijst van thema’s.
+-- Description --
+Opmerking: Signaleringskabels die data vervoeren vallen onder datatransport.
+-- Source --</documentation>
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Thema</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element maxOccurs="3" minOccurs="0" name="contactNetinformatie" type="wionbr:AanvraagSoortContactPropertyType">
             <annotation>
               <documentation>-- Name --
 -- Definition --
@@ -317,19 +331,6 @@ Contactinformatie bij optreden storing.
 Contactinformatie bij opgetreden beschadiging.
 -- Description --
 -- Source --</documentation>
-            </annotation>
-          </element>
-          <element maxOccurs="unbounded" name="thema" type="gml:ReferenceType">
-            <annotation>
-              <documentation>-- Name --
--- Definition --
-Het thema geeft aan welk type leiding het betreft en welke functie de leidingen hebben. Bijvoorbeeld datatransport, gas lage druk, laagspanning, riool etc. Gekozen kan worden uit een lijst van thema’s.
--- Description --
-Opmerking: Signaleringskabels die data vervoeren vallen onder datatransport.
--- Source --</documentation>
-              <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Thema</targetCodeList>
-              </appinfo>
             </annotation>
           </element>
           <element minOccurs="0" name="netbeheerder" type="wionbr:BeheerderPropertyType">
@@ -417,7 +418,7 @@ Gewenste datum vanaf wanneer een belang van toepassing is.
 -- Source --</documentation>
             </annotation>
           </element>
-          <element name="ingangsdatum" type="dateTime">
+          <element minOccurs="0" name="ingangsdatum" type="dateTime">
             <annotation>
               <documentation>-- Name --
 -- Definition --
@@ -717,20 +718,20 @@ Dit attribuut heeft DateTime als data type.
 -- Source --</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="kvkNummer" type="string">
-            <annotation>
-              <documentation>-- Name --
--- Definition --
-KvK nummer van de aanvrager van gebiedsinformatie.
--- Description --
--- Source --</documentation>
-            </annotation>
-          </element>
           <element maxOccurs="2" minOccurs="0" name="naam" type="string">
             <annotation>
               <documentation>-- Name --
 -- Definition --
 De naam van de organisatie.
+-- Description --
+-- Source --</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="kvkNummer" type="string">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+KvK nummer van de aanvrager van gebiedsinformatie.
 -- Description --
 -- Source --</documentation>
             </annotation>

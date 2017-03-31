@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:wion="http://www.geostandaarden.nl/imkl/2015/wion/1.2RC1" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" elementFormDefault="qualified" targetNamespace="http://www.geostandaarden.nl/imkl/2015/wion/1.2RC1" version="1.2RC1">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:wion="http://www.geostandaarden.nl/imkl/2015/wion/1.2RC2" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" elementFormDefault="qualified" targetNamespace="http://www.geostandaarden.nl/imkl/2015/wion/1.2RC2" version="1.2">
   <annotation>
     <documentation>-- Name --
+IMKL2015 versie 1.2
 -- Definition --
 -- Description --
 4 profielen:
@@ -8,7 +9,6 @@ wion: IMKL2015-wion.xsd
 wionBR: IMKL2015-wionbr.xsd
 sw: IMKL2015-sw.xsd
 rrb: IMKL2015-rrb.xsd
-
 -- Source --</documentation>
   </annotation>
   <import namespace="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" schemaLocation="http://inspire.ec.europa.eu/schemas/us-net-common/4.0/UtilityNetworksCommon.xsd"/>
@@ -586,6 +586,7 @@ Een persoon of een organisatie die een net of een veiligheidsgebied beheert.
 -- Definition --
 Code van de beheerder.
 -- Description --
+De code bestaat uit zes alfanumerieke posities. Dit is afgestemd met het format van  CBS codes voor gemeenten en provincies.
 -- Source --</documentation>
             </annotation>
           </element>
@@ -623,7 +624,20 @@ Bron: belangenregistratie.</documentation>
     <complexContent>
       <extension base="wion:BelangGeneriekType">
         <sequence>
-          <element maxOccurs="3" minOccurs="0" name="contactNetInformatie" type="wion:AanvraagSoortContactPropertyType">
+          <element maxOccurs="unbounded" name="thema" type="gml:ReferenceType">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+Het thema geeft aan welk type leiding het betreft en welke functie de leidingen hebben. Bijvoorbeeld datatransport, gas lage druk, laagspanning, riool etc. Gekozen kan worden uit een lijst van thema’s.
+-- Description --
+Opmerking: Signaleringskabels die data vervoeren vallen onder datatransport.
+-- Source --</documentation>
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Thema</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element maxOccurs="3" minOccurs="0" name="contactNetinformatie" type="wion:AanvraagSoortContactPropertyType">
             <annotation>
               <documentation>-- Name --
 -- Definition --
@@ -649,19 +663,6 @@ Contactinformatie bij optreden storing.
 Contactinformatie bij opgetreden beschadiging.
 -- Description --
 -- Source --</documentation>
-            </annotation>
-          </element>
-          <element maxOccurs="unbounded" name="thema" type="gml:ReferenceType">
-            <annotation>
-              <documentation>-- Name --
--- Definition --
-Het thema geeft aan welk type leiding het betreft en welke functie de leidingen hebben. Bijvoorbeeld datatransport, gas lage druk, laagspanning, riool etc. Gekozen kan worden uit een lijst van thema’s.
--- Description --
-Opmerking: Signaleringskabels die data vervoeren vallen onder datatransport.
--- Source --</documentation>
-              <appinfo>
-                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Thema</targetCodeList>
-              </appinfo>
             </annotation>
           </element>
           <element minOccurs="0" name="netbeheerder" type="wion:BeheerderPropertyType">
@@ -749,7 +750,7 @@ Gewenste datum vanaf wanneer een belang van toepassing is.
 -- Source --</documentation>
             </annotation>
           </element>
-          <element name="ingangsdatum" type="dateTime">
+          <element minOccurs="0" name="ingangsdatum" type="dateTime">
             <annotation>
               <documentation>-- Name --
 -- Definition --
@@ -934,7 +935,7 @@ Verwijzing naar gebied waar een belang is geraak door een orientatiepolygoon.
 -- Source --</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="netbeheerder" type="wion:BeheerderPropertyType">
+          <element name="netbeheerder" type="wion:BeheerderPropertyType">
             <annotation>
               <documentation>-- Name --
 -- Definition --
@@ -2264,7 +2265,7 @@ Verwijzing naar orientatiepolygoon
     <annotation>
       <documentation>-- Name --
 -- Definition --
-nog invullen
+Gebiedsinformatie is het geheel van informatie dat door beheerders, via de Dienst wordt verstrekt over de betrokken orientatiepolygoon dan wel graafpolygoon.
 -- Description --
 -- Source --</documentation>
     </annotation>
@@ -3558,20 +3559,20 @@ Dit attribuut heeft DateTime als data type.
 -- Source --</documentation>
             </annotation>
           </element>
-          <element minOccurs="0" name="kvkNummer" type="string">
-            <annotation>
-              <documentation>-- Name --
--- Definition --
-KvK nummer van de aanvrager van gebiedsinformatie.
--- Description --
--- Source --</documentation>
-            </annotation>
-          </element>
           <element maxOccurs="2" minOccurs="0" name="naam" type="string">
             <annotation>
               <documentation>-- Name --
 -- Definition --
 De naam van de organisatie.
+-- Description --
+-- Source --</documentation>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="kvkNummer" type="string">
+            <annotation>
+              <documentation>-- Name --
+-- Definition --
+KvK nummer van de aanvrager van gebiedsinformatie.
 -- Description --
 -- Source --</documentation>
             </annotation>
@@ -3721,7 +3722,7 @@ De geometrie van het gebied (een polygoon) dat een persoon of organisatie tekent
 -- Definition --
 Een type kabel of leiding die niet onder de andere benoemde typen valt.
 -- Description --
-Bijvoorbeeld een weesleiding maar ook leidingen voor voedingsmiddelen, landbouwproducten vallen hieronder.
+Bijvoorbeeld een weesleiding maar ook leidingen voor voedingsmiddelen, landbouwproducten vallen hieronder. Een weesleiding valt bij INSPIRE onder de waarde utilityNetworkType = 'overig'.
 -- Source --
 IMKL</documentation>
     </annotation>

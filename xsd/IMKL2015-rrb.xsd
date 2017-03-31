@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:rrb="http://www.geostandaarden.nl/imkl/2015/rrb/1.2RC1" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" elementFormDefault="qualified" targetNamespace="http://www.geostandaarden.nl/imkl/2015/rrb/1.2RC1" version="1.2RC1">
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:rrb="http://www.geostandaarden.nl/imkl/2015/rrb/1.2RC2" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" elementFormDefault="qualified" targetNamespace="http://www.geostandaarden.nl/imkl/2015/rrb/1.2RC2" version="1.2">
   <annotation>
     <documentation>-- Name --
+IMKL2015 versie 1.2
 -- Definition --
 -- Description --
 4 profielen:
@@ -8,7 +9,6 @@ wion: IMKL2015-wion.xsd
 wionBR: IMKL2015-wionbr.xsd
 sw: IMKL2015-sw.xsd
 rrb: IMKL2015-rrb.xsd
-
 -- Source --</documentation>
   </annotation>
   <import namespace="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" schemaLocation="http://inspire.ec.europa.eu/schemas/us-net-common/4.0/UtilityNetworksCommon.xsd"/>
