@@ -9,7 +9,7 @@ This is the github reposotitory for the development of the IMKL2015 information 
 ## URI Stratgy
 In IMKL2015 objects are identified by URI's. Below we describe what URI's are used for what purposes:
 
-###Codelijsten
+### Codelijsten
 
 In het codelijstergister zitten codelijsten en de codes zelf: een codelijst is een lijstje toegestane waardes (in de vorm van een URI).
 
@@ -25,7 +25,7 @@ Het RDF met de codelijst wordt gepubliceerd op:
 
     http://register.geostandaarden.nl/waardelijst/imkl/20151201/imkl2015.rdf
 
-###GML Applicatieschema
+### GML Applicatieschema
 Binnen IMKL komen momenteel drie applicatieschema’s voor: 
 
     WION: http://www.geostandaarden.nl/imkl/2015/wion/1.0
