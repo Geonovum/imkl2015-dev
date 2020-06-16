@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
 Changelog.
+======================
+General: Changes to the 1.2.1 schema are indicated by "adapted 4-2.0".
+Startversion is imkl2015-wion.xsd version 1.2.1 published on https://register.geostandaarden.nl/gmlapplicatieschema/imkl2015/1.2.1/imkl2015-wion.xsd
+======================
+
+2020-06-16:
+Version: 2.0io20200616
+Informatiepolygoon: definition added:  Definition 
+Een informatiepolygoon is de weergave door een grondroerder van het gebied, waarvoor gebiedsinformatie wordt gevraagd.
+ Description 
+De gebiedsinformatie die zich bevindt tussen een informatiepolygoon en de graafpolygoon is puur ter informatie en ondersteuning van de werkzaamheden van de grondroerder.
+
+Orientatiepolygoon: definition changed
+
+
 2020-06-08:
 Graafpolygoon:
 Artikel1 WION vervangen door Artikel 1 WIBON.
 
 2020-06-02:
 Version: 2.0io20200602
-Changes to the 1.2.1 schema are indicated by "adapted 4-2.0".
-Startversion is imkl2015-wion.xsd version 1.2.1 published on https://register.geostandaarden.nl/gmlapplicatieschema/imkl2015/1.2.1/imkl2015-wion.xsd
+
 
 Change of namespace:
 xmlns:wion="http://www.geostandaarden.nl/imkl/2015/wion/1.2" -> xmlns:wibon="http://www.geostandaarden.nl/imkl/wibon"
@@ -50,10 +64,10 @@ Organisatie:
 <element name="email" type="string" minOccurs="0" maxOccurs="2"> -> <element name="email" type="string" minOccurs="0" maxOccurs="1"> 
 
 -->
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:wibon="http://www.geostandaarden.nl/imkl/wibon" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" targetNamespace="http://www.geostandaarden.nl/imkl/wibon" elementFormDefault="qualified" version="2.0io20200608">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:wibon="http://www.geostandaarden.nl/imkl/wibon" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" targetNamespace="http://www.geostandaarden.nl/imkl/wibon" elementFormDefault="qualified" version="2.0io20200616">
 	<annotation>
 		<documentation>-- Name --
-imkl versie 2.0io 20200602
+imkl versie 2.0io 20200616
 -- Definition --
 -- Description --
 3 profielen: OPMERKING: nog bepalen
@@ -2599,9 +2613,12 @@ De geometrie van het gebied (een polygoon) waarbinnen gegraven gaat worden.
 	</complexType>
 	<element name="Informatiepolygoon" type="wibon:InformatiepolygoonType" substitutionGroup="gml:AbstractFeature">
 		<annotation>
+	<!-- adapted 4-2.0 -->
 			<documentation>-- Name --
 -- Definition --
+Een informatiepolygoon is de weergave door een grondroerder van het gebied, waarvoor gebiedsinformatie wordt gevraagd.
 -- Description --
+De gebiedsinformatie die zich bevindt tussen een informatiepolygoon en de graafpolygoon is puur ter informatie en ondersteuning van de werkzaamheden van de grondroerder.
 -- Source --</documentation>
 		</annotation>
 	</element>
@@ -3747,11 +3764,15 @@ Website van de organisatie.
 	</complexType>
 	<element name="Orientatiepolygoon" type="wibon:OrientatiepolygoonType" substitutionGroup="gml:AbstractFeature">
 		<annotation>
-			<documentation>-- Name --
+			<documentation>
+<!-- adapted 4-2.0 -->			
+			-- Name --
 -- Definition --
-Gebied dat een persoon of organisatie tekent om daar informatie over kabels en leidingen van te ontvangen.
+Een oriëntatiepolygoon is de weergave door een opdrachtgever, grondroerder, aanbieder of bestuursorgaan van een aangesloten gebied, ten aanzien waarvan deze om gebiedsinformatie verzoekt met het oog op respectievelijk het voorbereiden van graafwerkzaamheden, het voorbereiden van een verzoek tot medegebruik of coördinatie, of ten behoeve van de hem opgedragen taak.
 -- Description --
--- Source --</documentation>
+-- Source --
+Artikel 1 en Artikel 7 WIBON
+</documentation>
 		</annotation>
 	</element>
 	<complexType name="OrientatiepolygoonType">
