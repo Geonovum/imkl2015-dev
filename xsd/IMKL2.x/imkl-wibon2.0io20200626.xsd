@@ -7,6 +7,10 @@ General: Changes to the 1.2.1 schema are indicated by "adapted 4-2.0".
 Startversion is imkl2015-wion.xsd version 1.2.1 published on https://register.geostandaarden.nl/gmlapplicatieschema/imkl2015/1.2.1/imkl2015-wion.xsd
 ======================
 
+2020-07-03
+Aanvrager:
+Rename attribute
+<element name="extraEmail" type="string" minOccurs="0"> -> <element name="extraContact" type="wibon:ContactPropertyType" minOccurs="0">
 
 2020-06-26
 
@@ -254,11 +258,12 @@ Organisatie die aanvraag doet.
 -- Source --</documentation>
 				</annotation>
 			</element>
-			<element name="extraEmail" type="string" minOccurs="0">
+		<!-- adapted 4-2.0 -->
+			<element name="extraContact" type="wibon:ContactPropertyType" minOccurs="0">
 				<annotation>
 					<documentation>-- Name --
 -- Definition --
-Extra email naast het emailadres van de contactpersoon.
+Extra contact naast dat van de contactpersoon.
 -- Description --
 -- Source --</documentation>
 				</annotation>
