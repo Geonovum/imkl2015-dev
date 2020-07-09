@@ -7,7 +7,8 @@ General: Changes to the 1.2.1 schema are indicated by "adapted 4-2.0".
 Startversion is imkl2015-wion.xsd version 1.2.1 published on https://register.geostandaarden.nl/gmlapplicatieschema/imkl2015/1.2.1/imkl2015-wion.xsd
 ======================
 
-2020-07-03
+2020-07-06
+Version: 2.0cons20200706
 Aanvrager:
 Rename attribute
 <element name="extraEmail" type="string" minOccurs="0"> -> <element name="extraContact" type="wibon:ContactPropertyType" minOccurs="0">
@@ -77,10 +78,10 @@ Organisatie:
 <element name="email" type="string" minOccurs="0" maxOccurs="2"> -> <element name="email" type="string" minOccurs="0" maxOccurs="1"> 
 
 -->
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:wibon="http://www.geostandaarden.nl/imkl/wibon" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" targetNamespace="http://www.geostandaarden.nl/imkl/wibon" elementFormDefault="qualified" version="2.0io20200706">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:wibon="http://www.geostandaarden.nl/imkl/wibon" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" targetNamespace="http://www.geostandaarden.nl/imkl/wibon" elementFormDefault="qualified" version="2.0cons20200706">
 	<annotation>
 		<documentation>-- Name --
-imkl versie 2.0io 20200706
+imkl versie 2.0cons20200706
 -- Definition --
 -- Description --
 3 profielen: OPMERKING: nog bepalen
