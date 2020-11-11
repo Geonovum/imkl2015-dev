@@ -7,6 +7,10 @@ General: Changes to the 1.2.1 schema are indicated by "adapted 4-2.0".
 Startversion is imkl2015-wion.xsd version 1.2.1 published on https://register.geostandaarden.nl/gmlapplicatieschema/imkl2015/1.2.1/imkl2015-wion.xsd
 ======================
 
+2020-10-30
+
+Landcode as codelist.
+
 2020-09-30
 Gebiedsinformatieaanvraag:
 <element name="referentie" type="string" minOccurs="0"> -> <element name="referentie" type="string">
@@ -104,10 +108,10 @@ Organisatie:
 <element name="email" type="string" minOccurs="0" maxOccurs="2"> -> <element name="email" type="string" minOccurs="0" maxOccurs="1"> 
 
 -->
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:wibon="http://www.geostandaarden.nl/imkl/wibon" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" targetNamespace="http://www.geostandaarden.nl/imkl/wibon" elementFormDefault="qualified" version="2.0.0rc">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" xmlns:wibon="http://www.geostandaarden.nl/imkl/wibon" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" targetNamespace="http://www.geostandaarden.nl/imkl/wibon" elementFormDefault="qualified" version="2.0.0">
 	<annotation>
 		<documentation>-- Name --
-imkl versie 2.0.0rc
+imkl versie 2.0.0
 -- Definition --
 -- Description --
 2 profielen:
@@ -437,12 +441,16 @@ De volgende regulier expressie beschrijft het format van een valide volledige po
 BAG. http://www.digitaleoverheid.nl/onderwerpen/stelselinformatiepunt/stelsel-van-basisregistraties/stelselvoorzieningen/stelselcatalogus/begrippen/Adres/BAG/Nummeraanduiding/Postcode-Nummeraanduiding</documentation>
 				</annotation>
 			</element>
-			<element name="landcode" type="string" minOccurs="0">
+			<!-- adapted 4-2.0 -->
+			<element name="landcode" type="gml:ReferenceType">
 				<annotation>
 					<documentation>-- Name --
 -- Definition --
-Tweeletterige afkorting van de landsnaam conform ISO 3166 - Country codes
+Drieletterige afkorting van de landsnaam conform ISO 3166 - Country codes
 -- Source --</documentation>
+					<appinfo>
+						<targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LandcodeValue</targetCodeList>
+					</appinfo>
 				</annotation>
 			</element>
 		</sequence>
@@ -4115,13 +4123,16 @@ aangewezen WOONPLAATS.
 BAG</documentation>
 				</annotation>
 			</element>
-			<element name="landcode" type="string" minOccurs="0">
+			<!-- adapted 4-2.0 -->
+			<element name="landcode" type="gml:ReferenceType">
 				<annotation>
 					<documentation>-- Name --
 -- Definition --
-Landcode van het postbusadres (zie codelijst).
--- Description --
+Drieletterige afkorting van de landsnaam conform ISO 3166 - Country codes
 -- Source --</documentation>
+					<appinfo>
+						<targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LandcodeValue</targetCodeList>
+					</appinfo>
 				</annotation>
 			</element>
 		</sequence>

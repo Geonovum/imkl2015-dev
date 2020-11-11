@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gml:FeatureCollection gml:id="e134606e-9935-4154-97f6-bee42cd879f7" xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0" xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0" xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0" xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0" xmlns:base2="http://inspire.ec.europa.eu/schemas/base2/2.0" xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0" xmlns:net="http://inspire.ec.europa.eu/schemas/net/4.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3" 
+xmlns:imkl="http://www.geostandaarden.nl/imkl/wibonbr" 
+xsi:schemaLocation="http://www.geostandaarden.nl/imkl/wibonbr ./imkl-wibon2.0rc2.xsd">
+	<gml:boundedBy>
+		<gml:Envelope srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2">
+			<gml:lowerCorner>189644.0 353992.0</gml:lowerCorner>
+			<gml:upperCorner>190141.0 354369.0</gml:upperCorner>
+		</gml:Envelope>
+	</gml:boundedBy>
+	<gml:featureMember>
+		<imkl:Beheerder gml:id="nl.imkl-KL1031._Beheerder">
+			<imkl:identificatie>
+				<imkl:NEN3610ID>
+					<imkl:namespace>nl.imkl</imkl:namespace>
+					<imkl:lokaalID>KL1031._Beheerder</imkl:lokaalID>
+				</imkl:NEN3610ID>
+			</imkl:identificatie>
+			<imkl:beginLifespanVersion>2000-01-01T00:00:00.000+01:00</imkl:beginLifespanVersion>
+			<imkl:bronhoudercode>KL1031</imkl:bronhoudercode>
+			<imkl:websiteKlic>www.enexis.nl/klic-info</imkl:websiteKlic>
+			<!-- Organisatie als datatype, conform WIBON -->
+			<imkl:organisatie>
+				<imkl:Organisatie>
+					<imkl:naam>Enexis B.V.</imkl:naam>
+					<imkl:kvkNummer>17131139</imkl:kvkNummer>
+					<imkl:bezoekAdres>
+						<imkl:Adres>
+							<imkl:BAGid>0344200000084855</imkl:BAGid>
+							<imkl:openbareRuimteNaam>Demkaweg</imkl:openbareRuimteNaam>
+							<imkl:huisnummer>11</imkl:huisnummer>
+							<imkl:huisletter>A</imkl:huisletter>
+							<imkl:huisnummertoevoeging>A</imkl:huisnummertoevoeging>
+							<imkl:woonplaatsNaam>Utrecht</imkl:woonplaatsNaam>
+							<imkl:postcode>3555HW</imkl:postcode>
+							<imkl:landcode xlink:href="http://publications.europa.eu/resource/authority/country/NLD"/>
+						</imkl:Adres>
+					</imkl:bezoekAdres>
+					<imkl:postbusAdres>
+						<imkl:PostbusAdres>
+							<imkl:postbusnummer>9046</imkl:postbusnummer>
+							<imkl:postcode>7300GH</imkl:postcode>
+							<imkl:woonplaatsNaam>APELDOORN</imkl:woonplaatsNaam>
+							<imkl:landcode xlink:href="http://publications.europa.eu/resource/authority/country/NLD"/>
+						</imkl:PostbusAdres>
+					</imkl:postbusAdres>
+					<imkl:telefoon>033-1234567</imkl:telefoon>
+					<imkl:mobiel>06-12345678</imkl:mobiel>
+					<imkl:fax>033-1234568</imkl:fax>
+					<imkl:email>info@enexis.nl</imkl:email>
+					<imkl:website>www.enexis.nl/info</imkl:website>
+				</imkl:Organisatie>
+			</imkl:organisatie>
+			<!-- -->
+		</imkl:Beheerder>
+	</gml:featureMember>
+	<gml:featureMember>
+		<imkl:Belang gml:id="nl.imkl-KL1031._Belang_5012977-1">
+			<imkl:identificatie>
+				<imkl:NEN3610ID>
+					<imkl:namespace>nl.imkl</imkl:namespace>
+					<imkl:lokaalID>KL1031._Belang_5012977</imkl:lokaalID>
+					<imkl:versie>1</imkl:versie>
+				</imkl:NEN3610ID>
+			</imkl:identificatie>
+			<imkl:beginLifespanVersion>2018-08-30T00:00:00.000+02:00</imkl:beginLifespanVersion>
+			<imkl:omschrijving>ENEXIS</imkl:omschrijving>
+			<imkl:gewensteIngangsdatum>2018-09-01T00:00:00.000+02:00</imkl:gewensteIngangsdatum>
+			<imkl:ingangsdatum>2018-09-01T00:00:00.000+02:00</imkl:ingangsdatum>
+			<imkl:gewensteEinddatum>2025-09-01T00:00:00.000+02:00</imkl:gewensteEinddatum>
+			<imkl:einddatum>2025-09-01T00:00:00.000+02:00</imkl:einddatum>
+			<imkl:beheerpolygoon>
+				<gml:MultiSurface>
+					<gml:surfaceMember>
+						<gml:Polygon srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2" gml:id="nl.imkl-KL1031._Belang_5012977-1_geo1">
+							<gml:exterior>
+								<gml:LinearRing>
+									<gml:posList>189644.0 354349.0 189785.0 354160.0 189845.0 354080.0 190141.0 353992.0 190141.0 354369.0 189644.0 354349.0</gml:posList>
+								</gml:LinearRing>
+							</gml:exterior>
+						</gml:Polygon>
+					</gml:surfaceMember>
+					<gml:surfaceMember>
+						<gml:Polygon srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2" gml:id="nl.imkl-KL1031._Belang_5012977-1_geo2">
+							<gml:exterior>
+								<gml:LinearRing>
+									<gml:posList>190644.0 354349.0 190785.0 354160.0 190845.0 354080.0 191141.0 353992.0 191141.0 354369.0 190644.0 354349.0</gml:posList>
+								</gml:LinearRing>
+							</gml:exterior>
+						</gml:Polygon>
+					</gml:surfaceMember>
+				</gml:MultiSurface>
+			</imkl:beheerpolygoon>
+			<imkl:contactAanvraag>
+				<imkl:AanvraagSoortContact>
+					<imkl:aanvraagSoort xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/AanvraagSoortValue/graafmelding"/>
+					<imkl:naam>KLICINFO-G</imkl:naam>
+					<imkl:telefoon>0888577271</imkl:telefoon>
+					<imkl:email>klicinfo@enexis.nl</imkl:email>
+				</imkl:AanvraagSoortContact>
+			</imkl:contactAanvraag>
+			<imkl:contactAanvraag>
+				<imkl:AanvraagSoortContact>
+					<imkl:aanvraagSoort xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/AanvraagSoortValue/calamiteitenmelding"/>
+					<imkl:naam>KLICINFO-C</imkl:naam>
+					<imkl:telefoon>0888577271</imkl:telefoon>
+					<imkl:email>klicinfo@enexis.nl</imkl:email>
+				</imkl:AanvraagSoortContact>
+			</imkl:contactAanvraag>
+			<imkl:contactAanvraag>
+				<imkl:AanvraagSoortContact>
+					<imkl:aanvraagSoort xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/AanvraagSoortValue/orientatieverzoek"/>
+					<imkl:naam>KLICINFO-O</imkl:naam>
+					<imkl:telefoon>0888577271</imkl:telefoon>
+					<imkl:email>klicinfo@enexis.nl</imkl:email>
+				</imkl:AanvraagSoortContact>
+			</imkl:contactAanvraag>
+			<imkl:thema xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/laagspanning"/>
+			<imkl:thema xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/gasLageDruk"/>
+			<imkl:thema xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/gasHogeDruk"/>
+			<imkl:thema xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/Thema/middenspanning"/>
+			<imkl:contactNetinformatie>
+				<imkl:AanvraagSoortContact>
+					<imkl:aanvraagSoort xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/AanvraagSoortValue/graafmelding"/>
+					<imkl:naam>KLICINFO-G</imkl:naam>
+					<imkl:telefoon>0888577271</imkl:telefoon>
+					<imkl:email>klicinfo@enexis.nl</imkl:email>
+				</imkl:AanvraagSoortContact>
+			</imkl:contactNetinformatie>
+			<imkl:contactNetinformatie>
+				<imkl:AanvraagSoortContact>
+					<imkl:aanvraagSoort xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/AanvraagSoortValue/calamiteitenmelding"/>
+					<imkl:naam>KLICINFO-C</imkl:naam>
+					<imkl:telefoon>0888577271</imkl:telefoon>
+					<imkl:email>klicinfo@enexis.nl</imkl:email>
+				</imkl:AanvraagSoortContact>
+			</imkl:contactNetinformatie>
+			<imkl:contactNetinformatie>
+				<imkl:AanvraagSoortContact>
+					<imkl:aanvraagSoort xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/AanvraagSoortValue/orientatieverzoek"/>
+					<imkl:naam>KLICINFO-O</imkl:naam>
+					<imkl:telefoon>0888577271</imkl:telefoon>
+					<imkl:email>klicinfo@enexis.nl</imkl:email>
+				</imkl:AanvraagSoortContact>
+			</imkl:contactNetinformatie>
+			<imkl:contactBeschadiging>
+				<imkl:Contact>
+					<imkl:naam>KLICINFO-SCHADE</imkl:naam>
+					<imkl:telefoon>0888577271</imkl:telefoon>
+					<imkl:email>klicinfo@enexis.nl</imkl:email>
+				</imkl:Contact>
+			</imkl:contactBeschadiging>
+			<imkl:netbeheerder xlink:href="nl.imkl-KL1031._Beheerder"/>
+		</imkl:Belang>
+	</gml:featureMember>
+<!--
+Dit is een belang van een BeheerderVG
+- - - - - - - - - - - - - - - - - - -
+-->
+	<gml:featureMember>
+		<imkl:Beheerder gml:id="nl.imkl-KL9001._Beheerder">
+			<imkl:identificatie>
+				<imkl:NEN3610ID>
+					<imkl:namespace>nl.imkl</imkl:namespace>
+					<imkl:lokaalID>KL9001._Beheerder</imkl:lokaalID>
+				</imkl:NEN3610ID>
+			</imkl:identificatie>
+			<imkl:beginLifespanVersion>2000-01-01T00:00:00.000+01:00</imkl:beginLifespanVersion>
+			<imkl:bronhoudercode>KL9001</imkl:bronhoudercode>
+			<imkl:websiteKlic>www.ecnnucleair.eu/klic-info</imkl:websiteKlic>
+			<!-- Organisatie als datatype, conform WIBON -->
+			<imkl:organisatie>
+				<imkl:Organisatie>
+					<imkl:naam>Stichting ECN Nucleair</imkl:naam>
+					<imkl:kvkNummer>59349026</imkl:kvkNummer>
+					<imkl:bezoekAdres>
+						<imkl:Adres>
+							<imkl:BAGid>0476200000653678</imkl:BAGid>
+							<imkl:openbareRuimteNaam>Westerduinweg</imkl:openbareRuimteNaam>
+							<imkl:huisnummer>3</imkl:huisnummer>
+							<imkl:huisnummertoevoeging>101</imkl:huisnummertoevoeging>
+							<imkl:woonplaatsNaam>Petten</imkl:woonplaatsNaam>
+							<imkl:postcode>1755LE</imkl:postcode>
+							<imkl:landcode xlink:href="http://publications.europa.eu/resource/authority/country/NLD"/>
+						</imkl:Adres>
+					</imkl:bezoekAdres>
+					<imkl:telefoon>0224 564 950</imkl:telefoon>
+					<imkl:email>info@ecnnucleair.eu</imkl:email>
+					<imkl:website>www.ecnnucleair.eu</imkl:website>
+				</imkl:Organisatie>
+			</imkl:organisatie>
+			<!-- -->
+		</imkl:Beheerder>
+	</gml:featureMember>
+	<gml:featureMember>
+		<imkl:Veiligheidsgebied gml:id="nl.imkl-KL9001._Veiligheidsgebied_9001900-1">
+			<imkl:identificatie>
+				<imkl:NEN3610ID>
+					<imkl:namespace>nl.imkl</imkl:namespace>
+					<imkl:lokaalID>KL9001._Veiligheidsgebied_9001900</imkl:lokaalID>
+					<imkl:versie>1</imkl:versie>
+				</imkl:NEN3610ID>
+			</imkl:identificatie>
+			<imkl:beginLifespanVersion>2018-08-30T00:00:00.000+02:00</imkl:beginLifespanVersion>
+			<imkl:omschrijving>ECN PETTEN</imkl:omschrijving>
+			<imkl:ingangsdatum>2018-09-01T00:00:00.000+02:00</imkl:ingangsdatum>
+			<imkl:einddatum>2025-09-01T00:00:00.000+02:00</imkl:einddatum>
+			<imkl:beheerpolygoon>
+				<gml:MultiSurface>
+					<gml:surfaceMember>
+						<gml:Polygon srsName="urn:ogc:def:crs:EPSG::28992" srsDimension="2" gml:id="nl.imkl-KL9001._Veiligheidsgebied_9001900-1_geo1">
+							<gml:exterior>
+								<gml:LinearRing>
+									<gml:posList>159644.0 354000.0 159785.0 354200.0 159845.0 354080.0 160141.0 353992.0 160141.0 354369.0 159644.0 354000.0</gml:posList>
+								</gml:LinearRing>
+							</gml:exterior>
+						</gml:Polygon>
+					</gml:surfaceMember>
+				</gml:MultiSurface>
+			</imkl:beheerpolygoon>
+			<imkl:contactAanvraag>
+				<imkl:AanvraagSoortContact>
+					<imkl:aanvraagSoort xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/AanvraagSoortValue/graafmelding"/>
+					<imkl:naam>KLICINFO-G</imkl:naam>
+					<imkl:telefoon>0888577271</imkl:telefoon>
+					<imkl:email>klicinfo@ecnnucleair.eu</imkl:email>
+				</imkl:AanvraagSoortContact>
+			</imkl:contactAanvraag>
+			<imkl:contactAanvraag>
+				<imkl:AanvraagSoortContact>
+					<imkl:aanvraagSoort xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/AanvraagSoortValue/calamiteitenmelding"/>
+					<imkl:naam>KLICINFO-C</imkl:naam>
+					<imkl:telefoon>0888577271</imkl:telefoon>
+					<imkl:email>klicinfo@ecnnucleair.eu</imkl:email>
+				</imkl:AanvraagSoortContact>
+			</imkl:contactAanvraag>
+			<imkl:contactAanvraag>
+				<imkl:AanvraagSoortContact>
+					<imkl:aanvraagSoort xlink:href="http://definities.geostandaarden.nl/imkl2015/id/waarde/AanvraagSoortValue/orientatieverzoek"/>
+					<imkl:naam>KLICINFO-O</imkl:naam>
+					<imkl:telefoon>0888577271</imkl:telefoon>
+					<imkl:email>klicinfo@ecnnucleair.eu</imkl:email>
+				</imkl:AanvraagSoortContact>
+			</imkl:contactAanvraag>
+			<imkl:beheerderVeiligheidsgebied xlink:href="nl.imkl-KL9001._Beheerder"/>
+		</imkl:Veiligheidsgebied>
+	</gml:featureMember>
+</gml:FeatureCollection>
