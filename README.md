@@ -1,4 +1,7 @@
 # imkl2015-dev
+
+`NOTE: This git was used for the generation of IMKL schemas. It is preserved for future use when potential schemas need to be generated` 
+
 This is the github reposotitory for the development of the IMKL2015 information model and schemas. In the repo we have the following folders:
 
 * ShapeChange: Configuration files for the ShapeChange tool that convert the UML diagram to a GML application schema.
